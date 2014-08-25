@@ -7,6 +7,3 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-
-# Ignore all files under menu4touristApp (phonegap files)
-#/menu4touristApp
