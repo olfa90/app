@@ -6,4 +6,4 @@
 
 # Ignore all files under merge and plataform (phonegap configurations files)
 /merges
-/platforms
+/platforms/*
