@@ -1,0 +1,154 @@
+header.bar {
+  background-color: rgb(219,54,60);
+}
+
+header.bar .logo {
+  height: 44px;
+  width: 34px;
+  background-image: url("../img/logo.gif");
+  background-size: 34px;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  text-decoration: none;
+}
+
+header.bar .title{
+  color: rgb(255,252,244);
+}
+
+header.bar .icon, nav.bar-header-secondary .btn-link{
+  color: rgb(255,252,244);
+}
+
+nav.bar-header-secondary {
+  background-color: rgb(141,41,43);
+  text-align: center;
+  vertical-align: middle;
+}
+
+nav.bar-header-secondary .filtro {
+  top: 8px;
+  color: rgb(141,41,43);
+  border-color: rgb(141,41,43);
+}
+
+nav.bar-header-secondary .btn-link {
+  font-size: 12px;
+}
+
+nav.bar-header-secondary .icon {
+  color: rgb(255,202,73);
+  font-size: 20px;
+}
+
+.icon-google-maps {
+  height: 14px;
+  width: 13px;
+  background-image: url("../img/glyphicons_242_google_maps_red.gif");
+  background-size: 8px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+nav.bar-header-secondary .icon-google-maps {
+  height: 35px;
+  width: 17px;
+  background-image: url("../img/glyphicons_242_google_maps_gold.gif");
+  background-size: 11px;
+  background-position: center;
+}
+
+.subtitle {
+  position: absolute;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 17px;
+  font-weight: 800 bold;
+  line-height: 44px;
+  color: rgb(141,41,43); /*#800000; #871115;*/
+  white-space: nowrap;
+}
+
+#list_places {
+  padding-top: 73px;
+  padding-bottom: 50px;
+}
+
+.table-view .table-view-cell {
+  color: rgb(141,41,43);
+  /*font-weight: 600;*/
+}
+
+.bar-tab .tab-item.active, .bar-tab .tab-item:active {
+  color: rgb(219,54,60);
+}
+
+#informations {
+  padding-bottom: 50px;
+}
+
+#informations > section > a {
+  display: block;
+  padding-right: 10px;
+  padding-left: 10px;
+  height: 32px;
+
+  background-color: rgb(141,41,43);
+  color: rgb(255,252,244);
+}
+
+#informations > section > a > h2, #informations > section > a > p {
+  display: inline-block;
+  line-height: 32px;
+  padding: 0;
+  margin: 0;
+  color: rgb(255,252,244);
+}
+
+#informations > section > a > h2 {
+  font-size: 14px;
+  font-weight: 450;
+}
+
+#informations > section > a > p {
+  float: right;
+  font-size: 12px;
+}
+
+img#place {
+  width: 100%;
+  height: 180px;
+}
+
+img#map {
+  width: 100%;
+  height: 150px;
+}
+
+#informations > section > p {
+  margin: 0px 10px 6px;
+  color: #000;
+}
+
+/*#menu .table-view .table-view-cell {
+  color: rgb(141,41,43);
+  font-weight: 600;
+}*/
+
+#menu .table-view-divider {
+  background-color: rgb(219,54,60);
+  color: rgb(255,252,244);
+}
+
+/*#menu .table-view-divider:first-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}*/
+
+p.price {
+  color: #000;
+  font-weight: 500;
+}
