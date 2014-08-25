@@ -5,5 +5,5 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore all files under merge and plataform (phonegap configurations files)
-/merges
-/platforms/*
+#/merges
+#/platforms/*
