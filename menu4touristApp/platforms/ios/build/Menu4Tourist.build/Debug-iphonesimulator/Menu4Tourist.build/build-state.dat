@@ -1,817 +1,0 @@
-TMenu4Tourist
-v6
-r1
-cCheck dependencies
-cProcessInfoPlistFile /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/Info.plist /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Menu4Tourist-Info.plist
-cPhaseScriptExecution Copy\ www\ directory /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Script-304B58A110DAC018002A0835.sh
-cCpResource Menu4Tourist/Resources/icons/icon-76.png build/emulator/Menu4Tourist.app/icon-76.png
-cCpResource Menu4Tourist/Resources/icons/icon-40@2x.png build/emulator/Menu4Tourist.app/icon-40@2x.png
-cCpResource Menu4Tourist/Resources/icons/icon-72.png build/emulator/Menu4Tourist.app/icon-72.png
-cCpResource Menu4Tourist/Resources/icons/icon.png build/emulator/Menu4Tourist.app/icon.png
-cCpResource Menu4Tourist/Resources/icons/icon@2x.png build/emulator/Menu4Tourist.app/icon@2x.png
-cCopyStringsFile /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/en.lproj/Localizable.strings Menu4Tourist/Resources/en.lproj/Localizable.strings
-cCompileXIB /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Classes/MainViewController.xib
-cCpResource Menu4Tourist/Resources/icons/icon-50.png build/emulator/Menu4Tourist.app/icon-50.png
-cCpResource Menu4Tourist/Resources/icons/icon-60@2x.png build/emulator/Menu4Tourist.app/icon-60@2x.png
-cCopyStringsFile /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/de.lproj/Localizable.strings Menu4Tourist/Resources/de.lproj/Localizable.strings
-cCpResource Menu4Tourist/Resources/icons/icon-small.png build/emulator/Menu4Tourist.app/icon-small.png
-cCpResource Menu4Tourist/Resources/splash/Default-Landscape@2x~ipad.png build/emulator/Menu4Tourist.app/Default-Landscape@2x~ipad.png
-cCpResource Menu4Tourist/Resources/splash/Default-Landscape~ipad.png build/emulator/Menu4Tourist.app/Default-Landscape~ipad.png
-cCpResource Menu4Tourist/Resources/splash/Default-Portrait@2x~ipad.png build/emulator/Menu4Tourist.app/Default-Portrait@2x~ipad.png
-cCpResource Menu4Tourist/Resources/icons/icon-small@2x.png build/emulator/Menu4Tourist.app/icon-small@2x.png
-cCpResource Menu4Tourist/Resources/splash/Default-Portrait~ipad.png build/emulator/Menu4Tourist.app/Default-Portrait~ipad.png
-cCpResource Menu4Tourist/Resources/icons/icon-40.png build/emulator/Menu4Tourist.app/icon-40.png
-cCpResource Menu4Tourist/Resources/splash/Default@2x~iphone.png build/emulator/Menu4Tourist.app/Default@2x~iphone.png
-cCpResource Menu4Tourist/Resources/icons/icon-60.png build/emulator/Menu4Tourist.app/icon-60.png
-cCpResource Menu4Tourist/Resources/splash/Default~iphone.png build/emulator/Menu4Tourist.app/Default~iphone.png
-cCpResource Menu4Tourist/Resources/splash/Default-568h@2x~iphone.png build/emulator/Menu4Tourist.app/Default-568h@2x~iphone.png
-cCpResource Menu4Tourist/Resources/icons/icon-50@2x.png build/emulator/Menu4Tourist.app/icon-50@2x.png
-cCpResource Menu4Tourist/Resources/icons/icon-76@2x.png build/emulator/Menu4Tourist.app/icon-76@2x.png
-cCpResource Menu4Tourist/Resources/icons/icon-72@2x.png build/emulator/Menu4Tourist.app/icon-72@2x.png
-cProcessPCH /var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Menu4Tourist-Prefix-auugkumjxvyloscvdyrnasszzxms/Menu4Tourist-Prefix.pch.pch Menu4Tourist/Menu4Tourist-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Objects-normal/i386/main.o /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Objects-normal/i386/AppDelegate.o /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Objects-normal/i386/MainViewController.o /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cLd /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/Menu4Tourist normal i386
-cGenerateDSYMFile /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app.dSYM /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/Menu4Tourist
-cTouch /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk
-c0000000053119F8A0000000000000198
-t1393663882
-s408
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/SDKSettings.plist
-c0000000053BDB0E600000000000003B4
-t1404940518
-s948
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/CoreServices/SystemVersion.plist
-c0000000053BDB0F1000000000000019E
-t1404940529
-s414
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AssetsLibrary.framework/AssetsLibrary
-c0000000053BDB0F20000000000059340
-t1404940530
-s365376
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-c0000000053BDB0F30000000000446820
-t1404940531
-s4483104
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreLocation.framework/CoreLocation
-c0000000053BDB0F400000000000F1A80
-t1404940532
-s989824
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
-c0000000053BDB0F800000000001BE790
-t1404940536
-s1828752
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Classes/AppDelegate.m
-c0000000053BDB29E00000000000013AF
-t1404940958
-s5039
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Classes/MainViewController.m
-c0000000053BDB29F000000000000126D
-t1404940959
-s4717
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Classes/MainViewController.xib
-c0000000053BDB29E0000000000001759
-t1404940958
-s5977
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Menu4Tourist-Info.plist
-c0000000053BDB3240000000000000A0D
-t1404941092
-s2573
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Menu4Tourist-Prefix.pch
-c0000000053BDB29F00000000000003C9
-t1404940959
-s969
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/de.lproj/Localizable.strings
-c0000000053BDB29E00000000000004C0
-t1404940958
-s1216
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/en.lproj/Localizable.strings
-c0000000053BDB29E00000000000004AB
-t1404940958
-s1195
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/icons/icon-40.png
-c0000000053BDB29E0000000000000FF2
-t1404940958
-s4082
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/icons/icon-40@2x.png
-c0000000053BDB29E0000000000001CF3
-t1404940958
-s7411
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/icons/icon-50.png
-c0000000053BDB29E000000000000130A
-t1404940958
-s4874
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/icons/icon-50@2x.png
-c0000000053BDB29E000000000000258B
-t1404940958
-s9611
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/icons/icon-60.png
-c0000000053BDB29E00000000000016B3
-t1404940958
-s5811
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/icons/icon-60@2x.png
-c0000000053BDB29E0000000000002E94
-t1404940958
-s11924
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/icons/icon-72.png
-c0000000053BDB29E0000000000001350
-t1404940958
-s4944
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/icons/icon-72@2x.png
-c0000000053BDB29E0000000000002DBA
-t1404940958
-s11706
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/icons/icon-76.png
-c0000000053BDB29E0000000000001B71
-t1404940958
-s7025
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/icons/icon-76@2x.png
-c0000000053BDB29E0000000000003B9E
-t1404940958
-s15262
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/icons/icon-small.png
-c0000000053BDB29E0000000000000CDE
-t1404940958
-s3294
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/icons/icon-small@2x.png
-c0000000053BDB29E00000000000015E8
-t1404940958
-s5608
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/icons/icon.png
-c0000000053BDB29E0000000000000F3E
-t1404940958
-s3902
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/icons/icon@2x.png
-c0000000053BDB29E0000000000001EBD
-t1404940958
-s7869
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/splash/Default-568h@2x~iphone.png
-c0000000053BDB29E00000000000085B1
-t1404940958
-s34225
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/splash/Default-Landscape@2x~ipad.png
-c0000000053BDB29E0000000000033D0A
-t1404940958
-s212234
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/splash/Default-Landscape~ipad.png
-c0000000053BDB29E00000000000166A2
-t1404940958
-s91810
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/splash/Default-Portrait@2x~ipad.png
-c0000000053BDB29E0000000000033F7C
-t1404940958
-s212860
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/splash/Default-Portrait~ipad.png
-c0000000053BDB29E0000000000016641
-t1404940958
-s91713
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/splash/Default@2x~iphone.png
-c0000000053BDB29E0000000000007323
-t1404940958
-s29475
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/splash/Default~iphone.png
-c0000000053BDB29E000000000000289A
-t1404940958
-s10394
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/main.m
-c0000000053BDB29F000000000000045E
-t1404940959
-s1118
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Objects-normal/i386/AppDelegate.o
-t1404941138
-s74044
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Objects-normal/i386/MainViewController.o
-t1404941138
-s50856
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Objects-normal/i386/Menu4Tourist.LinkFileList
-c0000000053BDB33100000000000001FE
-t1404941105
-s510
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Objects-normal/i386/main.o
-t1404941138
-s3028
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Script-304B58A110DAC018002A0835.sh
-c0000000053BDB331000000000000002D
-t1404941105
-s45
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app
-t1404941140
-s1020
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app.dSYM
-t2
-s0
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/Default-568h@2x~iphone.png
-t1404941106
-s34225
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/Default-Landscape@2x~ipad.png
-t1404941106
-s212234
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/Default-Landscape~ipad.png
-t1404941106
-s91810
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/Default-Portrait@2x~ipad.png
-t1404941106
-s212860
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/Default-Portrait~ipad.png
-t1404941106
-s91713
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/Default@2x~iphone.png
-t1404941106
-s29475
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/Default~iphone.png
-t1404941106
-s10394
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/Info.plist
-t1404941105
-s1285
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/MainViewController.nib
-t1404941136
-s1332
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/Menu4Tourist
-t1404941140
-s285644
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/PkgInfo
-t2
-s0
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/de.lproj/Localizable.strings
-t1404941106
-s280
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/en.lproj/Localizable.strings
-t1404941106
-s166
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/icon-40.png
-t1404941106
-s4082
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/icon-40@2x.png
-t1404941106
-s7411
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/icon-50.png
-t1404941106
-s4874
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/icon-50@2x.png
-t1404941106
-s9611
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/icon-60.png
-t1404941106
-s5811
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/icon-60@2x.png
-t1404941106
-s11924
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/icon-72.png
-t1404941106
-s4944
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/icon-72@2x.png
-t1404941106
-s11706
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/icon-76.png
-t1404941106
-s7025
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/icon-76@2x.png
-t1404941106
-s15262
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/icon-small.png
-t1404941106
-s3294
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/icon-small@2x.png
-t1404941106
-s5608
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/icon.png
-t1404941106
-s3902
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/icon@2x.png
-t1404941106
-s7869
-
-N/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/libCordova.a
-c0000000053BDB33100000000000D2EB8
-t1404941105
-s863928
-
-N/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Menu4Tourist-Prefix-auugkumjxvyloscvdyrnasszzxms/Menu4Tourist-Prefix.pch.pch
-t1404941137
-s5374464
-
-CCheck dependencies
-r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies0c77aab1ea6db941^0d8cb0b1ea6db941^---0#1#1#--18"Check dependencies36"93A81B5B-E64E-4CB6-97BF-262E59768662-
-
-CCompileC build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Objects-normal/i386/AppDelegate.o /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s426633937.692919
-e426633938.121552
-r1
-xCompileC
-xbuild/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Objects-normal/i386/AppDelegate.o
-x/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Classes/AppDelegate.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Classes/AppDelegate.m
-d/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Classes/AppDelegate.h
-d/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/include/Cordova/CDVViewController.h
-d/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h
-d/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h
-d/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h
-d/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h
-d/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h
-d/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h
-d/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h
-d/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h
-d/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h
-d/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Classes/MainViewController.h
-d/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegateImpl.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection112"Compile /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Classes/AppDelegate.m227"[1mCompileC[0m build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Objects-normal/i386/AppDelegate.o [1mMenu4Tourist/Classes/AppDelegate.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler6d8cb1d1ea6db941^4b1e1fd2ea6db941^---0#0#1#-19%DVTDocumentLocation2@111"file:///Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Classes/AppDelegate.m0000000000000000^4324"[1mCompileC[0m build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Objects-normal/i386/AppDelegate.o [1mMenu4Tourist/Classes/AppDelegate.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/apache-ant-1.9.3/bin:/System/Library/android-sdk-mac_x86:/Applications/sdk/platform-tools:/Applications/sdk/tools:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=80 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Menu4Tourist-generated-files.hmap -I/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Menu4Tourist-own-target-headers.hmap -I/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Menu4Tourist-all-target-headers.hmap -iquote /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Menu4Tourist-project-headers.hmap -I/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/include -I/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/usr/local/lib/include -I/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/UninstalledProducts/include -I/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator -I/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/DerivedSources/i386 -I/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/DerivedSources -F/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator -include /var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Menu4Tourist-Prefix-auugkumjxvyloscvdyrnasszzxms/Menu4Tourist-Prefix.pch -MMD -MT dependencies -MF /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Objects-normal/i386/AppDelegate.d --serialize-diagnostics /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Objects-normal/i386/AppDelegate.dia -c /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Classes/AppDelegate.m -o /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Objects-normal/i386/AppDelegate.o36"F8AFAB16-2163-4001-B444-D804271D4AEB-
-b2A9D069C-057D-45C7-80F2-BCF281695A7D
-
-CCompileC build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Objects-normal/i386/MainViewController.o /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s426633938.114804
-e426633938.205964
-r1
-xCompileC
-xbuild/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Objects-normal/i386/MainViewController.o
-x/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Classes/MainViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Classes/MainViewController.m
-d/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Classes/MainViewController.h
-d/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/include/Cordova/CDVViewController.h
-d/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h
-d/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h
-d/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h
-d/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h
-d/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h
-d/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h
-d/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h
-d/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h
-d/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h
-d/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegateImpl.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection119"Compile /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Classes/MainViewController.m241"[1mCompileC[0m build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Objects-normal/i386/MainViewController.o [1mMenu4Tourist/Classes/MainViewController.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilered9d1dd2ea6db941^1fba34d2ea6db941^---0#0#1#-19%DVTDocumentLocation2@118"file:///Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Classes/MainViewController.m0000000000000000^4366"[1mCompileC[0m build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Objects-normal/i386/MainViewController.o [1mMenu4Tourist/Classes/MainViewController.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/apache-ant-1.9.3/bin:/System/Library/android-sdk-mac_x86:/Applications/sdk/platform-tools:/Applications/sdk/tools:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=80 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Menu4Tourist-generated-files.hmap -I/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Menu4Tourist-own-target-headers.hmap -I/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Menu4Tourist-all-target-headers.hmap -iquote /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Menu4Tourist-project-headers.hmap -I/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/include -I/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/usr/local/lib/include -I/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/UninstalledProducts/include -I/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator -I/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/DerivedSources/i386 -I/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/DerivedSources -F/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator -include /var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Menu4Tourist-Prefix-auugkumjxvyloscvdyrnasszzxms/Menu4Tourist-Prefix.pch -MMD -MT dependencies -MF /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Objects-normal/i386/MainViewController.d --serialize-diagnostics /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Objects-normal/i386/MainViewController.dia -c /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Classes/MainViewController.m -o /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Objects-normal/i386/MainViewController.o36"8E2F2A50-0C54-4FE1-BC1B-12ED72CBCB50-
-b2A9D069C-057D-45C7-80F2-BCF281695A7D
-
-CCompileC build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Objects-normal/i386/main.o /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s426633937.692505
-e426633938.114354
-r1
-xCompileC
-xbuild/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Objects-normal/i386/main.o
-x/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/main.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/main.m
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection97"Compile /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/main.m205"[1mCompileC[0m build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Objects-normal/i386/main.o [1mMenu4Tourist/main.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler406cb1d1ea6db941^17471dd2ea6db941^---0#0#1#-19%DVTDocumentLocation2@96"file:///Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/main.m0000000000000000^4266"[1mCompileC[0m build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Objects-normal/i386/main.o [1mMenu4Tourist/main.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/apache-ant-1.9.3/bin:/System/Library/android-sdk-mac_x86:/Applications/sdk/platform-tools:/Applications/sdk/tools:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=80 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Menu4Tourist-generated-files.hmap -I/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Menu4Tourist-own-target-headers.hmap -I/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Menu4Tourist-all-target-headers.hmap -iquote /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Menu4Tourist-project-headers.hmap -I/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/include -I/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/usr/local/lib/include -I/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/UninstalledProducts/include -I/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator -I/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/DerivedSources/i386 -I/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/DerivedSources -F/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator -include /var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Menu4Tourist-Prefix-auugkumjxvyloscvdyrnasszzxms/Menu4Tourist-Prefix.pch -MMD -MT dependencies -MF /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Objects-normal/i386/main.d --serialize-diagnostics /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Objects-normal/i386/main.dia -c /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/main.m -o /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Objects-normal/i386/main.o36"96896DEF-0386-4303-BD8D-F3E5C0F42DB7-
-b2A9D069C-057D-45C7-80F2-BCF281695A7D
-
-CCompileXIB /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Classes/MainViewController.xib
-s426633906.269767
-e426633936.705476
-r1
-xCompileXIB
-x/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Classes/MainViewController.xib
-o2014-07-09 18:25:32.429 Interface Builder Cocoa Touch Tool[28742:303] CFPreferences: user home directory at file:///var/root/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection123"Compiling /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Classes/MainViewController.xib70"[1mCompileXIB[0m [1mMenu4Tourist/Classes/MainViewController.xib[0medbc45b2ea6db941^679eb4d0ea6db941^-227"2014-07-09 18:25:32.429 Interface Builder Cocoa Touch Tool[28742:303] CFPreferences: user home directory at file:///var/root/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.-0#0#1#-19%DVTDocumentLocation2@120"file:///Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Classes/MainViewController.xib0000000000000000^1070"[1mCompileXIB[0m [1mMenu4Tourist/Classes/MainViewController.xib[0m    cd /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/apache-ant-1.9.3/bin:/System/Library/android-sdk-mac_x86:/Applications/sdk/platform-tools:/Applications/sdk/tools:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"    export XCODE_DEVELOPER_USR_PATH=/Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 5.0 --output-format human-readable-text --compile /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/MainViewController.nib /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Classes/MainViewController.xib36"5CC73020-51EF-4F02-A911-0EE78BE80EB9-
-b2A9D069C-057D-45C7-80F2-BCF281695A7D
-
-CCopyStringsFile /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/de.lproj/Localizable.strings Menu4Tourist/Resources/de.lproj/Localizable.strings
-s426633906.274607
-e426633906.276896
-r1
-xCopyStringsFile
-x/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/de.lproj/Localizable.strings
-xMenu4Tourist/Resources/de.lproj/Localizable.strings
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection56"Copy Menu4Tourist/Resources/de.lproj/Localizable.strings136"[1mCopyStringsFile[0m build/emulator/Menu4Tourist.app/de.lproj/Localizable.strings Menu4Tourist/Resources/de.lproj/Localizable.strings417e46b2ea6db941^2efe46b2ea6db941^---0#0#1#-19%DVTDocumentLocation2@128"file:///Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/de.lproj/Localizable.strings0000000000000000^848"[1mCopyStringsFile[0m build/emulator/Menu4Tourist.app/de.lproj/Localizable.strings Menu4Tourist/Resources/de.lproj/Localizable.strings    cd /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/apache-ant-1.9.3/bin:/System/Library/android-sdk-mac_x86:/Applications/sdk/platform-tools:/Applications/sdk/tools:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/de.lproj -- Menu4Tourist/Resources/de.lproj/Localizable.strings36"8589B1B2-DBDC-41BE-AA90-8C52794F9102-
-b2A9D069C-057D-45C7-80F2-BCF281695A7D
-
-CCopyStringsFile /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/en.lproj/Localizable.strings Menu4Tourist/Resources/en.lproj/Localizable.strings
-s426633906.268646
-e426633906.274131
-r1
-xCopyStringsFile
-x/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/en.lproj/Localizable.strings
-xMenu4Tourist/Resources/en.lproj/Localizable.strings
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection56"Copy Menu4Tourist/Resources/en.lproj/Localizable.strings136"[1mCopyStringsFile[0m build/emulator/Menu4Tourist.app/en.lproj/Localizable.strings Menu4Tourist/Resources/en.lproj/Localizable.strings3c1445b2ea6db941^2e3946b2ea6db941^---0#0#1#-19%DVTDocumentLocation2@128"file:///Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/en.lproj/Localizable.strings0000000000000000^848"[1mCopyStringsFile[0m build/emulator/Menu4Tourist.app/en.lproj/Localizable.strings Menu4Tourist/Resources/en.lproj/Localizable.strings    cd /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/apache-ant-1.9.3/bin:/System/Library/android-sdk-mac_x86:/Applications/sdk/platform-tools:/Applications/sdk/tools:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/en.lproj -- Menu4Tourist/Resources/en.lproj/Localizable.strings36"B9D146B8-E103-4DEE-B173-984373C33FC1-
-b2A9D069C-057D-45C7-80F2-BCF281695A7D
-
-CCpResource Menu4Tourist/Resources/icons/icon-40.png build/emulator/Menu4Tourist.app/icon-40.png
-s426633906.299717
-e426633906.338389
-r1
-xCpResource
-xMenu4Tourist/Resources/icons/icon-40.png
-xbuild/emulator/Menu4Tourist.app/icon-40.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection48"Copy build/emulator/Menu4Tourist.app/icon-40.png103"[1mCpResource[0m Menu4Tourist/Resources/icons/icon-40.png build/emulator/Menu4Tourist.app/icon-40.pngb1de4cb2ea6db941^51a556b2ea6db941^---0#0#1#-19%DVTDocumentLocation2@120"file:///Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/icon-40.png0034ec32ddffdf42^884"[1mCpResource[0m Menu4Tourist/Resources/icons/icon-40.png build/emulator/Menu4Tourist.app/icon-40.png    cd /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/apache-ant-1.9.3/bin:/System/Library/android-sdk-mac_x86:/Applications/sdk/platform-tools:/Applications/sdk/tools:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/icons/icon-40.png /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app36"02C5F686-EC30-46EE-967A-FEDA18E9A2A5-
-b2A9D069C-057D-45C7-80F2-BCF281695A7D
-
-CCpResource Menu4Tourist/Resources/icons/icon-40@2x.png build/emulator/Menu4Tourist.app/icon-40@2x.png
-s426633906.257234
-e426633906.267364
-r1
-xCpResource
-xMenu4Tourist/Resources/icons/icon-40@2x.png
-xbuild/emulator/Menu4Tourist.app/icon-40@2x.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection51"Copy build/emulator/Menu4Tourist.app/icon-40@2x.png109"[1mCpResource[0m Menu4Tourist/Resources/icons/icon-40@2x.png build/emulator/Menu4Tourist.app/icon-40@2x.png72fb41b2ea6db941^486b44b2ea6db941^---0#0#1#-19%DVTDocumentLocation2@123"file:///Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/icon-40@2x.png0034ec32ddffdf42^893"[1mCpResource[0m Menu4Tourist/Resources/icons/icon-40@2x.png build/emulator/Menu4Tourist.app/icon-40@2x.png    cd /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/apache-ant-1.9.3/bin:/System/Library/android-sdk-mac_x86:/Applications/sdk/platform-tools:/Applications/sdk/tools:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/icons/icon-40@2x.png /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app36"CCF09DB7-A415-4970-8B42-7F8892138365-
-b2A9D069C-057D-45C7-80F2-BCF281695A7D
-
-CCpResource Menu4Tourist/Resources/icons/icon-50.png build/emulator/Menu4Tourist.app/icon-50.png
-s426633906.271463
-e426633906.274042
-r1
-xCpResource
-xMenu4Tourist/Resources/icons/icon-50.png
-xbuild/emulator/Menu4Tourist.app/icon-50.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection48"Copy build/emulator/Menu4Tourist.app/icon-50.png103"[1mCpResource[0m Menu4Tourist/Resources/icons/icon-50.png build/emulator/Menu4Tourist.app/icon-50.png5fb245b2ea6db941^af2746b2ea6db941^---0#0#1#-19%DVTDocumentLocation2@120"file:///Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/icon-50.png0034ec32ddffdf42^884"[1mCpResource[0m Menu4Tourist/Resources/icons/icon-50.png build/emulator/Menu4Tourist.app/icon-50.png    cd /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/apache-ant-1.9.3/bin:/System/Library/android-sdk-mac_x86:/Applications/sdk/platform-tools:/Applications/sdk/tools:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/icons/icon-50.png /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app36"ECBAD333-A192-469C-AEFC-43FC105803B4-
-b2A9D069C-057D-45C7-80F2-BCF281695A7D
-
-CCpResource Menu4Tourist/Resources/icons/icon-50@2x.png build/emulator/Menu4Tourist.app/icon-50@2x.png
-s426633906.368592
-e426633906.390282
-r1
-xCpResource
-xMenu4Tourist/Resources/icons/icon-50@2x.png
-xbuild/emulator/Menu4Tourist.app/icon-50@2x.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection51"Copy build/emulator/Menu4Tourist.app/icon-50@2x.png109"[1mCpResource[0m Menu4Tourist/Resources/icons/icon-50@2x.png build/emulator/Menu4Tourist.app/icon-50@2x.pngef8c5eb2ea6db941^b40564b2ea6db941^---0#0#1#-19%DVTDocumentLocation2@123"file:///Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/icon-50@2x.png0034ec32ddffdf42^893"[1mCpResource[0m Menu4Tourist/Resources/icons/icon-50@2x.png build/emulator/Menu4Tourist.app/icon-50@2x.png    cd /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/apache-ant-1.9.3/bin:/System/Library/android-sdk-mac_x86:/Applications/sdk/platform-tools:/Applications/sdk/tools:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/icons/icon-50@2x.png /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app36"B0061544-A7EF-4ABC-9ADF-2C288EFED013-
-b2A9D069C-057D-45C7-80F2-BCF281695A7D
-
-CCpResource Menu4Tourist/Resources/icons/icon-60.png build/emulator/Menu4Tourist.app/icon-60.png
-s426633906.339215
-e426633906.366454
-r1
-xCpResource
-xMenu4Tourist/Resources/icons/icon-60.png
-xbuild/emulator/Menu4Tourist.app/icon-60.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection48"Copy build/emulator/Menu4Tourist.app/icon-60.png103"[1mCpResource[0m Menu4Tourist/Resources/icons/icon-60.png build/emulator/Menu4Tourist.app/icon-60.png0dfe56b2ea6db941^02d35db2ea6db941^---0#0#1#-19%DVTDocumentLocation2@120"file:///Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/icon-60.png0034ec32ddffdf42^884"[1mCpResource[0m Menu4Tourist/Resources/icons/icon-60.png build/emulator/Menu4Tourist.app/icon-60.png    cd /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/apache-ant-1.9.3/bin:/System/Library/android-sdk-mac_x86:/Applications/sdk/platform-tools:/Applications/sdk/tools:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/icons/icon-60.png /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app36"F6885FDE-B0E3-4B55-9B0F-0EC3452C5AAA-
-b2A9D069C-057D-45C7-80F2-BCF281695A7D
-
-CCpResource Menu4Tourist/Resources/icons/icon-60@2x.png build/emulator/Menu4Tourist.app/icon-60@2x.png
-s426633906.273570
-e426633906.276166
-r1
-xCpResource
-xMenu4Tourist/Resources/icons/icon-60@2x.png
-xbuild/emulator/Menu4Tourist.app/icon-60@2x.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection51"Copy build/emulator/Menu4Tourist.app/icon-60@2x.png109"[1mCpResource[0m Menu4Tourist/Resources/icons/icon-60@2x.png build/emulator/Menu4Tourist.app/icon-60@2x.png363b46b2ea6db941^25b346b2ea6db941^---0#0#1#-19%DVTDocumentLocation2@123"file:///Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/icon-60@2x.png0034ec32ddffdf42^893"[1mCpResource[0m Menu4Tourist/Resources/icons/icon-60@2x.png build/emulator/Menu4Tourist.app/icon-60@2x.png    cd /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/apache-ant-1.9.3/bin:/System/Library/android-sdk-mac_x86:/Applications/sdk/platform-tools:/Applications/sdk/tools:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/icons/icon-60@2x.png /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app36"B9EFA2FA-231C-4AB5-A3BC-EA929718FD4F-
-b2A9D069C-057D-45C7-80F2-BCF281695A7D
-
-CCpResource Menu4Tourist/Resources/icons/icon-72.png build/emulator/Menu4Tourist.app/icon-72.png
-s426633906.257572
-e426633906.267249
-r1
-xCpResource
-xMenu4Tourist/Resources/icons/icon-72.png
-xbuild/emulator/Menu4Tourist.app/icon-72.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection48"Copy build/emulator/Menu4Tourist.app/icon-72.png103"[1mCpResource[0m Menu4Tourist/Resources/icons/icon-72.png build/emulator/Menu4Tourist.app/icon-72.png011542b2ea6db941^0f7c44b2ea6db941^---0#0#1#-19%DVTDocumentLocation2@120"file:///Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/icon-72.png0034ec32ddffdf42^884"[1mCpResource[0m Menu4Tourist/Resources/icons/icon-72.png build/emulator/Menu4Tourist.app/icon-72.png    cd /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/apache-ant-1.9.3/bin:/System/Library/android-sdk-mac_x86:/Applications/sdk/platform-tools:/Applications/sdk/tools:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/icons/icon-72.png /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app36"B51E353A-1461-4658-986B-EB9A71EBE1C0-
-b2A9D069C-057D-45C7-80F2-BCF281695A7D
-
-CCpResource Menu4Tourist/Resources/icons/icon-72@2x.png build/emulator/Menu4Tourist.app/icon-72@2x.png
-s426633906.390935
-e426633906.397918
-r1
-xCpResource
-xMenu4Tourist/Resources/icons/icon-72@2x.png
-xbuild/emulator/Menu4Tourist.app/icon-72@2x.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection51"Copy build/emulator/Menu4Tourist.app/icon-72@2x.png109"[1mCpResource[0m Menu4Tourist/Resources/icons/icon-72@2x.png build/emulator/Menu4Tourist.app/icon-72@2x.png184464b2ea6db941^22df65b2ea6db941^---0#0#1#-19%DVTDocumentLocation2@123"file:///Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/icon-72@2x.png0034ec32ddffdf42^893"[1mCpResource[0m Menu4Tourist/Resources/icons/icon-72@2x.png build/emulator/Menu4Tourist.app/icon-72@2x.png    cd /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/apache-ant-1.9.3/bin:/System/Library/android-sdk-mac_x86:/Applications/sdk/platform-tools:/Applications/sdk/tools:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/icons/icon-72@2x.png /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app36"171F54E9-7A6C-4497-B2AF-C7A66BAED938-
-b2A9D069C-057D-45C7-80F2-BCF281695A7D
-
-CCpResource Menu4Tourist/Resources/icons/icon-76.png build/emulator/Menu4Tourist.app/icon-76.png
-s426633906.257067
-e426633906.267508
-r1
-xCpResource
-xMenu4Tourist/Resources/icons/icon-76.png
-xbuild/emulator/Menu4Tourist.app/icon-76.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection48"Copy build/emulator/Menu4Tourist.app/icon-76.png103"[1mCpResource[0m Menu4Tourist/Resources/icons/icon-76.png build/emulator/Menu4Tourist.app/icon-76.pnge5f041b2ea6db941^809c44b2ea6db941^---0#0#1#-19%DVTDocumentLocation2@120"file:///Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/icon-76.png0034ec32ddffdf42^884"[1mCpResource[0m Menu4Tourist/Resources/icons/icon-76.png build/emulator/Menu4Tourist.app/icon-76.png    cd /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/apache-ant-1.9.3/bin:/System/Library/android-sdk-mac_x86:/Applications/sdk/platform-tools:/Applications/sdk/tools:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/icons/icon-76.png /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app36"D6FA239F-B6B8-41F6-8DD1-790B3644A109-
-b2A9D069C-057D-45C7-80F2-BCF281695A7D
-
-CCpResource Menu4Tourist/Resources/icons/icon-76@2x.png build/emulator/Menu4Tourist.app/icon-76@2x.png
-s426633906.389426
-e426633906.392191
-r1
-xCpResource
-xMenu4Tourist/Resources/icons/icon-76@2x.png
-xbuild/emulator/Menu4Tourist.app/icon-76@2x.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection51"Copy build/emulator/Menu4Tourist.app/icon-76@2x.png109"[1mCpResource[0m Menu4Tourist/Resources/icons/icon-76@2x.png build/emulator/Menu4Tourist.app/icon-76@2x.png9cfb63b2ea6db941^fc7064b2ea6db941^---0#0#1#-19%DVTDocumentLocation2@123"file:///Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/icon-76@2x.png0034ec32ddffdf42^893"[1mCpResource[0m Menu4Tourist/Resources/icons/icon-76@2x.png build/emulator/Menu4Tourist.app/icon-76@2x.png    cd /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/apache-ant-1.9.3/bin:/System/Library/android-sdk-mac_x86:/Applications/sdk/platform-tools:/Applications/sdk/tools:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/icons/icon-76@2x.png /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app36"D4CE3DB5-CB66-41F0-939A-D518EE496615-
-b2A9D069C-057D-45C7-80F2-BCF281695A7D
-
-CCpResource Menu4Tourist/Resources/icons/icon-small.png build/emulator/Menu4Tourist.app/icon-small.png
-s426633906.275590
-e426633906.277784
-r1
-xCpResource
-xMenu4Tourist/Resources/icons/icon-small.png
-xbuild/emulator/Menu4Tourist.app/icon-small.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection51"Copy build/emulator/Menu4Tourist.app/icon-small.png109"[1mCpResource[0m Menu4Tourist/Resources/icons/icon-small.png build/emulator/Menu4Tourist.app/icon-small.pngf0c246b2ea6db941^601d47b2ea6db941^---0#0#1#-19%DVTDocumentLocation2@123"file:///Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/icon-small.png0034ec32ddffdf42^893"[1mCpResource[0m Menu4Tourist/Resources/icons/icon-small.png build/emulator/Menu4Tourist.app/icon-small.png    cd /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/apache-ant-1.9.3/bin:/System/Library/android-sdk-mac_x86:/Applications/sdk/platform-tools:/Applications/sdk/tools:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/icons/icon-small.png /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app36"8CA26EEB-D2F6-4EE5-9904-D5E624C4CC2D-
-b2A9D069C-057D-45C7-80F2-BCF281695A7D
-
-CCpResource Menu4Tourist/Resources/icons/icon-small@2x.png build/emulator/Menu4Tourist.app/icon-small@2x.png
-s426633906.296332
-e426633906.338231
-r1
-xCpResource
-xMenu4Tourist/Resources/icons/icon-small@2x.png
-xbuild/emulator/Menu4Tourist.app/icon-small@2x.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection54"Copy build/emulator/Menu4Tourist.app/icon-small@2x.png115"[1mCpResource[0m Menu4Tourist/Resources/icons/icon-small@2x.png build/emulator/Menu4Tourist.app/icon-small@2x.png575c4cb2ea6db941^579856b2ea6db941^---0#0#1#-19%DVTDocumentLocation2@126"file:///Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/icon-small@2x.png0034ec32ddffdf42^902"[1mCpResource[0m Menu4Tourist/Resources/icons/icon-small@2x.png build/emulator/Menu4Tourist.app/icon-small@2x.png    cd /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/apache-ant-1.9.3/bin:/System/Library/android-sdk-mac_x86:/Applications/sdk/platform-tools:/Applications/sdk/tools:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/icons/icon-small@2x.png /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app36"4F0B6232-EF78-4B4A-A1A4-EDE6A4E0C97D-
-b2A9D069C-057D-45C7-80F2-BCF281695A7D
-
-CCpResource Menu4Tourist/Resources/icons/icon.png build/emulator/Menu4Tourist.app/icon.png
-s426633906.258673
-e426633906.267354
-r1
-xCpResource
-xMenu4Tourist/Resources/icons/icon.png
-xbuild/emulator/Menu4Tourist.app/icon.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection45"Copy build/emulator/Menu4Tourist.app/icon.png97"[1mCpResource[0m Menu4Tourist/Resources/icons/icon.png build/emulator/Menu4Tourist.app/icon.png844842b2ea6db941^6e8944b2ea6db941^---0#0#1#-19%DVTDocumentLocation2@117"file:///Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/icon.png0034ec32ddffdf42^875"[1mCpResource[0m Menu4Tourist/Resources/icons/icon.png build/emulator/Menu4Tourist.app/icon.png    cd /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/apache-ant-1.9.3/bin:/System/Library/android-sdk-mac_x86:/Applications/sdk/platform-tools:/Applications/sdk/tools:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/icons/icon.png /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app36"EBA9C9D5-6247-4E79-AA46-B73207618A48-
-b2A9D069C-057D-45C7-80F2-BCF281695A7D
-
-CCpResource Menu4Tourist/Resources/icons/icon@2x.png build/emulator/Menu4Tourist.app/icon@2x.png
-s426633906.268124
-e426633906.272741
-r1
-xCpResource
-xMenu4Tourist/Resources/icons/icon@2x.png
-xbuild/emulator/Menu4Tourist.app/icon@2x.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection48"Copy build/emulator/Menu4Tourist.app/icon@2x.png103"[1mCpResource[0m Menu4Tourist/Resources/icons/icon@2x.png build/emulator/Menu4Tourist.app/icon@2x.png570645b2ea6db941^a79245b2ea6db941^---0#0#1#-19%DVTDocumentLocation2@120"file:///Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/icon@2x.png0034ec32ddffdf42^884"[1mCpResource[0m Menu4Tourist/Resources/icons/icon@2x.png build/emulator/Menu4Tourist.app/icon@2x.png    cd /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/apache-ant-1.9.3/bin:/System/Library/android-sdk-mac_x86:/Applications/sdk/platform-tools:/Applications/sdk/tools:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/icons/icon@2x.png /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app36"DA8DC15B-844A-4284-97F5-D3633A7A53F0-
-b2A9D069C-057D-45C7-80F2-BCF281695A7D
-
-CCpResource Menu4Tourist/Resources/splash/Default-568h@2x~iphone.png build/emulator/Menu4Tourist.app/Default-568h@2x~iphone.png
-s426633906.367686
-e426633906.390076
-r1
-xCpResource
-xMenu4Tourist/Resources/splash/Default-568h@2x~iphone.png
-xbuild/emulator/Menu4Tourist.app/Default-568h@2x~iphone.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection63"Copy build/emulator/Menu4Tourist.app/Default-568h@2x~iphone.png134"[1mCpResource[0m Menu4Tourist/Resources/splash/Default-568h@2x~iphone.png build/emulator/Menu4Tourist.app/Default-568h@2x~iphone.pnge7545eb2ea6db941^fddd63b2ea6db941^---0#0#1#-19%DVTDocumentLocation2@135"file:///Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/Default-568h@2x~iphone.png0034ec32ddffdf42^931"[1mCpResource[0m Menu4Tourist/Resources/splash/Default-568h@2x~iphone.png build/emulator/Menu4Tourist.app/Default-568h@2x~iphone.png    cd /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/apache-ant-1.9.3/bin:/System/Library/android-sdk-mac_x86:/Applications/sdk/platform-tools:/Applications/sdk/tools:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/splash/Default-568h@2x~iphone.png /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app36"B9157936-78A4-461B-B856-AC3AEA1C501E-
-b2A9D069C-057D-45C7-80F2-BCF281695A7D
-
-CCpResource Menu4Tourist/Resources/splash/Default-Landscape@2x~ipad.png build/emulator/Menu4Tourist.app/Default-Landscape@2x~ipad.png
-s426633906.276524
-e426633906.297761
-r1
-xCpResource
-xMenu4Tourist/Resources/splash/Default-Landscape@2x~ipad.png
-xbuild/emulator/Menu4Tourist.app/Default-Landscape@2x~ipad.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection66"Copy build/emulator/Menu4Tourist.app/Default-Landscape@2x~ipad.png140"[1mCpResource[0m Menu4Tourist/Resources/splash/Default-Landscape@2x~ipad.png build/emulator/Menu4Tourist.app/Default-Landscape@2x~ipad.pngfd1047b2ea6db941^e4304cb2ea6db941^---0#0#1#-19%DVTDocumentLocation2@138"file:///Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/Default-Landscape@2x~ipad.png0034ec32ddffdf42^940"[1mCpResource[0m Menu4Tourist/Resources/splash/Default-Landscape@2x~ipad.png build/emulator/Menu4Tourist.app/Default-Landscape@2x~ipad.png    cd /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/apache-ant-1.9.3/bin:/System/Library/android-sdk-mac_x86:/Applications/sdk/platform-tools:/Applications/sdk/tools:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/splash/Default-Landscape@2x~ipad.png /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app36"C20BF061-D95D-4411-8D5E-D1AE39281CC5-
-b2A9D069C-057D-45C7-80F2-BCF281695A7D
-
-CCpResource Menu4Tourist/Resources/splash/Default-Landscape~ipad.png build/emulator/Menu4Tourist.app/Default-Landscape~ipad.png
-s426633906.277129
-e426633906.295535
-r1
-xCpResource
-xMenu4Tourist/Resources/splash/Default-Landscape~ipad.png
-xbuild/emulator/Menu4Tourist.app/Default-Landscape~ipad.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection63"Copy build/emulator/Menu4Tourist.app/Default-Landscape~ipad.png134"[1mCpResource[0m Menu4Tourist/Resources/splash/Default-Landscape~ipad.png build/emulator/Menu4Tourist.app/Default-Landscape~ipad.png9a2747b2ea6db941^3ba94bb2ea6db941^---0#0#1#-19%DVTDocumentLocation2@135"file:///Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/Default-Landscape~ipad.png0034ec32ddffdf42^931"[1mCpResource[0m Menu4Tourist/Resources/splash/Default-Landscape~ipad.png build/emulator/Menu4Tourist.app/Default-Landscape~ipad.png    cd /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/apache-ant-1.9.3/bin:/System/Library/android-sdk-mac_x86:/Applications/sdk/platform-tools:/Applications/sdk/tools:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/splash/Default-Landscape~ipad.png /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app36"6974AEAC-654B-4524-9457-B4EE68245A2B-
-b2A9D069C-057D-45C7-80F2-BCF281695A7D
-
-CCpResource Menu4Tourist/Resources/splash/Default-Portrait@2x~ipad.png build/emulator/Menu4Tourist.app/Default-Portrait@2x~ipad.png
-s426633906.278858
-e426633906.296357
-r1
-xCpResource
-xMenu4Tourist/Resources/splash/Default-Portrait@2x~ipad.png
-xbuild/emulator/Menu4Tourist.app/Default-Portrait@2x~ipad.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection65"Copy build/emulator/Menu4Tourist.app/Default-Portrait@2x~ipad.png138"[1mCpResource[0m Menu4Tourist/Resources/splash/Default-Portrait@2x~ipad.png build/emulator/Menu4Tourist.app/Default-Portrait@2x~ipad.png537547b2ea6db941^8cdc4bb2ea6db941^---0#0#1#-19%DVTDocumentLocation2@137"file:///Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/Default-Portrait@2x~ipad.png0034ec32ddffdf42^937"[1mCpResource[0m Menu4Tourist/Resources/splash/Default-Portrait@2x~ipad.png build/emulator/Menu4Tourist.app/Default-Portrait@2x~ipad.png    cd /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/apache-ant-1.9.3/bin:/System/Library/android-sdk-mac_x86:/Applications/sdk/platform-tools:/Applications/sdk/tools:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/splash/Default-Portrait@2x~ipad.png /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app36"00103E25-9176-4EB5-B72C-D37CDC6AC48E-
-b2A9D069C-057D-45C7-80F2-BCF281695A7D
-
-CCpResource Menu4Tourist/Resources/splash/Default-Portrait~ipad.png build/emulator/Menu4Tourist.app/Default-Portrait~ipad.png
-s426633906.296860
-e426633906.367091
-r1
-xCpResource
-xMenu4Tourist/Resources/splash/Default-Portrait~ipad.png
-xbuild/emulator/Menu4Tourist.app/Default-Portrait~ipad.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"Copy build/emulator/Menu4Tourist.app/Default-Portrait~ipad.png132"[1mCpResource[0m Menu4Tourist/Resources/splash/Default-Portrait~ipad.png build/emulator/Menu4Tourist.app/Default-Portrait~ipad.png01324cb2ea6db941^8a055eb2ea6db941^---0#0#1#-19%DVTDocumentLocation2@134"file:///Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/Default-Portrait~ipad.png0034ec32ddffdf42^928"[1mCpResource[0m Menu4Tourist/Resources/splash/Default-Portrait~ipad.png build/emulator/Menu4Tourist.app/Default-Portrait~ipad.png    cd /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/apache-ant-1.9.3/bin:/System/Library/android-sdk-mac_x86:/Applications/sdk/platform-tools:/Applications/sdk/tools:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/splash/Default-Portrait~ipad.png /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app36"FFFB31C5-103D-4670-82C0-54E7A957B7F1-
-b2A9D069C-057D-45C7-80F2-BCF281695A7D
-
-CCpResource Menu4Tourist/Resources/splash/Default@2x~iphone.png build/emulator/Menu4Tourist.app/Default@2x~iphone.png
-s426633906.338917
-e426633906.366569
-r1
-xCpResource
-xMenu4Tourist/Resources/splash/Default@2x~iphone.png
-xbuild/emulator/Menu4Tourist.app/Default@2x~iphone.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection58"Copy build/emulator/Menu4Tourist.app/Default@2x~iphone.png124"[1mCpResource[0m Menu4Tourist/Resources/splash/Default@2x~iphone.png build/emulator/Menu4Tourist.app/Default@2x~iphone.pnge4f756b2ea6db941^00e35db2ea6db941^---0#0#1#-19%DVTDocumentLocation2@130"file:///Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/Default@2x~iphone.png0034ec32ddffdf42^916"[1mCpResource[0m Menu4Tourist/Resources/splash/Default@2x~iphone.png build/emulator/Menu4Tourist.app/Default@2x~iphone.png    cd /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/apache-ant-1.9.3/bin:/System/Library/android-sdk-mac_x86:/Applications/sdk/platform-tools:/Applications/sdk/tools:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/splash/Default@2x~iphone.png /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app36"70332ED3-8838-4997-B420-8CAFCC565694-
-b2A9D069C-057D-45C7-80F2-BCF281695A7D
-
-CCpResource Menu4Tourist/Resources/splash/Default~iphone.png build/emulator/Menu4Tourist.app/Default~iphone.png
-s426633906.367051
-e426633906.389017
-r1
-xCpResource
-xMenu4Tourist/Resources/splash/Default~iphone.png
-xbuild/emulator/Menu4Tourist.app/Default~iphone.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection55"Copy build/emulator/Menu4Tourist.app/Default~iphone.png118"[1mCpResource[0m Menu4Tourist/Resources/splash/Default~iphone.png build/emulator/Menu4Tourist.app/Default~iphone.png98345eb2ea6db941^bb9763b2ea6db941^---0#0#1#-19%DVTDocumentLocation2@127"file:///Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/Default~iphone.png0034ec32ddffdf42^907"[1mCpResource[0m Menu4Tourist/Resources/splash/Default~iphone.png build/emulator/Menu4Tourist.app/Default~iphone.png    cd /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/apache-ant-1.9.3/bin:/System/Library/android-sdk-mac_x86:/Applications/sdk/platform-tools:/Applications/sdk/tools:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Resources/splash/Default~iphone.png /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app36"4EEFFAEB-6A1F-4FB7-9000-7BC50504295E-
-b2A9D069C-057D-45C7-80F2-BCF281695A7D
-
-CGenerateDSYMFile /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app.dSYM /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/Menu4Tourist
-s426633940.150725
-e426633940.315656
-r1
-xGenerateDSYMFile
-x/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app.dSYM
-x/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/Menu4Tourist
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection115"Generate /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app.dSYM114"[1mGenerateDSYMFile[0m [1mbuild/emulator/Menu4Tourist.app.dSYM[0m build/emulator/Menu4Tourist.app/Menu4Tourist08ae26d4ea6db941^52d150d4ea6db941^---0#0#1#-19%DVTDocumentLocation2@113"file:///Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app.dSYM0034ec32ddffdf42^895"[1mGenerateDSYMFile[0m [1mbuild/emulator/Menu4Tourist.app.dSYM[0m build/emulator/Menu4Tourist.app/Menu4Tourist    cd /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/apache-ant-1.9.3/bin:/System/Library/android-sdk-mac_x86:/Applications/sdk/platform-tools:/Applications/sdk/tools:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/Menu4Tourist -o /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app.dSYM36"5F3CB748-E836-4551-B405-58C35D7A3ABB-
-b2A9D069C-057D-45C7-80F2-BCF281695A7D
-
-CLd /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/Menu4Tourist normal i386
-s426633938.207002
-e426633940.149431
-r1
-xLd
-x/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/Menu4Tourist
-xnormal
-xi386
-d/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Objects-normal/i386/Menu4Tourist.LinkFileList
-d/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/libCordova.a
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/crt1.o
-d/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Objects-normal/i386/main.o
-d/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Objects-normal/i386/AppDelegate.o
-d/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Objects-normal/i386/MainViewController.o
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreMedia.framework/CoreMedia
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libSystem.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AssetsLibrary.framework/AssetsLibrary
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreLocation.framework/CoreLocation
-d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/arc/libarclite_iphonesimulator.a
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libobjc.dylib
-d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/lib/darwin/libclang_rt.ios.a
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AVFoundation.framework/libAVFAudio.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_override.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcache_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcommonCrypto_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcorecrypto_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcompiler_rt_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcopyfile_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libdispatch.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libdyld_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libmacho_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libnotify_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libremovefile_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_blocks.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_c.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_dnssd.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_info.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_m.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_network.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libunwind_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libxpc.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_configuration.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_asl.dylib
-d/usr/lib/libSystem.B.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/host/libdyld.dylib
-d/usr/lib/system/libcache.dylib
-d/usr/lib/system/libcommonCrypto.dylib
-d/usr/lib/system/libcompiler_rt.dylib
-d/usr/lib/system/libcopyfile.dylib
-d/usr/lib/system/libcorecrypto.dylib
-d/usr/lib/system/libkeymgr.dylib
-d/usr/lib/system/liblaunch.dylib
-d/usr/lib/system/libmacho.dylib
-d/usr/lib/system/libquarantine.dylib
-d/usr/lib/system/libremovefile.dylib
-d/usr/lib/system/libsystem_asl.dylib
-d/usr/lib/system/libsystem_blocks.dylib
-d/usr/lib/system/libsystem_c.dylib
-d/usr/lib/system/libsystem_configuration.dylib
-d/usr/lib/system/libsystem_dnssd.dylib
-d/usr/lib/system/libsystem_info.dylib
-d/usr/lib/system/libsystem_kernel.dylib
-d/usr/lib/system/libsystem_m.dylib
-d/usr/lib/system/libsystem_malloc.dylib
-d/usr/lib/system/libsystem_notify.dylib
-d/usr/lib/system/libsystem_platform.dylib
-d/usr/lib/system/libsystem_pthread.dylib
-d/usr/lib/system/libsystem_sandbox.dylib
-d/usr/lib/system/libunc.dylib
-d/usr/lib/system/libunwind.dylib
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection119"Link /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/Menu4Tourist67"[1mLd[0m build/emulator/Menu4Tourist.app/Menu4Tourist normal i386451235d2ea6db941^924126d4ea6db941^---0#0#1#--2076"[1mLd[0m build/emulator/Menu4Tourist.app/Menu4Tourist normal i386    cd /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios    export IPHONEOS_DEPLOYMENT_TARGET=5.0    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/apache-ant-1.9.3/bin:/System/Library/android-sdk-mac_x86:/Applications/sdk/platform-tools:/Applications/sdk/tools:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -L/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator -F/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator -filelist /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Objects-normal/i386/Menu4Tourist.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -weak_framework CoreFoundation -weak_framework UIKit -weak_framework AVFoundation -weak_framework CoreMedia -weak-lSystem -force_load /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/libCordova.a -ObjC -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=5.0 -framework AssetsLibrary /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/libCordova.a -framework CoreGraphics -framework MobileCoreServices -framework CoreLocation -Xlinker -dependency_info -Xlinker /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Objects-normal/i386/Menu4Tourist_dependency_info.dat -o /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/Menu4Tourist36"DC18392F-1334-4F90-839D-84852FB585E9-
-b2A9D069C-057D-45C7-80F2-BCF281695A7D
-
-CPhaseScriptExecution Copy\ www\ directory /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Script-304B58A110DAC018002A0835.sh
-s426633905.703372
-e426633906.256421
-r1
-xPhaseScriptExecution
-xCopy www directory
-x/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Script-304B58A110DAC018002A0835.sh
-o
-oreal	0m0.428s
-ouser	0m0.112s
-osys	0m0.179s
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"Run custom shell script 'Copy www directory'150"[1mPhaseScriptExecution[0m Copy\ www\ directory build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Script-304B58A110DAC018002A0835.sh6265b4b1ea6db941^22a541b2ea6db941^-42"real	0m0.428suser	0m0.112ssys	0m0.179s3(21%IDEActivityLogMessage2@14"real	0m0.428s-426633906#1#14#-0#-----2@14"user	0m0.112s-426633906#15#14#-0#-----2@13"sys	0m0.179s-426633906#29#13#-0#-----0#0#1#--414"[1mPhaseScriptExecution[0m Copy\ www\ directory build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Script-304B58A110DAC018002A0835.sh    cd /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios    /bin/sh -c /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Script-304B58A110DAC018002A0835.sh36"FCA84D29-60EF-4DA2-865B-8AA0F0437887-
-b2A9D069C-057D-45C7-80F2-BCF281695A7D
-
-CProcessInfoPlistFile /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/Info.plist /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Menu4Tourist-Info.plist
-s426633905.695270
-e426633905.702083
-r1
-xProcessInfoPlistFile
-x/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/Info.plist
-x/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Menu4Tourist-Info.plist
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection114"Process /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Menu4Tourist-Info.plist116"[1mProcessInfoPlistFile[0m build/emulator/Menu4Tourist.app/Info.plist [1mMenu4Tourist/Menu4Tourist-Info.plist[0m1328b2b1ea6db941^4dbcb3b1ea6db941^---0#0#1#-19%DVTDocumentLocation2@113"file:///Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Menu4Tourist-Info.plist0000000000000000^1008"[1mProcessInfoPlistFile[0m build/emulator/Menu4Tourist.app/Info.plist [1mMenu4Tourist/Menu4Tourist-Info.plist[0m    cd /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/apache-ant-1.9.3/bin:/System/Library/android-sdk-mac_x86:/Applications/sdk/platform-tools:/Applications/sdk/tools:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"    builtin-infoPlistUtility /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Menu4Tourist-Info.plist -genpkginfo /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app/Info.plist36"0D50955F-FA30-486E-BD95-A7A7675A2C91-
-b2A9D069C-057D-45C7-80F2-BCF281695A7D
-
-CProcessPCH /var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Menu4Tourist-Prefix-auugkumjxvyloscvdyrnasszzxms/Menu4Tourist-Prefix.pch.pch Menu4Tourist/Menu4Tourist-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s426633936.707434
-e426633937.691791
-r1
-xProcessPCH
-x/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Menu4Tourist-Prefix-auugkumjxvyloscvdyrnasszzxms/Menu4Tourist-Prefix.pch.pch
-xMenu4Tourist/Menu4Tourist-Prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Menu4Tourist-Prefix.pch
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection47"Precompile Menu4Tourist/Menu4Tourist-Prefix.pch318"[1mProcessPCH[0m /var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Menu4Tourist-Prefix-auugkumjxvyloscvdyrnasszzxms/Menu4Tourist-Prefix.pch.pch Menu4Tourist/Menu4Tourist-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler6953b5d0ea6db941^3f1bb1d1ea6db941^---0#0#1#-19%DVTDocumentLocation2@113"file:///Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Menu4Tourist-Prefix.pch0000000000000000^4295"[1mProcessPCH[0m /var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Menu4Tourist-Prefix-auugkumjxvyloscvdyrnasszzxms/Menu4Tourist-Prefix.pch.pch Menu4Tourist/Menu4Tourist-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/apache-ant-1.9.3/bin:/System/Library/android-sdk-mac_x86:/Applications/sdk/platform-tools:/Applications/sdk/tools:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=80 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Menu4Tourist-generated-files.hmap -I/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Menu4Tourist-own-target-headers.hmap -I/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Menu4Tourist-all-target-headers.hmap -iquote /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/Menu4Tourist-project-headers.hmap -I/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/include -I/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/usr/local/lib/include -I/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/UninstalledProducts/include -I/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator -I/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/DerivedSources/i386 -I/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/Menu4Tourist.build/Debug-iphonesimulator/Menu4Tourist.build/DerivedSources -F/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator --serialize-diagnostics /var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Menu4Tourist-Prefix-auugkumjxvyloscvdyrnasszzxms/Menu4Tourist-Prefix.pch.dia -MMD -MT dependencies -MF /var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Menu4Tourist-Prefix-auugkumjxvyloscvdyrnasszzxms/Menu4Tourist-Prefix.pch.d -c /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/Menu4Tourist/Menu4Tourist-Prefix.pch -o /var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Menu4Tourist-Prefix-auugkumjxvyloscvdyrnasszzxms/Menu4Tourist-Prefix.pch.pch36"016A5CE7-6197-4D64-BA14-3443176A488B-
-b2A9D069C-057D-45C7-80F2-BCF281695A7D
-
-CTouch /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app
-s426633940.317030
-e426633940.343096
-r1
-xTouch
-x/Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection107"Touch /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app45"[1mTouch[0m build/emulator/Menu4Tourist.app7a3851d4ea6db941^aed857d4ea6db941^---0#0#1#--625"[1mTouch[0m build/emulator/Menu4Tourist.app    cd /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/apache-ant-1.9.3/bin:/System/Library/android-sdk-mac_x86:/Applications/sdk/platform-tools:/Applications/sdk/tools:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"    /usr/bin/touch -c /Users/gu/workspace/menu4touristapp/app/menu4touristApp/platforms/ios/build/emulator/Menu4Tourist.app36"F4320390-E2BA-41A8-8847-E5DF2C78425A-
-b2A9D069C-057D-45C7-80F2-BCF281695A7D
-

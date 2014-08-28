@@ -13,6 +13,16 @@ menufortouristApp.factory('RestaurantsFactory', function(RestaurantService){
         });
     };
 
+    factory.getRestaurantCardapio = function(restaurant){
+        if (restaurant == null) {
+            return;
+        }
+        return RestaurantService.fetchCardapio(restaurant).then(function(restaurant) {
+            console.log(restaurant);
+            return restaurant;
+        });
+    };
+
 
     // Save object for the next page
     factory.saveSelectedRestaurant = function(selectedRestaurant) {

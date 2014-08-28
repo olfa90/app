@@ -1,9 +1,0 @@
-# you can skip this first one if it is not already excluded by prior patterns
-!menu4touristApp/
-
-menu4touristApp/*
-!menu4touristApp/www/
-
-menu4touristApp/merges/*
-
-menu4touristApp/platforms/*

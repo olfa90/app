@@ -1,0 +1,72 @@
+    <header class="bar bar-nav">
+      <button class="btn btn-link btn-nav pull-left" ng-click="back()">
+        <span class="icon icon-left-nav"></span>
+      </button>
+      <h1 class="title">Restaurant</h1>
+    </header>
+
+    <!-- standard bar fixed below top bar -->
+    <div class="bar bar-standard bar-header-secondary">
+      <h2 class="subtitle">{{restaurant.name}}</h2>
+    </div>
+
+    <section id="informations" class="content">
+      <section id="description">
+        <img id="place" src="img/gulagulaphoto.gif" alt="Place photo">
+        <p class="details">{{restaurant.description}}</p>
+      </section>
+      <section id="location">
+        <a class="section-title">
+          <h2>Location</h2>
+          <p>7.5 km from your location</p>
+        </a>
+        <img id="map" src="img/gulagulamaps.gif" alt="Map location">
+        <p class="details">{{restaurant.getFullAddress()}}</p>
+        <p class="details">{{restaurant.phone}} - {{restaurant.homepage}}</p>
+        <p class="details">{{restaurant.openHours}}</p>
+      </section>
+      <section id="menu">
+        <a class="section-title">
+          <h2>Menu</h2>
+        </a>
+        <ul class="table-view">
+          <li ng-repeat="secao in restaurant.secoes">
+            <ul class="table-view">
+              <li class="table-view-divider">{{secao.titulo}}</li>
+              <li class="table-view-cell media" ng-repeat="item in secao.itens">
+                <a>
+                  <!-- images size from http://placehold.it/60x60 -->
+                  <img class="media-object pull-left" ng-src="{{item.urlImage}}" width="75" height="60">
+                  <div class="media-body">
+                    {{item.titulo}}
+                    <p>{{item.descricao}}</p>
+                    <p class="price" ng-repeat="preco in item.precos">{{preco.valor|currency:"R$ "}} {{formatPriceDescription(preco.descricao)}}</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </section>
+
+    <nav class="bar bar-tab">
+      <a class="tab-item active" ng-click="back()">
+        <span class="icon icon-home"></span>
+        <span class="tab-label">Home</span>
+      </a>
+      <a class="tab-item" href="#">
+        <span class="icon icon-star-filled"></span>
+        <span class="tab-label">Favoritos</span>
+      </a>
+      <a class="tab-item" href="#">
+        <span class="icon icon-list"></span>
+        <span class="tab-label">Utilidades</span>
+      </a>
+      <a class="tab-item" href="#">
+        <span class="icon icon-person"></span>
+        <span class="tab-label">Eu</span>
+      </a>
+    </nav>
+    <!-- main container end -->
+     

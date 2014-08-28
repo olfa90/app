@@ -21,6 +21,7 @@ function Restaurant() {
 
 	var menuUrl = null;
 
+	var secoes = [];
 
 	this.getFullAddress = function() {
 		return address.street +', '+ address.number +', '+ address.neighbourhood +', '+ address_city +', '+ address.state

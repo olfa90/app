@@ -30,82 +30,21 @@
           <h2>Menu</h2>
         </a>
         <ul class="table-view">
-          <li class="table-view-divider">Entrees / Entradas</li>
-          <li class="table-view-cell media">
-            <a>
-              <!-- images size from http://placehold.it/60x60 -->
-              <img class="media-object pull-left" src="img/Mousse-salgada.jpg" width="75" height="60">
-              <div class="media-body">
-                Salt mousse
-                <p>Leek and gorgonzola (accompanying basket of toast)</p>
-                <p class="price">R$ 16,00</p>
-              </br>
-                Mousse salgada
-                <p>Alho-poró e gorgonzola (acompanha cesta de torradas)</p>
-              </div>
-            </a>
-          </li>
-          <li class="table-view-divider">Salads / Saladas</li>
-          <li class="table-view-cell media">
-            <a>
-              <img class="media-object pull-left" src="img/Caesar-frango.jpg" width="75" height="60">
-              <div class="media-body">
-                Caesar salad with chicken
-                <p>Silvers of grilled chicken, romaine, croutons and parmesan with traditional sauce</p>
-                <p class="price">R$ 35,00</p>
-              </br>
-                Caesar com frango
-                <p>Fatias de frango grelhado, alface, croutons e parmesão com molho tradicional</p>
-              </div>
-            </a>
-          </li>
-          <li class="table-view-divider">Pastas / Massas</li>
-          <li class="table-view-cell media">
-            <a>
-              <img class="media-object pull-left" src="img/Tomate-manjericao.jpg" width="75" height="60">
-              <div class="media-body">
-                Tomato and basil
-                <p class="price">R$ 25,00</p>
-              </br>
-                Tomate e manjericão
-              </div>
-            </a>
-          </li>
-          <li class="table-view-divider">Grill / Grelhados</li>
-          <li class="table-view-cell media">
-            <a>
-              <img class="media-object pull-left" src="img/Salmon.jpg" width="75" height="60">
-              <div class="media-body">
-                Salmon
-                <p class="price">R$ 30,00</p>
-              </br>
-                Salmão
-              </div>
-            </a>
-          </li>
-          <li class="table-view-divider">Desserts / Sobremesas</li>
-          <li class="table-view-cell media">
-            <a>
-              <img class="media-object pull-left" src="img/Rocambole-chocolate.jpg" width="75" height="60">
-              <div class="media-body">
-                Chocolate rolled cake with dulce de leche
-                <p class="price">R$ 10,00</p>
-              </br>
-                Rocambole de chocolate com doce de leite
-              </div>
-            </a>
-          </li>
-          <li class="table-view-divider">Beverages / Bebidas</li>
-          <li class="table-view-cell media">
-            <a>
-              <img class="media-object pull-left" src="img/Bacardi-Mojito.jpg" width="75" height="60">
-              <div class="media-body">
-                Bacardi Mojito
-                <p class="price">R$ 13,00</p>
-              </br>
-                Bacardi Mojito
-              </div>
-            </a>
+          <li ng-repeat="secao in restaurant.secoes">
+            <ul class="table-view">
+              <li class="table-view-divider">{{secao.titulo}}</li>
+              <li class="table-view-cell media" ng-repeat="item in secao.itens">
+                <a>
+                  <!-- images size from http://placehold.it/60x60 -->
+                  <img class="media-object pull-left" ng-src="{{item.urlImage}}" width="75" height="60">
+                  <div class="media-body">
+                    {{item.titulo}}
+                    <p>{{item.descricao}}</p>
+                    <p class="price" ng-repeat="preco in item.precos">{{preco.valor|currency:"R$ "}}</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
           </li>
         </ul>
       </section>

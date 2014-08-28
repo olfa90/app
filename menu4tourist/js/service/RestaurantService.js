@@ -27,6 +27,27 @@ menufortouristApp.service( 'RestaurantService', function ( $http, $q ) {
       }, function getRestaurantsError() { deferred.reject(); } );
 
       return deferred.promise;
+    },
+
+    fetchCardapio: function getSecoes( restaurant ) {
+      // We create our own promise to return
+      var deferred = $q.defer();
+
+      $http.get(restaurant.menuUrl).then( function ( object ) {
+        collection = object.data;
+        
+        var secoes = [];
+        collection.forEach(function (secao) {
+          secoes.push(secao);
+        });
+
+        restaurant.secoes = secoes;
+        // resolve the promise
+        deferred.resolve( restaurant );
+
+      }, function getRestaurantsError() { deferred.reject(); } );
+
+      return deferred.promise;
     }
   };
 });
