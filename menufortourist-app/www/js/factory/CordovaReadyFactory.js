@@ -8,7 +8,7 @@ menufortouristApp.factory('CordovaReadyFactory', function() {
     };
 
     document.addEventListener('deviceready', function () {
-      console.log('Entrou no deviceready');
+      // console.log('Entrou no deviceready');
       queue.forEach(function (args) {
         fn.apply(this, args);
       });

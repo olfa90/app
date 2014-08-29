@@ -105,6 +105,7 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/lib/ratchet.min.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/model/Address.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/model/BusRoute.js \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/model/Item.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/model/Price.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/model/Restaurant.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/service/BusService.js \

@@ -1,3 +1,22 @@
+    <!-- MODAL -->
+    <!-- <a href="#myModalexample" class="btn">Open modal</a> -->
+    <div id="order_list_modal" class="modal">
+      <header class="bar bar-nav">
+        <a class="icon icon-close pull-right" href="#order_list_modal"></a>
+        <h1 class="title">Show your order list to the waiter</h1>
+      </header>
+
+      <div class="content">
+        <p class="content-padded">
+          <h1 class="content-padded">{{selectedItem.identifier}} {{selectedItem.titulo}}</h1>
+          <br/>
+          <br/>
+          <h3 class="content-padded">{{selectedItem.descricao}}</h3>
+        </p>
+      </div>
+    </div>
+    <!-- // -->
+
     <header class="bar bar-nav">
       <button class="btn btn-link btn-nav pull-left" ng-click="back()">
         <span class="icon icon-left-nav"></span>
@@ -18,10 +37,10 @@
       <section id="location">
         <a class="section-title">
           <h2>Location</h2>
-          <p>7.5 km from your location</p>
+          <p>{{restaurant.distance}} km from your location</p>
         </a>
         <img id="map" src="img/gulagulamaps.gif" alt="Map location">
-        <p class="details">{{restaurant.getFullAddress()}}</p>
+        <p class="details">{{getFullAddress(restaurant.address)}}</p>
         <p class="details">{{restaurant.phone}} - {{restaurant.homepage}}</p>
         <p class="details">{{restaurant.openHours}}</p>
       </section>
@@ -34,7 +53,7 @@
             <ul class="table-view">
               <li class="table-view-divider">{{secao.titulo}}</li>
               <li class="table-view-cell media" ng-repeat="item in secao.itens">
-                <a>
+                <a ng-click="setSelectedItem(item)">
                   <!-- images size from http://placehold.it/60x60 -->
                   <img class="media-object pull-left" ng-src="{{item.urlImage}}" width="75" height="60">
                   <div class="media-body">

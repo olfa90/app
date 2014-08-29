@@ -5,7 +5,7 @@
     <feature name="App">
         <param name="android-package" value="org.apache.cordova.App" />
     </feature>
-    <name>MenuForTOURIST</name>
+    <name>Menu For TOURIST</name>
     <description>
         An incredible app for turists to find menu in theirs home languages.
     </description>
