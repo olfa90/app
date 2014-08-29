@@ -62,7 +62,6 @@ menufortouristApp.controller('DetailsController', function($scope, $location, Re
         }
         var itemTranslated = {identifier: item.identifier, titulo:"", descricao:""};
 
-        console.log('titulo traducoes .length: '+ item.tituloTraducoes.length);
         var tTraducoes = item.tituloTraducoes;
         for (var i = 0; i < tTraducoes.length; i++) {
             if (tTraducoes[i].idioma == locale) {
@@ -72,7 +71,6 @@ menufortouristApp.controller('DetailsController', function($scope, $location, Re
         }
 
         if (item.descricao != null) {
-            console.log('descricao traducoes .length: '+ item.descricaoTraducoes.length);
             var dTraducoes = item.descricaoTraducoes;
             for (var i = 0; i < dTraducoes.length; i++) {
                 if (dTraducoes[i].idioma == locale) {
