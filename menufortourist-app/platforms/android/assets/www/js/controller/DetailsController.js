@@ -56,13 +56,34 @@ menufortouristApp.controller('DetailsController', function($scope, $location, Re
         }
     }
 
+
+    // Acordion Collapse solution
+      //$scope.groups = [];
+      
+      /*
+       * if given group is the selected group, deselect it
+       * else, select the given group
+       */
+      $scope.toggleGroup = function(group) {
+        if ($scope.isGroupShown(group)) {
+          $scope.shownGroup = null;
+        } else {
+          $scope.shownGroup = group;
+        }
+      };
+      $scope.isGroupShown = function(group) {
+        return $scope.shownGroup === group;
+      };
+    //
+
+
+    // Private util methods
     function getItemTranslated(item, locale) {
         if (item == null || locale == null) {
             return;
         }
         var itemTranslated = {identifier: item.identifier, titulo:"", descricao:""};
 
-        console.log('titulo traducoes .length: '+ item.tituloTraducoes.length);
         var tTraducoes = item.tituloTraducoes;
         for (var i = 0; i < tTraducoes.length; i++) {
             if (tTraducoes[i].idioma == locale) {
@@ -72,7 +93,6 @@ menufortouristApp.controller('DetailsController', function($scope, $location, Re
         }
 
         if (item.descricao != null) {
-            console.log('descricao traducoes .length: '+ item.descricaoTraducoes.length);
             var dTraducoes = item.descricaoTraducoes;
             for (var i = 0; i < dTraducoes.length; i++) {
                 if (dTraducoes[i].idioma == locale) {

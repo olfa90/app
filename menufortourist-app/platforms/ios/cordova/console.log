@@ -1,0 +1,34 @@
+2014-08-29 16:19:54.156 Menu For TOURIST[19452:70b] Multi-tasking -> Device: YES, App: YES
+2014-08-29 16:19:54.894 Menu For TOURIST[19452:70b] Unlimited access to network resources
+2014-08-29 16:19:54.952 Menu For TOURIST[19452:70b] 
+
+Started backup to iCloud! Please be careful.
+Your application might rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines"
+You could find it at the following address https://developer.apple.com/icloud/documentation/data-storage/ .
+
+2014-08-29 16:20:05.684 Menu For TOURIST[19452:70b] Resetting plugins due to page load.
+2014-08-29 16:23:00.933 Menu For TOURIST[19452:70b] UIAlertSheetTextField -webView called. This method is no longer supported with the new text architecture
+2014-08-29 16:23:03.981 Menu For TOURIST[19452:4103] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptTextInputPanelWithPrompt:defaultText:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2014-08-29 16:26:09.316 Menu For TOURIST[19898:70b] Multi-tasking -> Device: YES, App: YES
+2014-08-29 16:26:09.828 Menu For TOURIST[19898:70b] Unlimited access to network resources
+2014-08-29 16:26:09.944 Menu For TOURIST[19898:70b] 
+
+Started backup to iCloud! Please be careful.
+Your application might rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines"
+You could find it at the following address https://developer.apple.com/icloud/documentation/data-storage/ .
+
+2014-08-29 16:26:13.357 Menu For TOURIST[19898:70b] Resetting plugins due to page load.
+2014-08-29 16:32:57.486 Menu For TOURIST[19898:4003] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptTextInputPanelWithPrompt:defaultText:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2014-08-29 16:35:43.952 Menu For TOURIST[20374:70b] Multi-tasking -> Device: YES, App: YES
+2014-08-29 16:35:45.173 Menu For TOURIST[20374:70b] Unlimited access to network resources
+2014-08-29 16:35:45.275 Menu For TOURIST[20374:70b] 
+
+Started backup to iCloud! Please be careful.
+Your application might rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines"
+You could find it at the following address https://developer.apple.com/icloud/documentation/data-storage/ .
+
+2014-08-29 16:35:48.038 Menu For TOURIST[20374:70b] Resetting plugins due to page load.
+2014-08-29 16:37:07.134 Menu For TOURIST[20374:3f03] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptTextInputPanelWithPrompt:defaultText:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode

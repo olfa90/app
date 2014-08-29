@@ -31,7 +31,7 @@
 
     <section id="informations" class="content">
       <section id="description">
-        <img id="place" src="img/gulagulaphoto.gif" alt="Place photo">
+        <img id="place" src="" alt="Place photo">
         <p class="details">{{restaurant.description}}</p>
       </section>
       <section id="location">
@@ -48,13 +48,38 @@
         <a class="section-title">
           <h2>Menu</h2>
         </a>
+
         <ul class="table-view">
+          <div ng-repeat="secao in restaurant.secoes">
+            <li class="table-view-divider"
+                      ng-click="toggleGroup(secao)"
+                      ng-class="{active: isGroupShown(secao)}">
+                <!-- <i class="icon" ng-class="isGroupShown(secao) ? 'ion-minus' : 'ion-plus'"></i> -->
+              &nbsp;
+              {{secao.titulo}}
+            </li>
+            <li class="item-accordion table-view-cell media"
+                      ng-repeat="item in secao.itens"
+                      ng-show="isGroupShown(secao)">
+              <a ng-click="setSelectedItem(item)">
+                <!-- images size from http://placehold.it/60x60 -->
+                <img class="media-object pull-left" ng-src="{{item.urlImage}}" width="75" height="60">
+                <div class="media-body">
+                  {{item.titulo}}
+                  <p>{{item.descricao}}</p>
+                  <p class="price" ng-repeat="preco in item.precos">{{preco.valor|currency:"R$ "}} {{formatPriceDescription(preco.descricao)}}</p>
+                </div>
+              </a>
+            </li>
+          </div>
+        </ul>
+
+        <!-- <ul class="table-view">
           <li ng-repeat="secao in restaurant.secoes">
             <ul class="table-view">
               <li class="table-view-divider">{{secao.titulo}}</li>
               <li class="table-view-cell media" ng-repeat="item in secao.itens">
                 <a ng-click="setSelectedItem(item)">
-                  <!-- images size from http://placehold.it/60x60 -->
                   <img class="media-object pull-left" ng-src="{{item.urlImage}}" width="75" height="60">
                   <div class="media-body">
                     {{item.titulo}}
@@ -65,7 +90,8 @@
               </li>
             </ul>
           </li>
-        </ul>
+        </ul> -->
+        <!-- images size from http://placehold.it/60x60 -->
       </section>
     </section>
 
