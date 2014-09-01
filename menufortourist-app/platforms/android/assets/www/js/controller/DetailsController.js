@@ -58,7 +58,6 @@ menufortouristApp.controller('DetailsController', function($scope, $location, Re
 
 
     // Acordion Collapse solution
-      //$scope.groups = [];
       
       /*
        * if given group is the selected group, deselect it

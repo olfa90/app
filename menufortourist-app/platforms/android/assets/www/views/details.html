@@ -12,6 +12,8 @@
           <br/>
           <br/>
           <h3 class="content-padded">{{selectedItem.descricao}}</h3>
+
+          <h3 class="content-padded" ng-show="selectedItem.titulo == ''">No translation for this item</h3>
         </p>
       </div>
     </div>
@@ -50,11 +52,11 @@
         </a>
 
         <ul class="table-view">
-          <div ng-repeat="secao in restaurant.secoes">
-            <li class="table-view-divider"
+          <div ng-repeat="secao in restaurant.secoes" ng-include src="'views/partials/_section.html'">
+            <!-- <li class="table-view-divider"
                       ng-click="toggleGroup(secao)"
                       ng-class="{active: isGroupShown(secao)}">
-                <!-- <i class="icon" ng-class="isGroupShown(secao) ? 'ion-minus' : 'ion-plus'"></i> -->
+                <i class="icon" ng-class="isGroupShown(secao) ? 'icon-down-nav' : 'icon-up-nav'"></i>
               &nbsp;
               {{secao.titulo}}
             </li>
@@ -62,7 +64,6 @@
                       ng-repeat="item in secao.itens"
                       ng-show="isGroupShown(secao)">
               <a ng-click="setSelectedItem(item)">
-                <!-- images size from http://placehold.it/60x60 -->
                 <img class="media-object pull-left" ng-src="{{item.urlImage}}" width="75" height="60">
                 <div class="media-body">
                   {{item.titulo}}
@@ -70,7 +71,8 @@
                   <p class="price" ng-repeat="preco in item.precos">{{preco.valor|currency:"R$ "}} {{formatPriceDescription(preco.descricao)}}</p>
                 </div>
               </a>
-            </li>
+            </li> -->
+
           </div>
         </ul>
 

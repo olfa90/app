@@ -152,6 +152,8 @@ img#map {
 #menu .table-view-divider {
   background-color: rgb(219,54,60);
   color: rgb(255,252,244);
+
+  line-height: 48px;
 }
 
 /*#menu .table-view-divider:first-child {

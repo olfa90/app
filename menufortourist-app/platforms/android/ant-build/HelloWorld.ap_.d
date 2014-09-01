@@ -184,4 +184,6 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/views/main.html \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/views/main.html.old \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/views/opening.html \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/views/partials \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/views/partials/_section.html \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/ant-build/AndroidManifest.xml \
