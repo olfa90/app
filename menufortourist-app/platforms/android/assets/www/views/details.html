@@ -23,7 +23,7 @@
       <button class="btn btn-link btn-nav pull-left" ng-click="back()">
         <span class="icon icon-left-nav"></span>
       </button>
-      <h1 class="title">Restaurant</h1>
+      <h1 class="title">Restaurante</h1>
     </header>
 
     <!-- standard bar fixed below top bar -->
@@ -32,8 +32,8 @@
     </div>
 
     <section id="informations" class="content">
-      <section id="description">
-        <img id="place" src="" alt="Place photo">
+      <!-- <section id="description">
+        <img id="place" src="">
         <p class="details">{{restaurant.description}}</p>
       </section>
       <section id="location">
@@ -41,18 +41,48 @@
           <h2>Location</h2>
           <p>{{restaurant.distance}} km from your location</p>
         </a>
-        <img id="map" src="img/gulagulamaps.gif" alt="Map location">
+        <img id="map" src="">
         <p class="details">{{getFullAddress(restaurant.address)}}</p>
         <p class="details">{{restaurant.phone}} - {{restaurant.homepage}}</p>
         <p class="details">{{restaurant.openHours}}</p>
-      </section>
+      </section> -->
       <section id="menu">
         <a class="section-title">
           <h2>Menu</h2>
         </a>
 
         <ul class="table-view">
-          <div ng-repeat="secao in restaurant.secoes" ng-include src="'views/partials/_section.html'">
+          <div ng-repeat="secao in restaurant.secoes">
+            <li class="table-view-divider"
+                      ng-click="toggleGroup(secao)"
+                      ng-class="{active: isGroupShown(secao)}">
+              <span class="icon" ng-class="{'icon-down-nav': isGroupShown(secao), 'icon-up-nav': !isGroupShown(secao)}"></span>
+              &nbsp;
+              {{secao.titulo}}
+            </li>
+            <li class="item-accordion table-view-cell"
+                      ng-repeat="item in secao.itens"
+                      ng-show="isGroupShown(secao)">
+              <a ng-click="setSelectedItem(item)">
+                <!-- images size from http://placehold.it/60x60 -->
+                <!-- <img class="media-object pull-left" ng-src="{{item.urlImage}}" width="75" height="60"> -->
+                <div class="media-body">
+                  {{item.titulo}}
+                  <p>{{item.descricao}}</p>
+                  <p class="price" ng-repeat="preco in item.precos">{{preco.valor|currency:"R$ "}} {{formatPriceDescription(preco.descricao)}}</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="item-accordion table-view-cell" ng-show="isGroupShown(secao) && secao.observacao != null"> 
+              <!-- ng-show="secao.observacao != null"  -->
+              <span class="icon icon-info"></span>
+              &nbsp;
+              {{secao.observacao}}
+            </li>
+
+            <div ng-repeat="secao in secao.subsecoes" ng-include src="'views/partials/_subsection.html'"></div>
+
             <!-- <li class="table-view-divider"
                       ng-click="toggleGroup(secao)"
                       ng-class="{active: isGroupShown(secao)}">
@@ -97,7 +127,7 @@
       </section>
     </section>
 
-    <nav class="bar bar-tab">
+    <!-- <nav class="bar bar-tab">
       <a class="tab-item active" ng-click="back()">
         <span class="icon icon-home"></span>
         <span class="tab-label">Home</span>
@@ -114,6 +144,6 @@
         <span class="icon icon-person"></span>
         <span class="tab-label">Eu</span>
       </a>
-    </nav>
+    </nav> -->
     <!-- main container end -->
      

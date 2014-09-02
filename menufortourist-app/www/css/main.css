@@ -80,8 +80,11 @@ nav.bar-header-secondary .icon-google-maps {
 }
 
 #list_places {
-  padding-top: 73px;
-  padding-bottom: 50px;
+  /* When not using second nav bar: 29px */
+  padding-top: 29px;
+  /*padding-top: 73px;*/
+  /* Needed when using footer nav bar bar-tab */
+  /*padding-bottom: 50px;*/
 }
 
 .table-view .table-view-cell {
@@ -98,7 +101,8 @@ nav.bar-header-secondary .icon-google-maps {
 }
 
 #informations {
-  padding-bottom: 50px;
+  /* Needed when using footer nav bar bar-tab */
+  /*padding-bottom: 50px;*/
 }
 
 #informations > section > a {
@@ -150,6 +154,7 @@ img#map {
 }*/
 
 #menu .table-view-divider {
+  text-transform: uppercase;
   background-color: rgb(219,54,60);
   color: rgb(255,252,244);
 

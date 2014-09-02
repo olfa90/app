@@ -81,7 +81,8 @@ nav.bar-header-secondary .icon-google-maps {
 
 #list_places {
   padding-top: 73px;
-  padding-bottom: 50px;
+  /* Needed when using footer nav bar bar-tab */
+  /*padding-bottom: 50px;*/
 }
 
 .table-view .table-view-cell {
@@ -98,7 +99,8 @@ nav.bar-header-secondary .icon-google-maps {
 }
 
 #informations {
-  padding-bottom: 50px;
+  /* Needed when using footer nav bar bar-tab */
+  /*padding-bottom: 50px;*/
 }
 
 #informations > section > a {
@@ -150,14 +152,34 @@ img#map {
 }*/
 
 #menu .table-view-divider {
+  text-transform: uppercase;
   background-color: rgb(219,54,60);
   color: rgb(255,252,244);
+
+  line-height: 48px;
 }
 
 /*#menu .table-view-divider:first-child {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }*/
+
+/*
+ * http://docs.angularjs.org/api/ng/directive/ngShow#usage_animations
+ */
+.item-accordion {
+  /*line-height: 38px;*/
+  /*padding-top: 0;*/
+  /*padding-bottom: 0;*/
+  transition: 0.09s all linear;
+}
+.item-accordion.ng-hide {
+  line-height: 0px;
+}
+.item-accordion.ng-hide-add,
+.item-accordion.ng-hide-remove {
+  display: block !important;
+}
 
 p.price {
   color: #000;

@@ -1,13 +1,13 @@
 menufortouristApp.service( 'RestaurantService', function ( $http, $q ) {
+  var url = 'http://www.menufortourist.com';
+// var url = 'http://192.168.0.9:3000';
   return {
     get: function getRestaurant( id ) {
       // We create our own promise to return
       var deferred = $q.defer();
 
-      var url = 'http://192.168.0.9:3000';
-
       // /restaurantes/1.json
-      $http.get('/restaurantes/'+id+'.json').then( function ( restaurant ) {
+      $http.get(url+'/restaurantes/'+id+'.json').then( function ( restaurant ) {
         deferred.resolve( restaurant );
       }, function getRestaurantError() { deferred.reject(); } );
 
@@ -17,8 +17,6 @@ menufortouristApp.service( 'RestaurantService', function ( $http, $q ) {
     find: function findRestaurants() {
       // We create our own promise to return
       var deferred = $q.defer();
-
-      var url = 'http://192.168.0.9:3000';
 
       $http.get(url+'/restaurantes.json').then( function ( restaurants ) {
         // resolve the promise
@@ -32,8 +30,6 @@ menufortouristApp.service( 'RestaurantService', function ( $http, $q ) {
     findNear: function findNearRestaurants(lat, lng) {
       // We create our own promise to return
       var deferred = $q.defer();
-
-      var url = 'http://192.168.0.9:3000';
 
       $http.get(url+'/restaurantes/around.json', {
         params: {lat: lat, lng: lng}

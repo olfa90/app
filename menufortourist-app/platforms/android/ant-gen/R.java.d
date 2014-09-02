@@ -12,6 +12,8 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/res/drawable-port-mdpi/screen.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/res/drawable-port-xhdpi/screen.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/res/drawable-xhdpi/icon.png \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/res/drawable-xxhdpi/icon.png \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/res/drawable-xxxhdpi/icon.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/res/values/strings.xml \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/res/xml/config.xml \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/ant-build/res/drawable/icon.png \
@@ -27,4 +29,6 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/ant-build/res/drawable-port-mdpi/screen.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/ant-build/res/drawable-port-xhdpi/screen.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/ant-build/res/drawable-xhdpi/icon.png \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/ant-build/res/drawable-xxhdpi/icon.png \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/ant-build/res/drawable-xxxhdpi/icon.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/ant-build/AndroidManifest.xml \
