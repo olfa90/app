@@ -1,0 +1,35 @@
+{
+  "name": "angular-google-staticmaps",
+  "description": "An AngularJS directive for Google Static Maps V2.",
+  "version": "0.2.0",
+  "main": "./angular-google-staticmaps.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "src",
+    "*.min.js",
+    "*.conf.js",
+    "*.html",
+    "Gruntfile.js",
+    "package.json"
+  ],
+  "dependencies": {
+    "angular": "~1.2.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.2.0"
+  },
+  "homepage": "https://github.com/passy/angular-google-staticmaps",
+  "_release": "0.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.2.0",
+    "commit": "bd68dadbb974a9f9194347c95c7be1c5b5f05738"
+  },
+  "_source": "git://github.com/passy/angular-google-staticmaps.git",
+  "_target": "~0.2.0",
+  "_originalSource": "angular-google-staticmaps",
+  "_direct": true
+}
