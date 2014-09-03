@@ -40,8 +40,8 @@
       -->
       <section id="location">
         <a class="section-title">
-          <h2>Location</h2>
-          <p>{{restaurant.distance}} km from your location</p>
+          <h2>Localização</h2>
+          <p>{{restaurant.distance}} km da sua localização</p> <!-- from your location -->
         </a>
         <img id="map" ng-src="http://maps.googleapis.com/maps/api/staticmap?center={{restaurant.address.lat}},{{restaurant.address.lng}}&zoom=15&size=300x150&markers=color:red%7Clabel:A%7C{{restaurant.address.lat}},{{restaurant.address.lng}}&sensor=true&key=AIzaSyBLD64U8OngmvqZtT-I-T8GWXkpX31sfTQ">
         <p class="details">{{getFullAddress(restaurant.address)}}</p>
