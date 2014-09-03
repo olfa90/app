@@ -53,7 +53,7 @@ menufortouristApp.service( 'RestaurantService', function ( $http, $q ) {
       // We create our own promise to return
       var deferred = $q.defer();
 
-      url = 'http://192.168.0.7:3000'
+      // url = 'http://192.168.0.7:3000'
 
       $http.get(url+'/restaurantes/around.json', {
         params: {lat: lat, lng: lng}
