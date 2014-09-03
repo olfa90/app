@@ -2,21 +2,25 @@
 menufortouristApp.controller('MainController', function($scope, $location, RestaurantsFactory, GeolocationFactory) {
 
 	//$scope.locationDone = false;
-	$scope.restaurants = RestaurantsFactory.getSearchResult();
 	
     init();
 
     function init(){
-        // $scope.restaurants = RestaurantsFactory.findRestaurants();
-        //$scope.restaurants = RestaurantsFactory.findNearRestaurants(-22.9748244,-43.1934073);
+        // Pega os restaurantes carregados na consulta anterior.
+        $scope.restaurants = RestaurantsFactory.getSearchResult();
+
         if ($scope.restaurants == null || $scope.restaurants.length < 1) {
+            // Show spinner dialog
+            window.plugins.spinnerDialog.show();
         	GeolocationFactory.getCurrentPosition(function(position) {
+                // Lat e Lng para teste: -22.9748244,-43.1934073
         		$scope.restaurants = RestaurantsFactory.findNearRestaurants(position.coords.latitude, position.coords.longitude);
-				//$scope.locationDone = true;
         	}, function onError(error) {
 		    	console.log('onError');
 		        alert('code: '    + error.code    + '\n' +
 		              'message: ' + error.message + '\n');
+                // Hide spinner dialog
+                window.plugins.spinnerDialog.hide();
 		    });
         }
 	}

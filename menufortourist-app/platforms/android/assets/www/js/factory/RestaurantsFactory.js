@@ -17,17 +17,26 @@ menufortouristApp.factory('RestaurantsFactory', function(RestaurantService){
             console.log(collection);
             restaurants = collection;
 
+            // Hide spinner dialog
+            window.plugins.spinnerDialog.hide();
+
             return restaurants;
         });
     };
 
     factory.getRestaurantCardapio = function(restaurantParam){
+        // Show spinner dialog
+        window.plugins.spinnerDialog.show();
         if (restaurantParam == null) {
+            // Hide spinner dialog
+            window.plugins.spinnerDialog.hide();
             return;
         }
         return RestaurantService.fetchCardapio(restaurantParam).then(function(object) {
             console.log(object);
             restaurant = object;
+            // Hide spinner dialog
+            window.plugins.spinnerDialog.hide();
             return restaurant;
         });
     };

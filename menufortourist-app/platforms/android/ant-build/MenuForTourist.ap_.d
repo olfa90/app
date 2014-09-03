@@ -164,6 +164,9 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/model/Restaurant.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/service/BusService.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/service/RestaurantService.js \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/hu.dpal.phonegap.plugins.SpinnerDialog \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/hu.dpal.phonegap.plugins.SpinnerDialog/www \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/hu.dpal.phonegap.plugins.SpinnerDialog/www/spinner.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/screen \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/android \

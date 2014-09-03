@@ -2,7 +2,7 @@
 <widget id="com.menufortourist" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Menu For TOURIST</name>
     <description>
-        An incredible app for turists to find menu in theirs home languages.
+        An incredible app for turists to find restaurant's menu in theirs home languages.
     </description>
     <author email="mazzoni.developer@gmail.com" href="http://menufortourist.com">
         Gustavo Mazzoni Maia Lopes
@@ -43,19 +43,20 @@
     <gap:plugin name="org.apache.cordova.vibration" />
     <!-- Plugin to to hide the statusbar and overlay on iOS -->
     <gap:plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" version="1.2.0" />
+    <gap:plugin name="hu.dpal.phonegap.plugins.spinnerdialog" version="0.2.1" />
     <!-- <icon src="www/icon.png" /> -->
-    <icon src="www/icon.png" />
+    <icon src="icon.png" />
     <!-- <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/icon/android/icon-36-ldpi.png" /> -->
-    <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/icon/android/logo-36.png" />
-    <icon gap:platform="android" gap:qualifier="mdpi" src="www/res/icon/android/logo-48.png" />
-    <icon gap:platform="android" gap:qualifier="hdpi" src="www/res/icon/android/logo-72.png" />
-    <icon gap:platform="android" gap:qualifier="xhdpi" src="www/res/icon/android/logo-96.png" />
+    <icon gap:platform="android" gap:qualifier="ldpi" src="res/icon/android/logo-36.png" />
+    <icon gap:platform="android" gap:qualifier="mdpi" src="res/icon/android/logo-48.png" />
+    <icon gap:platform="android" gap:qualifier="hdpi" src="res/icon/android/logo-72.png" />
+    <icon gap:platform="android" gap:qualifier="xhdpi" src="res/icon/android/logo-96.png" />
     <!-- <icon gap:platform="blackberry" src="res/icon/blackberry/icon-80.png" />
     <icon gap:platform="blackberry" gap:state="hover" src="res/icon/blackberry/icon-80.png" /> -->
-    <icon gap:platform="ios" height="57" src="www/res/icon/ios/logo-57.png" width="57" />
-    <icon gap:platform="ios" height="72" src="www/res/icon/ios/logo-72.png" width="72" />
-    <icon gap:platform="ios" height="114" src="www/res/icon/ios/logo-114.png" width="114" />
-    <icon gap:platform="ios" height="144" src="www/res/icon/ios/logo-144.png" width="144" />
+    <icon gap:platform="ios" height="57" src="res/icon/ios/logo-57.png" width="57" />
+    <icon gap:platform="ios" height="72" src="res/icon/ios/logo-72.png" width="72" />
+    <icon gap:platform="ios" height="114" src="res/icon/ios/logo-114.png" width="114" />
+    <icon gap:platform="ios" height="144" src="res/icon/ios/logo-144.png" width="144" />
     <!-- <icon gap:platform="webos" src="res/icon/webos/icon-64.png" /> -->
     <!-- <icon gap:platform="winphone" src="res/icon/windows-phone/icon-48.png" />
     <icon gap:platform="winphone" gap:role="background" src="res/icon/windows-phone/icon-173.png" /> -->

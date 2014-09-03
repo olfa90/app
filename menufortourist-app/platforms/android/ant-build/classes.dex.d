@@ -6,4 +6,8 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/ant-build/classes/com/menufortourist/R$string.class \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/ant-build/classes/com/menufortourist/R$xml.class \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/ant-build/classes/com/menufortourist/R.class \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/ant-build/classes/hu/dpal/phonegap/plugins/SpinnerDialog$1$1.class \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/ant-build/classes/hu/dpal/phonegap/plugins/SpinnerDialog$1.class \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/ant-build/classes/hu/dpal/phonegap/plugins/SpinnerDialog$2.class \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/ant-build/classes/hu/dpal/phonegap/plugins/SpinnerDialog.class \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/ant-build/dexedLibs/classes-3d957f889aaef063d2b87571ecafb5ff.jar \
