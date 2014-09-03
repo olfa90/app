@@ -5,7 +5,7 @@
     </header>
 
     <!-- Search in standard bar fixed below top bar (header) -->
-    <nav class="bar bar-standard bar-header-secondary">
+    <!-- <nav class="bar bar-standard bar-header-secondary">
       <button class="btn btn-link btn-nav pull-left">
         <span class="icon icon-bars"></span>
         Ordenar
@@ -20,13 +20,13 @@
         Mapa
         <span class="icon icon-google-maps"></span>
       </button>
-    </nav>
+    </nav> -->
 
     <section id="list_places" class="content">
       <ul id="list_view" class="table-view">
         <li class="table-view-cell media" ng-repeat="restaurant in restaurants">
           <a class="navigate-right" ng-click="goDetails(restaurant)">
-            <img class="media-object pull-left" ng-src="{{restaurant.getImage()}}" width="75" height="60">
+            <img class="media-object pull-left" ng-src="img/{{removerAcentos(restaurant.name)}}.jpg" width="75" height="60">
             <div class="media-body">
               {{restaurant.name}}
               <p>{{restaurant.specialty}}</p>

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.menufortourist" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Menu For Tourist</name>
+    <name>Menu For TOURIST</name>
     <description>
         An incredible app for turists to find menu in theirs home languages.
     </description>
@@ -41,6 +41,8 @@
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" />
+    <!-- Plugin to to hide the statusbar and overlay on iOS -->
+    <gap:plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" version="1.2.0" />
     <!-- <icon src="www/icon.png" /> -->
     <icon src="www/icon.png" />
     <!-- <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/icon/android/icon-36-ldpi.png" /> -->

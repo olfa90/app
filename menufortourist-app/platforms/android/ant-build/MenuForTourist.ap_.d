@@ -44,6 +44,7 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/index.html \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/phonegap.js \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/README.txt \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/spec \

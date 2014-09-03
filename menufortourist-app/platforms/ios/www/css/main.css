@@ -80,7 +80,9 @@ nav.bar-header-secondary .icon-google-maps {
 }
 
 #list_places {
-  padding-top: 73px;
+  /* When not using second nav bar: 29px */
+  padding-top: 29px;
+  /*padding-top: 73px;*/
   /* Needed when using footer nav bar bar-tab */
   /*padding-bottom: 50px;*/
 }
