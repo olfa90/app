@@ -8,10 +8,8 @@ menufortouristApp.controller('DetailsController', function($scope, $location, Re
 
     function init(){
         $scope.restaurant = RestaurantsFactory.getSelectedRestaurant();
-        restaurant = RestaurantsFactory.getRestaurantCardapio($scope.restaurant);
-        if (restaurant != null) {
-        	$scope.restaurant = restaurant;
-        }
+        
+        $scope.restaurant = RestaurantsFactory.getRestaurantCardapio($scope.restaurant);
     }
 
     $scope.back = function() {

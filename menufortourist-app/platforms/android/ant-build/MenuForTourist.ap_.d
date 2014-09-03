@@ -146,11 +146,11 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/controller/DetailsController.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/controller/MainController.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/controller/OpeningController.js \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/controller/SearchController.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/factory/CordovaReadyFactory.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/factory/DetailsFactory.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/factory/GeolocationFactory.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/factory/RestaurantsFactory.js \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/factory/RoutesFactory.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/lib/angular-locale_es.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/lib/angular-locale_pt-br.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/lib/angular.min.js \
@@ -158,11 +158,9 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/lib/cordova_plugins.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/lib/ratchet.min.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/model/Address.js \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/model/BusRoute.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/model/Item.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/model/Price.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/model/Restaurant.js \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/service/BusService.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/service/RestaurantService.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/hu.dpal.phonegap.plugins.SpinnerDialog \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/hu.dpal.phonegap.plugins.SpinnerDialog/www \
@@ -253,5 +251,6 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/views/main.html.old \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/views/opening.html \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/views/partials \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/views/search.html \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/views/partials/_subsection.html \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/ant-build/AndroidManifest.xml \

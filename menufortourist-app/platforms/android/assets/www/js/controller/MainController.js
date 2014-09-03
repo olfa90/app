@@ -7,7 +7,7 @@ menufortouristApp.controller('MainController', function($scope, $location, Resta
 
     function init(){
         // Pega os restaurantes carregados na consulta anterior.
-        $scope.restaurants = RestaurantsFactory.getSearchResult();
+        $scope.restaurants = RestaurantsFactory.getAroundResult();
 
         if ($scope.restaurants == null || $scope.restaurants.length < 1) {
             // Show spinner dialog
@@ -25,8 +25,13 @@ menufortouristApp.controller('MainController', function($scope, $location, Resta
         }
 	}
 
+    $scope.goSearch = function(restaurant) {
+        $location.path("/search");
+    };
+
     $scope.goDetails = function(restaurant) {
         RestaurantsFactory.saveSelectedRestaurant(restaurant);
+        RestaurantsFactory.setOrigin(RestaurantsFactory.MAIN_PAGE);
         $location.path("/details");
     };
 

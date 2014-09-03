@@ -27,6 +27,22 @@ menufortouristApp.service( 'RestaurantService', function ( $http, $q ) {
       return deferred.promise;
     },
 
+    search: function searchRestaurants(search) {
+      // We create our own promise to return
+      var deferred = $q.defer();
+
+      $http.get(url+'/restaurantes/search.json', {
+        params: {search: search}
+      }).then( function ( object ) {
+        restaurants = object.data;
+        // resolve the promise
+        deferred.resolve( restaurants );
+
+      }, function getRestaurantsError() { deferred.reject(); } );
+
+      return deferred.promise;
+    },
+
     findNear: function findNearRestaurants(lat, lng) {
       // We create our own promise to return
       var deferred = $q.defer();

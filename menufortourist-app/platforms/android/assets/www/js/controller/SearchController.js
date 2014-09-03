@@ -1,33 +1,24 @@
-// MainController
-menufortouristApp.controller('MainController', function($scope, $location, RestaurantsFactory, GeolocationFactory) {
+// SearchController
+menufortouristApp.controller('SearchController', function($scope, $location, RestaurantsFactory, GeolocationFactory) {
 
-	//$scope.locationDone = false;
-	
-    init();
+    $scope.searchText = '';
 
-    function init(){
-        // Pega os restaurantes carregados na consulta anterior.
-        $scope.restaurants = RestaurantsFactory.getSearchResult();
-
-        if ($scope.restaurants == null || $scope.restaurants.length < 1) {
-            // Show spinner dialog
-            window.plugins.spinnerDialog.show();
-        	GeolocationFactory.getCurrentPosition(function(position) {
-                // Lat e Lng para teste: -22.9748244,-43.1934073
-        		$scope.restaurants = RestaurantsFactory.findNearRestaurants(position.coords.latitude, position.coords.longitude);
-        	}, function onError(error) {
-		    	console.log('onError');
-		        alert('code: '    + error.code    + '\n' +
-		              'message: ' + error.message + '\n');
-                // Hide spinner dialog
-                window.plugins.spinnerDialog.hide();
-		    });
+    $scope.search = function(){
+        if ($scope.searchText == null || $scope.searchText.trim() == '') {
+            return;
         }
-	}
+
+        $scope.restaurants = RestaurantsFactory.searchRestaurants($scope.searchText);
+    }
 
     $scope.goDetails = function(restaurant) {
         RestaurantsFactory.saveSelectedRestaurant(restaurant);
+        RestaurantsFactory.setOrigin(RestaurantsFactory.SEARCH_PAGE);
         $location.path("/details");
+    };
+
+    $scope.back = function() {
+        $location.path("/main");
     };
 
     /**

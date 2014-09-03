@@ -9,12 +9,12 @@
 
       <div class="content">
         <p class="content-padded">
-          <h1 class="content-padded">{{selectedItem.identifier}} {{selectedItem.titulo}}</h1>
+          <h1 class="content-padded">{{selectedItem.identifier}} {{selectedItem.title}}</h1>
           <br/>
           <br/>
-          <h3 class="content-padded">{{selectedItem.descricao}}</h3>
+          <h3 class="content-padded">{{selectedItem.description}}</h3>
 
-          <h3 class="content-padded" ng-show="selectedItem.titulo == ''">No translation for this item</h3>
+          <h3 class="content-padded" ng-show="selectedItem.title == ''">No translation for this item</h3>
         </p>
       </div>
     </div>
@@ -60,7 +60,7 @@
                       ng-class="{active: isGroupShown(secao)}">
               <span class="icon" ng-class="{'icon-down-nav': isGroupShown(secao), 'icon-up-nav': !isGroupShown(secao)}"></span>
               &nbsp;
-              {{secao.titulo}}
+              {{secao.title}}
             </li>
             <li class="item-accordion table-view-cell"
                       ng-repeat="item in secao.itens"
@@ -69,18 +69,18 @@
                 <!-- images size from http://placehold.it/60x60 -->
                 <!-- <img class="media-object pull-left" ng-src="{{item.urlImage}}" width="75" height="60"> -->
                 <div class="media-body">
-                  {{item.titulo}}
-                  <p>{{item.descricao}}</p>
-                  <p class="price" ng-repeat="preco in item.precos">{{preco.valor|currency:"R$ "}} {{formatPriceDescription(preco.descricao)}}</p>
+                  {{item.title}}
+                  <p>{{item.description}}</p>
+                  <p class="price" ng-repeat="preco in item.precos">{{preco.valor|currency:"R$ "}} {{formatPriceDescription(preco.description)}}</p>
                 </div>
               </a>
             </li>
 
-            <li class="item-accordion table-view-cell" ng-show="isGroupShown(secao) && secao.observacao != null"> 
+            <li class="item-accordion table-view-cell" ng-show="isGroupShown(secao) && secao.note != null"> 
               <!-- ng-show="secao.observacao != null"  -->
               <span class="icon icon-info"></span>
               &nbsp;
-              {{secao.observacao}}
+              {{secao.note}}
             </li>
 
             <div ng-repeat="secao in secao.subsecoes" ng-include src="'views/partials/_subsection.html'"></div>

@@ -3,12 +3,31 @@ menufortouristApp.factory('RestaurantsFactory', function(RestaurantService){
     var factory = {};
 
     var restaurants = [];
+    var restaurantsSearch = [];
     var restaurant = null;
+
+    // CONSTANTS:
+    factory.MAIN_PAGE = 1;
+    factory.SEARCH_PAGE = 2;
+    var origin = 1;
     
     factory.findRestaurants = function(){
         return RestaurantService.find().then(function(d) {
             restaurants = d.data;
             return restaurants;
+        });
+    };
+
+    factory.searchRestaurants = function(search){
+        // Show spinner dialog
+        window.plugins.spinnerDialog.show();
+        return RestaurantService.search(search).then(function(collection) {
+            console.log(collection);
+            restaurantsSearch = collection;
+
+            // Hide spinner dialog
+            window.plugins.spinnerDialog.hide();
+            return restaurantsSearch;
         });
     };
 
@@ -51,8 +70,22 @@ menufortouristApp.factory('RestaurantsFactory', function(RestaurantService){
         return restaurant;
     };
 
-    factory.getSearchResult = function() {
+    factory.getAroundResult = function() {
         return restaurants;
+    };
+
+    factory.getSearchResult = function() {
+        return restaurantsSearch;
+    };
+
+
+    // Set origin page
+    factory.setOrigin = function(page){
+        origin = page;
+    };
+
+    factory.getOrigin = function(){
+        return origin;
     };
 
 

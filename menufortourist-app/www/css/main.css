@@ -79,6 +79,11 @@ nav.bar-header-secondary .icon-google-maps {
   white-space: nowrap;
 }
 
+input[type="search"] {
+  width: 90%;
+  color: #FFF;
+}
+
 #list_places {
   /* When not using second nav bar: 29px */
   padding-top: 29px;

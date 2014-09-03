@@ -13,7 +13,13 @@ menufortouristApp.controller('DetailsController', function($scope, $location, Re
     }
 
     $scope.back = function() {
-        $location.path("/main");
+        var origin = RestaurantsFactory.getOrigin();
+        if (origin == 2) {
+            $location.path("/search");
+        } else {
+            $location.path("/main");
+        }
+        
     };
 
     $scope.formatPriceDescription = function(description) {
@@ -48,7 +54,7 @@ menufortouristApp.controller('DetailsController', function($scope, $location, Re
             return;
         }
         for (var i = 0; i < translations.length; i++) {
-            if (translations[i].idioma == locale) {
+            if (translations[i].locale == locale) {
                 return translations[i];
             }
         }
@@ -79,21 +85,21 @@ menufortouristApp.controller('DetailsController', function($scope, $location, Re
         if (item == null || locale == null) {
             return;
         }
-        var itemTranslated = {identifier: item.identifier, titulo:"", descricao:""};
+        var itemTranslated = {identifier: item.identifier, title:"", description:""};
 
-        var tTraducoes = item.tituloTraducoes;
+        var tTraducoes = item.titulo.traducoes;
         for (var i = 0; i < tTraducoes.length; i++) {
-            if (tTraducoes[i].idioma == locale) {
-                itemTranslated.titulo = tTraducoes[i].traducao;
+            if (tTraducoes[i].locale == locale) {
+                itemTranslated.title = tTraducoes[i].text;
                 break;
             }
         }
 
         if (item.descricao != null) {
-            var dTraducoes = item.descricaoTraducoes;
+            var dTraducoes = item.descricao.traducoes;
             for (var i = 0; i < dTraducoes.length; i++) {
-                if (dTraducoes[i].idioma == locale) {
-                    itemTranslated.descricao = dTraducoes[i].traducao;
+                if (dTraducoes[i].locale == locale) {
+                    itemTranslated.description = dTraducoes[i].text;
                     break;
                 }
             }

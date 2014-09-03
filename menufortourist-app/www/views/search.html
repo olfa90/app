@@ -1,26 +1,11 @@
     <header class="bar bar-standard">
-      <a class="logo pull-left"></a>
-      <h1 class="title">Locais</h1>
-      <a class="icon icon-search pull-right" ng-click="goSearch()"></a>
+      <button class="btn btn-link btn-nav pull-left" ng-click="back()">
+        <span class="icon icon-left-nav"></span>
+      </button>
+      <form ng-submit="search()">
+        <input type="search" ng-model="searchText" placeholder="Nome ou localização do restaurante">
+      </form>
     </header>
-
-    <!-- Search in standard bar fixed below top bar (header) -->
-    <!-- <nav class="bar bar-standard bar-header-secondary">
-      <button class="btn btn-link btn-nav pull-left">
-        <span class="icon icon-bars"></span>
-        Ordenar
-      </button>
-      <button class="btn filtro">
-        Bairro
-      </button>
-      <button class="btn filtro">
-        Tipo
-      </button>
-      <button class="btn btn-link btn-nav pull-right">
-        Mapa
-        <span class="icon icon-google-maps"></span>
-      </button>
-    </nav> -->
 
     <section id="list_places" class="content">
       <ul id="list_view" class="table-view">
@@ -30,10 +15,10 @@
             <div class="media-body">
               {{restaurant.name}}
               <p>{{restaurant.specialty}}</p>
-              <p>
+              <!-- <p>
                 <span class="icon icon-google-maps"></span>
                 {{restaurant.distance}} km
-              </p>
+              </p> -->
             </div>
           </a>
         </li>

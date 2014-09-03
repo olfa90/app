@@ -37,6 +37,14 @@ menufortouristApp.config(function ($routeProvider) {
 
         }).
 
+        // search page
+        when('/search',
+        {
+            controller: 'SearchController',
+            templateUrl: 'views/search.html'
+
+        }).
+
         // details page
         when('/details',
         {
