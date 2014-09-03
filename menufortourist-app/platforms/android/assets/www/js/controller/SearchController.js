@@ -1,7 +1,29 @@
 // SearchController
-menufortouristApp.controller('SearchController', function($scope, $location, RestaurantsFactory, GeolocationFactory) {
+menufortouristApp.controller('SearchController', function($scope, $location, UserFactory, RestaurantsFactory) {
+
+    $scope.locale = UserFactory.locale;
 
     $scope.searchText = '';
+
+    init();
+
+    function init(){
+        // Pega os restaurantes carregados na consulta anterior.
+        $scope.restaurants = RestaurantsFactory.getSearchResult();
+    }
+
+    // Metodos for internationalization
+    $scope.getPlaceholder = function() {
+        if ($scope.locale == 'EN') {
+            return "Restaurant's name or location";
+        } else if ($scope.locale == 'ES') {
+            return 'Nombre o ubicación del restaurante';
+        } else {
+            return 'Nome ou localização do restaurante';
+        }
+    };
+    //
+
 
     $scope.search = function(){
         if ($scope.searchText == null || $scope.searchText.trim() == '') {

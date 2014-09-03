@@ -29,6 +29,14 @@ menufortouristApp.config(function ($routeProvider) {
 
         }).
 
+        // language page
+        when('/language',
+        {
+            controller: 'LanguageController',
+            templateUrl: 'views/language.html'
+
+        }).
+
         // main page
         when('/main',
         {

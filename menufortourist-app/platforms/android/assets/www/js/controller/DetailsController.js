@@ -1,5 +1,7 @@
 // DetailsController
-menufortouristApp.controller('DetailsController', function($scope, $location, RestaurantsFactory){
+menufortouristApp.controller('DetailsController', function($scope, $location, UserFactory, RestaurantsFactory){
+
+    $scope.locale = UserFactory.locale;
 
     $scope.restaurant = null;
     $scope.selectedItem = null;
@@ -11,6 +13,69 @@ menufortouristApp.controller('DetailsController', function($scope, $location, Re
         
         $scope.restaurant = RestaurantsFactory.getRestaurantCardapio($scope.restaurant);
     }
+
+    // Metodos for internationalization
+    $scope.getTitle = function() {
+        if ($scope.locale == 'EN') {
+            return 'Restaurant';
+        } else if ($scope.locale == 'ES') {
+            return 'Restaurante';
+        } else {
+            return 'Restaurante';
+        }
+    };
+
+    $scope.getLocationTitle = function() {
+        if ($scope.locale == 'EN') {
+            return 'Location';
+        } else if ($scope.locale == 'ES') {
+            return 'Ubicación';
+        } else {
+            return 'Localização';
+        }
+    };
+
+    $scope.getLocationInfo = function() {
+        if ($scope.locale == 'EN') {
+            return 'from your location';
+        } else if ($scope.locale == 'ES') {
+            return 'desde su ubicación';
+        } else {
+            return 'da sua localização';
+        }
+    };
+
+    $scope.getMenuTitle = function() {
+        if ($scope.locale == 'EN') {
+            return 'Menu';
+        } else if ($scope.locale == 'ES') {
+            return 'Menú';
+        } else {
+            return 'Cardápio';
+        }
+    };
+
+    $scope.getModalTitle = function() {
+        if ($scope.locale == 'EN') {
+            return 'Show to the waiter to order';
+        } else if ($scope.locale == 'ES') {
+            return 'Mostrar para el camarero para pedir';
+        } else {
+            return 'Mostre ao garçom para fazer o pedido';
+        }
+    };
+
+    $scope.getModalEmpty = function() {
+        if ($scope.locale == 'EN') {
+            return 'ERROR: Unable to load the native language of this item.';
+        } else if ($scope.locale == 'ES') {
+            return 'ERROR: No se puede cargar la lengua nativa de este artículo.';
+        } else {
+            return 'ERRO: Não foi possível carregar o idioma nativo deste item.';
+        }
+    };
+    //
+
 
     $scope.back = function() {
         var origin = RestaurantsFactory.getOrigin();
@@ -30,7 +95,7 @@ menufortouristApp.controller('DetailsController', function($scope, $location, Re
     }
 
     $scope.setSelectedItem = function(item) {
-        $scope.selectedItem = getItemTranslated(item, 'EN');
+        $scope.selectedItem = item;
         document.getElementById('order_list_modal').classList.add('active');
         // document.getElementById('order_list_modal').classList.remove('active');
     }
@@ -49,15 +114,17 @@ menufortouristApp.controller('DetailsController', function($scope, $location, Re
         return address.street +', '+ address.number +', '+ address.neighbourhood +', '+ address.city +', '+ address.state
     }
 
-    $scope.getTranslation = function(translations, locale) {
-        if (translations == null) {
+    $scope.getTranslation = function(object, locale) {
+        if (object == null || object.traducoes == null) {
             return;
         }
-        for (var i = 0; i < translations.length; i++) {
-            if (translations[i].locale == locale) {
-                return translations[i];
+        var translation = object.text;
+        for (var i = 0; i < object.traducoes.length; i++) {
+            if (object.traducoes[i].locale == locale) {
+                translation = object.traducoes[i].text;
             }
         }
+        return translation;
     }
 
 

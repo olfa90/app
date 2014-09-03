@@ -34,11 +34,17 @@ menufortouristApp.service( 'RestaurantService', function ( $http, $q ) {
       $http.get(url+'/restaurantes/search.json', {
         params: {search: search}
       }).then( function ( object ) {
+        if (object.data == null || object.data.length == 0) {
+          alert("Nenhum restaurante foi encontrado.");
+        }
         restaurants = object.data;
         // resolve the promise
         deferred.resolve( restaurants );
 
-      }, function getRestaurantsError() { deferred.reject(); } );
+      }, function getRestaurantsError() { 
+        alert("Não foi possível executar esta operação. Por favor, tente novamente mais tarde.");
+        deferred.reject(); 
+      });
 
       return deferred.promise;
     },
@@ -47,14 +53,23 @@ menufortouristApp.service( 'RestaurantService', function ( $http, $q ) {
       // We create our own promise to return
       var deferred = $q.defer();
 
+      url = 'http://192.168.0.7:3000'
+
       $http.get(url+'/restaurantes/around.json', {
         params: {lat: lat, lng: lng}
       }).then( function ( object ) {
+        console.log(object);
+        if (object.data == null || object.data.length == 0) {
+          alert("Nenhum restaurante foi encontrado na proximidade.");
+        }
         restaurants = object.data;
         // resolve the promise
         deferred.resolve( restaurants );
 
-      }, function getRestaurantsError() { deferred.reject(); } );
+      }, function getRestaurantsError() { 
+        alert("Não foi possível executar esta operação. Por favor, tente novamente mais tarde.");
+        deferred.reject();
+      });
 
       return deferred.promise;
     },

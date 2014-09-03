@@ -3,7 +3,7 @@
         <span class="icon icon-left-nav"></span>
       </button>
       <form ng-submit="search()">
-        <input type="search" ng-model="searchText" placeholder="Nome ou localização do restaurante">
+        <input type="search" ng-model="searchText" placeholder="{{getPlaceholder()}}" autofocus>
       </form>
     </header>
 

@@ -84,6 +84,14 @@ input[type="search"] {
   color: #FFF;
 }
 
+#list_languages .table-view-cell {
+  color: #000;
+  font-size: 18px;
+  font-weight: 800 bold;
+
+  line-height: 48px;
+}
+
 #list_places {
   /* When not using second nav bar: 29px */
   padding-top: 29px;
@@ -162,6 +170,10 @@ img#map {
   text-transform: uppercase;
   background-color: rgb(219,54,60);
   color: rgb(255,252,244);
+
+  /*color: rgb(141,41,43);*/
+  /*background-color: #fafafa;*/
+  /*border-top: 1px solid rgb(141,41,43);*/
 
   line-height: 48px;
 }

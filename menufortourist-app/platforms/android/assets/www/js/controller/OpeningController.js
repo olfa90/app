@@ -7,7 +7,7 @@ menufortouristApp.controller('OpeningController', function($scope, $location, $t
     	if (openingPage) {
             openingPage = false;
            $timeout(function() {
-	            $location.path("/main");
+	            $location.path("/language");
 	        }, 4000);
         } else {
         	$location.path("/main");

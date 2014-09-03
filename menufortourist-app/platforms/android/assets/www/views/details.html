@@ -3,7 +3,7 @@
     <div id="order_list_modal" class="modal">
       <header class="bar bar-nav">
         <a class="icon icon-close pull-right" href="#order_list_modal"></a>
-        <h1 class="title">Mostre ao garçom para fazer o pedido</h1>
+        <h1 class="title">{{getModalTitle()}}</h1>
         <!-- Show your order list to the waiter -->
       </header>
 
@@ -14,7 +14,7 @@
           <br/>
           <h3 class="content-padded">{{selectedItem.description}}</h3>
 
-          <h3 class="content-padded" ng-show="selectedItem.title == ''">No translation for this item</h3>
+          <h3 class="content-padded" ng-show="selectedItem.title == ''">{{getModalEmpty()}}</h3>
         </p>
       </div>
     </div>
@@ -24,7 +24,7 @@
       <button class="btn btn-link btn-nav pull-left" ng-click="back()">
         <span class="icon icon-left-nav"></span>
       </button>
-      <h1 class="title">Restaurante</h1>
+      <h1 class="title">{{getTitle()}}</h1>
     </header>
 
     <!-- standard bar fixed below top bar -->
@@ -40,8 +40,8 @@
       -->
       <section id="location">
         <a class="section-title">
-          <h2>Localização</h2>
-          <p>{{restaurant.distance}} km da sua localização</p> <!-- from your location -->
+          <h2>{{getLocationTitle()}}</h2>
+          <p>{{restaurant.distance}} km {{getLocationInfo()}}</p>
         </a>
         <img id="map" ng-src="http://maps.googleapis.com/maps/api/staticmap?center={{restaurant.address.lat}},{{restaurant.address.lng}}&zoom=15&size=300x150&markers=color:red%7Clabel:A%7C{{restaurant.address.lat}},{{restaurant.address.lng}}&sensor=true&key=AIzaSyBLD64U8OngmvqZtT-I-T8GWXkpX31sfTQ">
         <p class="details">{{getFullAddress(restaurant.address)}}</p>
@@ -50,17 +50,17 @@
       </section>
       <section id="menu">
         <a class="section-title">
-          <h2>Menu</h2>
+          <h2>{{getMenuTitle()}}</h2>
         </a>
 
         <ul class="table-view">
-          <div ng-repeat="secao in restaurant.secoes">
+          <div id="section_group" ng-repeat="secao in restaurant.secoes">
             <li class="table-view-divider"
                       ng-click="toggleGroup(secao)"
                       ng-class="{active: isGroupShown(secao)}">
               <span class="icon" ng-class="{'icon-down-nav': isGroupShown(secao), 'icon-up-nav': !isGroupShown(secao)}"></span>
               &nbsp;
-              {{secao.title}}
+              {{getTranslation(secao.titulo, locale)}}
             </li>
             <li class="item-accordion table-view-cell"
                       ng-repeat="item in secao.itens"
@@ -69,9 +69,9 @@
                 <!-- images size from http://placehold.it/60x60 -->
                 <!-- <img class="media-object pull-left" ng-src="{{item.urlImage}}" width="75" height="60"> -->
                 <div class="media-body">
-                  {{item.title}}
-                  <p>{{item.description}}</p>
-                  <p class="price" ng-repeat="preco in item.precos">{{preco.valor|currency:"R$ "}} {{formatPriceDescription(preco.description)}}</p>
+                  {{getTranslation(item.titulo, locale)}}
+                  <p>{{getTranslation(item.descricao, locale)}}</p>
+                  <p class="price" ng-repeat="preco in item.precos">{{preco.valor|currency:"R$ "}} {{formatPriceDescription(getTranslation(preco.descricao, locale))}}</p>
                 </div>
               </a>
             </li>
@@ -80,7 +80,8 @@
               <!-- ng-show="secao.observacao != null"  -->
               <span class="icon icon-info"></span>
               &nbsp;
-              {{secao.note}}
+              <!-- {{secao.note}} -->
+              {{getTranslation(secao.observacao, locale)}}
             </li>
 
             <div ng-repeat="secao in secao.subsecoes" ng-include src="'views/partials/_subsection.html'"></div>
