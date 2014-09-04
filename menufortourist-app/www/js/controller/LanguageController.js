@@ -1,23 +1,7 @@
 // LanguageController
 menufortouristApp.controller('LanguageController', function($scope, $location, CordovaReadyFactory, UserFactory) {
 
-	init();
-
-	function init() {
-		if (navigator.globalization != null) {
-			navigator.globalization.getLocaleName(
-		        function (locale) {
-		        	if (locale != null && locale.value != null && locale.value != '') {
-		        		UserFactory.locale = locale.value.toUpperCase();
-		        		console.log(UserFactory.locale);
-		        	}
-		        },
-		        function () { console.log('Não foi possível carregar o idioma do celular do usuário.');	}
-			);
-		}
-	}
-
-    $scope.setLanguage = function(locale) {
+	$scope.setLanguage = function(locale) {
         UserFactory.locale = locale;
         
         // Go to main page
@@ -25,8 +9,8 @@ menufortouristApp.controller('LanguageController', function($scope, $location, C
     };
 
     // Metodos for internationalization
-    $scope.getTitle = function() {
-    	if (UserFactory.locale == 'PT-BR') {
+     $scope.getTitle = function() {
+     	if (UserFactory.locale == 'PT-BR') {
             return 'Escolha o idioma';
         } else if (UserFactory.locale.substring(0, 2) == 'ES') {
             return 'Elija el idioma';
@@ -34,6 +18,19 @@ menufortouristApp.controller('LanguageController', function($scope, $location, C
             return 'Choose the language';
         }
     };
-    //
+
+ //    function loadUserLocale() {
+ //    	if (navigator.globalization != null) {
+	// 		navigator.globalization.getLocaleName(
+	// 	        function (locale) {
+	// 	        	if (locale != null && locale.value != null && locale.value != '') {
+	// 	        		UserFactory.locale = locale.value.toUpperCase();
+	// 	        	}
+	// 	        },
+	// 	        function () { console.log('Não foi possível carregar o idioma do celular do usuário.');	}
+	// 		);
+	// 	}
+	// }
+	//
     
 });

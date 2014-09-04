@@ -55,6 +55,16 @@ menufortouristApp.controller('DetailsController', function($scope, $location, Us
         }
     };
 
+    $scope.getMenuInfo = function() {
+        if ($scope.locale == 'EN') {
+            return "When ordering, press the item you want then show the waiter the item in restaurant's native language.";
+        } else if ($scope.locale == 'ES') {
+            return 'Al hacer el pedido, pulse el elemento que desee a continuación, mostrar al camarero del elemento en el idioma nativo del restaurante.';
+        } else {
+            return 'Ao fazer o pedido, pressione o item que deseja, em seguida, mostre ao garçom o item na língua nativa do restaurante.';
+        }
+    };
+
     $scope.getModalTitle = function() {
         if ($scope.locale == 'EN') {
             return 'Show to the waiter to order';
@@ -94,7 +104,7 @@ menufortouristApp.controller('DetailsController', function($scope, $location, Us
         return '';
     }
 
-    $scope.setSelectedItem = function(item) {
+    $scope.showModal = function(item) {
         $scope.selectedItem = item;
         document.getElementById('order_list_modal').classList.add('active');
         // document.getElementById('order_list_modal').classList.remove('active');

@@ -9,7 +9,7 @@
     <li class="item-accordion table-view-cell"
               ng-repeat="item in secao.itens"
               ng-show="isGroupShown(secao)">
-      <a ng-click="setSelectedItem(item)">
+      <a ng-click="showModal(item)">
         <!-- images size from http://placehold.it/60x60 -->
         <!-- <img class="media-object pull-left" ng-src="{{item.urlImage}}" width="75" height="60"> -->
         <div class="media-body">

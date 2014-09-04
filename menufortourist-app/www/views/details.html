@@ -52,20 +52,24 @@
         <a class="section-title">
           <h2>{{getMenuTitle()}}</h2>
         </a>
+
+        <div id="infomenu" class="card">
+          <p>{{getMenuInfo()}}</p>
+        </div>
         
         <div class="card" ng-repeat="secao in restaurant.secoes">
           <ul class="table-view">
             <li class="table-view-divider"
                       ng-click="toggleGroup(secao)"
                       ng-class="{active: isGroupShown(secao)}">
-              <span class="icon" ng-class="{'icon-down-nav': isGroupShown(secao), 'icon-up-nav': !isGroupShown(secao)}"></span>
+              <span ng-show="secao.itens.length > 0 || secao.note != null" class="icon" ng-class="{'icon-down-nav': isGroupShown(secao), 'icon-up-nav': !isGroupShown(secao)}"></span>
               &nbsp;
               {{getTranslation(secao.titulo)}}
             </li>
             <li class="item-accordion table-view-cell"
                       ng-repeat="item in secao.itens"
                       ng-show="isGroupShown(secao)">
-              <a ng-click="setSelectedItem(item)">
+              <a ng-click="showModal(item)">
                 <div class="media-body">
                   {{getTranslation(item.titulo)}}
                   <p>{{getTranslation(item.descricao)}}</p>
