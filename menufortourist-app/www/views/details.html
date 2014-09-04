@@ -8,14 +8,16 @@
       </header>
 
       <div class="content">
+        <br/>
         <p class="content-padded">
-          <h1 class="content-padded">{{selectedItem.identifier}} {{selectedItem.title}}</h1>
-          <br/>
-          <br/>
-          <h3 class="content-padded">{{selectedItem.description}}</h3>
-
-          <h3 class="content-padded" ng-show="selectedItem.title == ''">{{getModalEmpty()}}</h3>
+          <label>{{getModalText()}}</label>
         </p>
+        <div id="modal_item" class="card">
+          <h1>{{selectedItem.identifier}} {{selectedItem.title}}</h1>
+          <p class="price" ng-repeat="preco in selectedItem.precos">{{preco.valor|currency:"R$ "}} {{formatPriceDescription(preco.description)}}</p>
+        </div>
+
+        <h3 class="content-padded" ng-show="selectedItem.title == ''">{{getModalEmpty()}}</h3>
       </div>
     </div>
     <!-- // -->

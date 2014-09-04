@@ -57,11 +57,11 @@ menufortouristApp.controller('DetailsController', function($scope, $location, Us
 
     $scope.getMenuInfo = function() {
         if ($scope.locale == 'EN') {
-            return "When ordering, press the item you want then show the waiter the item in restaurant's native language.";
+            return "Press the item you want and show it to the waiter to place your order.";
         } else if ($scope.locale == 'ES') {
-            return 'Al hacer el pedido, pulse el elemento que desee a continuación, mostrar al camarero del elemento en el idioma nativo del restaurante.';
+            return 'Presione el ítem elegido y muestre al camarero para hacer su pedido.';
         } else {
-            return 'Ao fazer o pedido, pressione o item que deseja, em seguida, mostre ao garçom o item na língua nativa do restaurante.';
+            return 'Para fazer o pedido, pressione o item escolhido e mostre ao garçom.';
         }
     };
 
@@ -71,7 +71,18 @@ menufortouristApp.controller('DetailsController', function($scope, $location, Us
         } else if ($scope.locale == 'ES') {
             return 'Mostrar para el camarero para pedir';
         } else {
-            return 'Mostre ao garçom para fazer o pedido';
+            return 'Mostre ao garçom para pedir';
+        }
+    };
+
+    $scope.getModalText = function() {
+        // Will show modal text in restaurant's native language
+        if ($scope.restaurant.locale == 'EN') {
+            return "Please, I'd like to have:";
+        } else if ($scope.restaurant.locale == 'ES') {
+            return 'Por favor, me gustaría tener:';
+        } else {
+            return 'Por favor, gostaria de pedir:';
         }
     };
 

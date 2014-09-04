@@ -179,7 +179,7 @@ img#map {
   /*background-color: #fafafa;*/
   /*border-top: 1px solid rgb(141,41,43);*/
 
-  line-height: 48px;
+  line-height: 45px;
 }
 
 /*#menu .table-view-divider:first-child {
@@ -207,4 +207,17 @@ img#map {
 p.price {
   color: #000;
   font-weight: 500;
+}
+
+#order_list_modal .content {
+  text-align: center;
+}
+
+#order_list_modal .content > p > label {
+  font-size: 24px;
+  color: #000;
+}
+
+#modal_item {
+  padding: 10px;
 }

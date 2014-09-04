@@ -38,6 +38,10 @@ menufortouristApp.controller('MainController', function($scope, $location, UserF
     //
 
 
+    $scope.back = function() {
+        $location.path("/language");
+    };
+
     $scope.goSearch = function(restaurant) {
         $location.path("/search");
     };
