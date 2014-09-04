@@ -74,4 +74,7 @@
     <icon gap:platform="ios" height="114" src="res/icon/ios/logo-114.png" width="114" />
     <icon gap:platform="ios" height="144" src="res/icon/ios/logo-144.png" width="144" />
     <access origin="*" />
+    <feature name="Globalization">
+        <param name="ios-package" value="CDVGlobalization" />
+    </feature>
 </widget>

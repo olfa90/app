@@ -40,6 +40,7 @@
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		9479E30515F9402D8F6C8BE5 /* APPHiddenStatusbarOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EC20374BDB463B80E9F6D8 /* APPHiddenStatusbarOverlay.m */; };
 		B41D91DF158A4AA4903BC774 /* CDVSpinnerDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3EA9ABCB294B9B88636082 /* CDVSpinnerDialog.m */; };
+		61B5DEB47351400AB39DA8DD /* CDVGlobalization.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA9B98B15534A3B9988CC24 /* CDVGlobalization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,8 @@
 		0D09035929B74D48AD5834DC /* APPHiddenStatusbarOverlay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "APPHiddenStatusbarOverlay.h"; path = "de.appplant.cordova.plugin.hidden-statusbar-overlay/APPHiddenStatusbarOverlay.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		2A3EA9ABCB294B9B88636082 /* CDVSpinnerDialog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVSpinnerDialog.m"; path = "hu.dpal.phonegap.plugins.SpinnerDialog/CDVSpinnerDialog.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		EF6DE6D091D84D9EB7BDDBA8 /* CDVSpinnerDialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVSpinnerDialog.h"; path = "hu.dpal.phonegap.plugins.SpinnerDialog/CDVSpinnerDialog.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		FFA9B98B15534A3B9988CC24 /* CDVGlobalization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVGlobalization.m"; path = "org.apache.cordova.globalization/CDVGlobalization.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		2BC6F273D16140D597916826 /* CDVGlobalization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVGlobalization.h"; path = "org.apache.cordova.globalization/CDVGlobalization.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +235,8 @@
 				0D09035929B74D48AD5834DC /* APPHiddenStatusbarOverlay.h */,
 				2A3EA9ABCB294B9B88636082 /* CDVSpinnerDialog.m */,
 				EF6DE6D091D84D9EB7BDDBA8 /* CDVSpinnerDialog.h */,
+				FFA9B98B15534A3B9988CC24 /* CDVGlobalization.m */,
+				2BC6F273D16140D597916826 /* CDVGlobalization.h */,
 			);
 			name = Plugins;
 			path = "Menu For TOURIST/Plugins";
@@ -428,6 +433,7 @@
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 				9479E30515F9402D8F6C8BE5 /* APPHiddenStatusbarOverlay.m in Sources */,
 				B41D91DF158A4AA4903BC774 /* CDVSpinnerDialog.m in Sources */,
+				61B5DEB47351400AB39DA8DD /* CDVGlobalization.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -114,13 +114,13 @@ menufortouristApp.controller('DetailsController', function($scope, $location, Us
         return address.street +', '+ address.number +', '+ address.neighbourhood +', '+ address.city +', '+ address.state
     }
 
-    $scope.getTranslation = function(object, locale) {
+    $scope.getTranslation = function(object) {
         if (object == null || object.traducoes == null) {
             return;
         }
         var translation = object.text;
         for (var i = 0; i < object.traducoes.length; i++) {
-            if (object.traducoes[i].locale == locale) {
+            if (object.traducoes[i].locale == $scope.locale) {
                 translation = object.traducoes[i].text;
             }
         }

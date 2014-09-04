@@ -25,19 +25,4 @@ function Restaurant() {
 
 	var secoes = [];
 
-	this.getFullAddress = function() {
-		console.log('getFullAddress - address.street: '+ address.street)
-		if (address.complement != null && address.complement !== '') {
-			return address.street +', '+ address.number +', '+ address.complement +', ' + address.neighbourhood +', '+ address.city +', '+ address.state
-		}
-		return address.street +', '+ address.number +', '+ address.neighbourhood +', '+ address.city +', '+ address.state
-	}
-
-	this.getImage = function() {
-		if (imageUrl == null) {
-			return 'http://localhost:8000/#img/75x60.gif';
-		}
-		return imageUrl;
-	}
-
 }

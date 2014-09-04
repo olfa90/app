@@ -22,7 +22,7 @@ menufortouristApp.factory('RestaurantsFactory', function(RestaurantService){
         // Show spinner dialog
         window.plugins.spinnerDialog.show();
         return RestaurantService.search(search).then(function(collection) {
-            console.log(collection);
+            // console.log(collection);
             restaurantsSearch = collection;
 
             // Hide spinner dialog
@@ -33,7 +33,7 @@ menufortouristApp.factory('RestaurantsFactory', function(RestaurantService){
 
     factory.findNearRestaurants = function(lat, lng){
         return RestaurantService.findNear(lat, lng).then(function(collection) {
-            console.log(collection);
+            // console.log(collection);
             restaurants = collection;
 
             // Hide spinner dialog
@@ -52,7 +52,7 @@ menufortouristApp.factory('RestaurantsFactory', function(RestaurantService){
             return;
         }
         return RestaurantService.fetchCardapio(restaurantParam).then(function(object) {
-            console.log(object);
+            // console.log(object);
             restaurant = object;
             // Hide spinner dialog
             window.plugins.spinnerDialog.hide();

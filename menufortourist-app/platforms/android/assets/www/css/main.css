@@ -89,7 +89,7 @@ input[type="search"] {
   font-size: 18px;
   font-weight: 800 bold;
 
-  line-height: 48px;
+  /*line-height: 45px;*/
 }
 
 #list_places {
@@ -146,6 +146,11 @@ input[type="search"] {
   font-size: 12px;
 }
 
+#informations > section > p {
+  margin: 0px 10px 6px;
+  color: #000;
+}
+
 img#place {
   width: 100%;
   height: 180px;
@@ -156,14 +161,13 @@ img#map {
   height: 150px;
 }
 
-#informations > section > p {
-  margin: 0px 10px 6px;
-  color: #000;
-}
-
 /*#menu .table-view .table-view-cell {
   color: rgb(141,41,43);
   font-weight: 600;
+}*/
+
+/*#menu > div {
+  margin-bottom: 20px;
 }*/
 
 #menu .table-view-divider {

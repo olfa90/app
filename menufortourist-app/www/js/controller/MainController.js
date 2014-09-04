@@ -16,7 +16,7 @@ menufortouristApp.controller('MainController', function($scope, $location, UserF
                 // Lat e Lng para teste: -22.9748244,-43.1934073
         		$scope.restaurants = RestaurantsFactory.findNearRestaurants(position.coords.latitude, position.coords.longitude);
         	}, function onError(error) {
-		    	console.log('onError');
+		    	// console.log('onError');
 		        alert('code: '    + error.code    + '\n' +
 		              'message: ' + error.message + '\n');
                 // Hide spinner dialog

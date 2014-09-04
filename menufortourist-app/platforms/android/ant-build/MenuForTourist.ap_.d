@@ -165,8 +165,12 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/model/Restaurant.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/service/RestaurantService.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/hu.dpal.phonegap.plugins.SpinnerDialog \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/org.apache.cordova.globalization \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/hu.dpal.phonegap.plugins.SpinnerDialog/www \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/hu.dpal.phonegap.plugins.SpinnerDialog/www/spinner.js \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/org.apache.cordova.globalization/www \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/org.apache.cordova.globalization/www/globalization.js \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/org.apache.cordova.globalization/www/GlobalizationError.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/screen \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/android \
@@ -203,6 +207,7 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/windows-phone/icon-173-tile.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/windows-phone/icon-48.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/windows-phone/icon-62-tile.png \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/windows-phone/logo-48.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/screen/android \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/screen/bada \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/screen/bada-wac \

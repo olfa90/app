@@ -1,6 +1,8 @@
 menufortouristApp.factory('UserFactory', function() {
   return {
       name : 'anonymous',
-      locale : 'EN'
+      locale : 'EN',
+      lat: '',
+      lng: ''
   };
 });
