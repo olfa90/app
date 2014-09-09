@@ -146,6 +146,7 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/controller/DetailsController.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/controller/LanguageController.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/controller/MainController.js \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/controller/MapController.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/controller/OpeningController.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/controller/SearchController.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/factory/CordovaReadyFactory.js \
@@ -160,6 +161,7 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/lib/cordova_plugins.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/lib/ratchet.min.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/model/Address.js \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/model/GoogleMap.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/model/Item.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/model/Price.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/model/Restaurant.js \
@@ -257,6 +259,7 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/views/language.html \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/views/main.html \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/views/main.html.old \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/views/map.html \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/views/opening.html \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/views/partials \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/views/search.html \

@@ -1,4 +1,4 @@
-    <header class="bar bar-standard">
+    <header class="bar bar-nav">
       <button class="btn btn-link btn-nav pull-left" ng-click="back()">
         <span class="icon icon-left-nav"></span>
       </button>
@@ -7,23 +7,20 @@
       <a class="icon icon-search pull-right" ng-click="goSearch()"></a>
     </header>
 
-    <!-- Search in standard bar fixed below top bar (header) -->
-    <!-- <nav class="bar bar-standard bar-header-secondary">
+    <!-- Filters in standard bar fixed below top bar (header) -->
+    <nav class="bar bar-standard bar-header-secondary">
       <button class="btn btn-link btn-nav pull-left">
-        <span class="icon icon-bars"></span>
-        Ordenar
+        <span class="icon icon-refresh"></span>
+        {{getRefreshText()}}
       </button>
       <button class="btn filtro">
-        Bairro
+        {{getSpecialtyText()}}
       </button>
-      <button class="btn filtro">
-        Tipo
-      </button>
-      <button class="btn btn-link btn-nav pull-right">
-        Mapa
+      <button class="btn btn-link btn-nav pull-right" ng-click="goMap()">
+        {{getMapText()}}
         <span class="icon icon-google-maps"></span>
       </button>
-    </nav> -->
+    </nav>
 
     <section id="list_places" class="content">
       <ul id="list_view" class="table-view">

@@ -9,7 +9,7 @@ menufortouristApp.controller('LanguageController', function($scope, $location, C
     };
 
     // Metodos for internationalization
-     $scope.getTitle = function() {
+    $scope.getTitle = function() {
      	if (UserFactory.locale == 'PT-BR') {
             return 'Escolha o idioma';
         } else if (UserFactory.locale.substring(0, 2) == 'ES') {

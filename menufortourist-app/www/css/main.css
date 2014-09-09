@@ -94,7 +94,7 @@ input[type="search"] {
 
 #list_places {
   /* When not using second nav bar: 29px */
-  padding-top: 29px;
+  /*padding-top: 29px;*/
   /*padding-top: 73px;*/
   /* Needed when using footer nav bar bar-tab */
   /*padding-bottom: 50px;*/
@@ -111,6 +111,37 @@ input[type="search"] {
 
 .bar-tab .tab-item.active, .bar-tab .tab-item:active {
   color: rgb(219,54,60);
+}
+
+#content_map {
+  /*padding: 0;
+  position: absolute !important;
+  top: 40px !important;
+  right: 0;*/
+  bottom: 105px !important;
+  /*left: 0 !important;*/
+}
+
+#map_canvas {
+  height: 100%;
+  margin: 0px;
+  padding: 0px
+}
+
+.infoWindowContent {
+    font-size:  14px !important;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+h4.marker-info {
+    margin-bottom:0;
+    margin-top: 0;
+}
+
+#content_map_info {
+  position: absolute !important;
+  bottom: 0px !important;
+  width: 100%;
 }
 
 #informations {

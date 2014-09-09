@@ -1,0 +1,31 @@
+    <header class="bar bar-nav">
+      <button class="btn btn-link btn-nav pull-left" ng-click="back()">
+        <span class="icon icon-left-nav"></span>
+      </button>
+      <h1 class="title">{{getTitle()}}</h1>
+    </header>
+
+    
+    <section id="content_map" class="content">
+      <div id="map_canvas">
+      </div>
+    </section>
+
+    <section id="content_map_info">
+      <ul id="list_view" class="table-view">
+        <li class="table-view-cell media">
+          <a class="navigate-right" ng-click="goDetails(restaurant)">
+            <img class="media-object pull-left" ng-src="img/{{removerAcentos(restaurant.name)}}.jpg" width="75" height="60">
+            <div class="media-body">
+              {{restaurant.name}}
+              <p>{{restaurant.specialty}}</p>
+              <p>
+                <span class="icon icon-google-maps"></span>
+                {{restaurant.distance}} km
+              </p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <!-- main container end -->

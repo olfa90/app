@@ -53,6 +53,14 @@ menufortouristApp.config(function ($routeProvider) {
 
         }).
 
+        // map page
+        when('/map',
+        {
+            controller: 'MapController',
+            templateUrl: 'views/map.html'
+
+        }).
+
         // details page
         when('/details',
         {

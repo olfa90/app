@@ -14,6 +14,8 @@ menufortouristApp.controller('MainController', function($scope, $location, UserF
             window.plugins.spinnerDialog.show();
         	GeolocationFactory.getCurrentPosition(function(position) {
                 // Lat e Lng para teste: -22.9748244,-43.1934073
+                UserFactory.lat = position.coords.latitude;
+                UserFactory.lng = position.coords.longitude;
         		$scope.restaurants = RestaurantsFactory.findNearRestaurants(position.coords.latitude, position.coords.longitude);
         	}, function onError(error) {
 		    	// console.log('onError');
@@ -35,6 +37,33 @@ menufortouristApp.controller('MainController', function($scope, $location, UserF
             return 'Restaurantes';
         }
     };
+    $scope.getRefreshText = function() {
+        if ($scope.locale == 'EN') {
+            return 'Refresh';
+        } else if ($scope.locale == 'ES') {
+            return 'Actualizar';
+        } else {
+            return 'Atualizar';
+        }
+    };
+    $scope.getSpecialtyText = function() {
+        if ($scope.locale == 'EN') {
+            return 'Specialty';
+        } else if ($scope.locale == 'ES') {
+            return 'Especialidad';
+        } else {
+            return 'Especialidade';
+        }
+    };
+    $scope.getMapText = function() {
+        if ($scope.locale == 'EN') {
+            return 'Map';
+        } else if ($scope.locale == 'ES') {
+            return 'Mapa';
+        } else {
+            return 'Mapa';
+        }
+    };
     //
 
 
@@ -42,8 +71,12 @@ menufortouristApp.controller('MainController', function($scope, $location, UserF
         $location.path("/language");
     };
 
-    $scope.goSearch = function(restaurant) {
+    $scope.goSearch = function() {
         $location.path("/search");
+    };
+
+    $scope.goMap = function() {
+        $location.path("/map");
     };
 
     $scope.goDetails = function(restaurant) {

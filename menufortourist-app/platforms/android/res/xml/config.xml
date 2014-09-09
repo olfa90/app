@@ -60,5 +60,8 @@
     <icon gap:platform="ios" height="114" src="res/icon/ios/logo-114.png" width="114" />
     <icon gap:platform="ios" height="144" src="res/icon/ios/logo-144.png" width="144" />
     <icon gap:platform="winphone" src="res/icon/windows-phone/logo-48.png" />
+    <access origin="*.google.com" />
+    <access origin="*.googleapis.com" />
+    <access origin="*.gstatic.com" />
     <access origin="*" />
 </widget>
