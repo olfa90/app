@@ -38,6 +38,7 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/cordova_plugins.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/css \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/fonts \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/icon-marker.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/icon.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/icon.png.old.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img \
@@ -90,6 +91,7 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/Confeitaria-Colombo.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/CORUJAO DO CADEG.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/COSTELAO DO CADEG.jpg \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/current-location.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/DA VINCI RISTORANTE E PIZZERIA.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/EMPORIO GOURMET SHOW.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/ENCHENDO LINGUICA.jpg \

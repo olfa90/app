@@ -92,14 +92,15 @@ menufortouristApp.controller('MapController', function($scope, $location, UserFa
     // Private util methods
     function showMarkers(map){
         for (var i = 0; i < $scope.restaurants.length; i++) {
-            var lat = $scope.restaurants[i].address.lat;
-            var lng = $scope.restaurants[i].address.lng;
-
+            var restaurant = $scope.restaurants[i];
+            var lat = restaurant.address.lat;
+            var lng = restaurant.address.lng;
+            
             if (i == 0) {
-                $scope.restaurant = $scope.restaurants[i];
-                map.addMarkersToMap(lat, lng, $scope.restaurants[i], true);
+                $scope.restaurant = restaurant;
+                map.addMarkersToMap(lat, lng, restaurant, true);
             } else {
-                map.addMarkersToMap(lat, lng, $scope.restaurants[i]);
+                map.addMarkersToMap(lat, lng, restaurant);
             }
         };
     }
