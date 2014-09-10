@@ -21,25 +21,21 @@ function GoogleMap() {
 	};
 	var iconActiveMarker = {
 		url: 'icon-marker.png',
-	    // This marker is 25 pixels wide by 25 pixels tall.
-	    // size: new google.maps.Size(128, 128),
-	    // The origin for this image is 0,0.
-	    // origin: new google.maps.Point(0, 0),
-	    // the anchor where the icon's hotspot should be located (which is based on the origin)
-	    // anchor: new google.maps.Point(0, 15),
-	    // Scale the image to get the right size
 	    scaledSize: new google.maps.Size(28, 28)
 	};
 
-	this.initialize = function(lat, lng){
-		this.map = showMap(lat, lng);
+	this.initialize = function(lat, lng, frozen){
+		this.map = showMap(lat, lng, frozen);
 		addUserLocation(this.map, lat, lng);
 	}
 
-	var showMap = function(lat, lng){
+	var showMap = function(lat, lng, frozen){
 		var mapOptions = {
-			zoom: 13,
+			zoom: (frozen ? 15 : 13),
 			center: new google.maps.LatLng(lat, lng),
+			draggable: !frozen,
+			disableDoubleClickZoom: frozen,
+			zoomControl: !frozen,
 			disableDefaultUI: true,
 			mapTypeId: google.maps.MapTypeId.ROADMAP
 		}
@@ -50,7 +46,6 @@ function GoogleMap() {
 	}
 
 	var addUserLocation = function(map, lat, lng){
-		console.log("addUserLocation");
 		var userLatAndLong = new google.maps.LatLng(lat, lng);
 		var marker = new google.maps.Marker({
 			position: userLatAndLong,
@@ -62,18 +57,24 @@ function GoogleMap() {
 
 
 	//public
-	this.addMarkersToMap = function(lat, lng, info, selected){
-		var latitudeAndLongitude = new google.maps.LatLng(lat, lng);
+	this.addMarkersToMap = function(place, selected){
+		var latitudeAndLongitude = new google.maps.LatLng(place.address.lat, place.address.lng);
+		var icon = iconMarker;
+
+		if (selected) {
+			icon = iconActiveMarker;
+			this.map.panTo(latitudeAndLongitude);
+		}
 		
 		var marker = new google.maps.Marker({
 			position: latitudeAndLongitude,
 			map: this.map,
-			icon: iconMarker,
+			icon: icon,
 			animation: google.maps.Animation.DROP,
-			title: info.name
+			title: place.name
 		});
 
-		marker.content = '<div class="infoWindowContent">' + (info.specialty == null ? '' : info.specialty) + '</div>';
+		marker.content = '<div class="infoWindowContent">' + (place.specialty == null ? '' : place.specialty) + '</div>';
         
 		// When marker clicked
 		google.maps.event.addListener(marker, 'click', function() {
@@ -89,16 +90,26 @@ function GoogleMap() {
 
 			this.map.panTo(latitudeAndLongitude);
 			var $scope = angular.element(document.getElementById('content_map_info')).scope();
-	        $scope.restaurant = info;
+	        $scope.restaurant = place;
 	        $scope.$apply(); //tell angular to check dirty bindings again
 		});
 
-		if (selected) {
-			marker.setIcon(iconActiveMarker);
-			this.map.panTo(latitudeAndLongitude);
-		}
-
 		markers.push(marker);
+	}
+
+	this.addStaticMarkersToMap = function(place){
+		var latitudeAndLongitude = new google.maps.LatLng(place.address.lat, place.address.lng);
+		var icon = iconMarker;
+
+		var marker = new google.maps.Marker({
+			position: latitudeAndLongitude,
+			map: this.map,
+			icon: icon,
+			animation: google.maps.Animation.DROP,
+			title: place.name
+		});
+
+		this.map.panTo(latitudeAndLongitude);
 	}
 
 	this.fitBounds = function(latOne, lngOne, latTwo, lngTwo){

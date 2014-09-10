@@ -10,7 +10,11 @@ menufortouristApp.controller('DetailsController', function($scope, $location, Us
 
     function init(){
         $scope.restaurant = RestaurantsFactory.getSelectedRestaurant();
-        
+        var map = new GoogleMap();
+        map.initialize(UserFactory.lat, UserFactory.lng, true);
+        map.addStaticMarkersToMap($scope.restaurant);
+
+        // Load restaurant's menu
         $scope.restaurant = RestaurantsFactory.getRestaurantCardapio($scope.restaurant);
     }
 
