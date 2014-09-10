@@ -24,7 +24,7 @@ header.bar .title{
   color: rgb(255,252,244);
 }
 
-header.bar .icon, nav.bar-header-secondary .btn-link{
+header.bar .icon, header.bar .btn-link, nav.bar-header-secondary .btn-link{
   color: rgb(255,252,244);
 }
 

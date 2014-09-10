@@ -2,7 +2,9 @@
 menufortouristApp.controller('MainController', function($scope, $location, UserFactory, RestaurantsFactory, GeolocationFactory) {
 
 	$scope.locale = UserFactory.locale;
-	
+
+    $scope.restaurants = [];
+    
     init();
 
     function init(){
@@ -10,22 +12,61 @@ menufortouristApp.controller('MainController', function($scope, $location, UserF
         $scope.restaurants = RestaurantsFactory.getAroundResult();
 
         if ($scope.restaurants == null || $scope.restaurants.length < 1) {
-            // Show spinner dialog
-            window.plugins.spinnerDialog.show();
-        	GeolocationFactory.getCurrentPosition(function(position) {
-                // Lat e Lng para teste: -22.9748244,-43.1934073
-                UserFactory.lat = position.coords.latitude;
-                UserFactory.lng = position.coords.longitude;
-        		$scope.restaurants = RestaurantsFactory.findNearRestaurants(position.coords.latitude, position.coords.longitude);
-        	}, function onError(error) {
-		    	// console.log('onError');
-		        alert('code: '    + error.code    + '\n' +
-		              'message: ' + error.message + '\n');
-                // Hide spinner dialog
-                window.plugins.spinnerDialog.hide();
-		    });
+            loadRestaurants();
         }
 	}
+
+    function loadRestaurants() {
+        // Show spinner dialog
+        window.plugins.spinnerDialog.show();
+        GeolocationFactory.getCurrentPosition(function(position) {
+            // Lat e Lng para teste: -22.9748244,-43.1934073
+            UserFactory.lat = position.coords.latitude;
+            UserFactory.lng = position.coords.longitude;
+            $scope.restaurants = RestaurantsFactory.findNearRestaurants(position.coords.latitude, position.coords.longitude);
+        }, function onError(error) {
+            // console.log('onError');
+            alert('code: '    + error.code    + '\n' +
+                  'message: ' + error.message + '\n');
+            // Hide spinner dialog
+            window.plugins.spinnerDialog.hide();
+        });
+    }
+
+    // function initMap(){
+    //     if ($scope.map == null) {
+    //         // Show spinner dialog
+    //         window.plugins.spinnerDialog.show();
+    //         GeolocationFactory.getCurrentPosition(function(position) {
+    //             $scope.map = new GoogleMap();
+    //             $scope.map.initialize(position.coords.latitude, position.coords.longitude);
+    //             showMarkers();
+    //             window.plugins.spinnerDialog.hide();
+    //         }, function onError(error) {
+    //             // console.log('onError');
+    //             alert('code: '    + error.code    + '\n' +
+    //                   'message: ' + error.message + '\n');
+    //             // Hide spinner dialog
+    //             window.plugins.spinnerDialog.hide();
+    //         });
+    //     } else {
+    //         showMarkers();
+    //     }
+    // }
+
+    // function showMarkers(){
+    //     $scope.map.deleteMarkers();
+    //     for (var i = 0; i < $scope.restaurants.length; i++) {
+    //         var restaurant = $scope.restaurants[i];
+            
+    //         if (i == 0) {
+    //             $scope.restaurant = restaurant;
+    //             $scope.map.addMarkers(restaurant, true);
+    //         } else {
+    //             $scope.map.addMarkers(restaurant);
+    //         }
+    //     };
+    // }
 
     // Metodos for internationalization
     $scope.getTitle = function() {
@@ -76,7 +117,13 @@ menufortouristApp.controller('MainController', function($scope, $location, UserF
     };
 
     $scope.goMap = function() {
+        // $scope.list = false;
+        // initMap();
         $location.path("/map");
+    };
+
+    $scope.refresh = function() {
+        loadRestaurants();
     };
 
     $scope.goDetails = function(restaurant) {
@@ -91,7 +138,10 @@ menufortouristApp.controller('MainController', function($scope, $location, UserF
      * @return {String}                 [string sem acentos]
      */
     $scope.removerAcentos = function( newStringComAcento ) {
-      var string = newStringComAcento;
+        if (newStringComAcento == null || newStringComAcento == '') {
+            return;
+        }
+        var string = newStringComAcento;
         var mapaAcentosHex  = {
             A : /[\xE0-\xE6]/g,
             E : /[\xE8-\xEB]/g,

@@ -12,7 +12,7 @@ menufortouristApp.controller('DetailsController', function($scope, $location, Us
         $scope.restaurant = RestaurantsFactory.getSelectedRestaurant();
         var map = new GoogleMap();
         map.initialize(UserFactory.lat, UserFactory.lng, true);
-        map.addStaticMarkersToMap($scope.restaurant);
+        map.addStaticMarkers($scope.restaurant);
 
         // Load restaurant's menu
         $scope.restaurant = RestaurantsFactory.getRestaurantCardapio($scope.restaurant);
@@ -104,12 +104,13 @@ menufortouristApp.controller('DetailsController', function($scope, $location, Us
 
     $scope.back = function() {
         var origin = RestaurantsFactory.getOrigin();
-        if (origin == 2) {
+        if (origin == RestaurantsFactory.SEARCH_PAGE) {
             $location.path("/search");
+        } else if (origin == RestaurantsFactory.MAIN_MAP_PAGE || origin == RestaurantsFactory.SEARCH_MAP_PAGE) {
+            $location.path("/map");
         } else {
             $location.path("/main");
-        }
-        
+        }  
     };
 
     $scope.formatPriceDescription = function(description) {

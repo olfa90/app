@@ -3,12 +3,16 @@ menufortouristApp.factory('RestaurantsFactory', function(RestaurantService){
     var factory = {};
 
     var restaurants = [];
+    var restaurantsAround = [];
     var restaurantsSearch = [];
     var restaurant = null;
+    var map = null;
 
     // CONSTANTS:
     factory.MAIN_PAGE = 1;
     factory.SEARCH_PAGE = 2;
+    factory.MAIN_MAP_PAGE = 3;
+    factory.SEARCH_MAP_PAGE = 4;
     var origin = 1;
     
     factory.findRestaurants = function(){
@@ -34,12 +38,12 @@ menufortouristApp.factory('RestaurantsFactory', function(RestaurantService){
     factory.findNearRestaurants = function(lat, lng){
         return RestaurantService.findNear(lat, lng).then(function(collection) {
             // console.log(collection);
-            restaurants = collection;
+            restaurantsAround = collection;
 
             // Hide spinner dialog
             window.plugins.spinnerDialog.hide();
 
-            return restaurants;
+            return restaurantsAround;
         });
     };
 
@@ -71,13 +75,21 @@ menufortouristApp.factory('RestaurantsFactory', function(RestaurantService){
     };
 
     factory.getAroundResult = function() {
-        return restaurants;
+        return restaurantsAround;
     };
 
     factory.getSearchResult = function() {
         return restaurantsSearch;
     };
 
+    // Save map for next time
+    factory.saveMapState = function(mapState) {
+        map = mapState;
+    };
+
+    factory.getMapState = function() {
+        return map;
+    };
 
     // Set origin page
     factory.setOrigin = function(page){

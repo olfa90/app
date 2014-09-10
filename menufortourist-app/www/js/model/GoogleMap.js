@@ -2,6 +2,8 @@ function GoogleMap() {
 	var map = null;
 	var markers = [];
 	var infoWindow = new google.maps.InfoWindow();
+	var that = null;
+
 	var userMarker = {
 		url: 'img/current-location.png',
 	    size: new google.maps.Size(22, 22),
@@ -25,13 +27,14 @@ function GoogleMap() {
 	};
 
 	this.initialize = function(lat, lng, frozen){
+		that = null;
 		this.map = showMap(lat, lng, frozen);
 		addUserLocation(this.map, lat, lng);
 	}
 
 	var showMap = function(lat, lng, frozen){
 		var mapOptions = {
-			zoom: (frozen ? 15 : 13),
+			zoom: (frozen ? 14 : 12),
 			center: new google.maps.LatLng(lat, lng),
 			draggable: !frozen,
 			disableDoubleClickZoom: frozen,
@@ -56,48 +59,55 @@ function GoogleMap() {
 	}
 
 
-	//public
-	this.addMarkersToMap = function(place, selected){
+	/**
+	*	Public methods
+	*/
+	this.addMarkers = function(place, selected){
 		var latitudeAndLongitude = new google.maps.LatLng(place.address.lat, place.address.lng);
-		var icon = iconMarker;
-
-		if (selected) {
-			icon = iconActiveMarker;
-			this.map.panTo(latitudeAndLongitude);
-		}
 		
 		var marker = new google.maps.Marker({
 			position: latitudeAndLongitude,
 			map: this.map,
-			icon: icon,
+			icon: iconMarker,
 			animation: google.maps.Animation.DROP,
 			title: place.name
 		});
+
+		if (selected) {
+			marker.setIcon(iconActiveMarker);
+			that = marker;
+			marker.setZIndex(google.maps.Marker.MAX_ZINDEX + 1);
+			this.map.panTo(latitudeAndLongitude);
+		}
 
 		marker.content = '<div class="infoWindowContent">' + (place.specialty == null ? '' : place.specialty) + '</div>';
         
 		// When marker clicked
 		google.maps.event.addListener(marker, 'click', function() {
-			infoWindow.setContent('<h4 class="marker-info">' + marker.title + '</h4>' + marker.content);
-            // infoWindow.open(this.map, marker);
+			if (that) {
+				that.setZIndex();
+			}
+			that = this;
+			this.setZIndex(google.maps.Marker.MAX_ZINDEX + 1);
 
-            for (var i = 0; i < markers.length; i++) {
-	           // markers[i].setOpacity(0.6);
+			for (var i = 0; i < markers.length; i++) {
 	           markers[i].setIcon(iconMarker);
 	        }
-	        // marker.setOpacity(1.0);
 	        marker.setIcon(iconActiveMarker);
 
 			this.map.panTo(latitudeAndLongitude);
 			var $scope = angular.element(document.getElementById('content_map_info')).scope();
 	        $scope.restaurant = place;
 	        $scope.$apply(); //tell angular to check dirty bindings again
+
+	        // infoWindow.setContent('<h4 class="marker-info">' + marker.title + '</h4>' + marker.content);
+            // infoWindow.open(this.map, marker);
 		});
 
 		markers.push(marker);
 	}
 
-	this.addStaticMarkersToMap = function(place){
+	this.addStaticMarkers = function(place){
 		var latitudeAndLongitude = new google.maps.LatLng(place.address.lat, place.address.lng);
 		var icon = iconMarker;
 
@@ -110,6 +120,29 @@ function GoogleMap() {
 		});
 
 		this.map.panTo(latitudeAndLongitude);
+	}
+
+	// Sets the map on all markers in the array.
+	this.setAllMap = function() {
+	  for (var i = 0; i < markers.length; i++) {
+	    markers[i].setMap(this.map);
+	  }
+	}
+
+	// Removes the markers from the map, but keeps them in the array.
+	this.clearMarkers = function () {
+	  this.setAllMap(null);
+	}
+
+	// Shows any markers currently in the array.
+	this.showMarkers = function() {
+	  this.setAllMap();
+	}
+
+	// Deletes all markers in the array by removing references to them.
+	this.deleteMarkers = function() {
+	  this.clearMarkers();
+	  markers = [];
 	}
 
 	this.fitBounds = function(latOne, lngOne, latTwo, lngTwo){

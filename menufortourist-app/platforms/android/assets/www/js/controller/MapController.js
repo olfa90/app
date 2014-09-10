@@ -3,20 +3,24 @@ menufortouristApp.controller('MapController', function($scope, $location, UserFa
 
     $scope.locale = UserFactory.locale;
 
-    $scope.restaurant = null;
-
     init();
 
     function init(){
         // Pega os restaurantes carregados na consulta anterior.
         $scope.restaurants = RestaurantsFactory.getAroundResult();
 
+        var map = RestaurantsFactory.getMapState();
+
         // Show spinner dialog
         window.plugins.spinnerDialog.show();
         GeolocationFactory.getCurrentPosition(function(position) {
-            var map = new GoogleMap();
+            if (map == null) {
+                map = new GoogleMap();
+            }
             map.initialize(position.coords.latitude, position.coords.longitude);
             showMarkers(map);
+
+            RestaurantsFactory.saveMapState(map);
             window.plugins.spinnerDialog.hide();
         }, function onError(error) {
             // console.log('onError');
@@ -42,12 +46,29 @@ menufortouristApp.controller('MapController', function($scope, $location, UserFa
 
     $scope.goDetails = function(restaurant) {
         RestaurantsFactory.saveSelectedRestaurant(restaurant);
-        RestaurantsFactory.setOrigin(RestaurantsFactory.MAIN_PAGE);
+        RestaurantsFactory.setOrigin(RestaurantsFactory.MAIN_MAP_PAGE);
         $location.path("/details");
     };
 
     $scope.back = function() {
         $location.path("/main");
+    };
+
+    $scope.goSearch = function() {
+        $location.path("/search");
+    };
+    
+    $scope.goList = function() {
+        var origin = RestaurantsFactory.getOrigin();
+        if (origin == RestaurantsFactory.SEARCH_PAGE) {
+            $location.path("/search");
+        } else if (origin == RestaurantsFactory.MAIN_MAP_PAGE) {
+            $location.path("/main");
+        } else if (origin == RestaurantsFactory.SEARCH_MAP_PAGE) {
+            $location.path("/search");
+        } else {
+            $location.path("/main");
+        }
     };
 
     
@@ -91,14 +112,15 @@ menufortouristApp.controller('MapController', function($scope, $location, UserFa
 
     // Private util methods
     function showMarkers(map){
+        map.deleteMarkers();
         for (var i = 0; i < $scope.restaurants.length; i++) {
             var restaurant = $scope.restaurants[i];
             
             if (i == 0) {
                 $scope.restaurant = restaurant;
-                map.addMarkersToMap(restaurant, true);
+                map.addMarkers(restaurant, true);
             } else {
-                map.addMarkersToMap(restaurant);
+                map.addMarkers(restaurant);
             }
         };
     }
