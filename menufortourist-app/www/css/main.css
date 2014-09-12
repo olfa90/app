@@ -84,12 +84,23 @@ input[type="search"] {
   color: #FFF;
 }
 
+#list_languages {
+  height: 100%
+}
+
 #list_languages .table-view-cell {
   color: #000;
   font-size: 18px;
   font-weight: 800 bold;
 
   /*line-height: 45px;*/
+}
+
+#list_languages > div {
+  top: 30%;
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 #list_places {

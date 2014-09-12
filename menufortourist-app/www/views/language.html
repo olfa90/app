@@ -4,7 +4,13 @@
     </header>
 
     <section id="list_languages" class="content">
-      <div class="card">
+      <div>
+        <button class="btn btn-primary btn-block navigate-right" ng-click="setLanguage('EN')">English</button>
+        <button class="btn btn-negative btn-block navigate-right" ng-click="setLanguage('ES')">Español</button>
+        <button class="btn btn-positive btn-block navigate-right" ng-click="setLanguage('PT-BR')">Português</button>
+      </div>
+      
+      <!-- <div class="card">
         <ul class="table-view">
           <li class="table-view-cell media">
             <a class="navigate-right" ng-click="setLanguage('EN')">
@@ -31,6 +37,6 @@
             </a>
           </li>
         </ul>
-      </div>
+      </div> -->
     </section>
     <!-- main container end -->

@@ -126,6 +126,11 @@ menufortouristApp.controller('DetailsController', function($scope, $location, Us
         // document.getElementById('order_list_modal').classList.remove('active');
     }
 
+    $scope.hideModal = function() {
+        $scope.selectedItem = null;
+        document.getElementById('order_list_modal').classList.remove('active');
+    }
+
     $scope.getSelectedItem = function() {
         return $scope.selectedItem;
     }

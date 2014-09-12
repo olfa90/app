@@ -69,7 +69,7 @@ function GoogleMap() {
 			position: latitudeAndLongitude,
 			map: this.map,
 			icon: iconMarker,
-			animation: google.maps.Animation.DROP,
+			// animation: google.maps.Animation.DROP,
 			title: place.name
 		});
 

@@ -9,14 +9,12 @@ menufortouristApp.controller('MapController', function($scope, $location, UserFa
         // Pega os restaurantes carregados na consulta anterior.
         $scope.restaurants = RestaurantsFactory.getAroundResult();
 
-        var map = RestaurantsFactory.getMapState();
+        // var map = RestaurantsFactory.getMapState();
 
         // Show spinner dialog
         window.plugins.spinnerDialog.show();
         GeolocationFactory.getCurrentPosition(function(position) {
-            if (map == null) {
-                map = new GoogleMap();
-            }
+            var map = new GoogleMap();
             map.initialize(position.coords.latitude, position.coords.longitude);
             showMarkers(map);
 
