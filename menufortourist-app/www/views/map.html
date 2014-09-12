@@ -20,7 +20,7 @@
     </section>
 
     <section id="content_map_info">
-      <ul ng-if="restaurant" class="table-view">
+      <ul ng-show="restaurant" class="table-view">
         <li class="table-view-cell media">
           <a class="navigate-right" ng-click="goDetails(restaurant)">
             <img class="media-object pull-left" ng-src="img/{{removerAcentos(restaurant.name)}}.jpg" width="75" height="60">

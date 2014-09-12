@@ -1,5 +1,5 @@
 // SearchController
-menufortouristApp.controller('MapController', function($scope, $location, UserFactory, RestaurantsFactory, GeolocationFactory) {
+menufortouristApp.controller('MapController', function($scope, $location, $window, UserFactory, RestaurantsFactory, GeolocationFactory) {
 
     $scope.locale = UserFactory.locale;
 
@@ -7,25 +7,26 @@ menufortouristApp.controller('MapController', function($scope, $location, UserFa
 
     function init(){
         // Pega os restaurantes carregados na consulta anterior.
-        $scope.restaurants = RestaurantsFactory.getAroundResult();
+        $scope.restaurants = RestaurantsFactory.getRestaurantsList();
+        console.log($scope.restaurants);
 
         // var map = RestaurantsFactory.getMapState();
 
         // Show spinner dialog
-        window.plugins.spinnerDialog.show();
+        // window.plugins.spinnerDialog.show();
         GeolocationFactory.getCurrentPosition(function(position) {
             var map = new GoogleMap();
             map.initialize(position.coords.latitude, position.coords.longitude);
             showMarkers(map);
 
             RestaurantsFactory.saveMapState(map);
-            window.plugins.spinnerDialog.hide();
+            // window.plugins.spinnerDialog.hide();
         }, function onError(error) {
             // console.log('onError');
             alert('code: '    + error.code    + '\n' +
                   'message: ' + error.message + '\n');
             // Hide spinner dialog
-            window.plugins.spinnerDialog.hide();
+            // window.plugins.spinnerDialog.hide();
         });
     }
 
@@ -49,24 +50,23 @@ menufortouristApp.controller('MapController', function($scope, $location, UserFa
     };
 
     $scope.back = function() {
-        $location.path("/main");
+        // $location.path("/main");
+        $window.history.back();
     };
 
     $scope.goSearch = function() {
+        RestaurantsFactory.cleanSearchResult();
         $location.path("/search");
     };
     
     $scope.goList = function() {
-        var origin = RestaurantsFactory.getOrigin();
-        if (origin == RestaurantsFactory.SEARCH_PAGE) {
-            $location.path("/search");
-        } else if (origin == RestaurantsFactory.MAIN_MAP_PAGE) {
-            $location.path("/main");
-        } else if (origin == RestaurantsFactory.SEARCH_MAP_PAGE) {
-            $location.path("/search");
-        } else {
-            $location.path("/main");
-        }
+        // var origin = RestaurantsFactory.getOrigin();
+        // if (origin == RestaurantsFactory.SEARCH_PAGE || origin == RestaurantsFactory.SEARCH_MAP_PAGE) {
+        //     $location.path("/search");
+        // } else {
+        //     $location.path("/main");
+        // }
+        $window.history.back();
     };
 
     

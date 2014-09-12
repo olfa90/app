@@ -1,18 +1,36 @@
 // SearchController
-menufortouristApp.controller('SearchController', function($scope, $location, UserFactory, RestaurantsFactory) {
+menufortouristApp.controller('SearchController', function($scope, $location, $window, UserFactory, RestaurantsFactory) {
 
     $scope.locale = UserFactory.locale;
 
+    $scope.searching = true;
     $scope.searchText = '';
+
+    $scope.restaurants = [];
 
     init();
 
     function init(){
         // Pega os restaurantes carregados na consulta anterior.
         $scope.restaurants = RestaurantsFactory.getSearchResult();
+
+        console.log($scope.restaurants);
+        console.log($scope.restaurants.length);
+        if ($scope.restaurants != null && $scope.restaurants.length > 0) {
+            $scope.searching = false;
+        }
     }
 
-    // Metodos for internationalization
+    // Methods for internationalization
+    $scope.getTitle = function() {
+        if ($scope.locale == 'EN') {
+            return 'Search';
+        } else if ($scope.locale == 'ES') {
+            return 'Búsqueda';
+        } else {
+            return 'Busca';
+        }
+    };
     $scope.getPlaceholder = function() {
         if ($scope.locale == 'EN') {
             return "Restaurant's name or location";
@@ -20,6 +38,15 @@ menufortouristApp.controller('SearchController', function($scope, $location, Use
             return 'Nombre o ubicación del restaurante';
         } else {
             return 'Nome ou localização do restaurante';
+        }
+    };
+    $scope.getMapText = function() {
+        if ($scope.locale == 'EN') {
+            return 'Map';
+        } else if ($scope.locale == 'ES') {
+            return 'Mapa';
+        } else {
+            return 'Mapa';
         }
     };
     //
@@ -31,6 +58,7 @@ menufortouristApp.controller('SearchController', function($scope, $location, Use
         }
 
         $scope.restaurants = RestaurantsFactory.searchRestaurants($scope.searchText);
+        $scope.searching = false;
     }
 
     $scope.goDetails = function(restaurant) {
@@ -40,7 +68,19 @@ menufortouristApp.controller('SearchController', function($scope, $location, Use
     };
 
     $scope.back = function() {
+        RestaurantsFactory.cleanSearchResult();
         $location.path("/main");
+        // $window.history.back();
+    };
+
+    $scope.showSearch = function() {
+        $scope.searching = true;
+    };
+
+    $scope.goMap = function(restaurants) {
+        RestaurantsFactory.saveRestaurantsList(restaurants);
+        RestaurantsFactory.setOrigin(RestaurantsFactory.SEARCH_PAGE);
+        $location.path("/map");
     };
 
     /**

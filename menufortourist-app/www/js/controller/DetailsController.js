@@ -1,5 +1,5 @@
 // DetailsController
-menufortouristApp.controller('DetailsController', function($scope, $location, UserFactory, RestaurantsFactory){
+menufortouristApp.controller('DetailsController', function($scope, $location, $window, UserFactory, RestaurantsFactory){
 
     $scope.locale = UserFactory.locale;
 
@@ -103,14 +103,15 @@ menufortouristApp.controller('DetailsController', function($scope, $location, Us
 
 
     $scope.back = function() {
-        var origin = RestaurantsFactory.getOrigin();
-        if (origin == RestaurantsFactory.SEARCH_PAGE) {
-            $location.path("/search");
-        } else if (origin == RestaurantsFactory.MAIN_MAP_PAGE || origin == RestaurantsFactory.SEARCH_MAP_PAGE) {
-            $location.path("/map");
-        } else {
-            $location.path("/main");
-        }  
+        // var origin = RestaurantsFactory.getOrigin();
+        // if (origin == RestaurantsFactory.SEARCH_PAGE) {
+        //     $location.path("/search");
+        // } else if (origin == RestaurantsFactory.MAIN_MAP_PAGE || origin == RestaurantsFactory.SEARCH_MAP_PAGE) {
+        //     $location.path("/map");
+        // } else {
+        //     $location.path("/main");
+        // }
+        $window.history.back();
     };
 
     $scope.formatPriceDescription = function(description) {

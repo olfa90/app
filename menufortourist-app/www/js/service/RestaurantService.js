@@ -1,6 +1,9 @@
 menufortouristApp.service( 'RestaurantService', function ( $http, $q ) {
   var url = 'http://www.menufortourist.com';
 // var url = 'http://192.168.0.9:3000';
+
+  var cnt = 0;
+
   return {
     get: function getRestaurant( id ) {
       // We create our own promise to return
@@ -34,6 +37,7 @@ menufortouristApp.service( 'RestaurantService', function ( $http, $q ) {
       $http.get(url+'/restaurantes/search.json', {
         params: {search: search}
       }).then( function ( object ) {
+        cnt = 0;
         if (object.data == null || object.data.length == 0) {
           alert("Nenhum restaurante foi encontrado.");
         }
@@ -41,9 +45,13 @@ menufortouristApp.service( 'RestaurantService', function ( $http, $q ) {
         // resolve the promise
         deferred.resolve( restaurants );
 
-      }, function getRestaurantsError() { 
-        alert("Não foi possível executar esta operação. Por favor, tente novamente mais tarde.");
-        deferred.reject(); 
+      }, function getRestaurantsError() {
+        if (cnt == 0) {
+          cnt++;
+          search(search);
+        } else {
+          deferred.reject("Não foi possível executar esta operação. Por favor, tente novamente mais tarde.");
+        }
       });
 
       return deferred.promise;
@@ -64,7 +72,6 @@ menufortouristApp.service( 'RestaurantService', function ( $http, $q ) {
         deferred.resolve( restaurants );
 
       }, function getRestaurantsError() { 
-        alert("Não foi possível executar esta operação. Por favor, tente novamente mais tarde.");
         deferred.reject();
       });
 

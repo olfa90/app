@@ -9,9 +9,21 @@ header.bar {
   background-color: rgb(219,54,60);
 }
 
-header.bar .logo {
+header h1.logo {
+  background: url("../icon.png");
   height: 44px;
-  width: 34px;
+  width: 30px;
+  text-indent: -9999px;
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  margin: 0;
+}
+
+header a.logo {
+  height: 44px;
+  width: 30px;
   background-image: url("../img/logo.gif");
   background-size: 30px;
   background-repeat: no-repeat;
@@ -80,7 +92,7 @@ nav.bar-header-secondary .icon-google-maps {
 }
 
 input[type="search"] {
-  width: 90%;
+  width: 82%;
   color: #FFF;
 }
 

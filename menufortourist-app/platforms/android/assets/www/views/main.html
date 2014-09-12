@@ -7,7 +7,7 @@
       <div class="pull-right">
         <a class="icon icon-search" ng-click="goSearch()"></a>
         &nbsp;
-        <button class="btn btn-link btn-nav" ng-click="goMap()">
+        <button class="btn btn-link btn-nav" ng-show="restaurants" ng-click="goMap(restaurants)">
           {{getMapText()}}
         </button>
       </div>

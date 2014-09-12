@@ -32,6 +32,14 @@ menufortouristApp.factory('RestaurantsFactory', function(RestaurantService){
             // Hide spinner dialog
             window.plugins.spinnerDialog.hide();
             return restaurantsSearch;
+        }, function(reason) {
+            console.log('Failed: ' + reason);
+            alert("Não foi possível executar esta operação. Por favor, tente novamente mais tarde.");
+            restaurantsSearch = [];
+
+            // Hide spinner dialog
+            window.plugins.spinnerDialog.hide();
+            return restaurantsSearch;
         });
     };
 
@@ -43,6 +51,14 @@ menufortouristApp.factory('RestaurantsFactory', function(RestaurantService){
             // Hide spinner dialog
             window.plugins.spinnerDialog.hide();
 
+            return restaurantsAround;
+        }, function(reason) {
+            console.log('Failed: ' + reason);
+            alert("Não foi possível executar esta operação. Por favor, tente novamente mais tarde.");
+            restaurantsAround = [];
+
+            // Hide spinner dialog
+            window.plugins.spinnerDialog.hide();
             return restaurantsAround;
         });
     };
@@ -74,6 +90,16 @@ menufortouristApp.factory('RestaurantsFactory', function(RestaurantService){
         return restaurant;
     };
 
+    // Save list for the next page
+    factory.saveRestaurantsList = function(restaurantsList) {
+        restaurants = restaurantsList;
+    };
+
+    // Get list saved from previous page
+    factory.getRestaurantsList = function() {
+        return restaurants;
+    };
+
     factory.getAroundResult = function() {
         return restaurantsAround;
     };
@@ -81,6 +107,10 @@ menufortouristApp.factory('RestaurantsFactory', function(RestaurantService){
     factory.getSearchResult = function() {
         return restaurantsSearch;
     };
+
+    factory.cleanSearchResult = function() {
+        restaurantsSearch = [];
+    };    
 
     // Save map for next time
     factory.saveMapState = function(mapState) {

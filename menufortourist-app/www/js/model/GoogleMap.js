@@ -80,7 +80,7 @@ function GoogleMap() {
 			this.map.panTo(latitudeAndLongitude);
 		}
 
-		marker.content = '<div class="infoWindowContent">' + (place.specialty == null ? '' : place.specialty) + '</div>';
+		// marker.content = '<div class="infoWindowContent">' + (place.description == null ? '' : place.description) + '</div>';
         
 		// When marker clicked
 		google.maps.event.addListener(marker, 'click', function() {

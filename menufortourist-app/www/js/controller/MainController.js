@@ -1,5 +1,5 @@
 // MainController
-menufortouristApp.controller('MainController', function($scope, $location, UserFactory, RestaurantsFactory, GeolocationFactory) {
+menufortouristApp.controller('MainController', function($scope, $location, $window, UserFactory, RestaurantsFactory, GeolocationFactory) {
 
 	$scope.locale = UserFactory.locale;
 
@@ -68,7 +68,7 @@ menufortouristApp.controller('MainController', function($scope, $location, UserF
     //     };
     // }
 
-    // Metodos for internationalization
+    // Methods for internationalization
     $scope.getTitle = function() {
         if ($scope.locale == 'EN') {
             return 'Restaurants';
@@ -110,15 +110,18 @@ menufortouristApp.controller('MainController', function($scope, $location, UserF
 
     $scope.back = function() {
         $location.path("/language");
+        // $window.history.back();
     };
 
     $scope.goSearch = function() {
         $location.path("/search");
     };
 
-    $scope.goMap = function() {
+    $scope.goMap = function(restaurants) {
         // $scope.list = false;
         // initMap();
+        RestaurantsFactory.saveRestaurantsList(restaurants);
+        RestaurantsFactory.setOrigin(RestaurantsFactory.MAIN_PAGE);
         $location.path("/map");
     };
 

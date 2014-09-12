@@ -1,10 +1,26 @@
-    <header class="bar bar-nav">
+    <header class="bar bar-nav" ng-show="searching">
       <button class="btn btn-link btn-nav pull-left" ng-click="back()">
         <span class="icon icon-left-nav"></span>
+        <h1 class="logo">Menu For TOURIST</h1>
       </button>
       <form ng-submit="search()">
         <input type="search" ng-model="searchText" placeholder="{{getPlaceholder()}}" autofocus>
       </form>
+    </header>
+
+    <header class="bar bar-nav" ng-show="!searching">
+      <button class="btn btn-link btn-nav pull-left" ng-click="back()">
+        <span class="icon icon-left-nav"></span>
+        <h1 class="logo">Menu For TOURIST</h1>
+      </button>
+      <h1 class="title">{{getTitle()}}</h1>
+      <div class="pull-right">
+        <a class="icon icon-search" ng-click="showSearch()"></a>
+        &nbsp;
+        <button class="btn btn-link btn-nav" ng-show="restaurants" ng-click="goMap(restaurants)">
+          {{getMapText()}}
+        </button>
+      </div>
     </header>
 
     <section id="list_places" class="content">
