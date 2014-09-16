@@ -133,3 +133,101 @@ You could find it at the following address https://developer.apple.com/icloud/do
 2014-09-16 11:18:47.680 Menu For Tourist[71353:70b] [CDVTimer][TotalPluginStartup] 326.003015ms
 2014-09-16 11:18:48.961 Menu For Tourist[71353:70b] Resetting plugins due to page load.
 2014-09-16 11:18:50.064 Menu For Tourist[71353:70b] Finished load of: file:///Users/gu/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/A6FB6DBF-1A3E-44E4-8885-B866FE5CDF24/Menu%20For%20TOURIST.app/www/index.html#/
+objc[73205]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2014-09-16 15:08:34.955 Menu For Tourist[73205:70b] Cannot find executable for CFBundle 0xa2b9590 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2014-09-16 15:08:34.961 Menu For Tourist[73205:70b] Cannot find executable for CFBundle 0xa5a9610 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2014-09-16 15:08:35.015 Menu For Tourist[73205:70b] Multi-tasking -> Device: YES, App: YES
+2014-09-16 15:08:35.249 Menu For Tourist[73205:70b] Unlimited access to network resources
+2014-09-16 15:08:35.323 Menu For Tourist[73205:70b] 
+
+Started backup to iCloud! Please be careful.
+Your application might rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines"
+You could find it at the following address https://developer.apple.com/icloud/documentation/data-storage/ .
+
+2014-09-16 15:08:37.369 Menu For Tourist[73205:70b] [CDVTimer][splashscreen] 532.642007ms
+2014-09-16 15:08:37.370 Menu For Tourist[73205:70b] [CDVTimer][TotalPluginStartup] 533.241987ms
+2014-09-16 15:08:38.325 Menu For Tourist[73205:70b] Resetting plugins due to page load.
+2014-09-16 15:08:40.176 Menu For Tourist[73205:70b] Finished load of: file:///Users/gu/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/A6FB6DBF-1A3E-44E4-8885-B866FE5CDF24/Menu%20For%20TOURIST.app/www/index.html#/
+objc[73832]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2014-09-16 15:19:21.829 Menu For Tourist[73832:70b] Cannot find executable for CFBundle 0xa54b840 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2014-09-16 15:19:22.124 Menu For Tourist[73832:70b] Cannot find executable for CFBundle 0xa23a0f0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2014-09-16 15:19:22.227 Menu For Tourist[73832:70b] Multi-tasking -> Device: YES, App: YES
+2014-09-16 15:19:22.360 Menu For Tourist[73832:70b] Unlimited access to network resources
+2014-09-16 15:19:22.450 Menu For Tourist[73832:70b] 
+
+Started backup to iCloud! Please be careful.
+Your application might rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines"
+You could find it at the following address https://developer.apple.com/icloud/documentation/data-storage/ .
+
+2014-09-16 15:19:24.372 Menu For Tourist[73832:70b] [CDVTimer][splashscreen] 446.771979ms
+2014-09-16 15:19:24.373 Menu For Tourist[73832:70b] [CDVTimer][TotalPluginStartup] 447.636962ms
+2014-09-16 15:19:25.252 Menu For Tourist[73832:70b] Resetting plugins due to page load.
+2014-09-16 15:19:26.591 Menu For Tourist[73832:70b] Finished load of: file:///Users/gu/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/A6FB6DBF-1A3E-44E4-8885-B866FE5CDF24/Menu%20For%20TOURIST.app/www/index.html#/
+2014-09-16 15:19:36.652 Menu For Tourist[73832:70b] THREAD WARNING: ['SpinnerDialog'] took '199.574951' ms. Plugin should use a background thread.
+objc[74439]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2014-09-16 15:23:39.466 Menu For Tourist[74439:70b] Cannot find executable for CFBundle 0xa3b8860 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2014-09-16 15:23:39.472 Menu For Tourist[74439:70b] Cannot find executable for CFBundle 0xa2eb700 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2014-09-16 15:23:39.630 Menu For Tourist[74439:70b] Multi-tasking -> Device: YES, App: YES
+2014-09-16 15:23:39.785 Menu For Tourist[74439:70b] Unlimited access to network resources
+2014-09-16 15:23:39.901 Menu For Tourist[74439:70b] 
+
+Started backup to iCloud! Please be careful.
+Your application might rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines"
+You could find it at the following address https://developer.apple.com/icloud/documentation/data-storage/ .
+
+2014-09-16 15:23:45.048 Menu For Tourist[74439:70b] [CDVTimer][splashscreen] 708.424985ms
+2014-09-16 15:23:45.069 Menu For Tourist[74439:70b] [CDVTimer][TotalPluginStartup] 729.190052ms
+2014-09-16 15:23:46.249 Menu For Tourist[74439:70b] Resetting plugins due to page load.
+2014-09-16 15:23:48.494 Menu For Tourist[74439:70b] Finished load of: file:///Users/gu/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/A6FB6DBF-1A3E-44E4-8885-B866FE5CDF24/Menu%20For%20TOURIST.app/www/index.html#/
+objc[75021]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2014-09-16 15:25:44.515 Menu For Tourist[75021:70b] Cannot find executable for CFBundle 0xa46dcf0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2014-09-16 15:25:44.522 Menu For Tourist[75021:70b] Cannot find executable for CFBundle 0xa549bf0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2014-09-16 15:25:44.660 Menu For Tourist[75021:70b] Multi-tasking -> Device: YES, App: YES
+2014-09-16 15:25:44.865 Menu For Tourist[75021:70b] Unlimited access to network resources
+2014-09-16 15:25:45.290 Menu For Tourist[75021:70b] 
+
+Started backup to iCloud! Please be careful.
+Your application might rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines"
+You could find it at the following address https://developer.apple.com/icloud/documentation/data-storage/ .
+
+2014-09-16 15:25:51.670 Menu For Tourist[75021:70b] [CDVTimer][splashscreen] 839.347959ms
+2014-09-16 15:25:51.706 Menu For Tourist[75021:70b] [CDVTimer][TotalPluginStartup] 875.129998ms
+2014-09-16 15:25:52.151 Menu For Tourist[75021:70b] Resetting plugins due to page load.
+2014-09-16 15:25:53.546 Menu For Tourist[75021:70b] Finished load of: file:///Users/gu/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/A6FB6DBF-1A3E-44E4-8885-B866FE5CDF24/Menu%20For%20TOURIST.app/www/index.html#/
+objc[75621]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2014-09-16 15:29:47.149 Menu For Tourist[75621:70b] Cannot find executable for CFBundle 0xa525730 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2014-09-16 15:29:47.156 Menu For Tourist[75621:70b] Cannot find executable for CFBundle 0xa34f8a0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2014-09-16 15:29:47.310 Menu For Tourist[75621:70b] Multi-tasking -> Device: YES, App: YES
+2014-09-16 15:29:47.516 Menu For Tourist[75621:70b] Unlimited access to network resources
+2014-09-16 15:29:47.615 Menu For Tourist[75621:70b] 
+
+Started backup to iCloud! Please be careful.
+Your application might rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines"
+You could find it at the following address https://developer.apple.com/icloud/documentation/data-storage/ .
+
+2014-09-16 15:29:49.171 Menu For Tourist[75621:70b] [CDVTimer][splashscreen] 422.958970ms
+2014-09-16 15:29:49.172 Menu For Tourist[75621:70b] [CDVTimer][TotalPluginStartup] 423.851013ms
+2014-09-16 15:29:49.782 Menu For Tourist[75621:70b] Resetting plugins due to page load.
+2014-09-16 15:29:50.987 Menu For Tourist[75621:70b] Finished load of: file:///Users/gu/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/A6FB6DBF-1A3E-44E4-8885-B866FE5CDF24/Menu%20For%20TOURIST.app/www/index.html#/
+2014-09-16 15:32:30.844 Menu For Tourist[75621:70b] THREAD WARNING: ['SpinnerDialog'] took '150.145996' ms. Plugin should use a background thread.
+objc[76229]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2014-09-16 15:36:00.748 Menu For Tourist[76229:70b] Cannot find executable for CFBundle 0xa36e840 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2014-09-16 15:36:00.752 Menu For Tourist[76229:70b] Cannot find executable for CFBundle 0xa252610 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2014-09-16 15:36:00.953 Menu For Tourist[76229:70b] Multi-tasking -> Device: YES, App: YES
+2014-09-16 15:36:01.589 Menu For Tourist[76229:70b] Unlimited access to network resources
+2014-09-16 15:36:01.699 Menu For Tourist[76229:70b] 
+
+Started backup to iCloud! Please be careful.
+Your application might rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines"
+You could find it at the following address https://developer.apple.com/icloud/documentation/data-storage/ .
+
+2014-09-16 15:36:03.728 Menu For Tourist[76229:70b] [CDVTimer][splashscreen] 462.490022ms
+2014-09-16 15:36:03.729 Menu For Tourist[76229:70b] [CDVTimer][TotalPluginStartup] 463.366985ms
+2014-09-16 15:36:04.607 Menu For Tourist[76229:70b] Resetting plugins due to page load.
+2014-09-16 15:36:05.914 Menu For Tourist[76229:70b] Finished load of: file:///Users/gu/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/A6FB6DBF-1A3E-44E4-8885-B866FE5CDF24/Menu%20For%20TOURIST.app/www/index.html#/

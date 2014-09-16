@@ -2,6 +2,7 @@
 menufortouristApp.controller('SearchController', function($scope, $location, $window, UserFactory, RestaurantsFactory) {
 
     $scope.locale = UserFactory.locale;
+    $scope.helpers = AppUtil.helpers;
 
     $scope.searching = true;
     $scope.searchText = '';
@@ -114,7 +115,7 @@ menufortouristApp.controller('SearchController', function($scope, $location, $wi
             string = string.replace( expressaoRegular, letra );
         }
      
-        return string;
+        return string.toUpperCase();
     };
     
 });

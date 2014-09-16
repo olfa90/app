@@ -102,17 +102,21 @@ input[type="search"] {
 
 #list_languages .table-view-cell {
   color: #000;
-  font-size: 18px;
-  font-weight: 800 bold;
-
-  /*line-height: 45px;*/
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 45px;
 }
 
 #list_languages > div {
-  top: 30%;
+  top: 27%;
   position: relative;
-  margin-left: 10px;
-  margin-right: 10px;
+  /*margin-left: 10px;
+  margin-right: 10px;*/
+}
+
+#list_languages > div img {
+  margin-left: 20%;
+  margin-right: 15px;
 }
 
 #list_places {

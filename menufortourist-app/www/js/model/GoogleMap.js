@@ -19,11 +19,11 @@ function GoogleMap() {
 	    // the anchor where the icon's hotspot should be located (which is based on the origin)
 	    // anchor: new google.maps.Point(0, 15),
 	    // Scale the image to get the right size
-	    scaledSize: new google.maps.Size(25, 25)
+	    scaledSize: new google.maps.Size(28, 28)
 	};
 	var iconActiveMarker = {
 		url: 'icon-marker.png',
-	    scaledSize: new google.maps.Size(28, 28)
+	    scaledSize: new google.maps.Size(32, 32)
 	};
 
 	this.initialize = function(lat, lng, frozen){

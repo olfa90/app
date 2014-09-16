@@ -115,6 +115,10 @@ input[type="search"] {
   margin-right: 10px;
 }
 
+#list_languages > div > button > img {
+  margin-left: 10px;
+}
+
 #list_places {
   /* When not using second nav bar: 29px */
   /*padding-top: 29px;*/
@@ -225,7 +229,7 @@ img#place {
 }
 
 #menu .table-view-divider {
-  text-transform: uppercase;
+  /*text-transform: capitalize;*/
   background-color: rgb(219,54,60);
   color: rgb(255,252,244);
 
@@ -233,6 +237,11 @@ img#place {
   /*background-color: #fafafa;*/
   /*border-top: 1px solid rgb(141,41,43);*/
 
+  /*line-height: 45px;*/
+  padding-right: 10px;
+}
+
+#menu .table-view-divider::first-line {
   line-height: 45px;
 }
 
