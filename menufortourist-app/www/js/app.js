@@ -24,8 +24,10 @@ menufortouristApp.config(function ($routeProvider) {
         // opening page
         when('/',
         {
-            controller: 'OpeningController',
-            templateUrl: 'views/opening.html'
+            // controller: 'OpeningController',
+            // templateUrl: 'views/opening.html'
+            controller: 'LanguageController',
+            templateUrl: 'views/language.html'
 
         }).
 

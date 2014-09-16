@@ -1,29 +1,35 @@
-    <header class="bar bar-standard">
+    <header class="bar bar-nav">
+      <button class="btn btn-link btn-nav pull-left" ng-click="back()">
+        <span class="icon icon-left-nav"></span>
+      </button>
       <a class="logo pull-left"></a>
-      <h1 class="title">Locais</h1>
-      <a class="icon icon-search pull-right"></a>
+      <h1 class="title">{{getTitle()}}</h1>
+      <div class="pull-right">
+        <a class="icon icon-search" ng-click="goSearch()"></a>
+        &nbsp;
+        <button class="btn btn-link btn-nav" ng-show="restaurants" ng-click="goMap(restaurants)">
+          {{getMapText()}}
+        </button>
+      </div>
     </header>
 
-    <!-- Search in standard bar fixed below top bar (header) -->
+    <!-- Filters in standard bar fixed below top bar (header) -->
     <!-- <nav class="bar bar-standard bar-header-secondary">
-      <button class="btn btn-link btn-nav pull-left">
-        <span class="icon icon-bars"></span>
-        Ordenar
+      <button class="btn btn-link btn-nav pull-left" ng-click="refresh()">
+        <span class="icon icon-refresh"></span>
+        {{getRefreshText()}}
       </button>
       <button class="btn filtro">
-        Bairro
+        {{getSpecialtyText()}}
       </button>
-      <button class="btn filtro">
-        Tipo
-      </button>
-      <button class="btn btn-link btn-nav pull-right">
-        Mapa
+      <button class="btn btn-link btn-nav pull-right" ng-click="goMap()">
+        {{getMapText()}}
         <span class="icon icon-google-maps"></span>
       </button>
     </nav> -->
 
     <section id="list_places" class="content">
-      <ul id="list_view" class="table-view">
+      <ul class="table-view">
         <li class="table-view-cell media" ng-repeat="restaurant in restaurants">
           <a class="navigate-right" ng-click="goDetails(restaurant)">
             <img class="media-object pull-left" ng-src="img/{{removerAcentos(restaurant.name)}}.jpg" width="75" height="60">

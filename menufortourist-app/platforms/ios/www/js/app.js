@@ -24,8 +24,18 @@ menufortouristApp.config(function ($routeProvider) {
         // opening page
         when('/',
         {
-            controller: 'OpeningController',
-            templateUrl: 'views/opening.html'
+            // controller: 'OpeningController',
+            // templateUrl: 'views/opening.html'
+            controller: 'LanguageController',
+            templateUrl: 'views/language.html'
+
+        }).
+
+        // language page
+        when('/language',
+        {
+            controller: 'LanguageController',
+            templateUrl: 'views/language.html'
 
         }).
 
@@ -34,6 +44,22 @@ menufortouristApp.config(function ($routeProvider) {
         {
             controller: 'MainController',
             templateUrl: 'views/main.html'
+
+        }).
+
+        // search page
+        when('/search',
+        {
+            controller: 'SearchController',
+            templateUrl: 'views/search.html'
+
+        }).
+
+        // map page
+        when('/map',
+        {
+            controller: 'MapController',
+            templateUrl: 'views/map.html'
 
         }).
 

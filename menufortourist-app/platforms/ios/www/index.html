@@ -41,8 +41,12 @@
     <!-- importsrc update:uglify.target.files['dist/js/app.min.js'] -->
     <script src="js/app.js"></script>
     <script src="js/controller/OpeningController.js"></script>
+    <script src="js/controller/LanguageController.js"></script>
     <script src="js/controller/MainController.js"></script>
+    <script src="js/controller/SearchController.js"></script>
+    <script src="js/controller/MapController.js"></script>
     <script src="js/controller/DetailsController.js"></script>
+    <script src="js/factory/UserFactory.js"></script>
     <script src="js/factory/CordovaReadyFactory.js"></script>
     <script src="js/factory/GeolocationFactory.js"></script>
     <script src="js/factory/RestaurantsFactory.js"></script>
@@ -50,7 +54,13 @@
     <script src="js/service/RestaurantService.js"></script>
     <script src="js/model/Address.js"></script>
     <script src="js/model/Restaurant.js"></script>
+    <script src="js/model/GoogleMap.js"></script>
     <!-- endimportsrc -->
+
+    <!-- Google maps -->
+    <script type="text/javascript"
+      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBLD64U8OngmvqZtT-I-T8GWXkpX31sfTQ&sensor=true&language={{locale}}"></script>
+    <!-- // -->
 
   </body>
 </html>

@@ -114,7 +114,7 @@ menufortouristApp.controller('SearchController', function($scope, $location, $wi
             string = string.replace( expressaoRegular, letra );
         }
      
-        return string;
+        return string.toUpperCase();
     };
     
 });

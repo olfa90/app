@@ -62,7 +62,7 @@ menufortouristApp.service( 'RestaurantService', function ( $http, $q ) {
       var deferred = $q.defer();
 
       $http.get(url+'/restaurantes/around.json', {
-        params: {lat: lat, lng: lng}
+        params: {lat: lat, lng: lng, radius: 20}
       }).then( function ( object ) {
         if (object.data == null || object.data.length == 0) {
           alert("Nenhum restaurante foi encontrado na proximidade.");

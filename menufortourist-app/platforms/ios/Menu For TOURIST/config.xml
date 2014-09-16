@@ -26,6 +26,13 @@
     <feature name="SpinnerDialog">
         <param name="ios-package" value="CDVSpinnerDialog" />
     </feature>
+    <feature name="Globalization">
+        <param name="ios-package" value="CDVGlobalization" />
+    </feature>
+    <feature name="SplashScreen">
+        <param name="ios-package" value="CDVSplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
     <name>Menu For TOURIST</name>
     <description>
         An incredible app for turists to find restaurant's menu in theirs home languages.
@@ -44,7 +51,7 @@
     <preference name="ios-statusbarstyle" value="black-opaque" />
     <preference name="detect-data-types" value="true" />
     <preference name="exit-on-suspend" value="false" />
-    <preference name="show-splash-screen-spinner" value="true" />
+    <preference name="show-splash-screen-spinner" value="false" />
     <preference name="auto-hide-splash-screen" value="true" />
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="7" />
@@ -63,7 +70,7 @@
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" />
     <gap:plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" version="1.2.0" />
-    <gap:plugin name="hu.dpal.phonegap.plugins.spinnerdialog" />
+    <gap:plugin name="hu.dpal.phonegap.plugins.spinnerdialog" version="0.2.1" />
     <icon src="icon.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="res/icon/android/logo-36.png" />
     <icon gap:platform="android" gap:qualifier="mdpi" src="res/icon/android/logo-48.png" />
@@ -73,8 +80,9 @@
     <icon gap:platform="ios" height="72" src="res/icon/ios/logo-72.png" width="72" />
     <icon gap:platform="ios" height="114" src="res/icon/ios/logo-114.png" width="114" />
     <icon gap:platform="ios" height="144" src="res/icon/ios/logo-144.png" width="144" />
+    <icon gap:platform="winphone" src="res/icon/windows-phone/logo-48.png" />
+    <access origin="*.google.com" />
+    <access origin="*.googleapis.com" />
+    <access origin="*.gstatic.com" />
     <access origin="*" />
-    <feature name="Globalization">
-        <param name="ios-package" value="CDVGlobalization" />
-    </feature>
 </widget>

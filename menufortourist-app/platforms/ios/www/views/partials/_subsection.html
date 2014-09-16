@@ -1,29 +1,31 @@
-  <li class="table-view-divider"
-      ng-click="toggleGroup(secao)"
-      ng-class="{active: isGroupShown(secao)}">
-    <span class="icon" ng-class="{'icon-down-nav': isGroupShown(secao), 'icon-up-nav': !isGroupShown(secao)}"></span>
-    &nbsp;
-    {{secao.titulo}}
-  </li>
-  <li class="item-accordion table-view-cell"
-            ng-repeat="item in secao.itens"
-            ng-show="isGroupShown(secao)">
-    <a ng-click="setSelectedItem(item)">
-      <!-- images size from http://placehold.it/60x60 -->
-      <!-- <img class="media-object pull-left" ng-src="{{item.urlImage}}" width="75" height="60"> -->
-      <div class="media-body">
-        {{item.titulo}}
-        <p>{{item.descricao}}</p>
-        <p class="price" ng-repeat="preco in item.precos">{{preco.valor|currency:"R$ "}} {{formatPriceDescription(preco.descricao)}}</p>
-      </div>
-    </a>
-  </li>
+  <ul class="table-view">
+    <li class="table-view-divider"
+        ng-click="toggleGroup(secao)"
+        ng-class="{active: isGroupShown(secao)}">
+      <span class="icon" ng-class="{'icon-down-nav': isGroupShown(secao), 'icon-up-nav': !isGroupShown(secao)}"></span>
+      &nbsp;
+      {{getTranslation(secao.titulo)}}
+    </li>
+    <li class="item-accordion table-view-cell"
+              ng-repeat="item in secao.itens"
+              ng-show="isGroupShown(secao)">
+      <a ng-click="showModal(item)">
+        <!-- images size from http://placehold.it/60x60 -->
+        <!-- <img class="media-object pull-left" ng-src="{{item.urlImage}}" width="75" height="60"> -->
+        <div class="media-body">
+          {{getTranslation(item.titulo)}}
+          <p>{{getTranslation(item.descricao)}}</p>
+          <p class="price" ng-repeat="preco in item.precos">{{preco.valor|currency:"R$ "}} {{formatPriceDescription(getTranslation(preco.descricao))}}</p>
+        </div>
+      </a>
+    </li>
 
-  <li class="item-accordion table-view-cell" ng-show="isGroupShown(secao) && secao.observacao != null"> 
-    <!-- ng-show="secao.observacao != null"  -->
-    <span class="icon icon-info"></span>
-    &nbsp;
-    {{secao.observacao}}
-  </li>
+    <li class="item-accordion table-view-cell" ng-show="isGroupShown(secao) && secao.note != null"> 
+      <!-- ng-show="secao.observacao != null"  -->
+      <span class="icon icon-info"></span>
+      &nbsp;
+      {{getTranslation(secao.observacao)}}
+    </li>
 
-  <div ng-repeat="secao in secao.subsecoes" ng-include src="'views/partials/_subsection.html'"></div>
+    <div class="card" ng-repeat="secao in secao.subsecoes" ng-include src="'views/partials/_subsection.html'"></div>
+  </ul>

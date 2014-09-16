@@ -169,7 +169,7 @@ menufortouristApp.controller('MainController', function($scope, $location, $wind
             string = string.replace( expressaoRegular, letra );
         }
      
-        return string;
+        return string.toUpperCase();
     };
     
 });

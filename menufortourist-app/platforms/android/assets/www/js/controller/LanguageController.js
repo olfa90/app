@@ -1,5 +1,5 @@
 // LanguageController
-menufortouristApp.controller('LanguageController', function($scope, $location, CordovaReadyFactory, UserFactory) {
+menufortouristApp.controller('LanguageController', function($scope, $location, UserFactory) {
 
 	$scope.setLanguage = function(locale) {
         UserFactory.locale = locale;

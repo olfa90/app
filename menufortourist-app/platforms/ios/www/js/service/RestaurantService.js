@@ -1,6 +1,9 @@
 menufortouristApp.service( 'RestaurantService', function ( $http, $q ) {
   var url = 'http://www.menufortourist.com';
 // var url = 'http://192.168.0.9:3000';
+
+  var cnt = 0;
+
   return {
     get: function getRestaurant( id ) {
       // We create our own promise to return
@@ -27,18 +30,50 @@ menufortouristApp.service( 'RestaurantService', function ( $http, $q ) {
       return deferred.promise;
     },
 
+    search: function searchRestaurants(search) {
+      // We create our own promise to return
+      var deferred = $q.defer();
+
+      $http.get(url+'/restaurantes/search.json', {
+        params: {search: search}
+      }).then( function ( object ) {
+        cnt = 0;
+        if (object.data == null || object.data.length == 0) {
+          alert("Nenhum restaurante foi encontrado.");
+        }
+        restaurants = object.data;
+        // resolve the promise
+        deferred.resolve( restaurants );
+
+      }, function getRestaurantsError() {
+        if (cnt == 0) {
+          cnt++;
+          search(search);
+        } else {
+          deferred.reject("Não foi possível executar esta operação. Por favor, tente novamente mais tarde.");
+        }
+      });
+
+      return deferred.promise;
+    },
+
     findNear: function findNearRestaurants(lat, lng) {
       // We create our own promise to return
       var deferred = $q.defer();
 
       $http.get(url+'/restaurantes/around.json', {
-        params: {lat: lat, lng: lng}
+        params: {lat: lat, lng: lng, radius: 20}
       }).then( function ( object ) {
+        if (object.data == null || object.data.length == 0) {
+          alert("Nenhum restaurante foi encontrado na proximidade.");
+        }
         restaurants = object.data;
         // resolve the promise
         deferred.resolve( restaurants );
 
-      }, function getRestaurantsError() { deferred.reject(); } );
+      }, function getRestaurantsError() { 
+        deferred.reject();
+      });
 
       return deferred.promise;
     },

@@ -3,7 +3,17 @@ menufortouristApp.factory('RestaurantsFactory', function(RestaurantService){
     var factory = {};
 
     var restaurants = [];
+    var restaurantsAround = [];
+    var restaurantsSearch = [];
     var restaurant = null;
+    var map = null;
+
+    // CONSTANTS:
+    factory.MAIN_PAGE = 1;
+    factory.SEARCH_PAGE = 2;
+    factory.MAIN_MAP_PAGE = 3;
+    factory.SEARCH_MAP_PAGE = 4;
+    var origin = 1;
     
     factory.findRestaurants = function(){
         return RestaurantService.find().then(function(d) {
@@ -12,15 +22,44 @@ menufortouristApp.factory('RestaurantsFactory', function(RestaurantService){
         });
     };
 
+    factory.searchRestaurants = function(search){
+        // Show spinner dialog
+        window.plugins.spinnerDialog.show();
+        return RestaurantService.search(search).then(function(collection) {
+            // console.log(collection);
+            restaurantsSearch = collection;
+
+            // Hide spinner dialog
+            window.plugins.spinnerDialog.hide();
+            return restaurantsSearch;
+        }, function(reason) {
+            console.log('Failed: ' + reason);
+            alert("Não foi possível executar esta operação. Por favor, tente novamente mais tarde.");
+            restaurantsSearch = [];
+
+            // Hide spinner dialog
+            window.plugins.spinnerDialog.hide();
+            return restaurantsSearch;
+        });
+    };
+
     factory.findNearRestaurants = function(lat, lng){
         return RestaurantService.findNear(lat, lng).then(function(collection) {
-            console.log(collection);
-            restaurants = collection;
+            // console.log(collection);
+            restaurantsAround = collection;
 
             // Hide spinner dialog
             window.plugins.spinnerDialog.hide();
 
-            return restaurants;
+            return restaurantsAround;
+        }, function(reason) {
+            console.log('Failed: ' + reason);
+            alert("Não foi possível executar esta operação. Por favor, tente novamente mais tarde.");
+            restaurantsAround = [];
+
+            // Hide spinner dialog
+            window.plugins.spinnerDialog.hide();
+            return restaurantsAround;
         });
     };
 
@@ -33,7 +72,7 @@ menufortouristApp.factory('RestaurantsFactory', function(RestaurantService){
             return;
         }
         return RestaurantService.fetchCardapio(restaurantParam).then(function(object) {
-            console.log(object);
+            // console.log(object);
             restaurant = object;
             // Hide spinner dialog
             window.plugins.spinnerDialog.hide();
@@ -51,8 +90,44 @@ menufortouristApp.factory('RestaurantsFactory', function(RestaurantService){
         return restaurant;
     };
 
-    factory.getSearchResult = function() {
+    // Save list for the next page
+    factory.saveRestaurantsList = function(restaurantsList) {
+        restaurants = restaurantsList;
+    };
+
+    // Get list saved from previous page
+    factory.getRestaurantsList = function() {
         return restaurants;
+    };
+
+    factory.getAroundResult = function() {
+        return restaurantsAround;
+    };
+
+    factory.getSearchResult = function() {
+        return restaurantsSearch;
+    };
+
+    factory.cleanSearchResult = function() {
+        restaurantsSearch = [];
+    };    
+
+    // Save map for next time
+    factory.saveMapState = function(mapState) {
+        map = mapState;
+    };
+
+    factory.getMapState = function() {
+        return map;
+    };
+
+    // Set origin page
+    factory.setOrigin = function(page){
+        origin = page;
+    };
+
+    factory.getOrigin = function(){
+        return origin;
     };
 
 

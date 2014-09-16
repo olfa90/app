@@ -9,9 +9,21 @@ header.bar {
   background-color: rgb(219,54,60);
 }
 
-header.bar .logo {
+header h1.logo {
+  background: url("../icon.png");
   height: 44px;
-  width: 34px;
+  width: 30px;
+  text-indent: -9999px;
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  margin: 0;
+}
+
+header a.logo {
+  height: 44px;
+  width: 30px;
   background-image: url("../img/logo.gif");
   background-size: 30px;
   background-repeat: no-repeat;
@@ -24,7 +36,7 @@ header.bar .title{
   color: rgb(255,252,244);
 }
 
-header.bar .icon, nav.bar-header-secondary .btn-link{
+header.bar .icon, header.bar .btn-link, nav.bar-header-secondary .btn-link{
   color: rgb(255,252,244);
 }
 
@@ -79,9 +91,33 @@ nav.bar-header-secondary .icon-google-maps {
   white-space: nowrap;
 }
 
+input[type="search"] {
+  width: 78%;
+  color: #FFF;
+}
+
+#list_languages {
+  height: 100%
+}
+
+#list_languages .table-view-cell {
+  color: #000;
+  font-size: 18px;
+  font-weight: 800 bold;
+
+  /*line-height: 45px;*/
+}
+
+#list_languages > div {
+  top: 30%;
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 #list_places {
   /* When not using second nav bar: 29px */
-  padding-top: 29px;
+  /*padding-top: 29px;*/
   /*padding-top: 73px;*/
   /* Needed when using footer nav bar bar-tab */
   /*padding-bottom: 50px;*/
@@ -98,6 +134,37 @@ nav.bar-header-secondary .icon-google-maps {
 
 .bar-tab .tab-item.active, .bar-tab .tab-item:active {
   color: rgb(219,54,60);
+}
+
+#content_map {
+  /*padding: 0;
+  position: absolute !important;
+  top: 40px !important;
+  right: 0;*/
+  bottom: 105px !important;
+  /*left: 0 !important;*/
+}
+
+#map_canvas {
+  height: 100%;
+  margin: 0px;
+  padding: 0px
+}
+
+.infoWindowContent {
+    font-size:  14px !important;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+h4.marker-info {
+    margin-bottom:0;
+    margin-top: 0;
+}
+
+#content_map_info {
+  position: absolute !important;
+  bottom: 0px !important;
+  width: 100%;
 }
 
 #informations {
@@ -133,19 +200,19 @@ nav.bar-header-secondary .icon-google-maps {
   font-size: 12px;
 }
 
+#informations > section > p {
+  margin: 0px 10px 6px;
+  color: #000;
+}
+
 img#place {
   width: 100%;
   height: 180px;
 }
 
-img#map {
+#map {
   width: 100%;
   height: 150px;
-}
-
-#informations > section > p {
-  margin: 0px 10px 6px;
-  color: #000;
 }
 
 /*#menu .table-view .table-view-cell {
@@ -153,12 +220,20 @@ img#map {
   font-weight: 600;
 }*/
 
+#infomenu {
+  padding: 10px;
+}
+
 #menu .table-view-divider {
   text-transform: uppercase;
   background-color: rgb(219,54,60);
   color: rgb(255,252,244);
 
-  line-height: 48px;
+  /*color: rgb(141,41,43);*/
+  /*background-color: #fafafa;*/
+  /*border-top: 1px solid rgb(141,41,43);*/
+
+  line-height: 45px;
 }
 
 /*#menu .table-view-divider:first-child {
@@ -186,4 +261,17 @@ img#map {
 p.price {
   color: #000;
   font-weight: 500;
+}
+
+#order_list_modal .content {
+  text-align: center;
+}
+
+#order_list_modal .content > p > label {
+  font-size: 24px;
+  color: #000;
+}
+
+#modal_item {
+  padding: 10px;
 }

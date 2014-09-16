@@ -98,7 +98,6 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/ESPETACULO.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/ESPIRITO DO CHOPP.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/GALETO SABIA.jpg \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/glyphicons_242_google_maps.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/glyphicons_242_google_maps_gold.gif \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/glyphicons_242_google_maps_gold.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/glyphicons_242_google_maps_ice.gif \
@@ -170,11 +169,14 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/service/RestaurantService.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/hu.dpal.phonegap.plugins.SpinnerDialog \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/org.apache.cordova.globalization \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/org.apache.cordova.splashscreen \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/hu.dpal.phonegap.plugins.SpinnerDialog/www \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/hu.dpal.phonegap.plugins.SpinnerDialog/www/spinner.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/org.apache.cordova.globalization/www \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/org.apache.cordova.globalization/www/globalization.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/org.apache.cordova.globalization/www/GlobalizationError.js \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/org.apache.cordova.splashscreen/www \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/org.apache.cordova.splashscreen/www/splashscreen.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/screen \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/android \
@@ -185,10 +187,6 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/tizen \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/webos \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/windows-phone \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/android/icon-36-ldpi.png \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/android/icon-48-mdpi.png \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/android/icon-72-hdpi.png \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/android/icon-96-xhdpi.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/android/logo-36.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/android/logo-48.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/android/logo-72.png \
@@ -198,10 +196,6 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/bada-wac/icon-50-type3.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/bada-wac/icon-80-type4.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/blackberry/icon-80.png \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/ios/icon-57-2x.png \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/ios/icon-57.png \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/ios/icon-72-2x.png \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/ios/icon-72.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/ios/logo-114.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/ios/logo-144.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/ios/logo-57.png \
@@ -220,14 +214,6 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/screen/tizen \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/screen/webos \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/screen/windows-phone \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/screen/android/screen-hdpi-landscape.png \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/screen/android/screen-hdpi-portrait.png \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/screen/android/screen-ldpi-landscape.png \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/screen/android/screen-ldpi-portrait.png \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/screen/android/screen-mdpi-landscape.png \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/screen/android/screen-mdpi-portrait.png \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/screen/android/screen-xhdpi-landscape.png \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/screen/android/screen-xhdpi-portrait.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/screen/bada/screen-portrait.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/screen/bada-wac/screen-type3.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/screen/bada-wac/screen-type4.png \
@@ -236,15 +222,6 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/screen/ios/abertura-1136x640.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/screen/ios/abertura-1280x720.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/screen/ios/abertura-800x480.png \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/screen/ios/screen-ipad-landscape-2x.png \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/screen/ios/screen-ipad-landscape.png \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/screen/ios/screen-ipad-portrait-2x.png \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/screen/ios/screen-ipad-portrait.png \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/screen/ios/screen-iphone-landscape-2x.png \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/screen/ios/screen-iphone-landscape.png \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/screen/ios/screen-iphone-portrait-2x.png \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/screen/ios/screen-iphone-portrait-568h-2x.png \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/screen/ios/screen-iphone-portrait.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/screen/tizen/README.md \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/screen/webos/screen-64.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/screen/windows-phone/screen-portrait.jpg \

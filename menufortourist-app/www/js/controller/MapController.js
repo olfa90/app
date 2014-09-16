@@ -104,7 +104,7 @@ menufortouristApp.controller('MapController', function($scope, $location, $windo
             string = string.replace( expressaoRegular, letra );
         }
      
-        return string;
+        return string.toUpperCase();
     };
 
 

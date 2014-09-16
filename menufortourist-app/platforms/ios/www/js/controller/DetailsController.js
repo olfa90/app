@@ -1,5 +1,7 @@
 // DetailsController
-menufortouristApp.controller('DetailsController', function($scope, $location, RestaurantsFactory){
+menufortouristApp.controller('DetailsController', function($scope, $location, $window, UserFactory, RestaurantsFactory){
+
+    $scope.locale = UserFactory.locale;
 
     $scope.restaurant = null;
     $scope.selectedItem = null;
@@ -8,12 +10,108 @@ menufortouristApp.controller('DetailsController', function($scope, $location, Re
 
     function init(){
         $scope.restaurant = RestaurantsFactory.getSelectedRestaurant();
-        
+        var map = new GoogleMap();
+        map.initialize(UserFactory.lat, UserFactory.lng, true);
+        map.addStaticMarkers($scope.restaurant);
+
+        // Load restaurant's menu
         $scope.restaurant = RestaurantsFactory.getRestaurantCardapio($scope.restaurant);
     }
 
+    // Metodos for internationalization
+    $scope.getTitle = function() {
+        if ($scope.locale == 'EN') {
+            return 'Restaurant';
+        } else if ($scope.locale == 'ES') {
+            return 'Restaurante';
+        } else {
+            return 'Restaurante';
+        }
+    };
+
+    $scope.getLocationTitle = function() {
+        if ($scope.locale == 'EN') {
+            return 'Location';
+        } else if ($scope.locale == 'ES') {
+            return 'Ubicación';
+        } else {
+            return 'Localização';
+        }
+    };
+
+    $scope.getLocationInfo = function() {
+        if ($scope.locale == 'EN') {
+            return 'from your location';
+        } else if ($scope.locale == 'ES') {
+            return 'desde su ubicación';
+        } else {
+            return 'da sua localização';
+        }
+    };
+
+    $scope.getMenuTitle = function() {
+        if ($scope.locale == 'EN') {
+            return 'Menu';
+        } else if ($scope.locale == 'ES') {
+            return 'Menú';
+        } else {
+            return 'Cardápio';
+        }
+    };
+
+    $scope.getMenuInfo = function() {
+        if ($scope.locale == 'EN') {
+            return "Press the item you want and show it to the waiter to place your order.";
+        } else if ($scope.locale == 'ES') {
+            return 'Presione el ítem elegido y muestre al camarero para hacer su pedido.';
+        } else {
+            return 'Para fazer o pedido, pressione o item escolhido e mostre ao garçom.';
+        }
+    };
+
+    $scope.getModalTitle = function() {
+        if ($scope.locale == 'EN') {
+            return 'Show to the waiter to order';
+        } else if ($scope.locale == 'ES') {
+            return 'Mostrar para el camarero para pedir';
+        } else {
+            return 'Mostre ao garçom para pedir';
+        }
+    };
+
+    $scope.getModalText = function() {
+        // Will show modal text in restaurant's native language
+        if ($scope.restaurant.locale == 'EN') {
+            return "Please, I'd like to have:";
+        } else if ($scope.restaurant.locale == 'ES') {
+            return 'Por favor, me gustaría tener:';
+        } else {
+            return 'Por favor, gostaria de pedir:';
+        }
+    };
+
+    $scope.getModalEmpty = function() {
+        if ($scope.locale == 'EN') {
+            return 'ERROR: Unable to load the native language of this item.';
+        } else if ($scope.locale == 'ES') {
+            return 'ERROR: No se puede cargar la lengua nativa de este artículo.';
+        } else {
+            return 'ERRO: Não foi possível carregar o idioma nativo deste item.';
+        }
+    };
+    //
+
+
     $scope.back = function() {
-        $location.path("/main");
+        // var origin = RestaurantsFactory.getOrigin();
+        // if (origin == RestaurantsFactory.SEARCH_PAGE) {
+        //     $location.path("/search");
+        // } else if (origin == RestaurantsFactory.MAIN_MAP_PAGE || origin == RestaurantsFactory.SEARCH_MAP_PAGE) {
+        //     $location.path("/map");
+        // } else {
+        //     $location.path("/main");
+        // }
+        $window.history.back();
     };
 
     $scope.formatPriceDescription = function(description) {
@@ -23,10 +121,15 @@ menufortouristApp.controller('DetailsController', function($scope, $location, Re
         return '';
     }
 
-    $scope.setSelectedItem = function(item) {
-        $scope.selectedItem = getItemTranslated(item, 'EN');
+    $scope.showModal = function(item) {
+        $scope.selectedItem = item;
         document.getElementById('order_list_modal').classList.add('active');
         // document.getElementById('order_list_modal').classList.remove('active');
+    }
+
+    $scope.hideModal = function() {
+        $scope.selectedItem = null;
+        document.getElementById('order_list_modal').classList.remove('active');
     }
 
     $scope.getSelectedItem = function() {
@@ -43,15 +146,17 @@ menufortouristApp.controller('DetailsController', function($scope, $location, Re
         return address.street +', '+ address.number +', '+ address.neighbourhood +', '+ address.city +', '+ address.state
     }
 
-    $scope.getTranslation = function(translations, locale) {
-        if (translations == null) {
+    $scope.getTranslation = function(object) {
+        if (object == null || object.traducoes == null) {
             return;
         }
-        for (var i = 0; i < translations.length; i++) {
-            if (translations[i].idioma == locale) {
-                return translations[i];
+        var translation = object.text;
+        for (var i = 0; i < object.traducoes.length; i++) {
+            if (object.traducoes[i].locale == $scope.locale) {
+                translation = object.traducoes[i].text;
             }
         }
+        return translation;
     }
 
 
@@ -79,21 +184,21 @@ menufortouristApp.controller('DetailsController', function($scope, $location, Re
         if (item == null || locale == null) {
             return;
         }
-        var itemTranslated = {identifier: item.identifier, titulo:"", descricao:""};
+        var itemTranslated = {identifier: item.identifier, title:"", description:""};
 
-        var tTraducoes = item.tituloTraducoes;
+        var tTraducoes = item.titulo.traducoes;
         for (var i = 0; i < tTraducoes.length; i++) {
-            if (tTraducoes[i].idioma == locale) {
-                itemTranslated.titulo = tTraducoes[i].traducao;
+            if (tTraducoes[i].locale == locale) {
+                itemTranslated.title = tTraducoes[i].text;
                 break;
             }
         }
 
         if (item.descricao != null) {
-            var dTraducoes = item.descricaoTraducoes;
+            var dTraducoes = item.descricao.traducoes;
             for (var i = 0; i < dTraducoes.length; i++) {
-                if (dTraducoes[i].idioma == locale) {
-                    itemTranslated.descricao = dTraducoes[i].traducao;
+                if (dTraducoes[i].locale == locale) {
+                    itemTranslated.description = dTraducoes[i].text;
                     break;
                 }
             }

@@ -1,6 +1,7 @@
 // MainController
 menufortouristApp.controller('OpeningController', function($scope, $location, $timeout) {
 	
+    var time = 4000;
 	init();
 
     function init(){
@@ -8,7 +9,7 @@ menufortouristApp.controller('OpeningController', function($scope, $location, $t
             openingPage = false;
            $timeout(function() {
 	            $location.path("/language");
-	        }, 4000);
+	        }, time);
         } else {
         	$location.path("/main");
         }
