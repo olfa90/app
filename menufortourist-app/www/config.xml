@@ -49,10 +49,10 @@
     <gap:plugin name="hu.dpal.phonegap.plugins.spinnerdialog" version="0.2.1"/>
     <icon src="icon.png" />
     <!-- <icon gap:platform="android" gap:qualifier="ldpi" src="res/icon/android/icon-36-ldpi.png" /> -->
-    <icon gap:platform="android" gap:qualifier="ldpi" src="res/icon/android/logo-36.png" />
-    <icon gap:platform="android" gap:qualifier="mdpi" src="res/icon/android/logo-48.png" />
-    <icon gap:platform="android" gap:qualifier="hdpi" src="res/icon/android/logo-72.png" />
-    <icon gap:platform="android" gap:qualifier="xhdpi" src="res/icon/android/logo-96.png" />
+    <icon gap:platform="android" gap:qualifier="ldpi" src="res/icon/android/icon-36.png" />
+    <icon gap:platform="android" gap:qualifier="mdpi" src="res/icon/android/icon-48.png" />
+    <icon gap:platform="android" gap:qualifier="hdpi" src="res/icon/android/icon-72.png" />
+    <icon gap:platform="android" gap:qualifier="xhdpi" src="res/icon/android/icon-96.png" />
     <!-- <icon gap:platform="blackberry" src="res/icon/blackberry/icon-80.png" />
     <icon gap:platform="blackberry" gap:state="hover" src="res/icon/blackberry/icon-80.png" /> -->
     <icon gap:platform="ios" height="57" src="res/icon/ios/logo-57.png" width="57" />
@@ -63,7 +63,7 @@
     <icon gap:platform="winphone" src="res/icon/windows-phone/logo-48.png" />
     <!-- <icon gap:platform="winphone" gap:role="background" src="res/icon/windows-phone/icon-173.png" /> -->
 
-    <!-- default splash for android -->
+    <!-- default splash -->
     <gap:splash src="splash.png" />
 
     <gap:splash gap:platform="android" gap:qualifier="port-ldpi" src="res/screen/android/screen-ldpi-portrait.png" />

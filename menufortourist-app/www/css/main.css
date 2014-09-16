@@ -24,7 +24,7 @@ header h1.logo {
 header a.logo {
   height: 44px;
   width: 30px;
-  background-image: url("../img/logo.gif");
+  background-image: url("../icon.png");
   background-size: 30px;
   background-repeat: no-repeat;
   background-position: center;

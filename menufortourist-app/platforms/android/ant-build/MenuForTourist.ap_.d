@@ -40,7 +40,6 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/fonts \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/icon-marker.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/icon.png \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/icon.png.old.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/index.html \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js \
@@ -50,6 +49,7 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/spec \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/spec.html \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/splash.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/views \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/css/app.css \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/css/main.css \
@@ -109,7 +109,6 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/gulagulaphoto.gif \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/INTIHUASI.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/LA ESQUINA.jpg \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/logo.gif \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/M4T_Flag_Brasil.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/M4T_Flag_Espanha.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/M4T_Flag_GBR.png \
@@ -192,10 +191,10 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/tizen \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/webos \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/windows-phone \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/android/logo-36.png \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/android/logo-48.png \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/android/logo-72.png \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/android/logo-96.png \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/android/icon-36.png \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/android/icon-48.png \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/android/icon-72.png \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/android/icon-96.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/bada/icon-128.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/bada-wac/icon-48-type5.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/bada-wac/icon-50-type3.png \
