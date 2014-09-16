@@ -2,6 +2,7 @@
 menufortouristApp.controller('MainController', function($scope, $location, $window, UserFactory, RestaurantsFactory, GeolocationFactory) {
 
 	$scope.locale = UserFactory.locale;
+    $scope.helpers = AppUtil.helpers;
 
     $scope.restaurants = [];
     
@@ -133,43 +134,6 @@ menufortouristApp.controller('MainController', function($scope, $location, $wind
         RestaurantsFactory.saveSelectedRestaurant(restaurant);
         RestaurantsFactory.setOrigin(RestaurantsFactory.MAIN_PAGE);
         $location.path("/details");
-    };
-
-    /**
-     * Remove acentos de caracteres
-     * @param  {String} stringComAcento [string que contem os acentos]
-     * @return {String}                 [string sem acentos]
-     */
-    $scope.removerAcentos = function( newStringComAcento ) {
-        if (newStringComAcento == null || newStringComAcento == '') {
-            return;
-        }
-        var string = newStringComAcento;
-        var mapaAcentosHex  = {
-            A : /[\xE0-\xE6]/g,
-            E : /[\xE8-\xEB]/g,
-            I : /[\xEC-\xEF]/g,
-            O : /[\xF2-\xF6]/g,
-            U : /[\xF9-\xFC]/g,
-            C : /\xE7/g,
-            N : /\xF1/g
-        };
-        var mapaAcentos = {
-            A : /[ÁÀÂÃáàâã]/g,
-            E : /[ÉÈÊéèê]/g,
-            I : /[ÍÌÎíìî]/g,
-            O : /[ÓÒÔÕóòôõ]/g,
-            U : /[ÚÙÛúùû]/g,
-            C : /[Çç]/g,
-            N : /\xF1/g
-        };
-     
-        for ( var letra in mapaAcentos ) {
-            var expressaoRegular = mapaAcentos[letra];
-            string = string.replace( expressaoRegular, letra );
-        }
-     
-        return string.toUpperCase();
     };
     
 });

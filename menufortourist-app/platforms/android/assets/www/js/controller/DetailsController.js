@@ -2,6 +2,7 @@
 menufortouristApp.controller('DetailsController', function($scope, $location, $window, UserFactory, RestaurantsFactory){
 
     $scope.locale = UserFactory.locale;
+    $scope.helpers = AppUtil.helpers;
 
     $scope.restaurant = null;
     $scope.selectedItem = null;

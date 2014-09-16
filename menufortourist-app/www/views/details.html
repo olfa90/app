@@ -69,7 +69,7 @@
                       ng-class="{active: isGroupShown(secao)}">
               <span ng-show="secao.itens.length > 0 || secao.note != null" class="icon" ng-class="{'icon-down-nav': isGroupShown(secao), 'icon-up-nav': !isGroupShown(secao)}"></span>
               &nbsp;
-              {{getTranslation(secao.titulo)}}
+              {{helpers.capitaliseFirstLetter( getTranslation(secao.titulo) )}}
             </li>
             <li class="item-accordion table-view-cell"
                       ng-repeat="item in secao.itens"

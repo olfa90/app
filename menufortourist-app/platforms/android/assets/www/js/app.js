@@ -1,3 +1,51 @@
+var AppUtil = AppUtil || {};
+
+AppUtil.helpers = {
+    isNotString: function(str) {
+     return (typeof str !== "string");
+    },
+
+    capitaliseFirstLetter: function(string) {
+        if (string == null || string.length < 1) {
+            return;
+        }
+        if (string.charAt(1) == string.charAt(1).toUpperCase()) {
+            string = string.toLowerCase();
+            string = string.charAt(0).toUpperCase() + string.slice(1);
+        }
+        return string;
+    },
+
+    /**
+     * Remove acentos de caracteres
+     * @param  {String} stringComAcento [string que contem os acentos]
+     * @return {String}                 [string sem acentos]
+     */
+    removerAcentos: function(newStringComAcento) {
+        if (newStringComAcento == null || newStringComAcento == '') {
+            return;
+        }
+        var string = newStringComAcento;
+        var mapaAcentos = {
+            A : /[ÁÀÂÃáàâã]/g,
+            E : /[ÉÈÊéèê]/g,
+            I : /[ÍÌÎíìî]/g,
+            O : /[ÓÒÔÕóòôõ]/g,
+            U : /[ÚÙÛúùû]/g,
+            C : /[Çç]/g,
+            N : /\xF1/g
+        };
+     
+        for ( var letra in mapaAcentos ) {
+            var expressaoRegular = mapaAcentos[letra];
+            string = string.replace( expressaoRegular, letra );
+        }
+     
+        return string.toUpperCase();
+    }
+};
+
+
 // Defining angular application model
 var menufortouristApp = angular.module('menufortouristApp',[]);
 
