@@ -136,6 +136,11 @@ input[type="search"] {
   padding-right: 55px;
 }
 
+#list_places .table-view-cell h4 {
+  margin-bottom: 0;
+  font-size: 1em;
+}
+
 .bar-tab .tab-item.active, .bar-tab .tab-item:active {
   color: rgb(219,54,60);
 }
@@ -176,7 +181,7 @@ h4.marker-info {
   /*padding-bottom: 50px;*/
 }
 
-#informations > section > a {
+#informations > section > a.section-title {
   display: block;
   padding-right: 10px;
   padding-left: 10px;
@@ -186,7 +191,7 @@ h4.marker-info {
   color: rgb(255,252,244);
 }
 
-#informations > section > a > h2, #informations > section > a > p {
+#informations > section > a.section-title > h2, #informations > section > a.section-title > p {
   display: inline-block;
   line-height: 32px;
   padding: 0;
@@ -194,18 +199,18 @@ h4.marker-info {
   color: rgb(255,252,244);
 }
 
-#informations > section > a > h2 {
+#informations > section > a.section-title > h2 {
   font-size: 14px;
   font-weight: 450;
 }
 
-#informations > section > a > p {
+#informations > section > a.section-title > p {
   float: right;
   font-size: 12px;
 }
 
 #informations > section > p {
-  margin: 0px 10px 6px;
+  margin: 6px 10px;
   color: #000;
 }
 
@@ -229,6 +234,9 @@ img#place {
 }
 
 #menu .table-view-divider {
+  position: relative;
+  /*padding-right: 10px;*/
+
   /*text-transform: capitalize;*/
   background-color: rgb(219,54,60);
   color: rgb(255,252,244);
@@ -238,17 +246,26 @@ img#place {
   /*border-top: 1px solid rgb(141,41,43);*/
 
   /*line-height: 45px;*/
-  padding-right: 10px;
 }
 
 #menu .table-view-divider::first-line {
-  line-height: 45px;
+  line-height: 30px;
 }
 
-/*#menu .table-view-divider:first-child {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}*/
+#menu .table-view-divider h3 {
+  padding-right: 22px;
+  margin-bottom: 0;
+  font-size: 1em;
+  font-weight: normal;
+}
+
+#menu .table-view-divider .icon {
+  font-size: 20px;
+  position: absolute;
+  right: 10px;
+  top: 27%;
+  /*padding-top: 5px;*/
+}
 
 /*
  * http://docs.angularjs.org/api/ng/directive/ngShow#usage_animations

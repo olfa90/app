@@ -34,6 +34,13 @@ module.exports = [
         "clobbers": [
             "navigator.splashscreen"
         ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.inappbrowser/www/inappbrowser.js",
+        "id": "org.apache.cordova.inappbrowser.inappbrowser",
+        "clobbers": [
+            "window.open"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -42,7 +49,8 @@ module.exports.metadata =
     "de.appplant.cordova.plugin.hidden-statusbar-overlay": "1.2.0",
     "hu.dpal.phonegap.plugins.SpinnerDialog": "0.3.0",
     "org.apache.cordova.globalization": "0.3.0",
-    "org.apache.cordova.splashscreen": "0.3.2"
+    "org.apache.cordova.splashscreen": "0.3.2",
+    "org.apache.cordova.inappbrowser": "0.5.1"
 }
 // BOTTOM OF METADATA
 });

@@ -30,12 +30,12 @@ menufortouristApp.service( 'RestaurantService', function ( $http, $q ) {
       return deferred.promise;
     },
 
-    search: function searchRestaurants(search) {
+    search: function searchRestaurants(search, lat, lng) {
       // We create our own promise to return
       var deferred = $q.defer();
 
       $http.get(url+'/restaurantes/search.json', {
-        params: {search: search}
+        params: {search: search, lat: lat, lng: lng}
       }).then( function ( object ) {
         cnt = 0;
         if (object.data == null || object.data.length == 0) {
@@ -48,7 +48,7 @@ menufortouristApp.service( 'RestaurantService', function ( $http, $q ) {
       }, function getRestaurantsError() {
         if (cnt == 0) {
           cnt++;
-          search(search);
+          search(search, lat, lng);
         } else {
           deferred.reject("Não foi possível executar esta operação. Por favor, tente novamente mais tarde.");
         }

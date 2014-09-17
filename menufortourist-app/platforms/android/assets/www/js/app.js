@@ -63,10 +63,14 @@ menufortouristApp.config(function($httpProvider) {
     delete $httpProvider.defaults.headers.common['X-Requested-With']
 });
 
+// Whitelisting
+menufortouristApp.config(function($compileProvider) {
+  $compileProvider.urlSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel):/);
+});
 
 //### ROUTING ###
 // Defining $routeProvider for MenuForTourist App
-menufortouristApp.config(function ($routeProvider) {
+menufortouristApp.config(function($routeProvider) {
     $routeProvider.
 
         // opening page

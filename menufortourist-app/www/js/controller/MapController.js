@@ -9,8 +9,7 @@ menufortouristApp.controller('MapController', function($scope, $location, $windo
     function init(){
         // Pega os restaurantes carregados na consulta anterior.
         $scope.restaurants = RestaurantsFactory.getRestaurantsList();
-        console.log($scope.restaurants);
-
+        
         // var map = RestaurantsFactory.getMapState();
 
         // Show spinner dialog

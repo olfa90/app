@@ -15,11 +15,17 @@ menufortouristApp.controller('SearchController', function($scope, $location, $wi
         // Pega os restaurantes carregados na consulta anterior.
         $scope.restaurants = RestaurantsFactory.getSearchResult();
 
-        console.log($scope.restaurants);
-        console.log($scope.restaurants.length);
         if ($scope.restaurants != null && $scope.restaurants.length > 0) {
             $scope.searching = false;
         }
+
+        GeolocationFactory.getCurrentPosition(function(position) {
+            UserFactory.lat = position.coords.latitude;
+            UserFactory.lng = position.coords.longitude;
+        }, function onError(error) {
+            alert('code: '    + error.code    + '\n' +
+                  'message: ' + error.message + '\n');
+        });
     }
 
     // Methods for internationalization
@@ -58,7 +64,7 @@ menufortouristApp.controller('SearchController', function($scope, $location, $wi
             return;
         }
 
-        $scope.restaurants = RestaurantsFactory.searchRestaurants($scope.searchText);
+        $scope.restaurants = RestaurantsFactory.searchRestaurants($scope.searchText, UserFactory.lat, UserFactory.lng);
         $scope.searching = false;
     }
 

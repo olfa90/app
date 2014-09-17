@@ -147,6 +147,11 @@ menufortouristApp.controller('DetailsController', function($scope, $location, $w
         return address.street +', '+ address.number +', '+ address.neighbourhood +', '+ address.city +', '+ address.state
     }
 
+    $scope.openUrl = function(url) {
+        console.log('openUrl: '+url);
+        $window.open(url, '_system');
+    }
+
     $scope.getTranslation = function(object) {
         if (object == null || object.traducoes == null) {
             return;

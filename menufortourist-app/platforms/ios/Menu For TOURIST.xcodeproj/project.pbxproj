@@ -42,6 +42,7 @@
 		B41D91DF158A4AA4903BC774 /* CDVSpinnerDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3EA9ABCB294B9B88636082 /* CDVSpinnerDialog.m */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		9578A3B46C7A463EAFE9B123 /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 210E7D96EBEF4050A457967C /* CDVSplashScreen.m */; };
+		2345D1090654464990D5B474 /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BBE2A33847C4FBDA5A1FD41 /* CDVInAppBrowser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +115,8 @@
 		FFA9B98B15534A3B9988CC24 /* CDVGlobalization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVGlobalization.m; path = org.apache.cordova.globalization/CDVGlobalization.m; sourceTree = "<group>"; };
 		210E7D96EBEF4050A457967C /* CDVSplashScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVSplashScreen.m"; path = "org.apache.cordova.splashscreen/CDVSplashScreen.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		CFAD11D09D394174ACA4B786 /* CDVSplashScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVSplashScreen.h"; path = "org.apache.cordova.splashscreen/CDVSplashScreen.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		2BBE2A33847C4FBDA5A1FD41 /* CDVInAppBrowser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVInAppBrowser.m"; path = "org.apache.cordova.inappbrowser/CDVInAppBrowser.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		D848EFAE6D5F4AE4BAE058CD /* CDVInAppBrowser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVInAppBrowser.h"; path = "org.apache.cordova.inappbrowser/CDVInAppBrowser.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +245,8 @@
 				2BC6F273D16140D597916826 /* CDVGlobalization.h */,
 				210E7D96EBEF4050A457967C /* CDVSplashScreen.m */,
 				CFAD11D09D394174ACA4B786 /* CDVSplashScreen.h */,
+				2BBE2A33847C4FBDA5A1FD41 /* CDVInAppBrowser.m */,
+				D848EFAE6D5F4AE4BAE058CD /* CDVInAppBrowser.h */,
 			);
 			name = Plugins;
 			path = "Menu For TOURIST/Plugins";
@@ -440,6 +445,7 @@
 				B41D91DF158A4AA4903BC774 /* CDVSpinnerDialog.m in Sources */,
 				61B5DEB47351400AB39DA8DD /* CDVGlobalization.m in Sources */,
 				9578A3B46C7A463EAFE9B123 /* CDVSplashScreen.m in Sources */,
+				2345D1090654464990D5B474 /* CDVInAppBrowser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

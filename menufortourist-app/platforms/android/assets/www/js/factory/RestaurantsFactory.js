@@ -22,10 +22,10 @@ menufortouristApp.factory('RestaurantsFactory', function(RestaurantService){
         });
     };
 
-    factory.searchRestaurants = function(search){
+    factory.searchRestaurants = function(search, lat, lng){
         // Show spinner dialog
         window.plugins.spinnerDialog.show();
-        return RestaurantService.search(search).then(function(collection) {
+        return RestaurantService.search(search, lat, lng).then(function(collection) {
             // console.log(collection);
             restaurantsSearch = collection;
 
