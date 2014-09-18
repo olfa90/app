@@ -12,6 +12,7 @@ menufortouristApp.controller('MainController', function($scope, $location, $wind
         if ($scope.connected != newValue) {
             console.log("connected changed to " + newValue);
             $scope.connected = newValue;
+            setInternetErrorMsg();
             init();
         }
     });
@@ -43,7 +44,8 @@ menufortouristApp.controller('MainController', function($scope, $location, $wind
             window.plugins.spinnerDialog.hide();
             console.log('code: '    + error.code    + '\n' +
                   'message: ' + error.message + '\n');
-            alert(getGPSErrorMsg());
+            // alert(getGPSErrorMsg());
+            setGpsErrorMsg();
         }, { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true });
     }
 

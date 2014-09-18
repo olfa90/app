@@ -1,5 +1,4 @@
-menufortouristApp.factory('RestaurantsFactory', function(RestaurantService){
-
+menufortouristApp.factory('RestaurantsFactory', function(RestaurantService, UserFactory) {
     var factory = {};
 
     var restaurants = [];
@@ -22,6 +21,30 @@ menufortouristApp.factory('RestaurantsFactory', function(RestaurantService){
         });
     };
 
+    factory.findNearRestaurants = function(lat, lng){
+        return RestaurantService.findNear(lat, lng).then(function(collection) {
+            // console.log(collection);
+            restaurantsAround = collection;
+
+            if (restaurantsAround == null || restaurantsAround.length == 0) {
+              alert("Nenhum restaurante foi encontrado na proximidade.");
+            }
+
+            // Hide spinner dialog
+            window.plugins.spinnerDialog.hide();
+
+            return restaurantsAround;
+        }, function(reason) {
+            console.log('Failed: ' + reason);
+            alert(getErrorMsg);
+            restaurantsAround = [];
+
+            // Hide spinner dialog
+            window.plugins.spinnerDialog.hide();
+            return restaurantsAround;
+        });
+    };
+
     factory.searchRestaurants = function(search, lat, lng){
         // Show spinner dialog
         window.plugins.spinnerDialog.show();
@@ -29,37 +52,21 @@ menufortouristApp.factory('RestaurantsFactory', function(RestaurantService){
             // console.log(collection);
             restaurantsSearch = collection;
 
+            if (restaurantsSearch == null || restaurantsSearch.length == 0) {
+              alert("Nenhum restaurante foi encontrado.");
+            }
+
             // Hide spinner dialog
             window.plugins.spinnerDialog.hide();
             return restaurantsSearch;
         }, function(reason) {
             console.log('Failed: ' + reason);
-            alert("Não foi possível executar esta operação. Por favor, tente novamente mais tarde.");
+            alert(getErrorMsg);
             restaurantsSearch = [];
 
             // Hide spinner dialog
             window.plugins.spinnerDialog.hide();
             return restaurantsSearch;
-        });
-    };
-
-    factory.findNearRestaurants = function(lat, lng){
-        return RestaurantService.findNear(lat, lng).then(function(collection) {
-            // console.log(collection);
-            restaurantsAround = collection;
-
-            // Hide spinner dialog
-            window.plugins.spinnerDialog.hide();
-
-            return restaurantsAround;
-        }, function(reason) {
-            console.log('Failed: ' + reason);
-            alert("Não foi possível executar esta operação. Por favor, tente novamente mais tarde.");
-            restaurantsAround = [];
-
-            // Hide spinner dialog
-            window.plugins.spinnerDialog.hide();
-            return restaurantsAround;
         });
     };
 
@@ -131,7 +138,19 @@ menufortouristApp.factory('RestaurantsFactory', function(RestaurantService){
     };
 
 
-    // Private util methods
+    /*
+    *   Private util methods
+    */
+    // Methods for internationalization
+    function getErrorMsg() {
+        if (UserFactory.locale == 'EN') {
+            return "Could not perform this operation. Please try again later.";
+        } else if (UserFactory.locale == 'ES') {
+            return 'No se pudo realizar esta operación. Por favor, inténtelo de nuevo más tarde.';
+        } else {
+            return 'Não foi possível executar esta operação. Por favor, tente novamente mais tarde.';
+        }
+    }
     function setDistanceFromUser(restaurantParam, userLat, userLng) {
         if (restaurantParam.address == null) {
             return;

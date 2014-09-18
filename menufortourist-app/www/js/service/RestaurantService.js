@@ -38,9 +38,7 @@ menufortouristApp.service( 'RestaurantService', function ( $http, $q ) {
         params: {search: search, lat: lat, lng: lng}
       }).then( function ( object ) {
         cnt = 0;
-        if (object.data == null || object.data.length == 0) {
-          alert("Nenhum restaurante foi encontrado.");
-        }
+        
         restaurants = object.data;
         // resolve the promise
         deferred.resolve( restaurants );
@@ -64,9 +62,6 @@ menufortouristApp.service( 'RestaurantService', function ( $http, $q ) {
       $http.get(url+'/restaurantes/around.json', {
         params: {lat: lat, lng: lng, radius: 20}
       }).then( function ( object ) {
-        if (object.data == null || object.data.length == 0) {
-          alert("Nenhum restaurante foi encontrado na proximidade.");
-        }
         restaurants = object.data;
         // resolve the promise
         deferred.resolve( restaurants );
