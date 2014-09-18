@@ -186,7 +186,7 @@ menufortouristApp.run(function(UserFactory) {
         document.addEventListener("online", onOnline, false);
         document.addEventListener("offline", onOffline, false);
 
-        loadUserLocale();
+        // loadUserLocale();
     }
 
     function loadUserLocale() {

@@ -1,7 +1,6 @@
 // MainController
 menufortouristApp.controller('MainController', function($scope, $location, $window, UserFactory, RestaurantsFactory, GeolocationFactory) {
 
-    // $scope.UserFactory = UserFactory;
     $scope.locale = UserFactory.locale;
     $scope.connected = UserFactory.connected;
     $scope.helpers = AppUtil.helpers;

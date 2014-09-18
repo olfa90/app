@@ -1,13 +1,23 @@
 // SearchController
-menufortouristApp.controller('SearchController', function($scope, $location, $window, UserFactory, RestaurantsFactory) {
+menufortouristApp.controller('SearchController', function($scope, $location, $window, UserFactory, GeolocationFactory, RestaurantsFactory) {
 
     $scope.locale = UserFactory.locale;
+    $scope.connected = UserFactory.connected;
     $scope.helpers = AppUtil.helpers;
 
     $scope.searching = true;
     $scope.searchText = '';
 
     $scope.restaurants = [];
+
+    $scope.$watch(function() {
+        return UserFactory.connected;
+    }, function (newValue) {
+        if ($scope.connected != newValue) {
+            $scope.connected = newValue;
+            init();
+        }
+    });
 
     init();
 
@@ -17,6 +27,9 @@ menufortouristApp.controller('SearchController', function($scope, $location, $wi
 
         if ($scope.restaurants != null && $scope.restaurants.length > 0) {
             $scope.searching = false;
+        }
+        if (!UserFactory.connected) {
+            return;
         }
 
         GeolocationFactory.getCurrentPosition(function(position) {
@@ -37,6 +50,15 @@ menufortouristApp.controller('SearchController', function($scope, $location, $wi
             return 'No se pudo obtener la posición actual. O las señales GPS son débiles o GPS se ha desconectado.';
         } else {
             return 'Não foi possível obter a posição atual. Ou os sinais de GPS estão fracos ou o GPS foi desligado.';
+        }
+    };
+    $scope.getErrorMsg = function() {
+        if ($scope.locale == 'EN') {
+            return 'No Internet connection';
+        } else if ($scope.locale == 'ES') {
+            return 'No hay conexión a Internet';
+        } else {
+            return 'Sem conexão com a Internet';
         }
     };
     $scope.getTitle = function() {
@@ -71,6 +93,9 @@ menufortouristApp.controller('SearchController', function($scope, $location, $wi
 
     $scope.search = function(){
         if ($scope.searchText == null || $scope.searchText.trim() == '') {
+            return;
+        }
+        if (!UserFactory.connected) {
             return;
         }
 

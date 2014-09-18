@@ -2,15 +2,29 @@
 menufortouristApp.controller('DetailsController', function($scope, $location, $window, UserFactory, RestaurantsFactory){
 
     $scope.locale = UserFactory.locale;
+    $scope.connected = UserFactory.connected;
     $scope.helpers = AppUtil.helpers;
 
     $scope.restaurant = null;
     $scope.selectedItem = null;
 
+    $scope.$watch(function() {
+        return UserFactory.connected;
+    }, function (newValue) {
+        if ($scope.connected != newValue) {
+            $scope.connected = newValue;
+        }
+    });
+
     init();
 
     function init(){
         $scope.restaurant = RestaurantsFactory.getSelectedRestaurant();
+        
+        if (!UserFactory.connected) {
+            return;
+        }
+        
         var map = new GoogleMap();
         map.initialize(UserFactory.lat, UserFactory.lng, true);
         map.addStaticMarkers($scope.restaurant);
@@ -20,6 +34,15 @@ menufortouristApp.controller('DetailsController', function($scope, $location, $w
     }
 
     // Metodos for internationalization
+    $scope.getErrorMsg = function() {
+        if ($scope.locale == 'EN') {
+            return 'No Internet connection';
+        } else if ($scope.locale == 'ES') {
+            return 'No hay conexión a Internet';
+        } else {
+            return 'Sem conexão com a Internet';
+        }
+    };
     $scope.getTitle = function() {
         if ($scope.locale == 'EN') {
             return 'Restaurant';
