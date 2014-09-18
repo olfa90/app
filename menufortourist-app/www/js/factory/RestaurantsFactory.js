@@ -27,7 +27,7 @@ menufortouristApp.factory('RestaurantsFactory', function(RestaurantService, User
             restaurantsAround = collection;
 
             if (restaurantsAround == null || restaurantsAround.length == 0) {
-              alert("Nenhum restaurante foi encontrado na proximidade.");
+              alert(getNoResultsFoundMsg());
             }
 
             // Hide spinner dialog
@@ -36,7 +36,7 @@ menufortouristApp.factory('RestaurantsFactory', function(RestaurantService, User
             return restaurantsAround;
         }, function(reason) {
             console.log('Failed: ' + reason);
-            alert(getErrorMsg);
+            alert(getErrorMsg());
             restaurantsAround = [];
 
             // Hide spinner dialog
@@ -53,7 +53,7 @@ menufortouristApp.factory('RestaurantsFactory', function(RestaurantService, User
             restaurantsSearch = collection;
 
             if (restaurantsSearch == null || restaurantsSearch.length == 0) {
-              alert("Nenhum restaurante foi encontrado.");
+              alert(getNoResultsFoundMsg());
             }
 
             // Hide spinner dialog
@@ -61,7 +61,7 @@ menufortouristApp.factory('RestaurantsFactory', function(RestaurantService, User
             return restaurantsSearch;
         }, function(reason) {
             console.log('Failed: ' + reason);
-            alert(getErrorMsg);
+            alert(getErrorMsg());
             restaurantsSearch = [];
 
             // Hide spinner dialog
@@ -144,13 +144,23 @@ menufortouristApp.factory('RestaurantsFactory', function(RestaurantService, User
     // Methods for internationalization
     function getErrorMsg() {
         if (UserFactory.locale == 'EN') {
-            return "Could not perform this operation. Please try again later.";
+            return "Could not perform this operation. Please try again later";
         } else if (UserFactory.locale == 'ES') {
-            return 'No se pudo realizar esta operación. Por favor, inténtelo de nuevo más tarde.';
+            return 'No se pudo realizar esta operación. Por favor, inténtelo de nuevo más tarde';
         } else {
-            return 'Não foi possível executar esta operação. Por favor, tente novamente mais tarde.';
+            return 'Não foi possível executar esta operação. Por favor, tente novamente mais tarde';
         }
     }
+    function getNoResultsFoundMsg() {
+        if (UserFactory.locale == 'EN') {
+            return "No restaurants found";
+        } else if (UserFactory.locale == 'ES') {
+            return 'No hay restaurantes encontrados';
+        } else {
+            return 'Nenhum restaurante foi encontrado';
+        }
+    }
+    //
     function setDistanceFromUser(restaurantParam, userLat, userLng) {
         if (restaurantParam.address == null) {
             return;
