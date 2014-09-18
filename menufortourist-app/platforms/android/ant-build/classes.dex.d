@@ -27,5 +27,7 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser.class \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowserDialog.class \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppChromeClient.class \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/ant-build/classes/org/apache/cordova/networkinformation/NetworkManager$1.class \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/ant-build/classes/org/apache/cordova/networkinformation/NetworkManager.class \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/ant-build/classes/org/apache/cordova/splashscreen/SplashScreen.class \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/ant-build/dexedLibs/classes-3d957f889aaef063d2b87571ecafb5ff.jar \

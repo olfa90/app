@@ -50,6 +50,30 @@ AppUtil.helpers = {
 var menufortouristApp = angular.module('menufortouristApp',[]);
 
 
+function loadTheApp() {
+
+    // Hide splash screen if any
+    if (navigator && navigator.splashscreen) {
+        // navigator.splashscreen.hide();
+    }
+
+    // Initiate FastClick
+    // FastClick.attach(document.body);
+
+    // Boot AngularJS
+    try {
+        angular.bootstrap(document, ['menufortouristApp']);
+    } catch (e) {
+        console.log('startup errrrrrrrrrrrrrr! ' + e);
+    }
+}
+
+// Listen to device ready
+angular.element(document).ready(function() {
+    document.addEventListener('deviceready', loadTheApp, false);
+});
+
+
 // Setting default HTTP headers for post 
 menufortouristApp.config(function($httpProvider) {
     // $httpProvider.defaults.headers.post['Authorization'] =
@@ -64,8 +88,32 @@ menufortouristApp.config(function($httpProvider) {
 });
 
 // Whitelisting
-menufortouristApp.config(function($compileProvider) {
-  $compileProvider.urlSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel):/);
+menufortouristApp.config(function($provide, $compileProvider) {
+    $provide.factory('UserFactory', function() {
+        var factory = {};
+
+        factory.locale = 'EN';
+        factory.connected = true;
+
+        factory.setName = function(name) {
+            factory.name = name;
+        };
+        factory.setLocale = function(locale) {
+            factory.locale = locale;
+        };
+        factory.setLat = function(lat) {
+            factory.lat = lat;
+        };
+        factory.setLng = function(lng) {
+            factory.lng = lng;
+        };
+        factory.setConnected = function(connected) {
+            factory.connected = connected;
+        };
+
+        return factory;
+    });
+    $compileProvider.urlSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel):/);
 });
 
 //### ROUTING ###
@@ -128,7 +176,61 @@ menufortouristApp.config(function($routeProvider) {
         otherwise({ redirectTo: '/'});
 });
 
-var openingPage = true;
+menufortouristApp.run(function(UserFactory) {
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    function onDeviceReady() {
+        console.log('onDeviceReady');
+        //Initialize anything you need to. aka: Google analytics.
+
+        //Set other events you need to listen to.
+        document.addEventListener("online", onOnline, false);
+        document.addEventListener("offline", onOffline, false);
+
+        loadUserLocale();
+    }
+
+    function loadUserLocale() {
+        if (navigator.globalization != null) {
+            navigator.globalization.getLocaleName(
+                function (locale) {
+                    if (locale != null && locale.value != null && locale.value != '') {
+                        UserFactory.setLocale(locale.value.toUpperCase());
+                    }
+                },
+                function () { console.log('Não foi possível carregar o idioma do celular do usuário.'); }
+            );
+        }
+    }
+
+    function onOnline(e) {
+        console.log("Called", e.type);
+        UserFactory.setConnected(true);
+        
+        var msgElement = angular.element(document.getElementById('msg_error'));
+        if (msgElement) {
+            var $scope = msgElement.scope();
+            $scope.$apply(); //tell angular to check dirty bindings again
+        }
+    }
+
+    function onOffline(e) {
+        console.log("Called", e.type);
+        UserFactory.setConnected(false);
+
+        var msgElement = angular.element(document.getElementById('msg_error'));
+        if (msgElement) {
+            var $scope = msgElement.scope();
+            if ($scope) {
+                $scope.$apply(); //tell angular to check dirty bindings again
+            }
+        }
+
+        // navigator.notification.alert("Sorry, you are offline.", function() {}, "Offline!");
+    }
+});
+
+// var openingPage = true;
 
 //### CONTROLERS ###
 //

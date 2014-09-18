@@ -119,6 +119,24 @@ input[type="search"] {
   margin-right: 15px;
 }
 
+#msg_error {
+  z-index: 2;
+  min-height: 60px;
+  background: dimgray;
+  text-align: center;
+  bottom: initial;
+  opacity: 0.8;
+  filter: alpha(opacity=80); /* For IE8 and earlier */
+  box-shadow: 2px 2px 5px #888888;
+}
+
+#msg_error > p {
+  padding: 10px;
+  margin: 0;
+  color: #FFF;
+  font-weight: 700;
+}
+
 #list_places {
   /* When not using second nav bar: 29px */
   /*padding-top: 29px;*/

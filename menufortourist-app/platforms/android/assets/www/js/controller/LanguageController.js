@@ -2,7 +2,7 @@
 menufortouristApp.controller('LanguageController', function($scope, $location, UserFactory) {
 
 	$scope.setLanguage = function(locale) {
-        UserFactory.locale = locale;
+        UserFactory.setLocale(locale);
         
         // Go to main page
         $location.path("/main");
@@ -18,19 +18,5 @@ menufortouristApp.controller('LanguageController', function($scope, $location, U
             return 'Choose the language';
         }
     };
-
- //    function loadUserLocale() {
- //    	if (navigator.globalization != null) {
-	// 		navigator.globalization.getLocaleName(
-	// 	        function (locale) {
-	// 	        	if (locale != null && locale.value != null && locale.value != '') {
-	// 	        		UserFactory.locale = locale.value.toUpperCase();
-	// 	        	}
-	// 	        },
-	// 	        function () { console.log('Não foi possível carregar o idioma do celular do usuário.');	}
-	// 		);
-	// 	}
-	// }
-	//
     
 });

@@ -1,11 +1,20 @@
 // MainController
 menufortouristApp.controller('MainController', function($scope, $location, $window, UserFactory, RestaurantsFactory, GeolocationFactory) {
 
-	$scope.locale = UserFactory.locale;
+    // $scope.UserFactory = UserFactory;
+    $scope.locale = UserFactory.locale;
+    $scope.connected = UserFactory.connected;
     $scope.helpers = AppUtil.helpers;
-
     $scope.restaurants = [];
-    
+
+    $scope.$watch(function() {
+        return UserFactory.connected;
+    }, function (newValue) {
+        console.log("connected changed to " + newValue);
+        $scope.connected = newValue;
+        init();
+    });
+
     init();
 
     function init(){
@@ -18,12 +27,15 @@ menufortouristApp.controller('MainController', function($scope, $location, $wind
 	}
 
     function loadRestaurants() {
+        if (!UserFactory.connected) {
+            return;
+        }
         // Show spinner dialog
         window.plugins.spinnerDialog.show();
         GeolocationFactory.getCurrentPosition(function(position) {
             // Lat e Lng para teste: -22.9748244,-43.1934073
-            UserFactory.lat = position.coords.latitude;
-            UserFactory.lng = position.coords.longitude;
+            UserFactory.setLat(position.coords.latitude);
+            UserFactory.setLng(position.coords.longitude);
             $scope.restaurants = RestaurantsFactory.findNearRestaurants(position.coords.latitude, position.coords.longitude);
         }, function onError(error) {
             // Hide spinner dialog
@@ -77,6 +89,15 @@ menufortouristApp.controller('MainController', function($scope, $location, $wind
             return 'No se pudo obtener la posición actual. O las señales GPS son débiles o GPS se ha desconectado.';
         } else {
             return 'Não foi possível obter a posição atual. Ou os sinais de GPS estão fracos ou o GPS foi desligado.';
+        }
+    };
+    $scope.getErrorMsg = function() {
+        if ($scope.locale == 'EN') {
+            return 'No Internet connection';
+        } else if ($scope.locale == 'ES') {
+            return 'No hay conexión a Internet';
+        } else {
+            return 'Sem conexão com a Internet';
         }
     };
     $scope.getTitle = function() {

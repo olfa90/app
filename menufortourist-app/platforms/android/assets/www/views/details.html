@@ -56,7 +56,7 @@
           <br/>
           <a ng-show="restaurant.phone" class="btn" ng-href="tel:{{restaurant.phone}}"> Tel: {{restaurant.phone}} </a>
           &nbsp;
-          <a ng-show="restaurant.homepage" class="btn" ng-click="openUrl('{{restaurant.homepage}}')">{{restaurant.homepage}}</a>
+          <a ng-show="restaurant.homepage" class="btn" ng-click="openUrl(restaurant.homepage)">{{restaurant.homepage}}</a>
         </p>
       </section>
       <section id="menu">

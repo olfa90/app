@@ -31,6 +31,10 @@
                         {
                             "xml": "<feature name=\"InAppBrowser\"><param name=\"ios-package\" value=\"CDVInAppBrowser\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"NetworkStatus\"><param name=\"ios-package\" value=\"CDVConnection\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -58,6 +62,12 @@
                             "xml": "false",
                             "count": 2
                         }
+                    ],
+                    "SystemConfiguration.framework": [
+                        {
+                            "xml": "true",
+                            "count": 1
+                        }
                     ]
                 }
             }
@@ -77,6 +87,9 @@
             "PACKAGE_NAME": "com.menufortourist"
         },
         "org.apache.cordova.inappbrowser": {
+            "PACKAGE_NAME": "com.menufortourist"
+        },
+        "org.apache.cordova.network-information": {
             "PACKAGE_NAME": "com.menufortourist"
         }
     },

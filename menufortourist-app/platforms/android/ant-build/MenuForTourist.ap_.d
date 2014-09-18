@@ -170,7 +170,6 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/lib \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/model \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/service \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/util \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/controller/DetailsController.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/controller/LanguageController.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/controller/MainController.js \
@@ -187,6 +186,7 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/lib/angular.min.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/lib/cordova.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/lib/cordova_plugins.js \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/lib/fastclick.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/lib/ratchet.min.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/model/Address.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/model/GoogleMap.js \
@@ -194,10 +194,10 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/model/Price.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/model/Restaurant.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/service/RestaurantService.js \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/util/AppUtil.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/hu.dpal.phonegap.plugins.SpinnerDialog \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/org.apache.cordova.globalization \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/org.apache.cordova.inappbrowser \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/org.apache.cordova.network-information \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/org.apache.cordova.splashscreen \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/hu.dpal.phonegap.plugins.SpinnerDialog/www \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/hu.dpal.phonegap.plugins.SpinnerDialog/www/spinner.js \
@@ -206,6 +206,9 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/org.apache.cordova.globalization/www/GlobalizationError.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/org.apache.cordova.inappbrowser/www \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/org.apache.cordova.inappbrowser/www/inappbrowser.js \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/org.apache.cordova.network-information/www \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/org.apache.cordova.network-information/www/Connection.js \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/org.apache.cordova.network-information/www/network.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/org.apache.cordova.splashscreen/www \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/plugins/org.apache.cordova.splashscreen/www/splashscreen.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon \

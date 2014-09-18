@@ -20,15 +20,25 @@ menufortouristApp.controller('SearchController', function($scope, $location, $wi
         }
 
         GeolocationFactory.getCurrentPosition(function(position) {
-            UserFactory.lat = position.coords.latitude;
-            UserFactory.lng = position.coords.longitude;
+            UserFactory.setLat(position.coords.latitude);
+            UserFactory.setLng(position.coords.longitude);
         }, function onError(error) {
-            alert('code: '    + error.code    + '\n' +
+            console.log('code: '    + error.code    + '\n' +
                   'message: ' + error.message + '\n');
-        });
+            alert(getGPSErrorMsg());
+        }, { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true });
     }
 
     // Methods for internationalization
+    function getGPSErrorMsg() {
+        if ($scope.locale == 'EN') {
+            return "Could not get the current position. Either GPS signals are weak or GPS has been switched off.";
+        } else if ($scope.locale == 'ES') {
+            return 'No se pudo obtener la posición actual. O las señales GPS son débiles o GPS se ha desconectado.';
+        } else {
+            return 'Não foi possível obter a posição atual. Ou os sinais de GPS estão fracos ou o GPS foi desligado.';
+        }
+    };
     $scope.getTitle = function() {
         if ($scope.locale == 'EN') {
             return 'Search';

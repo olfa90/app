@@ -18,6 +18,9 @@
     <feature name="InAppBrowser">
         <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
     </feature>
+    <feature name="NetworkStatus">
+        <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
+    </feature>
     <name>Menu For TOURIST</name>
     <description>
         An incredible app for turists to find restaurant's menu in theirs home languages.
