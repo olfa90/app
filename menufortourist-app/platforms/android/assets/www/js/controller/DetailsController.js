@@ -162,7 +162,7 @@ menufortouristApp.controller('DetailsController', function($scope, $location, $w
                 translation = object.traducoes[i].text;
             }
         }
-        return translation;
+        return translation.replace(/\./g,'')
     }
 
 

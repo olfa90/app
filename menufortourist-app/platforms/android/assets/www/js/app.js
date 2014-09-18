@@ -180,7 +180,6 @@ menufortouristApp.run(function(UserFactory) {
     document.addEventListener("deviceready", onDeviceReady, false);
 
     function onDeviceReady() {
-        console.log('onDeviceReady');
         //Initialize anything you need to. aka: Google analytics.
 
         //Set other events you need to listen to.
@@ -204,7 +203,7 @@ menufortouristApp.run(function(UserFactory) {
     }
 
     function onOnline(e) {
-        console.log("Called", e.type);
+        // console.log("Called", e.type);
         UserFactory.setConnected(true);
         
         var msgElement = angular.element(document.getElementById('msg_error'));
@@ -215,7 +214,7 @@ menufortouristApp.run(function(UserFactory) {
     }
 
     function onOffline(e) {
-        console.log("Called", e.type);
+        // console.log("Called", e.type);
         UserFactory.setConnected(false);
 
         var msgElement = angular.element(document.getElementById('msg_error'));

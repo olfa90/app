@@ -10,9 +10,11 @@ menufortouristApp.controller('MainController', function($scope, $location, $wind
     $scope.$watch(function() {
         return UserFactory.connected;
     }, function (newValue) {
-        console.log("connected changed to " + newValue);
-        $scope.connected = newValue;
-        loadRestaurants();
+        if ($scope.connected != newValue) {
+            console.log("connected changed to " + newValue);
+            $scope.connected = newValue;
+            init();
+        }
     });
 
     init();
