@@ -209,7 +209,9 @@ menufortouristApp.run(function(UserFactory) {
         var msgElement = angular.element(document.getElementById('msg_error'));
         if (msgElement) {
             var $scope = msgElement.scope();
-            $scope.$apply(); //tell angular to check dirty bindings again
+            if ($scope) {
+                $scope.$apply(); //tell angular to check dirty bindings again
+            }
         }
     }
 

@@ -316,6 +316,10 @@ p.price {
   color: #000;
 }
 
+#order_list_modal .content h1 {
+  color: rgb(141,41,43);
+}
+
 #modal_item {
   padding: 10px;
 }

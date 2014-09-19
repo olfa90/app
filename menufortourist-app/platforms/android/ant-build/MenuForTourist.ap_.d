@@ -85,14 +85,7 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/fonts/ratchicons.svg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/fonts/ratchicons.ttf \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/fonts/ratchicons.woff \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/60x60.gif \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/75x60.gif \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/abertura-1136x640.png \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/abertura-1280x720.png \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/abertura-800x480.png \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/abertura.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/ALLE CAFE.jpg \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/Bacardi-Mojito.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/BAR DO MINEIRO.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/BAR DU BOM.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/BAR IMACULADA.jpg \
@@ -100,11 +93,9 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/BEIJO & BEIJO.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/BISCUIT.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/BIZU BAR E RESTAURANTE.jpg \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/Brasileirinho.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/BRASSERIE AMENO.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/BRASSERIE BRASIL CAFE.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/BRASSERIE BRASIL RESTAURANTE.jpg \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/Caesar-frango.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/CAFE DO ALTO.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/CALIEL.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/CANTINA DO GAUCHO.jpg \
@@ -112,7 +103,6 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/CASA DA SUICA.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/CASTELO DO CHOPP.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/CHURRASQUETO LAREIRA.jpg \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/Confeitaria-Colombo.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/CORUJAO DO CADEG.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/COSTELAO DO CADEG.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/current-location.png \
@@ -128,9 +118,6 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/glyphicons_242_google_maps_red.gif \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/GREGORA ARTE E CAFE.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/GRUTA SAO SEBASTIAO.jpg \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/Gula-Gula.jpg \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/gulagulamaps.gif \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/gulagulaphoto.gif \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/INTIHUASI.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/LA ESQUINA.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/M4T_Flag_Brasil.png \
@@ -138,7 +125,6 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/M4T_Flag_GBR.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/MEU CANTAO.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/MODIVIDA.jpg \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/Mousse-salgada.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/NOSSO CHURRASQUETO SABOIA.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/NOSSO CHURRASQUETO.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/O CAMARAO ARTE E BIA.jpg \
@@ -148,19 +134,13 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/PLANALTO DO CHOPP.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/PORTA DO SOL.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/PRACA GOURMET.jpg \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/Rapadura.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/RESTAURANTE CACADOR.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/RESTAURANTE CEDRO DO LIBANO.jpg \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/Rio-Scenarium.jpg \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/Rocambole-chocolate.jpg \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/Salmon.jpg \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/riotur.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/SINDICATO DO CHOPP.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/SIRI.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/SO KANA.jpg \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/stalos.png \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/suco-natural.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/TEMPERARTE.jpg \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/Tomate-manjericao.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/VARANDAS GOURMET.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/VILLA OTTO.jpg \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img/ZINHO BIER.jpg \

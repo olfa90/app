@@ -152,9 +152,12 @@ menufortouristApp.controller('DetailsController', function($scope, $location, $w
         return '';
     }
 
-    $scope.showModal = function(item, secao) {
+    $scope.showModal = function(item, secao, secaoPai) {
         $scope.selectedItem = item;
-        $scope.selectedItem.section = secao;
+        $scope.selectedItem.section = secao.title;
+        if (secaoPai) {
+            $scope.selectedItem.mainSection = secaoPai.title;
+        }
         document.getElementById('order_list_modal').classList.add('active');
     }
 
