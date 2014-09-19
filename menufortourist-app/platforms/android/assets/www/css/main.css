@@ -183,7 +183,7 @@ input[type="search"] {
     border-top: 1px solid #ccc;
     padding-top: 10px;
 }
-h5.marker-info {
+.marker-info {
     margin-bottom:0;
     margin-top: 0;
     font-weight: 700;

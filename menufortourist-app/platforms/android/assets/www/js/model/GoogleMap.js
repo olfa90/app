@@ -65,7 +65,8 @@ function GoogleMap() {
 
 	var addUtilitiesLocations = function(map){
 		for (var i = 0; i < riotur.length; i++) {
-			riotur[i].title = 'Riotur - Posto de informações turísticas';
+			riotur[i].title = 'Riotur';
+			riotur[i].subtitle = 'Posto de informações turísticas';
 			riotur[i].site = 'http://www.rioguiaoficial.com.br';
 			riotur[i].icon = rioturMarker;
 			addUtilitiesMarkers( map, riotur[i] );
@@ -82,7 +83,9 @@ function GoogleMap() {
 			title: place.title
 		});
 
-		marker.content = '<div class="infoWindowContent">' +
+		marker.content = '<h3 class="marker-info">' + place.title + '</h3>' +
+						 '<h5 class="marker-info">' + place.subtitle + '</h5>' +
+						 '<div class="infoWindowContent">' +
 							place.description + 
 							'<br/>' +
 							place.phones +
@@ -96,7 +99,7 @@ function GoogleMap() {
 		google.maps.event.addListener(marker, 'click', function() {
 			this.map.panTo(latitudeAndLongitude);
 			
-	        infoWindow.setContent('<h5 class="marker-info">' + marker.title + '</h5>' + marker.content);
+	        infoWindow.setContent(marker.content);
             infoWindow.open(this.map, marker);
 		});
 	}
