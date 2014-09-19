@@ -13,8 +13,9 @@
           <label>{{getModalText()}}</label>
         </p>
         <div id="modal_item" class="card">
+          <h3>{{helpers.capitaliseFirstLetter( selectedItem.section.title )}}</h3>
           <h1>{{selectedItem.identifier}} {{selectedItem.title}}</h1>
-          <p class="price" ng-repeat="preco in selectedItem.precos">{{preco.valor|currency:"R$ "}} {{formatPriceDescription(preco.description)}}</p>
+          <p class="price" ng-repeat="preco in selectedItem.precos">{{getPrice(preco.valor)}} {{formatPriceDescription(preco.description)}}</p>
         </div>
 
         <h3 class="content-padded" ng-show="selectedItem.title == ''">{{getModalEmpty()}}</h3>
@@ -83,12 +84,12 @@
             <li class="item-accordion table-view-cell"
                       ng-repeat="item in secao.itens"
                       ng-show="isGroupShown(secao)">
-              <a ng-click="showModal(item)">
+              <a ng-click="showModal(item, secao)">
                 <div class="media-body">
                   {{getTranslation(item.titulo)}}
                   <p>{{getTranslation(item.descricao)}}</p>
                   <!-- TODO : When price lower or equal to 0.10, dont show!  -->
-                  <p class="price" ng-repeat="preco in item.precos">{{preco.valor|currency:"R$ "}} {{formatPriceDescription(getTranslation(preco.descricao))}}</p>
+                  <p class="price" ng-repeat="preco in item.precos">{{getPrice(preco.valor)}} {{formatPriceDescription(getTranslation(preco.descricao))}}</p>
                 </div>
               </a>
             </li>

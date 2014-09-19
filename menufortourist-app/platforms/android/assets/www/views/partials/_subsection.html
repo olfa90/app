@@ -3,18 +3,18 @@
         ng-click="toggleGroup(secao)"
         ng-class="{active: isGroupShown(secao)}">
       <h3>{{helpers.capitaliseFirstLetter( getTranslation(secao.titulo) )}}</h3>
-      <span class="icon pull-right" ng-class="{'icon-down-nav': isGroupShown(secao), 'icon-up-nav': !isGroupShown(secao)}"></span>
+      <span ng-show="secao.itens.length > 0 || secao.note != null" class="icon pull-right" ng-class="{'icon-down-nav': isGroupShown(secao), 'icon-up-nav': !isGroupShown(secao)}"></span>
     </li>
     <li class="item-accordion table-view-cell"
               ng-repeat="item in secao.itens"
               ng-show="isGroupShown(secao)">
-      <a ng-click="showModal(item)">
+      <a ng-click="showModal(item, secao)">
         <!-- images size from http://placehold.it/60x60 -->
         <!-- <img class="media-object pull-left" ng-src="{{item.urlImage}}" width="75" height="60"> -->
         <div class="media-body">
           {{getTranslation(item.titulo)}}
           <p>{{getTranslation(item.descricao)}}</p>
-          <p class="price" ng-repeat="preco in item.precos">{{preco.valor|currency:"R$ "}} {{formatPriceDescription(getTranslation(preco.descricao))}}</p>
+          <p class="price" ng-repeat="preco in item.precos">{{getPrice(preco.valor)}} {{formatPriceDescription(getTranslation(preco.descricao))}}</p>
         </div>
       </a>
     </li>

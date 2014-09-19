@@ -144,20 +144,20 @@ menufortouristApp.factory('RestaurantsFactory', function(RestaurantService, User
     // Methods for internationalization
     function getErrorMsg() {
         if (UserFactory.locale == 'EN') {
-            return "Could not perform this operation. Please try again later.";
+            return "Could not perform this operation. Please try again later";
         } else if (UserFactory.locale == 'ES') {
-            return 'No se pudo realizar esta operación. Por favor, inténtelo de nuevo más tarde.';
+            return 'No se pudo realizar esta operación. Por favor, inténtelo de nuevo más tarde';
         } else {
-            return 'Não foi possível executar esta operação. Por favor, tente novamente mais tarde.';
+            return 'Não foi possível executar esta operação. Por favor, tente novamente mais tarde';
         }
     }
     function getNoResultsFoundMsg() {
         if (UserFactory.locale == 'EN') {
-            return "No restaurants found.";
+            return "No restaurants found";
         } else if (UserFactory.locale == 'ES') {
-            return 'No hay restaurantes encontrados.';
+            return 'No hay restaurantes encontrados';
         } else {
-            return 'Nenhum restaurante foi encontrado.';
+            return 'Nenhum restaurante foi encontrado';
         }
     }
     //

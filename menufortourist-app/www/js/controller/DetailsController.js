@@ -1,5 +1,5 @@
 // DetailsController
-menufortouristApp.controller('DetailsController', function($scope, $location, $window, UserFactory, RestaurantsFactory){
+menufortouristApp.controller('DetailsController', function($scope, $location, $window, $filter, UserFactory, RestaurantsFactory){
 
     $scope.locale = UserFactory.locale;
     $scope.connected = UserFactory.connected;
@@ -138,6 +138,13 @@ menufortouristApp.controller('DetailsController', function($scope, $location, $w
         $window.history.back();
     };
 
+    $scope.getPrice = function(valor) {
+        if (valor == null || valor == '0.1') {
+            return null;
+        }
+        return $filter('currency')(valor, 'R$ ');
+    }
+
     $scope.formatPriceDescription = function(description) {
         if (description != null) {
             return '('+description+')';
@@ -145,10 +152,10 @@ menufortouristApp.controller('DetailsController', function($scope, $location, $w
         return '';
     }
 
-    $scope.showModal = function(item) {
+    $scope.showModal = function(item, secao) {
         $scope.selectedItem = item;
+        $scope.selectedItem.section = secao;
         document.getElementById('order_list_modal').classList.add('active');
-        // document.getElementById('order_list_modal').classList.remove('active');
     }
 
     $scope.hideModal = function() {
