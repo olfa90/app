@@ -30,16 +30,16 @@ function GoogleMap() {
 	    scaledSize: new google.maps.Size(32, 32)
 	};
 
-	this.initialize = function(lat, lng, frozen){
+	this.initialize = function(lat, lng, frozen, zoom){
 		that = null;
-		this.map = showMap(lat, lng, frozen);
+		this.map = showMap(lat, lng, frozen, zoom);
 		addUserLocation(this.map, lat, lng);
 		addUtilitiesLocations(this.map);
 	}
 
-	var showMap = function(lat, lng, frozen){
+	var showMap = function(lat, lng, frozen, zoom){
 		var mapOptions = {
-			zoom: (frozen ? 14 : 12),
+			zoom: (zoom ? zoom : 12),
 			center: new google.maps.LatLng(lat, lng),
 			draggable: !frozen,
 			disableDoubleClickZoom: frozen,
@@ -85,7 +85,7 @@ function GoogleMap() {
 		marker.content = '<div class="infoWindowContent">' +
 							place.description + 
 							'<br/>' +
-							'Tel: ' + place.phones +
+							place.phones +
 							'<br/>' +
 							place.openHours +
 							'<br/>' +
@@ -96,7 +96,7 @@ function GoogleMap() {
 		google.maps.event.addListener(marker, 'click', function() {
 			this.map.panTo(latitudeAndLongitude);
 			
-	        infoWindow.setContent('<h4 class="marker-info">' + marker.title + '</h4>' + marker.content);
+	        infoWindow.setContent('<h5 class="marker-info">' + marker.title + '</h5>' + marker.content);
             infoWindow.open(this.map, marker);
 		});
 	}
@@ -263,14 +263,14 @@ function GoogleMap() {
     		description:"Copacabana - Centro Integrado de Atendimento ao Turista", 
     		lat:"-22.9635282",
     		lng:"-43.1745114",
-    		phones:"2541-7522", 
+    		phones:"+55 21 2541-7522", 
     		openHours:"Seg-Sex, 9h-18h; Sáb, 9h-15h"
     	},
     	{
     		description:"Copacabana", 
     		lat:"-22.970091",
     		lng:"-43.182621",
-    		phones:"2547-4421", 
+    		phones:"+55 21 2547-4421", 
     		openHours:"Diariamente, 8h-21h"
     	},
     	{
@@ -312,7 +312,7 @@ function GoogleMap() {
     		description:"Rodoviária Novo Rio", 
     		lat:"-22.8988872",
     		lng:"-43.2096912",
-    		phones:"2263-4857", 
+    		phones:"+55 21 2263-4857", 
     		openHours:"Diariamente, 24h"
     	},
     	{

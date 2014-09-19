@@ -26,7 +26,7 @@ menufortouristApp.controller('DetailsController', function($scope, $location, $w
         }
         
         var map = new GoogleMap();
-        map.initialize(UserFactory.lat, UserFactory.lng, true);
+        map.initialize(UserFactory.lat, UserFactory.lng, false, 14);
         map.addStaticMarkers($scope.restaurant);
 
         // Load restaurant's menu
@@ -192,6 +192,14 @@ menufortouristApp.controller('DetailsController', function($scope, $location, $w
     $scope.hideModal = function() {
         $scope.selectedItem = null;
         document.getElementById('order_list_modal').classList.remove('active');
+    }
+
+    $scope.showTermsModal = function() {
+        document.getElementById('termsconditionsModal').classList.add('active');
+    }
+
+    $scope.hideTermsModal = function() {
+        document.getElementById('termsconditionsModal').classList.remove('active');
     }
 
     $scope.getSelectedItem = function() {

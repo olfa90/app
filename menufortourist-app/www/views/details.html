@@ -24,10 +24,9 @@
     </div>
     <!-- // -->
     <!-- MODAL Terms and conditions of use -->
-    <!-- <a href="#myModalexample" class="btn">Open modal</a> -->
     <div id="termsconditionsModal" class="modal">
       <header class="bar bar-nav">
-        <a class="icon icon-close pull-right" href="#termsconditionsModal"></a>
+        <a class="icon icon-close pull-right" ng-click="hideTermsModal()"></a>
         <h1 class="title">{{getMenuTermsConditionsTitle()}}</h1>
       </header>
 
@@ -79,7 +78,7 @@
         </p>
       </section>
       <section id="menu">
-        <a class="section-title" href="#termsconditionsModal">
+        <a class="section-title" ng-click="showTermsModal()">
           <h2>{{getMenuTitle()}}</h2>
           <p>{{getMenuTermsConditionsTitle()}}</p>
         </a>

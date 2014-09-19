@@ -183,9 +183,11 @@ input[type="search"] {
     border-top: 1px solid #ccc;
     padding-top: 10px;
 }
-h4.marker-info {
+h5.marker-info {
     margin-bottom:0;
     margin-top: 0;
+    font-weight: 700;
+    color: #000;
 }
 
 #content_map_info {
