@@ -39,7 +39,6 @@ menufortouristApp.controller('MainController', function($scope, $location, $wind
             UserFactory.setLat(position.coords.latitude);
             UserFactory.setLng(position.coords.longitude);
             $scope.restaurants = RestaurantsFactory.findNearRestaurants(position.coords.latitude, position.coords.longitude);
-            // $filter('orderBy')($scope.images, 'sortOrder');
         }, function onError(error) {
             // Hide spinner dialog
             window.plugins.spinnerDialog.hide();

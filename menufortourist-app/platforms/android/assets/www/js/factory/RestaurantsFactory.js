@@ -1,4 +1,4 @@
-menufortouristApp.factory('RestaurantsFactory', function(RestaurantService, UserFactory) {
+menufortouristApp.factory('RestaurantsFactory', function($filter, RestaurantService, UserFactory) {
     var factory = {};
 
     var restaurants = [];
@@ -29,6 +29,7 @@ menufortouristApp.factory('RestaurantsFactory', function(RestaurantService, User
             if (restaurantsAround == null || restaurantsAround.length == 0) {
               alert(getNoResultsFoundMsg());
             }
+                // restaurantsAround = $filter('orderBy')(restaurantsAround, 'distance');
 
             // Hide spinner dialog
             window.plugins.spinnerDialog.hide();

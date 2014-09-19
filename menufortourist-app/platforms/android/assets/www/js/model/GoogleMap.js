@@ -12,7 +12,7 @@ function GoogleMap() {
 	};
 	var rioturMarker = {
 		url: 'img/riotur.png',
-	    scaledSize: new google.maps.Size(18, 18)
+	    scaledSize: new google.maps.Size(16, 16)
 	};
 	var iconMarker = {
 		url: 'icon.png',

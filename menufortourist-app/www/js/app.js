@@ -58,7 +58,7 @@ function loadTheApp() {
     }
 
     // Initiate FastClick
-    // FastClick.attach(document.body);
+    FastClick.attach(document.body);
 
     // Boot AngularJS
     try {

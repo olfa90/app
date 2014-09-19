@@ -83,6 +83,34 @@ menufortouristApp.controller('DetailsController', function($scope, $location, $w
         }
     };
 
+    $scope.getMenuTermsConditionsTitle = function() {
+        if ($scope.locale == 'EN') {
+            return 'terms and conditions of use';
+        } else if ($scope.locale == 'ES') {
+            return 'términos y condiciones de uso';
+        } else {
+            return 'termos e condições de uso';
+        }
+    };
+
+    $scope.getModalTermsText = function() {
+        var content = "";
+        if ($scope.locale == 'EN') {
+            content = "The menus and translations displayed here are updated according to the information sent by the restaurants from time to time.<br/>" +
+                "We don't take responsibility for price changes or the availability of the dishes presented in this application.<br/>" +
+                "Restaurant hours, as well as the availability of tables must be confirmed directly with each restaurant.";
+        } else if ($scope.locale == 'ES') {
+            content = "Los menús y traducciones aquí disponibles son actualizados según las informaciones enviadas periódicamente por los restaurantes. <br/>" +
+                "No nos responsabilizamos de la variación de precio o de la disponibilidad de los platos presentados en esta aplicación.<br/>" +
+                "Los días y horario de funcionamiento, así como la disponibilidad de mesa en los restaurantes, deberán ser confirmados directamente con cada restaurante.";
+        } else {
+            content = "Os cardápios e traduções aqui disponibilizados são atualizadas conforme informações encaminhadas pelos restaurantes de tempos em tempos.<br/>" +
+                "Não nos responsabilizamos pela variação de preço e pela disponibilidade dos pratos ora apresentados neste aplicativo.<br/>" +
+                "Os dias e horários de funcionamento, bem como a disponibilidade de mesas nos restaurantes deverão ser confirmados diretamente com cada restaurante.";
+        }
+        return content;
+    };
+
     $scope.getMenuInfo = function() {
         if ($scope.locale == 'EN') {
             return "Press the item you want and show it to the waiter to place your order.";

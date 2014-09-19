@@ -1,4 +1,4 @@
-    <!-- MODAL -->
+    <!-- MODAL Item show to restaurant -->
     <!-- <a href="#myModalexample" class="btn">Open modal</a> -->
     <div id="order_list_modal" class="modal">
       <header class="bar bar-nav">
@@ -20,6 +20,19 @@
         </div>
 
         <h3 class="content-padded" ng-show="selectedItem.title == ''">{{getModalEmpty()}}</h3>
+      </div>
+    </div>
+    <!-- // -->
+    <!-- MODAL Terms and conditions of use -->
+    <!-- <a href="#myModalexample" class="btn">Open modal</a> -->
+    <div id="termsconditionsModal" class="modal">
+      <header class="bar bar-nav">
+        <a class="icon icon-close pull-right" href="#termsconditionsModal"></a>
+        <h1 class="title">{{getMenuTermsConditionsTitle()}}</h1>
+      </header>
+
+      <div class="content">
+        <p class="content-padded" ng-bind-html-unsafe="getModalTermsText()"></p>
       </div>
     </div>
     <!-- // -->
@@ -66,8 +79,9 @@
         </p>
       </section>
       <section id="menu">
-        <a class="section-title">
+        <a class="section-title" href="#termsconditionsModal">
           <h2>{{getMenuTitle()}}</h2>
+          <p>{{getMenuTermsConditionsTitle()}}</p>
         </a>
 
         <div id="infomenu" class="card">
