@@ -8,10 +8,10 @@ menufortouristApp.factory('RestaurantsFactory', function($filter, RestaurantServ
     var map = null;
 
     // CONSTANTS:
-    factory.MAIN_PAGE = 1;
-    factory.SEARCH_PAGE = 2;
-    factory.MAIN_MAP_PAGE = 3;
-    factory.SEARCH_MAP_PAGE = 4;
+    // factory.MAIN_PAGE = 1;
+    // factory.SEARCH_PAGE = 2;
+    // factory.MAIN_MAP_PAGE = 3;
+    // factory.SEARCH_MAP_PAGE = 4;
     var origin = 1;
     
     factory.findRestaurants = function(){
@@ -72,16 +72,21 @@ menufortouristApp.factory('RestaurantsFactory', function($filter, RestaurantServ
     };
 
     factory.getRestaurantCardapio = function(restaurantParam){
-        // Show spinner dialog
-        window.plugins.spinnerDialog.show();
         if (restaurantParam == null) {
-            // Hide spinner dialog
-            window.plugins.spinnerDialog.hide();
             return;
         }
+        // Show spinner dialog
+        window.plugins.spinnerDialog.show();
         return RestaurantService.fetchCardapio(restaurantParam).then(function(object) {
             // console.log(object);
             restaurant = object;
+            // Hide spinner dialog
+            window.plugins.spinnerDialog.hide();
+            return restaurant;
+        }, function(reason) {
+            console.log('Failed: ' + reason);
+            alert(getErrorMsg());
+
             // Hide spinner dialog
             window.plugins.spinnerDialog.hide();
             return restaurant;
@@ -162,6 +167,7 @@ menufortouristApp.factory('RestaurantsFactory', function($filter, RestaurantServ
         }
     }
     //
+    
     function setDistanceFromUser(restaurantParam, userLat, userLng) {
         if (restaurantParam.address == null) {
             return;

@@ -14,7 +14,7 @@
         <h1 class="logo">Menu For TOURIST</h1>
       </button>
       <h1 class="title">{{getTitle()}}</h1>
-      <div class="pull-right">
+      <div class="pull-right" ng-show="connected">
         <a class="icon icon-search" ng-click="showSearch()"></a>
         &nbsp;
         <button class="btn btn-link btn-nav" ng-show="restaurants" ng-click="goMap(restaurants)">
@@ -22,6 +22,10 @@
         </button>
       </div>
     </header>
+
+    <div id="msg_error" class="content" ng-hide="connected">
+      <p>{{getErrorMsg()}}</p>
+    </div>
 
     <section id="list_places" class="content">
       <ul id="list_view" class="table-view">
@@ -31,10 +35,10 @@
             <div class="media-body">
               {{restaurant.name}}
               <p>{{restaurant.specialty}}</p>
-              <!-- <p>
+              <p>
                 <span class="icon icon-google-maps"></span>
                 {{restaurant.distance}} km
-              </p> -->
+              </p>
             </div>
           </a>
         </li>

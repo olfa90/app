@@ -105,7 +105,7 @@ menufortouristApp.controller('SearchController', function($scope, $location, $wi
 
     $scope.goDetails = function(restaurant) {
         RestaurantsFactory.saveSelectedRestaurant(restaurant);
-        RestaurantsFactory.setOrigin(RestaurantsFactory.SEARCH_PAGE);
+        // RestaurantsFactory.setOrigin(RestaurantsFactory.SEARCH_PAGE);
         $location.path("/details");
     };
 

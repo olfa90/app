@@ -1,18 +1,32 @@
 // DetailsController
-menufortouristApp.controller('DetailsController', function($scope, $location, $window, UserFactory, RestaurantsFactory){
+menufortouristApp.controller('DetailsController', function($scope, $location, $window, $filter, UserFactory, RestaurantsFactory){
 
     $scope.locale = UserFactory.locale;
+    $scope.connected = UserFactory.connected;
     $scope.helpers = AppUtil.helpers;
 
     $scope.restaurant = null;
     $scope.selectedItem = null;
 
+    $scope.$watch(function() {
+        return UserFactory.connected;
+    }, function (newValue) {
+        if ($scope.connected != newValue) {
+            $scope.connected = newValue;
+        }
+    });
+
     init();
 
     function init(){
         $scope.restaurant = RestaurantsFactory.getSelectedRestaurant();
+        
+        if (!UserFactory.connected) {
+            return;
+        }
+        
         var map = new GoogleMap();
-        map.initialize(UserFactory.lat, UserFactory.lng, true);
+        map.initialize(UserFactory.lat, UserFactory.lng, false, 14);
         map.addStaticMarkers($scope.restaurant);
 
         // Load restaurant's menu
@@ -20,6 +34,15 @@ menufortouristApp.controller('DetailsController', function($scope, $location, $w
     }
 
     // Metodos for internationalization
+    $scope.getErrorMsg = function() {
+        if ($scope.locale == 'EN') {
+            return 'No Internet connection';
+        } else if ($scope.locale == 'ES') {
+            return 'No hay conexión a Internet';
+        } else {
+            return 'Sem conexão com a Internet';
+        }
+    };
     $scope.getTitle = function() {
         if ($scope.locale == 'EN') {
             return 'Restaurant';
@@ -58,6 +81,34 @@ menufortouristApp.controller('DetailsController', function($scope, $location, $w
         } else {
             return 'Cardápio';
         }
+    };
+
+    $scope.getMenuTermsConditionsTitle = function() {
+        if ($scope.locale == 'EN') {
+            return 'terms and conditions of use';
+        } else if ($scope.locale == 'ES') {
+            return 'términos y condiciones de uso';
+        } else {
+            return 'termos e condições de uso';
+        }
+    };
+
+    $scope.getModalTermsText = function() {
+        var content = "";
+        if ($scope.locale == 'EN') {
+            content = "The menus and translations displayed here are updated according to the information sent by the restaurants from time to time.<br/>" +
+                "We don't take responsibility for price changes or the availability of the dishes presented in this application.<br/>" +
+                "Restaurant hours, as well as the availability of tables must be confirmed directly with each restaurant.";
+        } else if ($scope.locale == 'ES') {
+            content = "Los menús y traducciones aquí disponibles son actualizados según las informaciones enviadas periódicamente por los restaurantes. <br/>" +
+                "No nos responsabilizamos de la variación de precio o de la disponibilidad de los platos presentados en esta aplicación.<br/>" +
+                "Los días y horario de funcionamiento, así como la disponibilidad de mesa en los restaurantes, deberán ser confirmados directamente con cada restaurante.";
+        } else {
+            content = "Os cardápios e traduções aqui disponibilizados são atualizadas conforme informações encaminhadas pelos restaurantes de tempos em tempos.<br/>" +
+                "Não nos responsabilizamos pela variação de preço e pela disponibilidade dos pratos ora apresentados neste aplicativo.<br/>" +
+                "Os dias e horários de funcionamento, bem como a disponibilidade de mesas nos restaurantes deverão ser confirmados diretamente com cada restaurante.";
+        }
+        return content;
     };
 
     $scope.getMenuInfo = function() {
@@ -115,6 +166,13 @@ menufortouristApp.controller('DetailsController', function($scope, $location, $w
         $window.history.back();
     };
 
+    $scope.getPrice = function(valor) {
+        if (valor == null || valor == '0.1') {
+            return null;
+        }
+        return $filter('currency')(valor, 'R$ ');
+    }
+
     $scope.formatPriceDescription = function(description) {
         if (description != null) {
             return '('+description+')';
@@ -122,15 +180,26 @@ menufortouristApp.controller('DetailsController', function($scope, $location, $w
         return '';
     }
 
-    $scope.showModal = function(item) {
+    $scope.showModal = function(item, secao, secaoPai) {
         $scope.selectedItem = item;
+        $scope.selectedItem.section = secao.title;
+        if (secaoPai) {
+            $scope.selectedItem.mainSection = secaoPai.title;
+        }
         document.getElementById('order_list_modal').classList.add('active');
-        // document.getElementById('order_list_modal').classList.remove('active');
     }
 
     $scope.hideModal = function() {
         $scope.selectedItem = null;
         document.getElementById('order_list_modal').classList.remove('active');
+    }
+
+    $scope.showTermsModal = function() {
+        document.getElementById('termsconditionsModal').classList.add('active');
+    }
+
+    $scope.hideTermsModal = function() {
+        document.getElementById('termsconditionsModal').classList.remove('active');
     }
 
     $scope.getSelectedItem = function() {
@@ -147,6 +216,11 @@ menufortouristApp.controller('DetailsController', function($scope, $location, $w
         return address.street +', '+ address.number +', '+ address.neighbourhood +', '+ address.city +', '+ address.state
     }
 
+    $scope.openUrl = function(url) {
+        console.log('openUrl: '+url);
+        $window.open(url, '_system');
+    }
+
     $scope.getTranslation = function(object) {
         if (object == null || object.traducoes == null) {
             return;
@@ -157,7 +231,7 @@ menufortouristApp.controller('DetailsController', function($scope, $location, $w
                 translation = object.traducoes[i].text;
             }
         }
-        return translation;
+        return translation.replace(/\./g,'')
     }
 
 

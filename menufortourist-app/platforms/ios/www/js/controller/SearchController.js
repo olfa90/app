@@ -1,7 +1,8 @@
 // SearchController
-menufortouristApp.controller('SearchController', function($scope, $location, $window, UserFactory, RestaurantsFactory) {
+menufortouristApp.controller('SearchController', function($scope, $location, $window, UserFactory, GeolocationFactory, RestaurantsFactory) {
 
     $scope.locale = UserFactory.locale;
+    $scope.connected = UserFactory.connected;
     $scope.helpers = AppUtil.helpers;
 
     $scope.searching = true;
@@ -9,20 +10,57 @@ menufortouristApp.controller('SearchController', function($scope, $location, $wi
 
     $scope.restaurants = [];
 
+    $scope.$watch(function() {
+        return UserFactory.connected;
+    }, function (newValue) {
+        if ($scope.connected != newValue) {
+            $scope.connected = newValue;
+            init();
+        }
+    });
+
     init();
 
     function init(){
         // Pega os restaurantes carregados na consulta anterior.
         $scope.restaurants = RestaurantsFactory.getSearchResult();
 
-        console.log($scope.restaurants);
-        console.log($scope.restaurants.length);
         if ($scope.restaurants != null && $scope.restaurants.length > 0) {
             $scope.searching = false;
         }
+        if (!UserFactory.connected) {
+            return;
+        }
+
+        GeolocationFactory.getCurrentPosition(function(position) {
+            UserFactory.setLat(position.coords.latitude);
+            UserFactory.setLng(position.coords.longitude);
+        }, function onError(error) {
+            console.log('code: '    + error.code    + '\n' +
+                  'message: ' + error.message + '\n');
+            alert(getGPSErrorMsg());
+        }, { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true });
     }
 
     // Methods for internationalization
+    function getGPSErrorMsg() {
+        if ($scope.locale == 'EN') {
+            return "Could not get the current position. Either GPS signals are weak or GPS has been switched off.";
+        } else if ($scope.locale == 'ES') {
+            return 'No se pudo obtener la posición actual. O las señales GPS son débiles o GPS se ha desconectado.';
+        } else {
+            return 'Não foi possível obter a posição atual. Ou os sinais de GPS estão fracos ou o GPS foi desligado.';
+        }
+    };
+    $scope.getErrorMsg = function() {
+        if ($scope.locale == 'EN') {
+            return 'No Internet connection';
+        } else if ($scope.locale == 'ES') {
+            return 'No hay conexión a Internet';
+        } else {
+            return 'Sem conexão com a Internet';
+        }
+    };
     $scope.getTitle = function() {
         if ($scope.locale == 'EN') {
             return 'Search';
@@ -57,8 +95,11 @@ menufortouristApp.controller('SearchController', function($scope, $location, $wi
         if ($scope.searchText == null || $scope.searchText.trim() == '') {
             return;
         }
+        if (!UserFactory.connected) {
+            return;
+        }
 
-        $scope.restaurants = RestaurantsFactory.searchRestaurants($scope.searchText);
+        $scope.restaurants = RestaurantsFactory.searchRestaurants($scope.searchText, UserFactory.lat, UserFactory.lng);
         $scope.searching = false;
     }
 

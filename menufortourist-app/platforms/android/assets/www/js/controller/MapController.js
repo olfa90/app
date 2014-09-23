@@ -16,7 +16,7 @@ menufortouristApp.controller('MapController', function($scope, $location, $windo
         // window.plugins.spinnerDialog.show();
         GeolocationFactory.getCurrentPosition(function(position) {
             var map = new GoogleMap();
-            map.initialize(position.coords.latitude, position.coords.longitude);
+            map.initialize(position.coords.latitude, position.coords.longitude, $scope.locale);
             showMarkers(map);
 
             // RestaurantsFactory.saveMapState(map);

@@ -1,4 +1,4 @@
-    <!-- MODAL -->
+    <!-- MODAL Item show to restaurant -->
     <!-- <a href="#myModalexample" class="btn">Open modal</a> -->
     <div id="order_list_modal" class="modal">
       <header class="bar bar-nav">
@@ -13,11 +13,25 @@
           <label>{{getModalText()}}</label>
         </p>
         <div id="modal_item" class="card">
+          <h3>{{helpers.capitaliseFirstLetter( selectedItem.mainSection )}}</h3>
+          <h3>{{helpers.capitaliseFirstLetter( selectedItem.section )}}</h3>
           <h1>{{selectedItem.identifier}} {{selectedItem.title}}</h1>
-          <p class="price" ng-repeat="preco in selectedItem.precos">{{preco.valor|currency:"R$ "}} {{formatPriceDescription(preco.description)}}</p>
+          <p class="price" ng-repeat="preco in selectedItem.precos">{{getPrice(preco.valor)}} {{formatPriceDescription(preco.description)}}</p>
         </div>
 
         <h3 class="content-padded" ng-show="selectedItem.title == ''">{{getModalEmpty()}}</h3>
+      </div>
+    </div>
+    <!-- // -->
+    <!-- MODAL Terms and conditions of use -->
+    <div id="termsconditionsModal" class="modal">
+      <header class="bar bar-nav">
+        <a class="icon icon-close pull-right" ng-click="hideTermsModal()"></a>
+        <h1 class="title">{{getMenuTermsConditionsTitle()}}</h1>
+      </header>
+
+      <div class="content">
+        <p class="content-padded" ng-bind-html-unsafe="getModalTermsText()"></p>
       </div>
     </div>
     <!-- // -->
@@ -32,6 +46,10 @@
     <!-- standard bar fixed below top bar -->
     <div class="bar bar-standard bar-header-secondary">
       <h2 class="subtitle">{{restaurant.name}}</h2>
+    </div>
+
+    <div id="msg_error" class="content" ng-hide="connected">
+      <p>{{getErrorMsg()}}</p>
     </div>
 
     <section id="informations" class="content">
@@ -49,13 +67,20 @@
           <div id="map_canvas" style="width: 100%; height: 100%;">
           </div>
         </div>
-        <p class="details">{{getFullAddress(restaurant.address)}}</p>
-        <p class="details">{{restaurant.phone}} - {{restaurant.homepage}}</p>
-        <p class="details">{{restaurant.openHours}}</p>
+        <p class="details">
+          {{getFullAddress(restaurant.address)}}
+          <br/>
+          {{restaurant.openHours}}
+          <br/>
+          <a ng-show="restaurant.phone" class="btn" ng-href="tel:{{restaurant.phone}}"> Tel: {{restaurant.phone}} </a>
+          &nbsp;
+          <a ng-show="restaurant.homepage" class="btn" ng-click="openUrl(restaurant.homepage)">{{restaurant.homepage}}</a>
+        </p>
       </section>
       <section id="menu">
-        <a class="section-title">
+        <a class="section-title" ng-click="showTermsModal()">
           <h2>{{getMenuTitle()}}</h2>
+          <p>{{getMenuTermsConditionsTitle()}}</p>
         </a>
 
         <div id="infomenu" class="card">
@@ -67,18 +92,18 @@
             <li class="table-view-divider"
                       ng-click="toggleGroup(secao)"
                       ng-class="{active: isGroupShown(secao)}">
-              <span ng-show="secao.itens.length > 0 || secao.note != null" class="icon" ng-class="{'icon-down-nav': isGroupShown(secao), 'icon-up-nav': !isGroupShown(secao)}"></span>
-              &nbsp;
-              {{helpers.capitaliseFirstLetter( getTranslation(secao.titulo) )}}
+              <h3>{{helpers.capitaliseFirstLetter( getTranslation(secao.titulo) )}}</h3>
+              <span ng-show="secao.itens.length > 0 || secao.note != null" class="icon pull-right" ng-class="{'icon-down-nav': isGroupShown(secao), 'icon-up-nav': !isGroupShown(secao)}"></span>
             </li>
             <li class="item-accordion table-view-cell"
                       ng-repeat="item in secao.itens"
                       ng-show="isGroupShown(secao)">
-              <a ng-click="showModal(item)">
+              <a ng-click="showModal(item, secao)">
                 <div class="media-body">
                   {{getTranslation(item.titulo)}}
                   <p>{{getTranslation(item.descricao)}}</p>
-                  <p class="price" ng-repeat="preco in item.precos">{{preco.valor|currency:"R$ "}} {{formatPriceDescription(getTranslation(preco.descricao))}}</p>
+                  <!-- TODO : When price lower or equal to 0.10, dont show!  -->
+                  <p class="price" ng-repeat="preco in item.precos">{{getPrice(preco.valor)}} {{formatPriceDescription(getTranslation(preco.descricao))}}</p>
                 </div>
               </a>
             </li>
@@ -90,68 +115,10 @@
             </li>
 
             <div class="card" ng-repeat="secao in secao.subsecoes" ng-include src="'views/partials/_subsection.html'"></div>
-
-            <!-- <li class="table-view-divider"
-                      ng-click="toggleGroup(secao)"
-                      ng-class="{active: isGroupShown(secao)}">
-                <i class="icon" ng-class="isGroupShown(secao) ? 'icon-down-nav' : 'icon-up-nav'"></i>
-              &nbsp;
-              {{secao.titulo}}
-            </li>
-            <li class="item-accordion table-view-cell media"
-                      ng-repeat="item in secao.itens"
-                      ng-show="isGroupShown(secao)">
-              <a ng-click="setSelectedItem(item)">
-                <img class="media-object pull-left" ng-src="{{item.urlImage}}" width="75" height="60">
-                <div class="media-body">
-                  {{item.titulo}}
-                  <p>{{item.descricao}}</p>
-                  <p class="price" ng-repeat="preco in item.precos">{{preco.valor|currency:"R$ "}} {{formatPriceDescription(preco.descricao)}}</p>
-                </div>
-              </a>
-            </li> -->
           </ul>
         </div>
-        
-
-        <!-- <ul class="table-view">
-          <li ng-repeat="secao in restaurant.secoes">
-            <ul class="table-view">
-              <li class="table-view-divider">{{secao.titulo}}</li>
-              <li class="table-view-cell media" ng-repeat="item in secao.itens">
-                <a ng-click="setSelectedItem(item)">
-                  <img class="media-object pull-left" ng-src="{{item.urlImage}}" width="75" height="60">
-                  <div class="media-body">
-                    {{item.titulo}}
-                    <p>{{item.descricao}}</p>
-                    <p class="price" ng-repeat="preco in item.precos">{{preco.valor|currency:"R$ "}} {{formatPriceDescription(preco.descricao)}}</p>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul> -->
         <!-- images size from http://placehold.it/60x60 -->
       </section>
     </section>
-
-    <!-- <nav class="bar bar-tab">
-      <a class="tab-item active" ng-click="back()">
-        <span class="icon icon-home"></span>
-        <span class="tab-label">Home</span>
-      </a>
-      <a class="tab-item" href="#">
-        <span class="icon icon-star-filled"></span>
-        <span class="tab-label">Favoritos</span>
-      </a>
-      <a class="tab-item" href="#">
-        <span class="icon icon-list"></span>
-        <span class="tab-label">Utilidades</span>
-      </a>
-      <a class="tab-item" href="#">
-        <span class="icon icon-person"></span>
-        <span class="tab-label">Eu</span>
-      </a>
-    </nav> -->
     <!-- main container end -->
      

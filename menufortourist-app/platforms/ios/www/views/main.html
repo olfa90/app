@@ -4,7 +4,7 @@
       </button>
       <a class="logo pull-left"></a>
       <h1 class="title">{{getTitle()}}</h1>
-      <div class="pull-right">
+      <div class="pull-right" ng-show="connected">
         <a class="icon icon-search" ng-click="goSearch()"></a>
         &nbsp;
         <button class="btn btn-link btn-nav" ng-show="restaurants" ng-click="goMap(restaurants)">
@@ -28,13 +28,17 @@
       </button>
     </nav> -->
 
+    <div id="msg_error" class="content" ng-hide="connected">
+      <p>{{getErrorMsg()}}</p>
+    </div>
+
     <section id="list_places" class="content">
       <ul class="table-view">
         <li class="table-view-cell media" ng-repeat="restaurant in restaurants">
           <a class="navigate-right" ng-click="goDetails(restaurant)">
             <img class="media-object pull-left" ng-src="img/{{helpers.removerAcentos(restaurant.name)}}.jpg" width="75" height="60">
             <div class="media-body">
-              {{restaurant.name}}
+              <h4>{{restaurant.name}}</h4>
               <p>{{restaurant.specialty}}</p>
               <p>
                 <span class="icon icon-google-maps"></span>

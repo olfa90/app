@@ -24,7 +24,7 @@ header h1.logo {
 header a.logo {
   height: 44px;
   width: 30px;
-  background-image: url("../img/logo.gif");
+  background-image: url("../icon.png");
   background-size: 30px;
   background-repeat: no-repeat;
   background-position: center;
@@ -102,21 +102,39 @@ input[type="search"] {
 
 #list_languages .table-view-cell {
   color: #000;
-  font-size: 18px;
-  font-weight: 800 bold;
-
-  /*line-height: 45px;*/
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 45px;
 }
 
 #list_languages > div {
-  top: 30%;
+  top: 27%;
   position: relative;
-  margin-left: 10px;
-  margin-right: 10px;
+  /*margin-left: 10px;
+  margin-right: 10px;*/
 }
 
-#list_languages > div > button > img {
-  margin-left: 10px;
+#list_languages > div img {
+  margin-left: 20%;
+  margin-right: 15px;
+}
+
+#msg_error {
+  z-index: 2;
+  min-height: 60px;
+  background: dimgray;
+  text-align: center;
+  bottom: initial;
+  opacity: 0.8;
+  filter: alpha(opacity=80); /* For IE8 and earlier */
+  box-shadow: 2px 2px 5px #888888;
+}
+
+#msg_error > p {
+  padding: 10px;
+  margin: 0;
+  color: #FFF;
+  font-weight: 700;
 }
 
 #list_places {
@@ -134,6 +152,11 @@ input[type="search"] {
 
 #list_places .table-view-cell {
   padding-right: 55px;
+}
+
+#list_places .table-view-cell h4 {
+  margin-bottom: 0;
+  font-size: 1em;
 }
 
 .bar-tab .tab-item.active, .bar-tab .tab-item:active {
@@ -160,9 +183,11 @@ input[type="search"] {
     border-top: 1px solid #ccc;
     padding-top: 10px;
 }
-h4.marker-info {
+.marker-info {
     margin-bottom:0;
     margin-top: 0;
+    font-weight: 700;
+    color: #000;
 }
 
 #content_map_info {
@@ -176,7 +201,7 @@ h4.marker-info {
   /*padding-bottom: 50px;*/
 }
 
-#informations > section > a {
+#informations > section > a.section-title {
   display: block;
   padding-right: 10px;
   padding-left: 10px;
@@ -186,7 +211,7 @@ h4.marker-info {
   color: rgb(255,252,244);
 }
 
-#informations > section > a > h2, #informations > section > a > p {
+#informations > section > a.section-title > h2, #informations > section > a.section-title > p {
   display: inline-block;
   line-height: 32px;
   padding: 0;
@@ -194,18 +219,18 @@ h4.marker-info {
   color: rgb(255,252,244);
 }
 
-#informations > section > a > h2 {
+#informations > section > a.section-title > h2 {
   font-size: 14px;
   font-weight: 450;
 }
 
-#informations > section > a > p {
+#informations > section > a.section-title > p {
   float: right;
   font-size: 12px;
 }
 
 #informations > section > p {
-  margin: 0px 10px 6px;
+  margin: 6px 10px;
   color: #000;
 }
 
@@ -229,6 +254,9 @@ img#place {
 }
 
 #menu .table-view-divider {
+  position: relative;
+  /*padding-right: 10px;*/
+
   /*text-transform: capitalize;*/
   background-color: rgb(219,54,60);
   color: rgb(255,252,244);
@@ -238,17 +266,26 @@ img#place {
   /*border-top: 1px solid rgb(141,41,43);*/
 
   /*line-height: 45px;*/
-  padding-right: 10px;
 }
 
 #menu .table-view-divider::first-line {
-  line-height: 45px;
+  line-height: 30px;
 }
 
-/*#menu .table-view-divider:first-child {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}*/
+#menu .table-view-divider h3 {
+  padding-right: 24px;
+  margin-bottom: 0;
+  font-size: 1em;
+  font-weight: normal;
+}
+
+#menu .table-view-divider .icon {
+  font-size: 20px;
+  position: absolute;
+  right: 10px;
+  top: 27%;
+  /*padding-top: 5px;*/
+}
 
 /*
  * http://docs.angularjs.org/api/ng/directive/ngShow#usage_animations
@@ -279,6 +316,10 @@ p.price {
 #order_list_modal .content > p > label {
   font-size: 24px;
   color: #000;
+}
+
+#order_list_modal .content h1 {
+  color: rgb(141,41,43);
 }
 
 #modal_item {

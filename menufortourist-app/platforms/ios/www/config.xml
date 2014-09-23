@@ -18,11 +18,14 @@
     <preference name="ios-statusbarstyle" value="black-opaque" />
     <preference name="detect-data-types" value="true" />
     <preference name="exit-on-suspend" value="false" />
-    <preference name="show-splash-screen-spinner" value="false" />
+    <preference name="show-splash-screen-spinner" value="true" />
     <preference name="auto-hide-splash-screen" value="true" />
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="7" />
     <preference name="android-installLocation" value="auto" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="3000" />
+
     <!-- <gap:plugin name="org.apache.cordova.battery-status" />
     <gap:plugin name="org.apache.cordova.camera" />
     <gap:plugin name="org.apache.cordova.media-capture" />
@@ -44,40 +47,42 @@
     <!-- Plugin to to hide the statusbar and overlay on iOS -->
     <gap:plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" version="1.2.0" />
     <gap:plugin name="hu.dpal.phonegap.plugins.spinnerdialog" version="0.2.1"/>
-    <!-- <icon src="www/icon.png" /> -->
     <icon src="icon.png" />
-    <!-- <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/icon/android/icon-36-ldpi.png" /> -->
-    <icon gap:platform="android" gap:qualifier="ldpi" src="res/icon/android/logo-36.png" />
-    <icon gap:platform="android" gap:qualifier="mdpi" src="res/icon/android/logo-48.png" />
-    <icon gap:platform="android" gap:qualifier="hdpi" src="res/icon/android/logo-72.png" />
-    <icon gap:platform="android" gap:qualifier="xhdpi" src="res/icon/android/logo-96.png" />
+    <!-- <icon gap:platform="android" gap:qualifier="ldpi" src="res/icon/android/icon-36-ldpi.png" /> -->
+    <icon gap:platform="android" gap:qualifier="ldpi" src="res/icon/android/icon-36.png" />
+    <icon gap:platform="android" gap:qualifier="mdpi" src="res/icon/android/icon-48.png" />
+    <icon gap:platform="android" gap:qualifier="hdpi" src="res/icon/android/icon-72.png" />
+    <icon gap:platform="android" gap:qualifier="xhdpi" src="res/icon/android/icon-96.png" />
     <!-- <icon gap:platform="blackberry" src="res/icon/blackberry/icon-80.png" />
     <icon gap:platform="blackberry" gap:state="hover" src="res/icon/blackberry/icon-80.png" /> -->
-    <icon gap:platform="ios" height="57" src="res/icon/ios/logo-57.png" width="57" />
-    <icon gap:platform="ios" height="72" src="res/icon/ios/logo-72.png" width="72" />
-    <icon gap:platform="ios" height="114" src="res/icon/ios/logo-114.png" width="114" />
-    <icon gap:platform="ios" height="144" src="res/icon/ios/logo-144.png" width="144" />
+    <icon gap:platform="ios" height="57" src="res/icon/ios/apple-touch-icon-precomposed.png" width="57" />
+    <icon gap:platform="ios" height="72" src="res/icon/ios/apple-touch-icon-72x72-precomposed.png" width="72" />
+    <icon gap:platform="ios" height="114" src="res/icon/ios/apple-touch-icon-114x114-precomposed.png" width="114" />
+    <icon gap:platform="ios" height="144" src="res/icon/ios/apple-touch-icon-144x144-precomposed.png" width="144" />
     <!-- <icon gap:platform="webos" src="res/icon/webos/icon-64.png" /> -->
     <icon gap:platform="winphone" src="res/icon/windows-phone/logo-48.png" />
     <!-- <icon gap:platform="winphone" gap:role="background" src="res/icon/windows-phone/icon-173.png" /> -->
 
-    <!-- <gap:splash gap:platform="android" gap:qualifier="port-ldpi" src="www/res/screen/android/screen-ldpi-portrait.png" />
-    <gap:splash gap:platform="android" gap:qualifier="port-mdpi" src="www/res/screen/android/screen-mdpi-portrait.png" />
-    <gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="www/res/screen/android/screen-hdpi-portrait.png" />
-    <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="www/res/screen/android/screen-xhdpi-portrait.png" /> -->
+    <!-- default splash -->
+    <gap:splash src="splash.png" />
+
+    <gap:splash gap:platform="android" gap:qualifier="port-ldpi" src="res/screen/android/screen-ldpi-portrait.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-mdpi" src="res/screen/android/screen-mdpi-portrait.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="res/screen/android/screen-hdpi-portrait.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="res/screen/android/screen-xhdpi-portrait.png" />
     
     <!-- <gap:splash gap:platform="blackberry" src="res/screen/blackberry/screen-225.png" /> -->
     
-    <gap:splash gap:platform="ios" height="480" src="www/res/screen/ios/Menu4Tourists_SplashPage_320x480px.jpg" width="320" />
-    <gap:splash gap:platform="ios" height="960" src="www/res/screen/ios/Menu4Tourists_SplashPage_640x960.jpg" width="640" />
-    <gap:splash gap:platform="ios" height="1136" src="www/res/screen/ios/Menu4Tourists_SplashPage_640x1136px.jpg" width="640" />
-    <!-- <gap:splash gap:platform="ios" height="1136" src="www/res/screen/ios/Menu4Tourists_SplashPage_640x1136px.jpg" width="640" /> -->
-    <gap:splash gap:platform="ios" height="1024" src="www/res/screen/ios/Menu4Tourists_SplashPage_768x1024px.jpg" width="768" />
-    <!-- <gap:splash gap:platform="ios" height="768" src="www/res/screen/ios/screen-ipad-landscape.png" width="1024" /> -->
-    <gap:splash gap:platform="ios" height="2048" src="www/res/screen/ios/Menu4Tourists_SplashPage_1536x2048px.jpg" width="1536" />
-    <!-- <gap:splash gap:platform="ios" height="1496" src="www/res/screen/ios/Menu4Tourists_SplashPage_1536x2048px.jpg" width="2048" /> -->
+    <gap:splash gap:platform="ios" height="480" src="res/screen/ios/Menu4Tourists_SplashPage_320x480px.png" width="320" />
+    <gap:splash gap:platform="ios" height="960" src="res/screen/ios/Menu4Tourists_SplashPage_640x960.png" width="640" />
+    <gap:splash gap:platform="ios" height="1136" src="res/screen/ios/Menu4Tourists_SplashPage_640x1136px.png" width="640" />
+    <!-- <gap:splash gap:platform="ios" height="1136" src="res/screen/ios/Menu4Tourists_SplashPage_640x1136px.jpg" width="640" /> -->
+    <gap:splash gap:platform="ios" height="1024" src="res/screen/ios/Menu4Tourists_SplashPage_768x1024px.png" width="768" />
+    <!-- <gap:splash gap:platform="ios" height="768" src="res/screen/ios/screen-ipad-landscape.png" width="1024" /> -->
+    <gap:splash gap:platform="ios" height="2048" src="res/screen/ios/Menu4Tourists_SplashPage_1536x2048px.png" width="1536" />
+    <!-- <gap:splash gap:platform="ios" height="1496" src="res/screen/ios/Menu4Tourists_SplashPage_1536x2048px.jpg" width="2048" /> -->
     
-    <!-- <gap:splash gap:platform="winphone" src="res/screen/windows-phone/screen-portrait.jpg" /> -->
+    <gap:splash gap:platform="winphone" src="res/screen/windows-phone/screen-portrait.jpg" />
 
     <access origin="*.google.com" />
     <access origin="*.googleapis.com" />

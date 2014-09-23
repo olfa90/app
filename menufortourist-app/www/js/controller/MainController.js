@@ -155,7 +155,7 @@ menufortouristApp.controller('MainController', function($scope, $location, $wind
         // $scope.list = false;
         // initMap();
         RestaurantsFactory.saveRestaurantsList(restaurants);
-        RestaurantsFactory.setOrigin(RestaurantsFactory.MAIN_PAGE);
+        // RestaurantsFactory.setOrigin(RestaurantsFactory.MAIN_PAGE);
         $location.path("/map");
     };
 

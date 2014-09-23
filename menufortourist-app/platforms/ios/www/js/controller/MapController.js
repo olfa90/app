@@ -9,8 +9,7 @@ menufortouristApp.controller('MapController', function($scope, $location, $windo
     function init(){
         // Pega os restaurantes carregados na consulta anterior.
         $scope.restaurants = RestaurantsFactory.getRestaurantsList();
-        console.log($scope.restaurants);
-
+        
         // var map = RestaurantsFactory.getMapState();
 
         // Show spinner dialog
@@ -20,18 +19,25 @@ menufortouristApp.controller('MapController', function($scope, $location, $windo
             map.initialize(position.coords.latitude, position.coords.longitude);
             showMarkers(map);
 
-            RestaurantsFactory.saveMapState(map);
+            // RestaurantsFactory.saveMapState(map);
             // window.plugins.spinnerDialog.hide();
         }, function onError(error) {
-            // console.log('onError');
-            alert('code: '    + error.code    + '\n' +
+            console.log('code: '    + error.code    + '\n' +
                   'message: ' + error.message + '\n');
-            // Hide spinner dialog
-            // window.plugins.spinnerDialog.hide();
-        });
+            alert(getGPSErrorMsg());
+        }, { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true });
     }
 
     // Metodos for internationalization
+    function getGPSErrorMsg() {
+        if ($scope.locale == 'EN') {
+            return "Could not get the current position. Either GPS signals are weak or GPS has been switched off.";
+        } else if ($scope.locale == 'ES') {
+            return 'No se pudo obtener la posición actual. O las señales GPS son débiles o GPS se ha desconectado.';
+        } else {
+            return 'Não foi possível obter a posição atual. Ou os sinais de GPS estão fracos ou o GPS foi desligado.';
+        }
+    };
     $scope.getTitle = function() {
         if ($scope.locale == 'EN') {
             return 'Restaurants';
