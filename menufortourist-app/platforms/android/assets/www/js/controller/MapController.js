@@ -52,7 +52,7 @@ menufortouristApp.controller('MapController', function($scope, $location, $windo
 
     $scope.goDetails = function(restaurant) {
         RestaurantsFactory.saveSelectedRestaurant(restaurant);
-        RestaurantsFactory.setOrigin(RestaurantsFactory.MAIN_MAP_PAGE);
+        // RestaurantsFactory.setOrigin(RestaurantsFactory.MAIN_MAP_PAGE);
         $location.path("/details");
     };
 

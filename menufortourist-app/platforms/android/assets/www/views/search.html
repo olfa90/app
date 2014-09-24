@@ -31,7 +31,7 @@
       <ul id="list_view" class="table-view">
         <li class="table-view-cell media" ng-repeat="restaurant in restaurants">
           <a class="navigate-right" ng-click="goDetails(restaurant)">
-            <img class="media-object pull-left" ng-src="img/{{helpers.removerAcentos(restaurant.name)}}.jpg" width="75" height="60">
+            <img class="media-object pull-left" ng-src="{{restaurant.photoUrl}}" width="75" height="60">
             <div class="media-body">
               {{restaurant.name}}
               <p>{{restaurant.specialty}}</p>

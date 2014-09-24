@@ -48,6 +48,7 @@ nav.bar-header-secondary {
 
 nav.bar-header-secondary .filtro {
   top: 8px;
+  /*left: -3%;*/
   color: rgb(141,41,43);
   border-color: rgb(141,41,43);
 }

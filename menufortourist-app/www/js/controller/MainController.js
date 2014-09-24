@@ -23,6 +23,10 @@ menufortouristApp.controller('MainController', function($scope, $location, $wind
         // Pega os restaurantes carregados na consulta anterior.
         $scope.restaurants = RestaurantsFactory.getAroundResult();
 
+        // Load restaurants filters
+        // $scope.filter = RestaurantsFactory.loadFilters();
+        // $scope.filter.around = true;
+
         if ($scope.restaurants == null || $scope.restaurants.length < 1) {
             loadRestaurants();
         }
@@ -121,13 +125,13 @@ menufortouristApp.controller('MainController', function($scope, $location, $wind
             return 'Atualizar';
         }
     };
-    $scope.getSpecialtyText = function() {
+    $scope.getFilterText = function() {
         if ($scope.locale == 'EN') {
-            return 'Specialty';
+            return 'Filters';
         } else if ($scope.locale == 'ES') {
-            return 'Especialidad';
+            return 'Filtros';
         } else {
-            return 'Especialidade';
+            return 'Filtros';
         }
     };
     $scope.getMapText = function() {
@@ -141,6 +145,37 @@ menufortouristApp.controller('MainController', function($scope, $location, $wind
     };
     //
 
+    // MODAL
+    // $scope.showFilterModal = function() {
+    //     document.getElementById('filterModal').classList.add('active');
+    // }
+    // $scope.hideFilterModal = function() {
+    //     document.getElementById('filterModal').classList.remove('active');
+    // }
+    // $scope.toggleFilterAround = function() {
+    //     $scope.filter.around = !$scope.filter.around;
+    // }
+    // $scope.toggleFilterCity = function(city) {
+    //     if (city == $scope.filter.selectedCity) {
+    //         $scope.filter.selectedCity = null;
+    //         $scope.filter.around = true;
+    //         $scope.filter.selectedNeighbourhoods = [];
+    //     } else {
+    //         $scope.filter.selectedCity = city;
+    //         $scope.filter.around = false;
+    //         $scope.filter.selectedNeighbourhoods = city.neighbourhoods;
+    //     }
+    //     console.log($scope.filter.selectedNeighbourhoods);
+    // }
+    // $scope.toggleFilterNeighbourhood = function(neighbourhood) {
+    //     var index = $scope.filter.selectedNeighbourhoods.indexOf(neighbourhood);
+    //     if (index > -1) {
+    //         $scope.filter.selectedNeighbourhoods.splice(index, 1);
+    //     } else {
+    //         $scope.filter.selectedNeighbourhoods.push(neighbourhood);
+    //     }
+    // }
+    // END MODAL
 
     $scope.back = function() {
         $location.path("/language");
