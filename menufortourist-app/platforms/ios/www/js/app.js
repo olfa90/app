@@ -121,11 +121,9 @@ menufortouristApp.config(function($provide, $compileProvider) {
 menufortouristApp.config(function($routeProvider) {
     $routeProvider.
 
-        // opening page
+        // first page
         when('/',
         {
-            // controller: 'OpeningController',
-            // templateUrl: 'views/opening.html'
             controller: 'LanguageController',
             templateUrl: 'views/language.html'
 

@@ -103,7 +103,6 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/controller/LanguageController.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/controller/MainController.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/controller/MapController.js \
-/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/controller/OpeningController.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/controller/SearchController.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/factory/CordovaReadyFactory.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/factory/DetailsFactory.js \
@@ -164,6 +163,15 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/ios/apple-touch-icon-144x144-precomposed.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/ios/apple-touch-icon-72x72-precomposed.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/ios/apple-touch-icon-precomposed.png \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/ios/icon-120.png \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/ios/icon-152.png \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/ios/icon-76.png \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/ios/icon-Small-100.png \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/ios/icon-Small-50.png \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/ios/icon-Small.png \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/ios/icon-Small@2x.png \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/ios/Tab-bar-icon.png \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/ios/toolbar-icon.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/tizen/icon-128.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/webos/icon-64.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/windows-phone/icon-173-tile.png \

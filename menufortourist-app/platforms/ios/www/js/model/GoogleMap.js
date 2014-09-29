@@ -30,14 +30,14 @@ function GoogleMap() {
 	    scaledSize: new google.maps.Size(32, 32)
 	};
 
-	this.initialize = function(lat, lng, frozen, zoom){
+	this.initialize = function(lat, lng, locale, zoom, frozen){
 		that = null;
-		this.map = showMap(lat, lng, frozen, zoom);
+		this.map = showMap(lat, lng, zoom, frozen);
 		addUserLocation(this.map, lat, lng);
-		addUtilitiesLocations(this.map);
+		addRioturLocations(this.map, locale);
 	}
 
-	var showMap = function(lat, lng, frozen, zoom){
+	var showMap = function(lat, lng, zoom, frozen){
 		var mapOptions = {
 			zoom: (zoom ? zoom : 12),
 			center: new google.maps.LatLng(lat, lng),
@@ -63,13 +63,26 @@ function GoogleMap() {
 		});
 	}
 
-	var addUtilitiesLocations = function(map){
-		for (var i = 0; i < riotur.length; i++) {
-			riotur[i].title = 'Riotur';
-			riotur[i].subtitle = 'Posto de informações turísticas';
-			riotur[i].site = 'http://www.rioguiaoficial.com.br';
-			riotur[i].icon = rioturMarker;
-			addUtilitiesMarkers( map, riotur[i] );
+	var addRioturLocations = function(map, locale){
+		var list = [];
+		var subtitle;
+		if (locale == 'EN') {
+			list = rioturEng;
+			subtitle = 'Tourist information kiosk';
+		} else if (locale == 'ES') {
+			list = rioturEs;
+			subtitle = 'Información turística quiosco';
+		} else {
+			list = riotur;
+			subtitle = 'Quiosque de informações turísticas';
+		}
+
+		for (var i = 0; i < list.length; i++) {
+			list[i].title = 'Riotur';
+			list[i].subtitle = subtitle;
+			list[i].site = 'http://www.rioguiaoficial.com.br';
+			list[i].icon = rioturMarker;
+			addUtilitiesMarkers( map, list[i] );
 		};
 	}
 
@@ -230,6 +243,7 @@ function GoogleMap() {
     */
     // Riotur - Empresa de Turismo do Município do Rio de Janeiro 
     // www.rioguiaoficial.com.br 
+    // Em Português
     var riotur = [
     	{
     		description:"Galeão - Aeroporto Internacional Tom Jobim", 
@@ -253,7 +267,7 @@ function GoogleMap() {
     		lat:"-23.0151055",
     		lng:"-43.3058162",
     		phones:"", 
-    		openHours:"Diariamente, 6h-22h"
+    		openHours:"Diariamente, 9h-18h"
     	},
     	{
     		description:"Candelária", 
@@ -295,21 +309,21 @@ function GoogleMap() {
     		lat:"-22.986086",
     		lng:"-43.2283593",
     		phones:"", 
-    		openHours:"Diariamente 8h-18h"
+    		openHours:"Diariamente, 8h-18h"
     	},
     	{
     		description:"Pão de Açúcar", 
     		lat:"-22.9551146",
     		lng:"-43.1666199",
     		phones:"", 
-    		openHours:"Diariamente 8h-20h"
+    		openHours:"Diariamente, 8h-20h"
     	},
     	{
     		description:"Quinta da Boa Vista", 
     		lat:"-22.9056874",
     		lng:"-43.2249263",
     		phones:"", 
-    		openHours:"Diariamente 9h-17h"
+    		openHours:"Diariamente, 9h-17h"
     	},
     	{
     		description:"Rodoviária Novo Rio", 
@@ -324,6 +338,202 @@ function GoogleMap() {
     		lng:"-43.228267",
     		phones:"", 
     		openHours:"Seg-Sáb, 10-22h; Dom, 12h-21h"
+    	},
+    ];
+
+    // Em Ingles
+    var rioturEng = [
+    	{
+    		description:"Galeão - Tom Jobim International Airport", 
+    		address:"Aeroporto Internacional Tom Jobim, Rio de Janeiro", 
+    		lat:"-22.814759",
+    		lng:"-43.246675",
+    		phones:"Terminal 1 - 3398-4077 / Terminal 2 - 3367-6213", 
+    		openHours:"Daily, 24/7"
+    	},
+    	{
+    		description:"Santos Dumont Airport", 
+    		address:"Senador Salgado Filho Square - Centro, Rio de Janeiro", 
+    		lat:"-22.911116",
+    		lng:"-43.167152",
+    		phones:"", 
+    		openHours:"Daily, from 6am to 10pm"
+    	},
+    	{
+    		description:"Barra", 
+    		address:"Pêpê Av. (intersection with Olegário Maciel Av.) - Barra da Tijuca, Rio de Janeiro", 
+    		lat:"-23.0151055",
+    		lng:"-43.3058162",
+    		phones:"", 
+    		openHours:"Daily, from 9am to 6pm"
+    	},
+    	{
+    		description:"Candelária", 
+    		lat:"-22.9019349",
+    		lng:"-43.1768286",
+    		phones:"", 
+    		openHours:"Monday to Friday, 9am to 6pm; Saturday, 9am to 3pm"
+    	},
+    	{
+    		description:"Copacabana - Centro Integrado de Atendimento ao Turista", 
+    		lat:"-22.9635282",
+    		lng:"-43.1745114",
+    		phones:"+55 21 2541-7522", 
+    		openHours:"Monday to Friday, 9am to 6pm; Saturday, 9am to 3pm"
+    	},
+    	{
+    		description:"Copacabana", 
+    		lat:"-22.970091",
+    		lng:"-43.182621",
+    		phones:"+55 21 2547-4421", 
+    		openHours:"Daily, 8am to 9pm"
+    	},
+    	{
+    		description:"Ipanema", 
+    		lat:"-22.9841973",
+    		lng:"-43.2050944",
+    		phones:"", 
+    		openHours:"Daily, from 8am to 8pm"
+    	},
+    	{
+    		description:"Lapa", 
+    		lat:"-22.9133375",
+    		lng:"-43.180747",
+    		phones:"", 
+    		openHours:"Daily, from 9am to 6pm"
+    	},
+    	{
+    		description:"Leblon", 
+    		lat:"-22.986086",
+    		lng:"-43.2283593",
+    		phones:"", 
+    		openHours:"Daily, from 8am to 6pm"
+    	},
+    	{
+    		description:"Sugarloaf Mountain", 
+    		lat:"-22.9551146",
+    		lng:"-43.1666199",
+    		phones:"", 
+    		openHours:"Daily, from 8am to 8pm"
+    	},
+    	{
+    		description:"Quinta da Boa Vista", 
+    		lat:"-22.9056874",
+    		lng:"-43.2249263",
+    		phones:"", 
+    		openHours:"Daily from 9am to 5pm"
+    	},
+    	{
+    		description:"Novo Rio Bus Terminal", 
+    		lat:"-22.8988872",
+    		lng:"-43.2096912",
+    		phones:"+55 21 2263-4857", 
+    		openHours:"Daily, 24/7"
+    	},
+    	{
+    		description:"Shopping da Gávea", 
+    		lat:"-22.975707",
+    		lng:"-43.228267",
+    		phones:"", 
+    		openHours:"Monday to Saturday, from 10am to 10pm; Sunday from 12am to 9pm"
+    	},
+    ];
+
+    // Em Espanhol
+    var rioturEs = [
+    	{
+    		description:"Galeão - Aeropuerto Internacional Tom Jobim", 
+    		address:"Aeroporto Internacional Tom Jobim, Rio de Janeiro", 
+    		lat:"-22.814759",
+    		lng:"-43.246675",
+    		phones:"Terminal 1 - 3398-4077 / Terminal 2 - 3367-6213", 
+    		openHours:"Diariamente, 24h"
+    	},
+    	{
+    		description:"Aeropuerto Santos Dumont", 
+    		address:"Praça Senador Salgado Filho - Centro, Rio de Janeiro", 
+    		lat:"-22.911116",
+    		lng:"-43.167152",
+    		phones:"", 
+    		openHours:"Diariamente, 6h-22h"
+    	},
+    	{
+    		description:"Barra", 
+    		address:"Av. do Pêpê (esquina con la Av. Olegário Maciel) - Barra da Tijuca, Rio de Janeiro", 
+    		lat:"-23.0151055",
+    		lng:"-43.3058162",
+    		phones:"", 
+    		openHours:"Diariamente, 9h-18h"
+    	},
+    	{
+    		description:"Candelária", 
+    		lat:"-22.9019349",
+    		lng:"-43.1768286",
+    		phones:"", 
+    		openHours:"De lunes a viernes: 9h – 18h; Sábado: 9h - 15h"
+    	},
+    	{
+    		description:"Copacabana - Centro Integrado de Atendimento ao Turista", 
+    		lat:"-22.9635282",
+    		lng:"-43.1745114",
+    		phones:"+55 21 2541-7522", 
+    		openHours:"De lunes a viernes: 9h – 18h; Sábado: 9h - 15h"
+    	},
+    	{
+    		description:"Copacabana", 
+    		lat:"-22.970091",
+    		lng:"-43.182621",
+    		phones:"+55 21 2547-4421", 
+    		openHours:"Diariamente, 8h-21h"
+    	},
+    	{
+    		description:"Ipanema", 
+    		lat:"-22.9841973",
+    		lng:"-43.2050944",
+    		phones:"", 
+    		openHours:"Diariamente, 8h-20h"
+    	},
+    	{
+    		description:"Lapa", 
+    		lat:"-22.9133375",
+    		lng:"-43.180747",
+    		phones:"", 
+    		openHours:"Diariamente, 9h-18h"
+    	},
+    	{
+    		description:"Leblon", 
+    		lat:"-22.986086",
+    		lng:"-43.2283593",
+    		phones:"", 
+    		openHours:"Diariamente, 8h-18h"
+    	},
+    	{
+    		description:"Pan de Azúcar", 
+    		lat:"-22.9551146",
+    		lng:"-43.1666199",
+    		phones:"", 
+    		openHours:"Diariamente, 8h-20h"
+    	},
+    	{
+    		description:"Quinta da Boa Vista", 
+    		lat:"-22.9056874",
+    		lng:"-43.2249263",
+    		phones:"", 
+    		openHours:"Diariamente, 9h-17h"
+    	},
+    	{
+    		description:"Rodoviária Novo Rio", 
+    		lat:"-22.8988872",
+    		lng:"-43.2096912",
+    		phones:"+55 21 2263-4857", 
+    		openHours:"Diariamente, 24h"
+    	},
+    	{
+    		description:"Shopping da Gávea", 
+    		lat:"-22.975707",
+    		lng:"-43.228267",
+    		phones:"", 
+    		openHours:"De lunes a sábado: 10h – 22h; Domingo: 12h - 21h"
     	},
     ];
 

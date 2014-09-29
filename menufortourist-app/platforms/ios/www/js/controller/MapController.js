@@ -16,7 +16,7 @@ menufortouristApp.controller('MapController', function($scope, $location, $windo
         // window.plugins.spinnerDialog.show();
         GeolocationFactory.getCurrentPosition(function(position) {
             var map = new GoogleMap();
-            map.initialize(position.coords.latitude, position.coords.longitude);
+            map.initialize(position.coords.latitude, position.coords.longitude, $scope.locale);
             showMarkers(map);
 
             // RestaurantsFactory.saveMapState(map);
@@ -52,7 +52,7 @@ menufortouristApp.controller('MapController', function($scope, $location, $windo
 
     $scope.goDetails = function(restaurant) {
         RestaurantsFactory.saveSelectedRestaurant(restaurant);
-        RestaurantsFactory.setOrigin(RestaurantsFactory.MAIN_MAP_PAGE);
+        // RestaurantsFactory.setOrigin(RestaurantsFactory.MAIN_MAP_PAGE);
         $location.path("/details");
     };
 

@@ -1,18 +1,18 @@
 // DetailsController
-menufortouristApp.controller('DetailsController', function($scope, $location, $window, $filter, UserFactory, RestaurantsFactory){
+menufortouristApp.controller('DetailsController', function($rootScope, $scope, $location, $window, $filter, RestaurantsFactory){
 
-    $scope.locale = UserFactory.locale;
-    $scope.connected = UserFactory.connected;
+    // $scope.locale = UserFactory.locale;
+    // $scope.connected = UserFactory.connected;
     $scope.helpers = AppUtil.helpers;
 
     $scope.restaurant = null;
     $scope.selectedItem = null;
 
     $scope.$watch(function() {
-        return UserFactory.connected;
+        return $rootScope.user.connected;
     }, function (newValue) {
-        if ($scope.connected != newValue) {
-            $scope.connected = newValue;
+        if ($rootScope.user.connected != newValue) {
+            $rootScope.user.connected = newValue;
         }
     });
 
@@ -21,12 +21,12 @@ menufortouristApp.controller('DetailsController', function($scope, $location, $w
     function init(){
         $scope.restaurant = RestaurantsFactory.getSelectedRestaurant();
         
-        if (!UserFactory.connected) {
+        if (!$rootScope.user.connected) {
             return;
         }
         
         var map = new GoogleMap();
-        map.initialize(UserFactory.lat, UserFactory.lng, $scope.locale, 14);
+        map.initialize($rootScope.user.lat, $rootScope.user.lng, $rootScope.user.locale, 14);
         map.addStaticMarkers($scope.restaurant);
 
         // Load restaurant's menu
@@ -35,18 +35,18 @@ menufortouristApp.controller('DetailsController', function($scope, $location, $w
 
     // Metodos for internationalization
     $scope.getErrorMsg = function() {
-        if ($scope.locale == 'EN') {
+        if ($rootScope.user.locale == 'EN') {
             return 'No Internet connection';
-        } else if ($scope.locale == 'ES') {
+        } else if ($rootScope.user.locale == 'ES') {
             return 'No hay conexión a Internet';
         } else {
             return 'Sem conexão com a Internet';
         }
     };
     $scope.getTitle = function() {
-        if ($scope.locale == 'EN') {
+        if ($rootScope.user.locale == 'EN') {
             return 'Restaurant';
-        } else if ($scope.locale == 'ES') {
+        } else if ($rootScope.user.locale == 'ES') {
             return 'Restaurante';
         } else {
             return 'Restaurante';
@@ -54,9 +54,9 @@ menufortouristApp.controller('DetailsController', function($scope, $location, $w
     };
 
     $scope.getLocationTitle = function() {
-        if ($scope.locale == 'EN') {
+        if ($rootScope.user.locale == 'EN') {
             return 'Location';
-        } else if ($scope.locale == 'ES') {
+        } else if ($rootScope.user.locale == 'ES') {
             return 'Ubicación';
         } else {
             return 'Localização';
@@ -64,9 +64,9 @@ menufortouristApp.controller('DetailsController', function($scope, $location, $w
     };
 
     $scope.getLocationInfo = function() {
-        if ($scope.locale == 'EN') {
+        if ($rootScope.user.locale == 'EN') {
             return 'from your location';
-        } else if ($scope.locale == 'ES') {
+        } else if ($rootScope.user.locale == 'ES') {
             return 'desde su ubicación';
         } else {
             return 'da sua localização';
@@ -74,9 +74,9 @@ menufortouristApp.controller('DetailsController', function($scope, $location, $w
     };
 
     $scope.getMenuTitle = function() {
-        if ($scope.locale == 'EN') {
+        if ($rootScope.user.locale == 'EN') {
             return 'Menu';
-        } else if ($scope.locale == 'ES') {
+        } else if ($rootScope.user.locale == 'ES') {
             return 'Menú';
         } else {
             return 'Cardápio';
@@ -84,9 +84,9 @@ menufortouristApp.controller('DetailsController', function($scope, $location, $w
     };
 
     $scope.getMenuTermsConditionsTitle = function() {
-        if ($scope.locale == 'EN') {
+        if ($rootScope.user.locale == 'EN') {
             return 'terms and conditions of use';
-        } else if ($scope.locale == 'ES') {
+        } else if ($rootScope.user.locale == 'ES') {
             return 'términos y condiciones de uso';
         } else {
             return 'termos e condições de uso';
@@ -95,11 +95,11 @@ menufortouristApp.controller('DetailsController', function($scope, $location, $w
 
     $scope.getModalTermsText = function() {
         var content = "";
-        if ($scope.locale == 'EN') {
+        if ($rootScope.user.locale == 'EN') {
             content = "The menus and translations displayed here are updated according to the information sent by the restaurants from time to time.<br/>" +
                 "We don't take responsibility for price changes or the availability of the dishes presented in this application.<br/>" +
                 "Restaurant hours, as well as the availability of tables must be confirmed directly with each restaurant.";
-        } else if ($scope.locale == 'ES') {
+        } else if ($rootScope.user.locale == 'ES') {
             content = "Los menús y traducciones aquí disponibles son actualizados según las informaciones enviadas periódicamente por los restaurantes. <br/>" +
                 "No nos responsabilizamos de la variación de precio o de la disponibilidad de los platos presentados en esta aplicación.<br/>" +
                 "Los días y horario de funcionamiento, así como la disponibilidad de mesa en los restaurantes, deberán ser confirmados directamente con cada restaurante.";
@@ -112,9 +112,9 @@ menufortouristApp.controller('DetailsController', function($scope, $location, $w
     };
 
     $scope.getMenuInfo = function() {
-        if ($scope.locale == 'EN') {
+        if ($rootScope.user.locale == 'EN') {
             return "Press the item you want and show it to the waiter to place your order.";
-        } else if ($scope.locale == 'ES') {
+        } else if ($rootScope.user.locale == 'ES') {
             return 'Presione el ítem elegido y muestre al camarero para hacer su pedido.';
         } else {
             return 'Para fazer o pedido, pressione o item escolhido e mostre ao garçom.';
@@ -122,9 +122,9 @@ menufortouristApp.controller('DetailsController', function($scope, $location, $w
     };
 
     $scope.getModalTitle = function() {
-        if ($scope.locale == 'EN') {
+        if ($rootScope.user.locale == 'EN') {
             return 'Show to the waiter to order';
-        } else if ($scope.locale == 'ES') {
+        } else if ($rootScope.user.locale == 'ES') {
             return 'Mostrar para el camarero para pedir';
         } else {
             return 'Mostre ao garçom para pedir';
@@ -143,9 +143,9 @@ menufortouristApp.controller('DetailsController', function($scope, $location, $w
     };
 
     $scope.getModalEmpty = function() {
-        if ($scope.locale == 'EN') {
+        if ($rootScope.user.locale == 'EN') {
             return 'ERROR: Unable to load the native language of this item.';
-        } else if ($scope.locale == 'ES') {
+        } else if ($rootScope.user.locale == 'ES') {
             return 'ERROR: No se puede cargar la lengua nativa de este artículo.';
         } else {
             return 'ERRO: Não foi possível carregar o idioma nativo deste item.';
@@ -227,7 +227,7 @@ menufortouristApp.controller('DetailsController', function($scope, $location, $w
         }
         var translation = object.text;
         for (var i = 0; i < object.traducoes.length; i++) {
-            if (object.traducoes[i].locale == $scope.locale) {
+            if (object.traducoes[i].locale == $rootScope.user.locale) {
                 translation = object.traducoes[i].text;
             }
         }

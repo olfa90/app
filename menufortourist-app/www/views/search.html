@@ -14,7 +14,7 @@
         <h1 class="logo">Menu For TOURIST</h1>
       </button>
       <h1 class="title">{{getTitle()}}</h1>
-      <div class="pull-right" ng-show="connected">
+      <div class="pull-right" ng-show="user.connected">
         <a class="icon icon-search" ng-click="showSearch()"></a>
         &nbsp;
         <button class="btn btn-link btn-nav" ng-show="restaurants" ng-click="goMap(restaurants)">
@@ -23,7 +23,7 @@
       </div>
     </header>
 
-    <div id="msg_error" class="content" ng-hide="connected">
+    <div id="msg_error" class="content" ng-hide="user.connected">
       <p>{{getErrorMsg()}}</p>
     </div>
 

@@ -47,7 +47,7 @@
       </button>
       <a class="logo pull-left"></a>
       <h1 class="title">{{getTitle()}}</h1>
-      <div class="pull-right" ng-show="connected">
+      <div class="pull-right" ng-show="user.connected">
         <a class="icon icon-search" ng-click="goSearch()"></a>
         &nbsp;
         <button class="btn btn-link btn-nav" ng-show="restaurants" ng-click="goMap(restaurants)">
@@ -63,7 +63,7 @@
       </a>
     </nav> -->
 
-    <div id="msg_error" class="content" ng-hide="connected">
+    <div id="msg_error" class="content" ng-hide="user.connected">
       <p>{{getErrorMsg()}}</p>
     </div>
 

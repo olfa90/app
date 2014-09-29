@@ -51,7 +51,7 @@
 	<key>CFBundleIdentifier</key>
 	<string>com.menufortourist</string>
 	<key>CFBundleInfoDictionaryVersion</key>
-	<string>5.0</string>
+	<string>6.0</string>
 	<key>CFBundleName</key>
 	<string>${PRODUCT_NAME}</string>
 	<key>CFBundlePackageType</key>

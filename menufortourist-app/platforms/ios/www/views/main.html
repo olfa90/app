@@ -1,3 +1,46 @@
+    <!-- Popover Filter -->
+    <!-- MODAL Terms and conditions of use -->
+    <!-- <div id="filterModal" class="modal">
+      <header class="bar bar-nav">
+        <a class="icon icon-close pull-right" ng-click="hideFilterModal()"></a>
+        <h1 class="title">{{getFilterText()}}</h1>
+      </header>
+
+      <div class="content">
+        <form>
+          <ul class="table-view">
+            <li class="table-view-cell">
+              Restaurantes próximos a mim
+              <div class="toggle" ng-class="{active: filter.around}" ng-click="toggleFilterAround()">
+                <div class="toggle-handle"></div>
+              </div>
+            </li>
+          </ul>
+          <ul class="table-view">
+            <li class="table-view-divider">Cidades</li>
+            <li class="table-view-cell" ng-repeat="city in filter.cities">
+              {{city.name}}
+              <div class="toggle" ng-class="{active: (!filter.around && city == filter.selectedCity)}" ng-click="toggleFilterCity(city)">
+                <div class="toggle-handle"></div>
+              </div>
+            </li>
+          </ul>
+          <ul class="table-view">
+            <li class="table-view-divider">Bairros</li>
+            <li class="table-view-cell" ng-repeat="neighbourhood in filter.selectedCity.neighbourhoods">
+              {{neighbourhood.name}}
+              <div class="toggle active" ng-click="toggleFilterNeighbourhood(neighbourhood)">
+                <div class="toggle-handle"></div>
+              </div>
+            </li>
+          </ul>
+          <button class="btn btn-positive btn-block" ng-click="hideFilterModal()">Save</button>
+        </form>
+      </div>
+    </div> -->
+    <!-- // -->
+
+
     <header class="bar bar-nav">
       <button class="btn btn-link btn-nav pull-left" ng-click="back()">
         <span class="icon icon-left-nav"></span>
@@ -15,17 +58,9 @@
 
     <!-- Filters in standard bar fixed below top bar (header) -->
     <!-- <nav class="bar bar-standard bar-header-secondary">
-      <button class="btn btn-link btn-nav pull-left" ng-click="refresh()">
-        <span class="icon icon-refresh"></span>
-        {{getRefreshText()}}
-      </button>
-      <button class="btn filtro">
-        {{getSpecialtyText()}}
-      </button>
-      <button class="btn btn-link btn-nav pull-right" ng-click="goMap()">
-        {{getMapText()}}
-        <span class="icon icon-google-maps"></span>
-      </button>
+      <a ng-click="showFilterModal()" class="btn filtro">
+        {{getFilterText()}}
+      </a>
     </nav> -->
 
     <div id="msg_error" class="content" ng-hide="connected">
@@ -36,7 +71,7 @@
       <ul class="table-view">
         <li class="table-view-cell media" ng-repeat="restaurant in restaurants">
           <a class="navigate-right" ng-click="goDetails(restaurant)">
-            <img class="media-object pull-left" ng-src="img/{{helpers.removerAcentos(restaurant.name)}}.jpg" width="75" height="60">
+            <img class="media-object pull-left" ng-src="{{restaurant.photoUrl}}" width="75" height="60">
             <div class="media-body">
               <h4>{{restaurant.name}}</h4>
               <p>{{restaurant.specialty}}</p>

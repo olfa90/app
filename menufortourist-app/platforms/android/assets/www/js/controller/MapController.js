@@ -1,7 +1,7 @@
 // SearchController
-menufortouristApp.controller('MapController', function($scope, $location, $window, UserFactory, RestaurantsFactory, GeolocationFactory) {
+menufortouristApp.controller('MapController', function($rootScope, $scope, $location, $window, RestaurantsFactory, GeolocationFactory) {
 
-    $scope.locale = UserFactory.locale;
+    // $scope.locale = UserFactory.locale;
     $scope.helpers = AppUtil.helpers;
 
     init();
@@ -16,7 +16,7 @@ menufortouristApp.controller('MapController', function($scope, $location, $windo
         // window.plugins.spinnerDialog.show();
         GeolocationFactory.getCurrentPosition(function(position) {
             var map = new GoogleMap();
-            map.initialize(position.coords.latitude, position.coords.longitude, $scope.locale);
+            map.initialize(position.coords.latitude, position.coords.longitude, $rootScope.user.locale);
             showMarkers(map);
 
             // RestaurantsFactory.saveMapState(map);
@@ -30,18 +30,18 @@ menufortouristApp.controller('MapController', function($scope, $location, $windo
 
     // Metodos for internationalization
     function getGPSErrorMsg() {
-        if ($scope.locale == 'EN') {
+        if ($rootScope.user.locale == 'EN') {
             return "Could not get the current position. Either GPS signals are weak or GPS has been switched off.";
-        } else if ($scope.locale == 'ES') {
+        } else if ($rootScope.user.locale == 'ES') {
             return 'No se pudo obtener la posición actual. O las señales GPS son débiles o GPS se ha desconectado.';
         } else {
             return 'Não foi possível obter a posição atual. Ou os sinais de GPS estão fracos ou o GPS foi desligado.';
         }
     };
     $scope.getTitle = function() {
-        if ($scope.locale == 'EN') {
+        if ($rootScope.user.locale == 'EN') {
             return 'Restaurants';
-        } else if ($scope.locale == 'ES') {
+        } else if ($rootScope.user.locale == 'ES') {
             return 'Restaurantes';
         } else {
             return 'Restaurantes';

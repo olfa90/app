@@ -19,7 +19,7 @@ function Restaurant() {
 	var openHours = null;
 	var homepage = null;
 
-	var imageUrl = null;
+	var photoUrl = null;
 
 	var menuUrl = null;
 

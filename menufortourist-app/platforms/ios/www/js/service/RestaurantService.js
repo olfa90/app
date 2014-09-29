@@ -1,6 +1,6 @@
 menufortouristApp.service( 'RestaurantService', function ( $http, $q ) {
   var url = 'http://www.menufortourist.com';
-// var url = 'http://192.168.0.9:3000';
+  // var url = 'http://192.168.0.100:3000';
 
   var cnt = 0;
 
@@ -90,6 +90,21 @@ menufortouristApp.service( 'RestaurantService', function ( $http, $q ) {
         deferred.resolve( restaurant );
 
       }, function getRestaurantsError() { deferred.reject(); } );
+
+      return deferred.promise;
+    },
+
+    loadFilters: function getFilter() {
+      // We create our own promise to return
+      var deferred = $q.defer();
+
+      $http.get(url+'/restaurantes/load_filters.json').then( function ( object ) {
+        data = object.data;
+        
+        // resolve the promise
+        deferred.resolve( data );
+
+      }, function getError() { deferred.reject(); } );
 
       return deferred.promise;
     }

@@ -26,7 +26,7 @@ menufortouristApp.controller('DetailsController', function($scope, $location, $w
         }
         
         var map = new GoogleMap();
-        map.initialize(UserFactory.lat, UserFactory.lng, false, 14);
+        map.initialize(UserFactory.lat, UserFactory.lng, $scope.locale, 14);
         map.addStaticMarkers($scope.restaurant);
 
         // Load restaurant's menu
@@ -221,7 +221,7 @@ menufortouristApp.controller('DetailsController', function($scope, $location, $w
         $window.open(url, '_system');
     }
 
-    $scope.getTranslation = function(object) {
+    $scope.getTranslation = function(object, clear) {
         if (object == null || object.traducoes == null) {
             return;
         }
@@ -231,7 +231,10 @@ menufortouristApp.controller('DetailsController', function($scope, $location, $w
                 translation = object.traducoes[i].text;
             }
         }
-        return translation.replace(/\./g,'')
+        if (clear) {
+            return translation.replace(/\./g,'');
+        }
+        return translation;
     }
 
 
