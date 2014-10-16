@@ -227,7 +227,7 @@ menufortouristApp.controller('DetailsController', function($rootScope, $scope, $
         }
         var translation = object.text;
         for (var i = 0; i < object.traducoes.length; i++) {
-            if (object.traducoes[i].locale == $rootScope.user.locale) {
+            if (object.traducoes[i].locale.toUpperCase() == $rootScope.user.locale.toUpperCase()) {
                 translation = object.traducoes[i].text;
             }
         }

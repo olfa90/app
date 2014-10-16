@@ -36,6 +36,14 @@
     <!-- Include the compiled Ratchet JS -->
     <script src="js/lib/ratchet.min.js"></script>
     <script src="cordova.js"></script>
+    <script type="text/javascript">
+    // temp fix for iOS8 beta 1 (fixed in beta 2), add it after the reference to cordova.js
+    if (navigator.userAgent === undefined) {
+      navigator.__defineGetter__('userAgent', function() {
+        return("Mozilla/5.0 (iPhone; CPU iPhone OS 8_0 like Mac OS X) AppleWebKit");
+      });
+    }
+    </script>
     <script src="js/lib/angular.min.js"></script>
     <script src="js/lib/angular-locale_pt-br.js"></script>
     <script src="js/lib/fastclick.js"></script>

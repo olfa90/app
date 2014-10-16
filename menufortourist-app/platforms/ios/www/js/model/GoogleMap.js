@@ -204,9 +204,9 @@ function GoogleMap() {
 	  markers = [];
 	}
 
-	this.fitBounds = function(latOne, lngOne, latTwo, lngTwo){
-		var latitudeAndLongitudeOne = new google.maps.LatLng(latOne, lngOne);
-		var latitudeAndLongitudeTwo = new google.maps.LatLng(latTwo, lngTwo);
+    this.fitBounds = function() { //latOne, lngOne, latTwo, lngTwo
+		var latitudeAndLongitudeOne = markers[0].getPosition(); //new google.maps.LatLng(latOne, lngOne);
+		var latitudeAndLongitudeTwo = markers[markers.length - 1].getPosition(); //new google.maps.LatLng(latTwo, lngTwo);
 		var mapBounds = new google.maps.LatLngBounds();
 		mapBounds.extend(latitudeAndLongitudeOne);
 		mapBounds.extend(latitudeAndLongitudeTwo);

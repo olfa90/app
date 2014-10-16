@@ -45,8 +45,8 @@
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" />
     <!-- Plugin to to hide the statusbar and overlay on iOS -->
-    <gap:plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" version="1.2.0" />
-    <gap:plugin name="hu.dpal.phonegap.plugins.spinnerdialog" version="0.2.1"/>
+    <gap:plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" />
+    <gap:plugin name="hu.dpal.phonegap.plugins.spinnerdialog" />
     <icon src="icon.png" />
     <!-- <icon gap:platform="android" gap:qualifier="ldpi" src="res/icon/android/icon-36-ldpi.png" /> -->
     <icon gap:platform="android" gap:qualifier="ldpi" src="res/icon/android/icon-36.png" />

@@ -38,6 +38,11 @@ function GoogleMap() {
 	}
 
 	var showMap = function(lat, lng, zoom, frozen){
+        if (!lat || !lng) {
+            // Setting default lat and lng of Rio de Janeiro,RJ city
+            lat = -22.90353930;
+            lng = -43.20958689;
+        }
 		var mapOptions = {
 			zoom: (zoom ? zoom : 12),
 			center: new google.maps.LatLng(lat, lng),
@@ -204,9 +209,9 @@ function GoogleMap() {
 	  markers = [];
 	}
 
-	this.fitBounds = function(latOne, lngOne, latTwo, lngTwo){
-		var latitudeAndLongitudeOne = new google.maps.LatLng(latOne, lngOne);
-		var latitudeAndLongitudeTwo = new google.maps.LatLng(latTwo, lngTwo);
+    this.fitBounds = function() { //latOne, lngOne, latTwo, lngTwo
+		var latitudeAndLongitudeOne = markers[0].getPosition(); //new google.maps.LatLng(latOne, lngOne);
+		var latitudeAndLongitudeTwo = markers[markers.length - 1].getPosition(); //new google.maps.LatLng(latTwo, lngTwo);
 		var mapBounds = new google.maps.LatLngBounds();
 		mapBounds.extend(latitudeAndLongitudeOne);
 		mapBounds.extend(latitudeAndLongitudeTwo);

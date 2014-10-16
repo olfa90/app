@@ -17,6 +17,7 @@ menufortouristApp.service( 'RestaurantService', function ( $http, $q ) {
       return deferred.promise;
     },
 
+    // Turned off on server
     find: function findRestaurants() {
       // We create our own promise to return
       var deferred = $q.defer();

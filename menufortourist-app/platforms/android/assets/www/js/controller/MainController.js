@@ -38,19 +38,46 @@ menufortouristApp.controller('MainController', function($rootScope, $scope, $loc
         }
         // Show spinner dialog
         window.plugins.spinnerDialog.show();
-        GeolocationFactory.getCurrentPosition(function(position) {
-            // Lat e Lng para teste: -22.9748244,-43.1934073
-            $rootScope.user.setLat(position.coords.latitude);
-            $rootScope.user.setLng(position.coords.longitude);
-            $scope.restaurants = RestaurantsFactory.findNearRestaurants(position.coords.latitude, position.coords.longitude);
-        }, function onError(error) {
+        GeolocationFactory.getCurrentPosition(
+            successCallbackGeolocation,
+            errorCallbackGeolocation,
+            { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true }
+        );
+    }
+
+    function errorCallbackGeolocation(error) {
+        console.log('code: '    + error.code    + '\n' +
+                  'message: ' + error.message + '\n');
+        if (error.code == error.TIMEOUT) {
+            // Attempt to get GPS loc timed out after 5 seconds, 
+            // try low accuracy location
+            GeolocationFactory.getCurrentPosition(
+                successCallbackGeolocation, 
+                function onError(error) {
+                    console.log('code: '    + error.code    + '\n' +
+                          'message: ' + error.message + '\n');
+
+                    // In case without GPS, get first 50 restaurants.
+                    $scope.restaurants = RestaurantsFactory.findNearRestaurants($rootScope.user.lat, $rootScope.user.lng);
+                    
+                    // Hide spinner dialog
+                    // window.plugins.spinnerDialog.hide();
+                    // alert(getGPSErrorMsg());
+                },
+                { maximumAge: 600000, timeout: 9000, enableHighAccuracy: false });
+
+        } else {
             // Hide spinner dialog
             window.plugins.spinnerDialog.hide();
-            console.log('code: '    + error.code    + '\n' +
-                  'message: ' + error.message + '\n');
-            // alert(getGPSErrorMsg());
-            setGpsErrorMsg();
-        }, { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true });
+            alert(getGPSErrorMsg());
+        }
+    }
+
+    function successCallbackGeolocation(position) {
+        // Lat e Lng para teste: -22.9748244,-43.1934073
+        $rootScope.user.setLat(position.coords.latitude);
+        $rootScope.user.setLng(position.coords.longitude);
+        $scope.restaurants = RestaurantsFactory.findNearRestaurants($rootScope.user.lat, $rootScope.user.lng);
     }
 
     // function initMap(){

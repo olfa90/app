@@ -1,0 +1,78 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g', 'phonegap@3.6.3' ]
+2 info using npm@1.4.3
+3 info using node@v0.10.26
+4 verbose cache add [ 'phonegap@3.6.3', null ]
+5 verbose cache add name=undefined spec="phonegap@3.6.3" args=["phonegap@3.6.3",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'phonegap@3.6.3',
+6 verbose parsed url   path: 'phonegap@3.6.3',
+6 verbose parsed url   href: 'phonegap@3.6.3' }
+7 verbose cache add name="phonegap" spec="3.6.3" args=["phonegap","3.6.3"]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: '3.6.3',
+8 verbose parsed url   path: '3.6.3',
+8 verbose parsed url   href: '3.6.3' }
+9 verbose addNamed [ 'phonegap', '3.6.3' ]
+10 verbose addNamed [ '3.6.3', '3.6.3' ]
+11 silly lockFile 146bbc78-phonegap-3-6-3 phonegap@3.6.3
+12 verbose lock phonegap@3.6.3 /Users/gu/.npm/146bbc78-phonegap-3-6-3.lock
+13 verbose url raw phonegap/3.6.3
+14 verbose url resolving [ 'https://registry.npmjs.org/', './phonegap/3.6.3' ]
+15 verbose url resolved https://registry.npmjs.org/phonegap/3.6.3
+16 info trying registry request attempt 1 at 11:09:45
+17 http GET https://registry.npmjs.org/phonegap/3.6.3
+18 http 404 https://registry.npmjs.org/phonegap/3.6.3
+19 silly registry.get cb [ 404,
+19 silly registry.get   { date: 'Thu, 16 Oct 2014 14:09:44 GMT',
+19 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+19 silly registry.get     etag: '"CNCJ43CGYK7M3DV53D2DBI3EQ"',
+19 silly registry.get     'content-type': 'application/json',
+19 silly registry.get     'cache-control': 'max-age=0',
+19 silly registry.get     'content-length': '36',
+19 silly registry.get     'accept-ranges': 'bytes',
+19 silly registry.get     via: '1.1 varnish',
+19 silly registry.get     'x-served-by': 'cache-jfk1032-JFK',
+19 silly registry.get     'x-cache': 'MISS',
+19 silly registry.get     'x-cache-hits': '0',
+19 silly registry.get     'x-timer': 'S1413468584.544816,VS0,VE39',
+19 silly registry.get     vary: 'Accept',
+19 silly registry.get     'keep-alive': 'timeout=10, max=50',
+19 silly registry.get     connection: 'Keep-Alive' } ]
+20 silly lockFile 146bbc78-phonegap-3-6-3 phonegap@3.6.3
+21 silly lockFile 146bbc78-phonegap-3-6-3 phonegap@3.6.3
+22 error Error: version not found: 3.6.3 : phonegap/3.6.3
+22 error     at RegClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:237:14)
+22 error     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:123:22)
+22 error     at Request.EventEmitter.emit (events.js:98:17)
+22 error     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:893:14)
+22 error     at Request.EventEmitter.emit (events.js:117:20)
+22 error     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:844:12)
+22 error     at IncomingMessage.EventEmitter.emit (events.js:117:20)
+22 error     at _stream_readable.js:920:16
+22 error     at process._tickCallback (node.js:415:13)
+23 error If you need help, you may report this *entire* log,
+23 error including the npm and node versions, at:
+23 error     <http://github.com/npm/npm/issues>
+24 error System Darwin 13.4.0
+25 error command "node" "/usr/local/bin/npm" "install" "-g" "phonegap@3.6.3"
+26 error cwd /Users/gu/workspace/menu4tourist/app/menufortourist-app
+27 error node -v v0.10.26
+28 error npm -v 1.4.3
+29 verbose exit [ 1, true ]

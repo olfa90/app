@@ -16,12 +16,12 @@ menufortouristApp.factory('RestaurantsFactory', function($filter, RestaurantServ
     // factory.SEARCH_MAP_PAGE = 4;
     var origin = 1;
     
-    factory.findRestaurants = function(){
-        return RestaurantService.find().then(function(d) {
-            restaurants = d.data;
-            return restaurants;
-        });
-    };
+    // factory.findRestaurants = function(){
+    //     return RestaurantService.find().then(function(d) {
+    //         restaurants = d.data;
+    //         return restaurants;
+    //     });
+    // };
 
     factory.findNearRestaurants = function(lat, lng){
         return RestaurantService.findNear(lat, lng).then(function(collection) {

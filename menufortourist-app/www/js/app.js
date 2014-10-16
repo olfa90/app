@@ -94,7 +94,7 @@ menufortouristApp.config(function($provide, $compileProvider) {
 
         factory.locale = 'EN';
         factory.connected = true;
-
+        
         factory.setName = function(name) {
             factory.name = name;
         };

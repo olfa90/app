@@ -50,28 +50,28 @@ AppUtil.helpers = {
 var menufortouristApp = angular.module('menufortouristApp',[]);
 
 
-function loadTheApp() {
+// function loadTheApp() {
 
-    // Hide splash screen if any
-    if (navigator && navigator.splashscreen) {
-        // navigator.splashscreen.hide();
-    }
+//     // Hide splash screen if any
+//     if (navigator && navigator.splashscreen) {
+//         // navigator.splashscreen.hide();
+//     }
 
-    // Initiate FastClick
-    FastClick.attach(document.body);
+//     // Initiate FastClick
+//     FastClick.attach(document.body);
 
-    // Boot AngularJS
-    try {
-        angular.bootstrap(document, ['menufortouristApp']);
-    } catch (e) {
-        console.log('startup errrrrrrrrrrrrrr! ' + e);
-    }
-}
+//     // Boot AngularJS
+//     try {
+//         angular.bootstrap(document, ['menufortouristApp']);
+//     } catch (e) {
+//         console.log('startup errrrrrrrrrrrrrr! ' + e);
+//     }
+// }
 
 // Listen to device ready
-angular.element(document).ready(function() {
-    document.addEventListener('deviceready', loadTheApp, false);
-});
+// angular.element(document).ready(function() {
+//     document.addEventListener('deviceready', loadTheApp, false);
+// });
 
 
 // Setting default HTTP headers for post 
@@ -118,7 +118,7 @@ menufortouristApp.config(function($provide, $compileProvider) {
 
 //### ROUTING ###
 // Defining $routeProvider for MenuForTourist App
-menufortouristApp.config(function($routeProvider) {
+menufortouristApp.config(function($routeProvider, $locationProvider) {
     $routeProvider.
 
         // first page
@@ -172,9 +172,14 @@ menufortouristApp.config(function($routeProvider) {
         // if non of the above
         // redirect to the MainController
         otherwise({ redirectTo: '/'});
+
+        // use the HTML5 History API
+        // $locationProvider.html5Mode(true);
 });
 
-menufortouristApp.run(function(UserFactory) {
+menufortouristApp.run(function($rootScope, UserFactory) {
+    // Will be available everywhere in the app
+    $rootScope.user = UserFactory;
     document.addEventListener("deviceready", onDeviceReady, false);
 
     function onDeviceReady() {
@@ -192,7 +197,7 @@ menufortouristApp.run(function(UserFactory) {
             navigator.globalization.getLocaleName(
                 function (locale) {
                     if (locale != null && locale.value != null && locale.value != '') {
-                        UserFactory.setLocale(locale.value.toUpperCase());
+                        $rootScope.user.setLocale(locale.value.toUpperCase());
                     }
                 },
                 function () { console.log('Não foi possível carregar o idioma do celular do usuário.'); }
@@ -202,7 +207,7 @@ menufortouristApp.run(function(UserFactory) {
 
     function onOnline(e) {
         // console.log("Called", e.type);
-        UserFactory.setConnected(true);
+        $rootScope.user.setConnected(true);
         
         var msgElement = angular.element(document.getElementById('msg_error'));
         if (msgElement) {
@@ -215,7 +220,7 @@ menufortouristApp.run(function(UserFactory) {
 
     function onOffline(e) {
         // console.log("Called", e.type);
-        UserFactory.setConnected(false);
+        $rootScope.user.setConnected(false);
 
         var msgElement = angular.element(document.getElementById('msg_error'));
         if (msgElement) {

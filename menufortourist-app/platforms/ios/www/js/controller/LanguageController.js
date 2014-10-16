@@ -1,8 +1,8 @@
 // LanguageController
-menufortouristApp.controller('LanguageController', function($scope, $location, UserFactory) {
+menufortouristApp.controller('LanguageController', function($rootScope, $scope, $location) {
 
 	$scope.setLanguage = function(locale) {
-        UserFactory.setLocale(locale);
+        $rootScope.user.setLocale(locale);
         
         // Go to main page
         $location.path("/main");
@@ -10,9 +10,9 @@ menufortouristApp.controller('LanguageController', function($scope, $location, U
 
     // Metodos for internationalization
     $scope.getTitle = function() {
-     	if (UserFactory.locale == 'PT-BR') {
+     	if ($rootScope.user.locale == 'PT-BR') {
             return 'Escolha o idioma';
-        } else if (UserFactory.locale.substring(0, 2) == 'ES') {
+        } else if ($rootScope.user.locale.substring(0, 2) == 'ES') {
             return 'Elija el idioma';
         } else {
             return 'Choose the language';

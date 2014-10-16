@@ -32,14 +32,32 @@ menufortouristApp.controller('SearchController', function($rootScope, $scope, $l
             return;
         }
 
-        GeolocationFactory.getCurrentPosition(function(position) {
-            $rootScope.user.setLat(position.coords.latitude);
-            $rootScope.user.setLng(position.coords.longitude);
-        }, function onError(error) {
-            console.log('code: '    + error.code    + '\n' +
+        GeolocationFactory.getCurrentPosition(
+            successCallbackGeolocation,
+            errorCallbackGeolocationHighAccuracy,
+            { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true });
+    }
+
+    function errorCallbackGeolocationHighAccuracy(error) {
+        console.log('code: '    + error.code    + '\n' +
                   'message: ' + error.message + '\n');
-            alert(getGPSErrorMsg());
-        }, { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true });
+        if (error.code == error.TIMEOUT) {
+            // Attempt to get GPS loc timed out after 5 seconds, 
+            // try low accuracy location
+            GeolocationFactory.getCurrentPosition(
+                successCallbackGeolocation, 
+                function onError(error) {
+                    console.log('code: '    + error.code    + '\n' +
+                          'message: ' + error.message + '\n');
+                },
+                { maximumAge: 60000, timeout: 9000, enableHighAccuracy: false });
+        }
+    }
+
+    function successCallbackGeolocation(position) {
+        // Lat e Lng para teste: -22.9748244,-43.1934073
+        $rootScope.user.setLat(position.coords.latitude);
+        $rootScope.user.setLng(position.coords.longitude);
     }
 
     // Methods for internationalization

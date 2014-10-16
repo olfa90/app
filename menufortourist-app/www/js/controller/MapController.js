@@ -14,18 +14,9 @@ menufortouristApp.controller('MapController', function($rootScope, $scope, $loca
 
         // Show spinner dialog
         // window.plugins.spinnerDialog.show();
-        GeolocationFactory.getCurrentPosition(function(position) {
-            var map = new GoogleMap();
-            map.initialize(position.coords.latitude, position.coords.longitude, $rootScope.user.locale);
-            showMarkers(map);
-
-            // RestaurantsFactory.saveMapState(map);
-            // window.plugins.spinnerDialog.hide();
-        }, function onError(error) {
-            console.log('code: '    + error.code    + '\n' +
-                  'message: ' + error.message + '\n');
-            alert(getGPSErrorMsg());
-        }, { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true });
+        var map = new GoogleMap();
+        map.initialize($rootScope.user.lat, $rootScope.user.lng, $rootScope.user.locale);
+        showMarkers(map);
     }
 
     // Metodos for internationalization
@@ -89,6 +80,8 @@ menufortouristApp.controller('MapController', function($rootScope, $scope, $loca
                 map.addMarkers(restaurant);
             }
         };
+
+        map.fitBounds();
     }
     
 });

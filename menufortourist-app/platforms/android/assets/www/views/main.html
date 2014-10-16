@@ -75,7 +75,7 @@
             <div class="media-body">
               <h4>{{restaurant.name}}</h4>
               <p>{{restaurant.specialty}}</p>
-              <p>
+              <p ng-show="user.lat">
                 <span class="icon icon-google-maps"></span>
                 {{restaurant.distance}} km
               </p>

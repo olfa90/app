@@ -59,7 +59,8 @@ module.exports.metadata =
     "org.apache.cordova.globalization": "0.3.0",
     "org.apache.cordova.splashscreen": "0.3.2",
     "org.apache.cordova.inappbrowser": "0.5.1",
-    "org.apache.cordova.network-information": "0.2.11"
+    "org.apache.cordova.network-information": "0.2.11",
+    "org.apache.cordova.geolocation": "0.3.11-dev"
 }
 // BOTTOM OF METADATA
 });
