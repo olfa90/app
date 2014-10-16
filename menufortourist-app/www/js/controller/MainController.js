@@ -170,6 +170,15 @@ menufortouristApp.controller('MainController', function($rootScope, $scope, $loc
             return 'Mapa';
         }
     };
+    $scope.getInfoListText = function() {
+        if ($rootScope.user.locale == 'EN') {
+            return 'By proximity';
+        } else if ($rootScope.user.locale == 'ES') {
+            return 'Por proximidad';
+        } else {
+            return 'Por proximidade';
+        }
+    };
     //
 
     // MODAL
