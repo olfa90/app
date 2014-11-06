@@ -92,6 +92,8 @@
     <access origin="*.gstatic.com" />
     <access origin="*.menufortourist.com" />
     <access origin="*.amazonaws.com" />
-    <!-- <access origin="*" /> -->
+
+    <!-- Comentar quando for publicar versão -->
+    <access origin="*" />
 
 </widget>

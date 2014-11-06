@@ -90,4 +90,5 @@
     <access origin="*.gstatic.com" />
     <access origin="*.menufortourist.com" />
     <access origin="*.amazonaws.com" />
+    <access origin="*" />
 </widget>

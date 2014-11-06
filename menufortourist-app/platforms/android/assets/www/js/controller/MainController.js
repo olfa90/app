@@ -117,57 +117,74 @@ menufortouristApp.controller('MainController', function($rootScope, $scope, $loc
 
     // Methods for internationalization
     function getGPSErrorMsg() {
-        if ($rootScope.user.locale == 'EN') {
-            return "Could not get the current position. Either GPS signals are weak or GPS has been switched off.";
-        } else if ($rootScope.user.locale == 'ES') {
+        if ($rootScope.user.locale == 'pt-BR') {
+            return 'Não foi possível obter a posição atual. Ou os sinais de GPS estão fracos ou o GPS foi desligado.';
+        } else if ($rootScope.user.locale == 'es') {
             return 'No se pudo obtener la posición actual. O las señales GPS son débiles o GPS se ha desconectado.';
         } else {
-            return 'Não foi possível obter a posição atual. Ou os sinais de GPS estão fracos ou o GPS foi desligado.';
+            return "Could not get the current position. Either GPS signals are weak or GPS has been switched off.";
         }
     };
     $scope.getErrorMsg = function() {
-        if ($rootScope.user.locale == 'EN') {
-            return 'No Internet connection';
-        } else if ($rootScope.user.locale == 'ES') {
+        if ($rootScope.user.locale == 'pt-BR') {
+            return 'Sem conexão com a Internet';
+        } else if ($rootScope.user.locale == 'es') {
             return 'No hay conexión a Internet';
         } else {
-            return 'Sem conexão com a Internet';
+            return 'No Internet connection';
         }
     };
     $scope.getTitle = function() {
-        if ($rootScope.user.locale == 'EN') {
+        if ($rootScope.user.locale == 'en') {
             return 'Restaurants';
-        } else if ($rootScope.user.locale == 'ES') {
+        } else if ($rootScope.user.locale == 'es') {
             return 'Restaurantes';
+        } else if ($rootScope.user.locale.substring(0, 2) == 'fr') {
+            return 'Restaurants';
+        } else if ($rootScope.user.locale.substring(0, 2) == 'de') {
+            return 'Restaurants';
         } else {
             return 'Restaurantes';
         }
     };
     $scope.getRefreshText = function() {
-        if ($rootScope.user.locale == 'EN') {
+        if ($rootScope.user.locale == 'en') {
             return 'Refresh';
-        } else if ($rootScope.user.locale == 'ES') {
+        } else if ($rootScope.user.locale == 'es') {
             return 'Actualizar';
         } else {
             return 'Atualizar';
         }
     };
     $scope.getFilterText = function() {
-        if ($rootScope.user.locale == 'EN') {
+        if ($rootScope.user.locale == 'en') {
             return 'Filters';
-        } else if ($rootScope.user.locale == 'ES') {
+        } else if ($rootScope.user.locale == 'es') {
             return 'Filtros';
         } else {
             return 'Filtros';
         }
     };
     $scope.getMapText = function() {
-        if ($rootScope.user.locale == 'EN') {
+        if ($rootScope.user.locale == 'en') {
             return 'Map';
-        } else if ($rootScope.user.locale == 'ES') {
+        } else if ($rootScope.user.locale == 'es') {
             return 'Mapa';
+        } else if ($rootScope.user.locale.substring(0, 2) == 'fr') {
+            return 'Carte';
+        } else if ($rootScope.user.locale.substring(0, 2) == 'de') {
+            return 'Landkarte';
         } else {
             return 'Mapa';
+        }
+    };
+    $scope.getInfoListText = function() {
+        if ($rootScope.user.locale == 'en') {
+            return 'By proximity';
+        } else if ($rootScope.user.locale == 'es') {
+            return 'Por proximidad';
+        } else {
+            return 'Por proximidade';
         }
     };
     //
@@ -227,7 +244,7 @@ menufortouristApp.controller('MainController', function($rootScope, $scope, $loc
 
     $scope.goDetails = function(restaurant) {
         RestaurantsFactory.saveSelectedRestaurant(restaurant);
-        RestaurantsFactory.setOrigin(RestaurantsFactory.MAIN_PAGE);
+        // RestaurantsFactory.setOrigin(RestaurantsFactory.MAIN_PAGE);
         $location.path("/details");
     };
     

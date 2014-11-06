@@ -1,10 +1,24 @@
-menufortouristApp.service( 'RestaurantService', function ( $http, $q ) {
+menufortouristApp.service( 'RestaurantService', function ( $http, $q, $rootScope ) {
   var url = 'http://www.menufortourist.com';
   // var url = 'http://192.168.0.100:3000';
+  var url = 'http://192.168.1.103:3000';
 
   var cnt = 0;
 
   return {
+    countRestaurants: function getRestaurant( id ) {
+      // We create our own promise to return
+      var deferred = $q.defer();
+
+      // /restaurantes/1.json
+      $http.get(url+'/restaurantes/count_restaurants.json').then( function ( object ) {
+        restaurantsCount = object.data;
+        deferred.resolve( restaurantsCount );
+      }, function getRestaurantError() { deferred.reject(); } );
+
+      return deferred.promise;
+    },
+
     get: function getRestaurant( id ) {
       // We create our own promise to return
       var deferred = $q.defer();
@@ -36,7 +50,7 @@ menufortouristApp.service( 'RestaurantService', function ( $http, $q ) {
       var deferred = $q.defer();
 
       $http.get(url+'/restaurantes/search.json', {
-        params: {search: search, lat: lat, lng: lng}
+        params: {search: search, lat: lat, lng: lng, idioma: $rootScope.user.locale}
       }).then( function ( object ) {
         cnt = 0;
         
@@ -61,7 +75,7 @@ menufortouristApp.service( 'RestaurantService', function ( $http, $q ) {
       var deferred = $q.defer();
 
       $http.get(url+'/restaurantes/around.json', {
-        params: {lat: lat, lng: lng, radius: 20}
+        params: {lat: lat, lng: lng, radius: 20, idioma: $rootScope.user.locale}
       }).then( function ( object ) {
         restaurants = object.data;
         // resolve the promise

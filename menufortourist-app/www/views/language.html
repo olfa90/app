@@ -3,49 +3,15 @@
       <h1 class="title">{{getTitle()}}</h1>
     </header>
 
-    <section id="list_languages" class="content">
-      <!-- <div>
-        <button class="btn btn-block btn-outlined navigate-right" ng-click="setLanguage('EN')">
-          <img src="img/M4T_Flag_GBR.png" class="pull-left" width="30" height="30">
-          English
-        </button>
-        <button class="btn btn-block btn-outlined navigate-right" ng-click="setLanguage('ES')">
-          <img src="img/M4T_Flag_Espanha.png" class="pull-left" width="30" height="30">
-          Español
-        </button>
-        <button class="btn btn-block btn-outlined navigate-right" ng-click="setLanguage('PT-BR')">
-          <img src="img/M4T_Flag_Brasil.png" class="pull-left" width="30" height="30">
-          Português
-        </button>
-      </div> -->
-      
+    <section id="list_languages" class="content">      
       <div>
-        <ul class="table-view">
+        <ul class="table-view" ng-repeat="result in countingResults">
           <li class="table-view-cell media">
-            <a class="navigate-right" ng-click="setLanguage('EN')">
-              <img src="img/M4T_Flag_GBR.png" class="pull-left" width="50" height="50">
+            <a class="navigate-right" ng-click="setLanguage(result.locale)">
+              <span class="badge">{{result.count}}</span>
+              <img ng-src="img/M4T_Flag_{{result.locale}}.png" class="pull-left" width="50" height="50">
               <div class="media-body">
-                English
-              </div>
-            </a>
-          </li>
-        </ul>
-        <ul class="table-view">
-          <li class="table-view-cell media">
-            <a class="navigate-right" ng-click="setLanguage('ES')">
-              <img src="img/M4T_Flag_Espanha.png" class="pull-left" width="50" height="50">
-              <div class="media-body">
-                Español
-              </div>
-            </a>
-          </li>
-        </ul>
-        <ul class="table-view">
-          <li class="table-view-cell media">
-            <a class="navigate-right" ng-click="setLanguage('PT-BR')">
-              <img src="img/M4T_Flag_Brasil.png" class="pull-left" width="50" height="50">
-              <div class="media-body">
-                Português
+                {{getLocaleHumanized(result.locale)}}
               </div>
             </a>
           </li>

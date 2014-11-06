@@ -92,7 +92,7 @@ menufortouristApp.config(function($provide, $compileProvider) {
     $provide.factory('UserFactory', function() {
         var factory = {};
 
-        factory.locale = 'EN';
+        factory.locale = 'en';
         factory.connected = true;
         
         factory.setName = function(name) {
@@ -125,7 +125,12 @@ menufortouristApp.config(function($routeProvider, $locationProvider) {
         when('/',
         {
             controller: 'LanguageController',
-            templateUrl: 'views/language.html'
+            templateUrl: 'views/language.html',
+            resolve: {
+                countingResults: ['$route', 'RestaurantsFactory', function ($route, RestaurantsFactory) {
+                    return RestaurantsFactory.countRestaurants();
+                }]
+            }
 
         }).
 
@@ -134,6 +139,11 @@ menufortouristApp.config(function($routeProvider, $locationProvider) {
         {
             controller: 'LanguageController',
             templateUrl: 'views/language.html'
+            // resolve: {
+            //     countingResults: ['$route', 'RestaurantsFactory', function ($route, RestaurantsFactory) {
+            //         return RestaurantsFactory.getRestaurantsCounting();
+            //     }]
+            // }
 
         }).
 

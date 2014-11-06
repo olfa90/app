@@ -35,59 +35,79 @@ menufortouristApp.controller('DetailsController', function($rootScope, $scope, $
 
     // Metodos for internationalization
     $scope.getErrorMsg = function() {
-        if ($rootScope.user.locale == 'EN') {
+        if ($rootScope.user.locale == 'en') {
             return 'No Internet connection';
-        } else if ($rootScope.user.locale == 'ES') {
+        } else if ($rootScope.user.locale == 'es') {
             return 'No hay conexión a Internet';
         } else {
             return 'Sem conexão com a Internet';
         }
     };
     $scope.getTitle = function() {
-        if ($rootScope.user.locale == 'EN') {
+        if ($rootScope.user.locale == 'en') {
             return 'Restaurant';
-        } else if ($rootScope.user.locale == 'ES') {
+        } else if ($rootScope.user.locale == 'es') {
             return 'Restaurante';
+        } else if ($rootScope.user.locale.substring(0, 2) == 'fr') {
+            return 'Restaurants';
+        } else if ($rootScope.user.locale.substring(0, 2) == 'de') {
+            return 'Restaurants';
         } else {
             return 'Restaurante';
         }
     };
 
     $scope.getLocationTitle = function() {
-        if ($rootScope.user.locale == 'EN') {
+        if ($rootScope.user.locale == 'en') {
             return 'Location';
-        } else if ($rootScope.user.locale == 'ES') {
+        } else if ($rootScope.user.locale == 'es') {
             return 'Ubicación';
+        } else if ($rootScope.user.locale.substring(0, 2) == 'fr') {
+            return 'Localisation';
+        } else if ($rootScope.user.locale.substring(0, 2) == 'de') {
+            return 'Lokalisierung';
         } else {
             return 'Localização';
         }
     };
 
     $scope.getLocationInfo = function() {
-        if ($rootScope.user.locale == 'EN') {
+        if ($rootScope.user.locale == 'en') {
             return 'from your location';
-        } else if ($rootScope.user.locale == 'ES') {
+        } else if ($rootScope.user.locale == 'es') {
             return 'desde su ubicación';
+        } else if ($rootScope.user.locale.substring(0, 2) == 'fr') {
+            return 'à partir de votre emplacement';
+        } else if ($rootScope.user.locale.substring(0, 2) == 'de') {
+            return 'von Ihrem Standort';
         } else {
             return 'da sua localização';
         }
     };
 
     $scope.getMenuTitle = function() {
-        if ($rootScope.user.locale == 'EN') {
+        if ($rootScope.user.locale == 'en') {
             return 'Menu';
-        } else if ($rootScope.user.locale == 'ES') {
+        } else if ($rootScope.user.locale == 'es') {
             return 'Menú';
+        } else if ($rootScope.user.locale.substring(0, 2) == 'fr') {
+            return 'Menu (Carte)';
+        } else if ($rootScope.user.locale.substring(0, 2) == 'de') {
+            return 'Menükarte';
         } else {
             return 'Cardápio';
         }
     };
 
     $scope.getMenuTermsConditionsTitle = function() {
-        if ($rootScope.user.locale == 'EN') {
+        if ($rootScope.user.locale == 'en') {
             return 'terms and conditions of use';
-        } else if ($rootScope.user.locale == 'ES') {
+        } else if ($rootScope.user.locale == 'es') {
             return 'términos y condiciones de uso';
+        } else if ($rootScope.user.locale.substring(0, 2) == 'fr') {
+            return "termes et conditions d'utilisation";
+        } else if ($rootScope.user.locale.substring(0, 2) == 'de') {
+            return 'Bedingungen der Nutzung';
         } else {
             return 'termos e condições de uso';
         }
@@ -95,14 +115,22 @@ menufortouristApp.controller('DetailsController', function($rootScope, $scope, $
 
     $scope.getModalTermsText = function() {
         var content = "";
-        if ($rootScope.user.locale == 'EN') {
+        if ($rootScope.user.locale == 'en') {
             content = "The menus and translations displayed here are updated according to the information sent by the restaurants from time to time.<br/>" +
                 "We don't take responsibility for price changes or the availability of the dishes presented in this application.<br/>" +
                 "Restaurant hours, as well as the availability of tables must be confirmed directly with each restaurant.";
-        } else if ($rootScope.user.locale == 'ES') {
+        } else if ($rootScope.user.locale == 'es') {
             content = "Los menús y traducciones aquí disponibles son actualizados según las informaciones enviadas periódicamente por los restaurantes. <br/>" +
                 "No nos responsabilizamos de la variación de precio o de la disponibilidad de los platos presentados en esta aplicación.<br/>" +
                 "Los días y horario de funcionamiento, así como la disponibilidad de mesa en los restaurantes, deberán ser confirmados directamente con cada restaurante.";
+        } else if ($rootScope.user.locale.substring(0, 2) == 'fr') {
+            content = "Les menus (cartes) et traductions mises à jour fournies ici sont des informations cohérentes transmis par les restaurants de temps en temps. <br/>" +
+                "Nous ne sommes pas responsables de la variation dans le prix et la disponibilité des plats présentés ici dans cette application.<br/>" +
+                "Les jours et les heures d'ouverture ainsi que la disponibilité des tables dans les restaurants doivent être confirmées directement avec chaque restaurant.";
+        } else if ($rootScope.user.locale.substring(0, 2) == 'de') {
+            content = "Die Menükarte und Überzetzungen haben aktualisiert genauso die Restaurants haben für uns  geschickt. <br/>" +
+                "Wir beten nicht für die Varianten auf den Preis oder auf die verfügbare Tische, was gibt es in dieses Anwenderprogramm.<br/>" +
+                "Die Öffnungszeiten und die Verfügbarkeit von der Tische müssen Sie im Restaurants bestätigen."
         } else {
             content = "Os cardápios e traduções aqui disponibilizados são atualizadas conforme informações encaminhadas pelos restaurantes de tempos em tempos.<br/>" +
                 "Não nos responsabilizamos pela variação de preço e pela disponibilidade dos pratos ora apresentados neste aplicativo.<br/>" +
@@ -112,20 +140,28 @@ menufortouristApp.controller('DetailsController', function($rootScope, $scope, $
     };
 
     $scope.getMenuInfo = function() {
-        if ($rootScope.user.locale == 'EN') {
+        if ($rootScope.user.locale == 'en') {
             return "Press the item you want and show it to the waiter to place your order.";
-        } else if ($rootScope.user.locale == 'ES') {
+        } else if ($rootScope.user.locale == 'es') {
             return 'Presione el ítem elegido y muestre al camarero para hacer su pedido.';
+        } else if ($rootScope.user.locale.substring(0, 2) == 'fr') {
+            return "Pour faire votre demande, appuyez sur l'image/nom et montrez au serveur.";
+        } else if ($rootScope.user.locale.substring(0, 2) == 'de') {
+            return 'Wenn Sie bestellen möchten, drücken Sie bitte den Abschnitt und zeigen Sie zum Kellner.';
         } else {
             return 'Para fazer o pedido, pressione o item escolhido e mostre ao garçom.';
         }
     };
 
     $scope.getModalTitle = function() {
-        if ($rootScope.user.locale == 'EN') {
+        if ($rootScope.user.locale == 'en') {
             return 'Show to the waiter to order';
-        } else if ($rootScope.user.locale == 'ES') {
+        } else if ($rootScope.user.locale == 'es') {
             return 'Mostrar para el camarero para pedir';
+        } else if ($rootScope.user.locale.substring(0, 2) == 'fr') {
+            return "Montrer au garçon de commander";
+        } else if ($rootScope.user.locale.substring(0, 2) == 'de') {
+            return 'Dem Kellner zeigen, um zu bestellen';
         } else {
             return 'Mostre ao garçom para pedir';
         }
@@ -133,19 +169,23 @@ menufortouristApp.controller('DetailsController', function($rootScope, $scope, $
 
     $scope.getModalText = function() {
         // Will show modal text in restaurant's native language
-        if ($scope.restaurant.locale == 'EN') {
+        if ($scope.restaurant.locale == 'en') {
             return "Please, I'd like to have:";
-        } else if ($scope.restaurant.locale == 'ES') {
+        } else if ($scope.restaurant.locale == 'es') {
             return 'Por favor, me gustaría tener:';
+        } else if ($rootScope.user.locale.substring(0, 2) == 'fr') {
+            return "S'il vous plaît, je voudrais demander:";
+        } else if ($rootScope.user.locale.substring(0, 2) == 'de') {
+            return 'Entschuldigung, ich möchte bestellen:';
         } else {
             return 'Por favor, gostaria de pedir:';
         }
     };
 
     $scope.getModalEmpty = function() {
-        if ($rootScope.user.locale == 'EN') {
+        if ($rootScope.user.locale == 'en') {
             return 'ERROR: Unable to load the native language of this item.';
-        } else if ($rootScope.user.locale == 'ES') {
+        } else if ($rootScope.user.locale == 'es') {
             return 'ERROR: No se puede cargar la lengua nativa de este artículo.';
         } else {
             return 'ERRO: Não foi possível carregar o idioma nativo deste item.';
