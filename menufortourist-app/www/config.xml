@@ -94,6 +94,6 @@
     <access origin="*.amazonaws.com" />
 
     <!-- Comentar quando for publicar versão -->
-    <access origin="*" />
+    <!-- <access origin="*" /> -->
 
 </widget>
