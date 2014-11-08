@@ -19,6 +19,12 @@ menufortouristApp.factory('RestaurantsFactory', function($filter, RestaurantServ
 
             if (restaurantsCount == null) {
               console.log('Something went wrong');
+            } else {
+                // Create new Array by prototype using filter method.
+                newList = restaurantsCount.filter(function (object, index, array) {
+                    return (object.count > 0);
+                });
+                restaurantsCount = newList;
             }
 
             return restaurantsCount;

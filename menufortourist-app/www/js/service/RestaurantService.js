@@ -1,6 +1,6 @@
 menufortouristApp.service( 'RestaurantService', function ( $http, $q, $rootScope ) {
   var url = 'http://www.menufortourist.com';
-  // var url = 'http://192.168.0.100:3000';
+  // var url = 'http://192.168.0.103:3000';
   // var url = 'http://192.168.1.103:3000';
 
   var cnt = 0;
