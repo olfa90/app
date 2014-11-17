@@ -36,17 +36,7 @@ menufortouristApp.controller('LanguageController', function($rootScope, $scope, 
 
     // Methods for internationalization
     $scope.getTitle = function() {
-     	if ($rootScope.user.locale == 'pt-BR') {
-            return 'Escolha o idioma';
-        } else if ($rootScope.user.locale.substring(0, 2) == 'es') {
-            return 'Elija el idioma';
-        } else if ($rootScope.user.locale.substring(0, 2) == 'fr') {
-            return 'Choisissez votre langue';
-        } else if ($rootScope.user.locale.substring(0, 2) == 'de') {
-            return 'Wählen Sie deine Sprache';
-        } else {
-            return 'Choose the language';
-        }
+        return $rootScope.user.messages.LANGUAGES_TITLE;
     };
 
     $scope.getLocaleHumanized = function(locale) {

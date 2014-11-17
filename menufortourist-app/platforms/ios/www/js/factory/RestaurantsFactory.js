@@ -1,6 +1,7 @@
 menufortouristApp.factory('RestaurantsFactory', function($filter, RestaurantService, UserFactory) {
     var factory = {};
 
+    var restaurantsCount = []
     var restaurants = [];
     var restaurantsAround = [];
     var restaurantsSearch = [];
@@ -9,17 +10,28 @@ menufortouristApp.factory('RestaurantsFactory', function($filter, RestaurantServ
 
     var filter = null;
 
-    // CONSTANTS:
-    // factory.MAIN_PAGE = 1;
-    // factory.SEARCH_PAGE = 2;
-    // factory.MAIN_MAP_PAGE = 3;
-    // factory.SEARCH_MAP_PAGE = 4;
     var origin = 1;
-    
-    factory.findRestaurants = function(){
-        return RestaurantService.find().then(function(d) {
-            restaurants = d.data;
-            return restaurants;
+
+    factory.countRestaurants = function(){
+        return RestaurantService.countRestaurants().then(function(data) {
+            //console.log(data);
+            restaurantsCount = data;
+
+            if (restaurantsCount == null) {
+              console.log('Something went wrong');
+            } else {
+                // Create new Array by prototype using filter method.
+                newList = restaurantsCount.filter(function (object, index, array) {
+                    return (object.count > 0);
+                });
+                restaurantsCount = newList;
+            }
+
+            return restaurantsCount;
+        }, function(reason) {
+            console.log('Failed: ' + reason);
+
+            return restaurantsCount;
         });
     };
 
@@ -112,6 +124,16 @@ menufortouristApp.factory('RestaurantsFactory', function($filter, RestaurantServ
         });
     };
 
+    // Save object for using when coming back
+    // factory.saveRestaurantsCounting = function(restaurantsCounting) {
+    //     restaurantsCount = restaurantsCounting;
+    // };
+
+    // //  Get object loaded when app starts
+    factory.getRestaurantsCount = function() {
+        return restaurantsCount;
+    };
+
     // Save object for the next page
     factory.saveSelectedRestaurant = function(selectedRestaurant) {
         restaurant = selectedRestaurant;
@@ -140,9 +162,14 @@ menufortouristApp.factory('RestaurantsFactory', function($filter, RestaurantServ
         return restaurantsSearch;
     };
 
+    // When user change his language.
+    factory.cleanMainResult = function() {
+        restaurantsAround = [];
+    };
+
     factory.cleanSearchResult = function() {
         restaurantsSearch = [];
-    };    
+    };
 
     // Save map for next time
     factory.saveMapState = function(mapState) {
@@ -168,18 +195,18 @@ menufortouristApp.factory('RestaurantsFactory', function($filter, RestaurantServ
     */
     // Methods for internationalization
     function getErrorMsg() {
-        if (UserFactory.locale == 'EN') {
+        if (UserFactory.locale == 'en') {
             return "Could not perform this operation. Please try again later";
-        } else if (UserFactory.locale == 'ES') {
+        } else if (UserFactory.locale == 'es') {
             return 'No se pudo realizar esta operación. Por favor, inténtelo de nuevo más tarde';
         } else {
             return 'Não foi possível executar esta operação. Por favor, tente novamente mais tarde';
         }
     }
     function getNoResultsFoundMsg() {
-        if (UserFactory.locale == 'EN') {
+        if (UserFactory.locale == 'en') {
             return "No restaurants found";
-        } else if (UserFactory.locale == 'ES') {
+        } else if (UserFactory.locale == 'es') {
             return 'No hay restaurantes encontrados';
         } else {
             return 'Nenhum restaurante foi encontrado';

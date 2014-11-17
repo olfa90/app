@@ -32,58 +32,88 @@ menufortouristApp.controller('SearchController', function($rootScope, $scope, $l
             return;
         }
 
-        GeolocationFactory.getCurrentPosition(function(position) {
-            $rootScope.user.setLat(position.coords.latitude);
-            $rootScope.user.setLng(position.coords.longitude);
-        }, function onError(error) {
-            console.log('code: '    + error.code    + '\n' +
+        GeolocationFactory.getCurrentPosition(
+            successCallbackGeolocation,
+            errorCallbackGeolocationHighAccuracy,
+            { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true });
+    }
+
+    function errorCallbackGeolocationHighAccuracy(error) {
+        console.log('code: '    + error.code    + '\n' +
                   'message: ' + error.message + '\n');
-            alert(getGPSErrorMsg());
-        }, { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true });
+        if (error.code == error.TIMEOUT) {
+            // Attempt to get GPS loc timed out after 5 seconds, 
+            // try low accuracy location
+            GeolocationFactory.getCurrentPosition(
+                successCallbackGeolocation, 
+                function onError(error) {
+                    console.log('code: '    + error.code    + '\n' +
+                          'message: ' + error.message + '\n');
+                },
+                { maximumAge: 60000, timeout: 9000, enableHighAccuracy: false });
+        }
+    }
+
+    function successCallbackGeolocation(position) {
+        // Lat e Lng para teste: -22.9748244,-43.1934073
+        $rootScope.user.setLat(position.coords.latitude);
+        $rootScope.user.setLng(position.coords.longitude);
     }
 
     // Methods for internationalization
     function getGPSErrorMsg() {
-        if ($rootScope.user.locale == 'EN') {
+        if ($rootScope.user.locale == 'en') {
             return "Could not get the current position. Either GPS signals are weak or GPS has been switched off.";
-        } else if ($rootScope.user.locale == 'ES') {
+        } else if ($rootScope.user.locale == 'es') {
             return 'No se pudo obtener la posición actual. O las señales GPS son débiles o GPS se ha desconectado.';
         } else {
             return 'Não foi possível obter a posição atual. Ou os sinais de GPS estão fracos ou o GPS foi desligado.';
         }
     };
     $scope.getErrorMsg = function() {
-        if ($rootScope.user.locale == 'EN') {
-            return 'No Internet connection';
-        } else if ($rootScope.user.locale == 'ES') {
+        if ($rootScope.user.locale == 'pt-BR') {
+            return 'Sem conexão com a Internet';
+        } else if ($rootScope.user.locale == 'es') {
             return 'No hay conexión a Internet';
         } else {
-            return 'Sem conexão com a Internet';
+            return 'No Internet connection';
         }
     };
     $scope.getTitle = function() {
-        if ($rootScope.user.locale == 'EN') {
+        if ($rootScope.user.locale == 'en') {
             return 'Search';
-        } else if ($rootScope.user.locale == 'ES') {
+        } else if ($rootScope.user.locale == 'es') {
             return 'Búsqueda';
+        } else if ($rootScope.user.locale.substring(0, 2) == 'fr') {
+            return 'Recherche';
+        } else if ($rootScope.user.locale.substring(0, 2) == 'de') {
+            return 'Suche';
         } else {
             return 'Busca';
         }
     };
     $scope.getPlaceholder = function() {
-        if ($rootScope.user.locale == 'EN') {
+        if ($rootScope.user.locale == 'en') {
             return "Restaurant's name or location";
-        } else if ($rootScope.user.locale == 'ES') {
+        } else if ($rootScope.user.locale == 'es') {
             return 'Nombre o ubicación del restaurante';
+        } else if ($rootScope.user.locale.substring(0, 2) == 'fr') {
+            return "Le nom ou l'emplacement du restaurant";
+        } else if ($rootScope.user.locale.substring(0, 2) == 'de') {
+            return 'Namen oder Speicherort Restaurants';
         } else {
             return 'Nome ou localização do restaurante';
         }
     };
     $scope.getMapText = function() {
-        if ($rootScope.user.locale == 'EN') {
+        if ($rootScope.user.locale == 'en') {
             return 'Map';
-        } else if ($rootScope.user.locale == 'ES') {
+        } else if ($rootScope.user.locale == 'es') {
             return 'Mapa';
+        } else if ($rootScope.user.locale.substring(0, 2) == 'fr') {
+            return 'Carte';
+        } else if ($rootScope.user.locale.substring(0, 2) == 'de') {
+            return 'Landkarte';
         } else {
             return 'Mapa';
         }

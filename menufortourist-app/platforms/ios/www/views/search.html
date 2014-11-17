@@ -35,7 +35,7 @@
             <div class="media-body">
               {{restaurant.name}}
               <p>{{restaurant.specialty}}</p>
-              <p>
+              <p ng-show="user.lat">
                 <span class="icon icon-google-maps"></span>
                 {{restaurant.distance}} km
               </p>

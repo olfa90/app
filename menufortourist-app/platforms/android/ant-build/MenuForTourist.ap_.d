@@ -62,6 +62,7 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/cordova_plugins.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/css \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/fonts \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/icon-120.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/icon-marker.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/icon.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/img \
@@ -107,6 +108,7 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/app.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/controller \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/factory \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/helper \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/lib \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/model \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/service \
@@ -119,6 +121,13 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/factory/GeolocationFactory.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/factory/RestaurantsFactory.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/factory/UserFactory.js \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/helper/MessagesDE.js \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/helper/MessagesEN.js \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/helper/MessagesES.js \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/helper/MessagesFactory.js \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/helper/MessagesFR.js \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/helper/MessagesJA.js \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/helper/MessagesPTBR.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/lib/angular-locale_es.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/lib/angular-locale_pt-br.js \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/js/lib/angular.min.js \
@@ -167,7 +176,9 @@
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/bada-wac/icon-80-type4.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/blackberry/icon-80.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/ios/apple-touch-icon-114x114-precomposed.png \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/ios/apple-touch-icon-120x120-precomposed.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/ios/apple-touch-icon-144x144-precomposed.png \
+/Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/ios/apple-touch-icon-152x152-precomposed.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/ios/apple-touch-icon-72x72-precomposed.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/ios/apple-touch-icon-precomposed.png \
 /Users/gu/workspace/menu4tourist/app/menufortourist-app/platforms/android/assets/www/res/icon/ios/icon-120.png \

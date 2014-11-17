@@ -57,11 +57,14 @@
     </header>
 
     <!-- Filters in standard bar fixed below top bar (header) -->
-    <!-- <nav class="bar bar-standard bar-header-secondary">
-      <a ng-click="showFilterModal()" class="btn filtro">
-        {{getFilterText()}}
-      </a>
+    <!-- <nav id="info_list" class="bar bar-standard bar-header-secondary">
+      <p>{{getInfoListText()}}</p>
     </nav> -->
+
+    <!-- Move it to the bottom
+    <a ng-click="showFilterModal()" class="btn filtro">
+      {{getFilterText()}}
+    </a> -->
 
     <div id="msg_error" class="content" ng-hide="user.connected">
       <p>{{getErrorMsg()}}</p>
@@ -75,7 +78,7 @@
             <div class="media-body">
               <h4>{{restaurant.name}}</h4>
               <p>{{restaurant.specialty}}</p>
-              <p>
+              <p ng-show="user.lat">
                 <span class="icon icon-google-maps"></span>
                 {{restaurant.distance}} km
               </p>

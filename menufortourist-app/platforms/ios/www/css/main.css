@@ -46,6 +46,17 @@ nav.bar-header-secondary {
   vertical-align: middle;
 }
 
+nav#info_list {
+  color: rgb(255,202,73);
+  font-size: 16px;
+  text-align: left;
+}
+
+nav#info_list > p {
+  margin: 12px 0;
+  color: rgb(255,202,73);
+}
+
 nav.bar-header-secondary .filtro {
   top: 8px;
   /*left: -3%;*/
@@ -101,6 +112,11 @@ input[type="search"] {
   height: 100%
 }
 
+#list_languages .table-view {
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
 #list_languages .table-view-cell {
   color: #000;
   font-size: 20px;
@@ -109,7 +125,7 @@ input[type="search"] {
 }
 
 #list_languages > div {
-  top: 27%;
+  /*top: 27%;*/
   position: relative;
   /*margin-left: 10px;
   margin-right: 10px;*/

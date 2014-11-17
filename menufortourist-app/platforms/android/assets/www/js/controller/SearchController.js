@@ -62,61 +62,19 @@ menufortouristApp.controller('SearchController', function($rootScope, $scope, $l
 
     // Methods for internationalization
     function getGPSErrorMsg() {
-        if ($rootScope.user.locale == 'en') {
-            return "Could not get the current position. Either GPS signals are weak or GPS has been switched off.";
-        } else if ($rootScope.user.locale == 'es') {
-            return 'No se pudo obtener la posición actual. O las señales GPS son débiles o GPS se ha desconectado.';
-        } else {
-            return 'Não foi possível obter a posição atual. Ou os sinais de GPS estão fracos ou o GPS foi desligado.';
-        }
+        return $rootScope.user.messages.GPS_ERROR;
     };
     $scope.getErrorMsg = function() {
-        if ($rootScope.user.locale == 'pt-BR') {
-            return 'Sem conexão com a Internet';
-        } else if ($rootScope.user.locale == 'es') {
-            return 'No hay conexión a Internet';
-        } else {
-            return 'No Internet connection';
-        }
+        return $rootScope.user.messages.INTERNET_ERROR;
     };
     $scope.getTitle = function() {
-        if ($rootScope.user.locale == 'en') {
-            return 'Search';
-        } else if ($rootScope.user.locale == 'es') {
-            return 'Búsqueda';
-        } else if ($rootScope.user.locale.substring(0, 2) == 'fr') {
-            return 'Recherche';
-        } else if ($rootScope.user.locale.substring(0, 2) == 'de') {
-            return 'Suche';
-        } else {
-            return 'Busca';
-        }
+        return $rootScope.user.messages.SEARCH_TITLE;
     };
     $scope.getPlaceholder = function() {
-        if ($rootScope.user.locale == 'en') {
-            return "Restaurant's name or location";
-        } else if ($rootScope.user.locale == 'es') {
-            return 'Nombre o ubicación del restaurante';
-        } else if ($rootScope.user.locale.substring(0, 2) == 'fr') {
-            return "Le nom ou l'emplacement du restaurant";
-        } else if ($rootScope.user.locale.substring(0, 2) == 'de') {
-            return 'Namen oder Speicherort Restaurants';
-        } else {
-            return 'Nome ou localização do restaurante';
-        }
+        return $rootScope.user.messages.PLACE_HOLDER;
     };
     $scope.getMapText = function() {
-        if ($rootScope.user.locale == 'en') {
-            return 'Map';
-        } else if ($rootScope.user.locale == 'es') {
-            return 'Mapa';
-        } else if ($rootScope.user.locale.substring(0, 2) == 'fr') {
-            return 'Carte';
-        } else if ($rootScope.user.locale.substring(0, 2) == 'de') {
-            return 'Landkarte';
-        } else {
-            return 'Mapa';
-        }
+        return $rootScope.user.messages.MAP;
     };
     //
 
@@ -135,7 +93,6 @@ menufortouristApp.controller('SearchController', function($rootScope, $scope, $l
 
     $scope.goDetails = function(restaurant) {
         RestaurantsFactory.saveSelectedRestaurant(restaurant);
-        // RestaurantsFactory.setOrigin(RestaurantsFactory.SEARCH_PAGE);
         $location.path("/details");
     };
 

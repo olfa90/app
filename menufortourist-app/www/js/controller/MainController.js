@@ -67,16 +67,19 @@ menufortouristApp.controller('MainController', function($rootScope, $scope, $loc
                 { maximumAge: 600000, timeout: 9000, enableHighAccuracy: false });
 
         } else {
-            // Hide spinner dialog
-            window.plugins.spinnerDialog.hide();
             alert(getGPSErrorMsg());
+
+            successCallbackGeolocation(null);
         }
     }
 
     function successCallbackGeolocation(position) {
-        // Lat e Lng para teste: -22.9748244,-43.1934073
-        $rootScope.user.setLat(position.coords.latitude);
-        $rootScope.user.setLng(position.coords.longitude);
+        if (position) {
+            // Lat e Lng para teste: -22.9748244,-43.1934073
+            $rootScope.user.setLat(position.coords.latitude);
+            $rootScope.user.setLng(position.coords.longitude);
+        }
+        
         $scope.restaurants = RestaurantsFactory.findNearRestaurants($rootScope.user.lat, $rootScope.user.lng);
     }
 
@@ -117,75 +120,22 @@ menufortouristApp.controller('MainController', function($rootScope, $scope, $loc
 
     // Methods for internationalization
     function getGPSErrorMsg() {
-        if ($rootScope.user.locale == 'pt-BR') {
-            return 'Não foi possível obter a posição atual. Ou os sinais de GPS estão fracos ou o GPS foi desligado.';
-        } else if ($rootScope.user.locale == 'es') {
-            return 'No se pudo obtener la posición actual. O las señales GPS son débiles o GPS se ha desconectado.';
-        } else {
-            return "Could not get the current position. Either GPS signals are weak or GPS has been switched off.";
-        }
+        return $rootScope.user.messages.GPS_ERROR;
     };
     $scope.getErrorMsg = function() {
-        if ($rootScope.user.locale == 'pt-BR') {
-            return 'Sem conexão com a Internet';
-        } else if ($rootScope.user.locale == 'es') {
-            return 'No hay conexión a Internet';
-        } else {
-            return 'No Internet connection';
-        }
+        return $rootScope.user.messages.INTERNET_ERROR;
     };
     $scope.getTitle = function() {
-        if ($rootScope.user.locale == 'en') {
-            return 'Restaurants';
-        } else if ($rootScope.user.locale == 'es') {
-            return 'Restaurantes';
-        } else if ($rootScope.user.locale.substring(0, 2) == 'fr') {
-            return 'Restaurants';
-        } else if ($rootScope.user.locale.substring(0, 2) == 'de') {
-            return 'Restaurants';
-        } else {
-            return 'Restaurantes';
-        }
-    };
-    $scope.getRefreshText = function() {
-        if ($rootScope.user.locale == 'en') {
-            return 'Refresh';
-        } else if ($rootScope.user.locale == 'es') {
-            return 'Actualizar';
-        } else {
-            return 'Atualizar';
-        }
+        return $rootScope.user.messages.RESTAURANTS_TITLE;
     };
     $scope.getFilterText = function() {
-        if ($rootScope.user.locale == 'en') {
-            return 'Filters';
-        } else if ($rootScope.user.locale == 'es') {
-            return 'Filtros';
-        } else {
-            return 'Filtros';
-        }
+        return $rootScope.user.messages.FILTER;
     };
     $scope.getMapText = function() {
-        if ($rootScope.user.locale == 'en') {
-            return 'Map';
-        } else if ($rootScope.user.locale == 'es') {
-            return 'Mapa';
-        } else if ($rootScope.user.locale.substring(0, 2) == 'fr') {
-            return 'Carte';
-        } else if ($rootScope.user.locale.substring(0, 2) == 'de') {
-            return 'Landkarte';
-        } else {
-            return 'Mapa';
-        }
+        return $rootScope.user.messages.MAP;
     };
     $scope.getInfoListText = function() {
-        if ($rootScope.user.locale == 'en') {
-            return 'By proximity';
-        } else if ($rootScope.user.locale == 'es') {
-            return 'Por proximidad';
-        } else {
-            return 'Por proximidade';
-        }
+        return $rootScope.user.messages.INFO_LIST;
     };
     //
 

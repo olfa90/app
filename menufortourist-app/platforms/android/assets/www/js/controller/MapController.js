@@ -15,39 +15,25 @@ menufortouristApp.controller('MapController', function($rootScope, $scope, $loca
         // Show spinner dialog
         // window.plugins.spinnerDialog.show();
         var map = new GoogleMap();
-        map.initialize($rootScope.user.lat, $rootScope.user.lng, $rootScope.user.locale);
+        map.initialize($rootScope.user);
         showMarkers(map);
     }
 
     // Metodos for internationalization
     function getGPSErrorMsg() {
-        if ($rootScope.user.locale == 'en') {
-            return "Could not get the current position. Either GPS signals are weak or GPS has been switched off.";
-        } else if ($rootScope.user.locale == 'es') {
-            return 'No se pudo obtener la posición actual. O las señales GPS son débiles o GPS se ha desconectado.';
-        } else {
-            return 'Não foi possível obter a posição atual. Ou os sinais de GPS estão fracos ou o GPS foi desligado.';
-        }
+        return $rootScope.user.messages.GPS_ERROR;
+    };
+    $scope.getErrorMsg = function() {
+        return $rootScope.user.messages.INTERNET_ERROR;
     };
     $scope.getTitle = function() {
-        if ($rootScope.user.locale == 'en') {
-            return 'Restaurants';
-        } else if ($rootScope.user.locale == 'es') {
-            return 'Restaurantes';
-        } else if ($rootScope.user.locale.substring(0, 2) == 'fr') {
-            return 'Restaurants';
-        } else if ($rootScope.user.locale.substring(0, 2) == 'de') {
-            return 'Restaurants';
-        } else {
-            return 'Restaurantes';
-        }
+        return $rootScope.user.messages.RESTAURANTS_TITLE;
     };
     //
 
 
     $scope.goDetails = function(restaurant) {
         RestaurantsFactory.saveSelectedRestaurant(restaurant);
-        // RestaurantsFactory.setOrigin(RestaurantsFactory.MAIN_MAP_PAGE);
         $location.path("/details");
     };
 

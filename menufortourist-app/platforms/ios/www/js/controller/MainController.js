@@ -38,19 +38,49 @@ menufortouristApp.controller('MainController', function($rootScope, $scope, $loc
         }
         // Show spinner dialog
         window.plugins.spinnerDialog.show();
-        GeolocationFactory.getCurrentPosition(function(position) {
+        GeolocationFactory.getCurrentPosition(
+            successCallbackGeolocation,
+            errorCallbackGeolocation,
+            { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true }
+        );
+    }
+
+    function errorCallbackGeolocation(error) {
+        console.log('code: '    + error.code    + '\n' +
+                  'message: ' + error.message + '\n');
+        if (error.code == error.TIMEOUT) {
+            // Attempt to get GPS loc timed out after 5 seconds, 
+            // try low accuracy location
+            GeolocationFactory.getCurrentPosition(
+                successCallbackGeolocation, 
+                function onError(error) {
+                    console.log('code: '    + error.code    + '\n' +
+                          'message: ' + error.message + '\n');
+
+                    // In case without GPS, get first 50 restaurants.
+                    $scope.restaurants = RestaurantsFactory.findNearRestaurants($rootScope.user.lat, $rootScope.user.lng);
+                    
+                    // Hide spinner dialog
+                    // window.plugins.spinnerDialog.hide();
+                    // alert(getGPSErrorMsg());
+                },
+                { maximumAge: 600000, timeout: 9000, enableHighAccuracy: false });
+
+        } else {
+            alert(getGPSErrorMsg());
+
+            successCallbackGeolocation(null);
+        }
+    }
+
+    function successCallbackGeolocation(position) {
+        if (position) {
             // Lat e Lng para teste: -22.9748244,-43.1934073
             $rootScope.user.setLat(position.coords.latitude);
             $rootScope.user.setLng(position.coords.longitude);
-            $scope.restaurants = RestaurantsFactory.findNearRestaurants(position.coords.latitude, position.coords.longitude);
-        }, function onError(error) {
-            // Hide spinner dialog
-            window.plugins.spinnerDialog.hide();
-            console.log('code: '    + error.code    + '\n' +
-                  'message: ' + error.message + '\n');
-            // alert(getGPSErrorMsg());
-            setGpsErrorMsg();
-        }, { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true });
+        }
+        
+        $scope.restaurants = RestaurantsFactory.findNearRestaurants($rootScope.user.lat, $rootScope.user.lng);
     }
 
     // function initMap(){
@@ -90,57 +120,74 @@ menufortouristApp.controller('MainController', function($rootScope, $scope, $loc
 
     // Methods for internationalization
     function getGPSErrorMsg() {
-        if ($rootScope.user.locale == 'EN') {
-            return "Could not get the current position. Either GPS signals are weak or GPS has been switched off.";
-        } else if ($rootScope.user.locale == 'ES') {
+        if ($rootScope.user.locale == 'pt-BR') {
+            return 'Não foi possível obter a posição atual. Ou os sinais de GPS estão fracos ou o GPS foi desligado.';
+        } else if ($rootScope.user.locale == 'es') {
             return 'No se pudo obtener la posición actual. O las señales GPS son débiles o GPS se ha desconectado.';
         } else {
-            return 'Não foi possível obter a posição atual. Ou os sinais de GPS estão fracos ou o GPS foi desligado.';
+            return "Could not get the current position. Either GPS signals are weak or GPS has been switched off.";
         }
     };
     $scope.getErrorMsg = function() {
-        if ($rootScope.user.locale == 'EN') {
-            return 'No Internet connection';
-        } else if ($rootScope.user.locale == 'ES') {
+        if ($rootScope.user.locale == 'pt-BR') {
+            return 'Sem conexão com a Internet';
+        } else if ($rootScope.user.locale == 'es') {
             return 'No hay conexión a Internet';
         } else {
-            return 'Sem conexão com a Internet';
+            return 'No Internet connection';
         }
     };
     $scope.getTitle = function() {
-        if ($rootScope.user.locale == 'EN') {
+        if ($rootScope.user.locale == 'en') {
             return 'Restaurants';
-        } else if ($rootScope.user.locale == 'ES') {
+        } else if ($rootScope.user.locale == 'es') {
             return 'Restaurantes';
+        } else if ($rootScope.user.locale.substring(0, 2) == 'fr') {
+            return 'Restaurants';
+        } else if ($rootScope.user.locale.substring(0, 2) == 'de') {
+            return 'Restaurants';
         } else {
             return 'Restaurantes';
         }
     };
     $scope.getRefreshText = function() {
-        if ($rootScope.user.locale == 'EN') {
+        if ($rootScope.user.locale == 'en') {
             return 'Refresh';
-        } else if ($rootScope.user.locale == 'ES') {
+        } else if ($rootScope.user.locale == 'es') {
             return 'Actualizar';
         } else {
             return 'Atualizar';
         }
     };
     $scope.getFilterText = function() {
-        if ($rootScope.user.locale == 'EN') {
+        if ($rootScope.user.locale == 'en') {
             return 'Filters';
-        } else if ($rootScope.user.locale == 'ES') {
+        } else if ($rootScope.user.locale == 'es') {
             return 'Filtros';
         } else {
             return 'Filtros';
         }
     };
     $scope.getMapText = function() {
-        if ($rootScope.user.locale == 'EN') {
+        if ($rootScope.user.locale == 'en') {
             return 'Map';
-        } else if ($rootScope.user.locale == 'ES') {
+        } else if ($rootScope.user.locale == 'es') {
             return 'Mapa';
+        } else if ($rootScope.user.locale.substring(0, 2) == 'fr') {
+            return 'Carte';
+        } else if ($rootScope.user.locale.substring(0, 2) == 'de') {
+            return 'Landkarte';
         } else {
             return 'Mapa';
+        }
+    };
+    $scope.getInfoListText = function() {
+        if ($rootScope.user.locale == 'en') {
+            return 'By proximity';
+        } else if ($rootScope.user.locale == 'es') {
+            return 'Por proximidad';
+        } else {
+            return 'Por proximidade';
         }
     };
     //
@@ -200,7 +247,7 @@ menufortouristApp.controller('MainController', function($rootScope, $scope, $loc
 
     $scope.goDetails = function(restaurant) {
         RestaurantsFactory.saveSelectedRestaurant(restaurant);
-        RestaurantsFactory.setOrigin(RestaurantsFactory.MAIN_PAGE);
+        // RestaurantsFactory.setOrigin(RestaurantsFactory.MAIN_PAGE);
         $location.path("/details");
     };
     

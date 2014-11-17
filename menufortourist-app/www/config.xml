@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.menufortourist" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.menufortourist" version="1.0.3" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Menu For TOURIST</name>
     <description>
         An incredible app for turists to find restaurant's menu in theirs home languages.
     </description>
-    <author email="mazzoni.developer@gmail.com" href="http://menufortourist.com">
+    <author email="mazzoni.developer@gmail.com" href="http://www.menufortourist.com">
         Gustavo Mazzoni Maia Lopes
     </author>
     <preference name="permissions" value="none" />
@@ -47,7 +47,7 @@
     <!-- Plugin to to hide the statusbar and overlay on iOS -->
     <gap:plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" />
     <gap:plugin name="hu.dpal.phonegap.plugins.spinnerdialog" />
-    <icon src="icon.png" />
+    <icon src="icon-120.png" />
     <!-- <icon gap:platform="android" gap:qualifier="ldpi" src="res/icon/android/icon-36-ldpi.png" /> -->
     <icon gap:platform="android" gap:qualifier="ldpi" src="res/icon/android/icon-36.png" />
     <icon gap:platform="android" gap:qualifier="mdpi" src="res/icon/android/icon-48.png" />
@@ -58,9 +58,9 @@
     <icon gap:platform="ios" height="57" src="res/icon/ios/apple-touch-icon-precomposed.png" width="57" />
     <icon gap:platform="ios" height="72" src="res/icon/ios/apple-touch-icon-72x72-precomposed.png" width="72" />
     <icon gap:platform="ios" height="114" src="res/icon/ios/apple-touch-icon-114x114-precomposed.png" width="114" />
-    <icon gap:platform="ios" height="120" src="res/icon/ios/icon-120.png" width="120" />
+    <icon gap:platform="ios" height="120" src="res/icon/ios/apple-touch-icon-120x120-precomposed.png" width="120" />
     <icon gap:platform="ios" height="76" src="res/icon/ios/icon-76.png" width="76" />
-    <icon gap:platform="ios" height="152" src="res/icon/ios/icon-152.png" width="152" />
+    <icon gap:platform="ios" height="152" src="res/icon/ios/apple-touch-icon-152x152-precomposed.png" width="152" />
     <icon gap:platform="ios" height="144" src="res/icon/ios/apple-touch-icon-144x144-precomposed.png" width="144" />
     <!-- <icon gap:platform="webos" src="res/icon/webos/icon-64.png" /> -->
     <icon gap:platform="winphone" src="res/icon/windows-phone/logo-48.png" />

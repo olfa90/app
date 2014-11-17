@@ -94,12 +94,15 @@ menufortouristApp.config(function($provide, $compileProvider) {
 
         factory.locale = 'en';
         factory.connected = true;
+        factory.messages = new MessagesEN();
         
         factory.setName = function(name) {
             factory.name = name;
         };
         factory.setLocale = function(locale) {
             factory.locale = locale;
+
+            factory.messages = (new MessagesFactory).getMessages(locale);
         };
         factory.setLat = function(lat) {
             factory.lat = lat;

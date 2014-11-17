@@ -14,35 +14,30 @@ menufortouristApp.controller('MapController', function($rootScope, $scope, $loca
 
         // Show spinner dialog
         // window.plugins.spinnerDialog.show();
-        GeolocationFactory.getCurrentPosition(function(position) {
-            var map = new GoogleMap();
-            map.initialize(position.coords.latitude, position.coords.longitude, $rootScope.user.locale);
-            showMarkers(map);
-
-            // RestaurantsFactory.saveMapState(map);
-            // window.plugins.spinnerDialog.hide();
-        }, function onError(error) {
-            console.log('code: '    + error.code    + '\n' +
-                  'message: ' + error.message + '\n');
-            alert(getGPSErrorMsg());
-        }, { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true });
+        var map = new GoogleMap();
+        map.initialize($rootScope.user.lat, $rootScope.user.lng, $rootScope.user.locale);
+        showMarkers(map);
     }
 
     // Metodos for internationalization
     function getGPSErrorMsg() {
-        if ($rootScope.user.locale == 'EN') {
+        if ($rootScope.user.locale == 'en') {
             return "Could not get the current position. Either GPS signals are weak or GPS has been switched off.";
-        } else if ($rootScope.user.locale == 'ES') {
+        } else if ($rootScope.user.locale == 'es') {
             return 'No se pudo obtener la posición actual. O las señales GPS son débiles o GPS se ha desconectado.';
         } else {
             return 'Não foi possível obter a posição atual. Ou os sinais de GPS estão fracos ou o GPS foi desligado.';
         }
     };
     $scope.getTitle = function() {
-        if ($rootScope.user.locale == 'EN') {
+        if ($rootScope.user.locale == 'en') {
             return 'Restaurants';
-        } else if ($rootScope.user.locale == 'ES') {
+        } else if ($rootScope.user.locale == 'es') {
             return 'Restaurantes';
+        } else if ($rootScope.user.locale.substring(0, 2) == 'fr') {
+            return 'Restaurants';
+        } else if ($rootScope.user.locale.substring(0, 2) == 'de') {
+            return 'Restaurants';
         } else {
             return 'Restaurantes';
         }

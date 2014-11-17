@@ -268,3 +268,61 @@ You could find it at the following address https://developer.apple.com/icloud/do
 2014-09-30 16:36:50.365 Menu For Tourist[20839:70b] THREAD WARNING: ['SpinnerDialog'] took '160.634033' ms. Plugin should use a background thread.
 2014-09-30 16:36:50.509 Menu For Tourist[20839:70b] THREAD WARNING: ['Geolocation'] took '123.643066' ms. Plugin should use a background thread.
 2014-09-30 16:36:53.427 Menu For Tourist[20839:70b] THREAD WARNING: ['SpinnerDialog'] took '27.019043' ms. Plugin should use a background thread.
+2014-11-09 21:14:14.503 Menu For Tourist[1454:14606] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/gu/Library/Developer/CoreSimulator/Devices/5C1617E6-C60A-4E33-90FF-292778DD9712/data/Containers/Data/Application/74D38C3A-BECE-4052-90BD-1083648973DE/Library/Cookies/Cookies.binarycookies
+2014-11-09 21:14:14.964 Menu For Tourist[1454:14606] Multi-tasking -> Device: YES, App: YES
+2014-11-09 21:14:15.329 Menu For Tourist[1454:14606] 
+
+Started backup to iCloud! Please be careful.
+Your application might rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines"
+You could find it at the following address https://developer.apple.com/icloud/documentation/data-storage/ .
+
+2014-11-09 21:14:22.648 Menu For Tourist[1454:14606] [CDVTimer][splashscreen] 2013.594985ms
+2014-11-09 21:14:22.648 Menu For Tourist[1454:14606] [CDVTimer][TotalPluginStartup] 2014.334977ms
+2014-11-09 21:14:25.256 Menu For Tourist[1454:14606] Resetting plugins due to page load.
+2014-11-09 21:14:27.069 Menu For Tourist[1454:14606] Finished load of: file:///Users/gu/Library/Developer/CoreSimulator/Devices/5C1617E6-C60A-4E33-90FF-292778DD9712/data/Containers/Bundle/Application/8FEF4640-8EE2-456F-86A3-504AF3652421/Menu%20For%20TOURIST.app/www/index.html#/
+2014-11-09 21:14:37.317 Menu For Tourist[1454:14606] THREAD WARNING: ['SpinnerDialog'] took '77.773926' ms. Plugin should use a background thread.
+2014-11-09 21:14:37.393 Menu For Tourist[1454:14606] THREAD WARNING: ['Geolocation'] took '64.423096' ms. Plugin should use a background thread.
+2014-11-09 21:14:40.877 Menu For Tourist[1454:14606] locationManager::didFailWithError (null)
+2014-11-09 21:24:04.536 Menu For Tourist[1952:19698] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/gu/Library/Developer/CoreSimulator/Devices/5C1617E6-C60A-4E33-90FF-292778DD9712/data/Containers/Data/Application/DB3A7817-AB8F-4701-9BB4-A732F1F38643/Library/Cookies/Cookies.binarycookies
+2014-11-09 21:24:04.701 Menu For Tourist[1952:19698] Multi-tasking -> Device: YES, App: YES
+2014-11-09 21:24:04.796 Menu For Tourist[1952:19698] 
+
+Started backup to iCloud! Please be careful.
+Your application might rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines"
+You could find it at the following address https://developer.apple.com/icloud/documentation/data-storage/ .
+
+2014-11-09 21:24:06.609 Menu For Tourist[1952:19698] [CDVTimer][splashscreen] 661.467969ms
+2014-11-09 21:24:06.610 Menu For Tourist[1952:19698] [CDVTimer][TotalPluginStartup] 662.437022ms
+2014-11-09 21:24:09.125 Menu For Tourist[1952:19698] Resetting plugins due to page load.
+2014-11-09 21:24:11.009 Menu For Tourist[1952:19698] Finished load of: file:///Users/gu/Library/Developer/CoreSimulator/Devices/5C1617E6-C60A-4E33-90FF-292778DD9712/data/Containers/Bundle/Application/BE3C04D2-C576-4556-AE9F-61F443FB59D7/Menu%20For%20TOURIST.app/www/index.html#/
+2014-11-09 21:24:37.748 Menu For Tourist[1952:19698] THREAD WARNING: ['SpinnerDialog'] took '12.379395' ms. Plugin should use a background thread.
+2014-11-09 21:24:37.784 Menu For Tourist[1952:19698] THREAD WARNING: ['Geolocation'] took '21.614014' ms. Plugin should use a background thread.
+2014-11-09 21:24:37.794 Menu For Tourist[1952:19698] locationManager::didFailWithError (null)
+2014-11-09 21:24:40.746 Menu For Tourist[1952:19698] THREAD WARNING: ['Geolocation'] took '18.048828' ms. Plugin should use a background thread.
+2014-11-09 21:24:40.774 Menu For Tourist[1952:19698] locationManager::didFailWithError (null)
+2014-11-09 21:24:53.254 Menu For Tourist[1952:19698] -[WebActionDisablingCALayerDelegate setBeingRemoved:]: unrecognized selector sent to instance 0x7c166b50
+2014-11-09 21:24:53.346 Menu For Tourist[1952:19698] *** WebKit discarded an uncaught exception in the webView:willRemoveScrollingLayer:withContentsLayer:forNode: delegate: <NSInvalidArgumentException> -[WebActionDisablingCALayerDelegate setBeingRemoved:]: unrecognized selector sent to instance 0x7c166b50
+2014-11-09 21:42:19.740 Menu For Tourist[3027:29249] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/gu/Library/Developer/CoreSimulator/Devices/36A460EE-9773-4AC0-9DD5-5343828095EF/data/Containers/Data/Application/73FAE6B1-4F4A-4A5F-A43D-4CCB54E3BAFD/Library/Cookies/Cookies.binarycookies
+2014-11-09 21:42:20.210 Menu For Tourist[3027:29249] Multi-tasking -> Device: YES, App: YES
+2014-11-09 21:42:20.411 Menu For Tourist[3027:29249] 
+
+Started backup to iCloud! Please be careful.
+Your application might rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines"
+You could find it at the following address https://developer.apple.com/icloud/documentation/data-storage/ .
+
+2014-11-09 21:42:25.440 Menu For Tourist[3027:29249] [CDVTimer][splashscreen] 884.329021ms
+2014-11-09 21:42:25.440 Menu For Tourist[3027:29249] [CDVTimer][TotalPluginStartup] 884.765029ms
+2014-11-09 21:42:27.001 Menu For Tourist[3027:29249] Resetting plugins due to page load.
+2014-11-09 21:42:28.353 Menu For Tourist[3027:29249] Finished load of: file:///Users/gu/Library/Developer/CoreSimulator/Devices/36A460EE-9773-4AC0-9DD5-5343828095EF/data/Containers/Bundle/Application/89BCE351-C693-42CE-8F5B-A023C89791AF/Menu%20For%20TOURIST.app/www/index.html#/
+2014-11-09 21:42:39.702 Menu For Tourist[3027:29249] THREAD WARNING: ['SpinnerDialog'] took '131.309082' ms. Plugin should use a background thread.
+2014-11-09 21:42:39.741 Menu For Tourist[3027:29249] THREAD WARNING: ['Geolocation'] took '34.050049' ms. Plugin should use a background thread.
+2014-11-09 21:42:41.714 Menu For Tourist[3027:29249] locationManager::didFailWithError (null)
+2014-11-09 21:42:49.629 Menu For Tourist[3027:29249] -[WebActionDisablingCALayerDelegate setBeingRemoved:]: unrecognized selector sent to instance 0x7af7b9e0
+2014-11-09 21:42:49.671 Menu For Tourist[3027:29249] *** WebKit discarded an uncaught exception in the webView:willRemoveScrollingLayer:withContentsLayer:forNode: delegate: <NSInvalidArgumentException> -[WebActionDisablingCALayerDelegate setBeingRemoved:]: unrecognized selector sent to instance 0x7af7b9e0
+2014-11-09 21:44:11.326 Menu For Tourist[3027:29249] THREAD WARNING: ['Geolocation'] took '30.791016' ms. Plugin should use a background thread.
+2014-11-09 21:44:11.328 Menu For Tourist[3027:29249] locationManager::didFailWithError (null)
+2014-11-09 21:44:30.537 Menu For Tourist[3027:29249] -[WebActionDisablingCALayerDelegate setBeingRemoved:]: unrecognized selector sent to instance 0x7af7b9e0
+2014-11-09 21:44:30.537 Menu For Tourist[3027:29249] *** WebKit discarded an uncaught exception in the webView:willRemoveScrollingLayer:withContentsLayer:forNode: delegate: <NSInvalidArgumentException> -[WebActionDisablingCALayerDelegate setBeingRemoved:]: unrecognized selector sent to instance 0x7af7b9e0
